@@ -12,11 +12,11 @@
 # Catppuccin macchiato
 BLANK='#00000000'
 CLEAR='#24273aee'
-DEFAULT='#6e738d'
-TEXT='#6e738d'
-WRONG='#a6da95'
-VERIFYING='#7dc4e4'
-BGCOLOR='24273a'
+DEFAULT='#c6d0f5'
+TEXT='#c6d0f5'
+WRONG='#303446'
+VERIFYING='#89b4fa'
+BGCOLOR='1e1e2e'
 
 i3lock \
 	--ignore-empty-password \
