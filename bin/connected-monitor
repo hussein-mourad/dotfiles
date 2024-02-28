@@ -1,0 +1,3 @@
+#!/bin/bash
+
+echo $(xrandr | grep '\sconnected\s' | grep '^HDMI' | awk '{print $1}')

@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# List all .mp4 files and save their names to input.txt
+ls *.mp4 > input.txt
+# Surround each line in input.txt with quotes and prepend 'file '
+sed -i "s/.*/file '&'/g" input.txt
+# Concatenate the videos using ffmpeg
+ffmpeg -f concat -safe 0 -i input.txt -c copy output.mp4  
