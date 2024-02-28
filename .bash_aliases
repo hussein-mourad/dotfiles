@@ -27,7 +27,7 @@ alias vi="NVIM_APPNAME=nvim-astro command nvim"
 alias nvim="NVIM_APPNAME=nvim-astro command nvim"
 
 alias vimc="vi ~/.vimrc"
-alias nvimc="cd ~/.config/nvim-astro && vi . && cd - "
+alias nvimc="cd ~/.config/nvim-astro/lua/user && vi . && cd - "
 alias nvchadc="cd ~/.config/nvim-chad && vi && cd - "
 
 # ls
