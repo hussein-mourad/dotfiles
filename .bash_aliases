@@ -26,6 +26,10 @@ alias c='clear'
 alias vi="NVIM_APPNAME=nvim-astro command nvim"
 alias nvim="NVIM_APPNAME=nvim-astro command nvim"
 
+alias vimc="vi ~/.vimrc"
+alias nvimc="cd ~/.config/nvim-astro && vi . && cd - "
+alias nvchadc="cd ~/.config/nvim-chad && vi && cd - "
+
 # ls
 alias ll='ls -lhF'
 alias la='ls -Ahl'
@@ -148,9 +152,6 @@ alias zshc="vi ~/.zshrc && zsh"
 alias ohmyzsh="vi ~/.oh-my-zsh"
 alias i3c="vi ~/.config/i3/config"
 #alias i3blocksc="vi ~/.config/i3/i3blocks.conf"
-alias vimc="vi ~/.vimrc"
-alias nvimc="cd ~/.config/nvim && vi . && cd - "
-alias nvchadc="cd ~/.config/nvim-chad && vi && cd - "
 alias tmuxc="vi ~/.config/tmux/tmux.conf && tmux source-file ~/config/tmux/tmux.conf "
 alias azkar='nohup zathura --page=54 /mnt/d/linux/Documents/books/islam/hisn-al-muslim.pdf > /dev/null 2>&1  &'
 
