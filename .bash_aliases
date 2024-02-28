@@ -24,9 +24,6 @@ alias c='clear'
 
 # vim
 alias vi=nvim
-alias nvim-chad="NVIM_APPNAME=nvim-chad command nvim"
-#alias vi="NVIM_APPNAME=LazyVim-nvim nvim"
-#alias nvim="NVIM_APPNAME=LazyVim-nvim nvim"
 
 # ls
 alias ll='ls -lhF'

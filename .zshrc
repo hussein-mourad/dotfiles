@@ -10,6 +10,7 @@ export TMPDIR="/tmp"
 source ~/.antigen.conf
 source ~/.bash_aliases
 source ~/.bash_functions
+source ~/bin/nvim-switcher
 
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 
