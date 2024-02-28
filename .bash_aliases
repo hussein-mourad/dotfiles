@@ -23,7 +23,8 @@ export WORK='/mnt/work'
 alias c='clear'
 
 # vim
-alias vi=nvim
+alias vi="NVIM_APPNAME=nvim-astro command nvim"
+alias nvim="NVIM_APPNAME=nvim-astro command nvim"
 
 # ls
 alias ll='ls -lhF'
