@@ -3,53 +3,16 @@ local plugins = {
   {
     "nvim-treesitter/nvim-treesitter",
     opts = function()
-      local opts = require "plugins.configs.treesitter"
-      opts.ensure_installed = {
-        "lua",
-        "vim",
-        "html",
-        "css",
-        "javascript",
-        "typescript",
-        "tsx",
-        "json",
-        "python",
-        "bash",
-        "c"
-      }
-      return opts
+      return require "custom.configs.treesitter"
     end,
     lazy = false
   },
 
   {
-    "windwp/nvim-ts-autotag",
-    ft = { "javascript", "javascriptreact", "typescript", "typescriptreact" },
-    config = function()
-      require("nvim-ts-autotag").setup()
-    end,
-  },
-
-  {
     "williamboman/mason.nvim",
-    opts = {
-      ensure_installed = {
-        "lua-language-server",
-        "html-lsp",
-        "css-lsp",
-        "stylua",
-        "prettier",
-        "eslint_d",
-        "typescript-language-server",
-        "tailwindcss-language-server",
-        -- "pyright",
-        -- "isort",
-        "black",
-        "pylint",
-        "python-lsp-server",
-        "gopls",
-      },
-    },
+    opts = function ()
+      return require "custom.configs.mason"
+    end,
   },
 
   {
@@ -68,14 +31,6 @@ local plugins = {
     end,
   },
 
-  -- {
-  --   "nvim-tree/nvim-tree.lua",
-  --   opts = function()
-  --     return require "custom.configs.nvimtree"
-  --   end,
-  -- },
-  --
-  --
   {
     "sindrets/diffview.nvim",
     cmd = { "DiffviewOpen", "DiffviewClose", "DiffviewToggleFiles", "DiffviewFocusFiles" },
@@ -86,6 +41,14 @@ local plugins = {
     cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
     ft = { "markdown" },
     build = function() vim.fn["mkdp#util#install"]() end,
+  },
+
+  {
+    "windwp/nvim-ts-autotag",
+    ft = { "javascript", "javascriptreact", "typescript", "typescriptreact" },
+    config = function()
+      require("nvim-ts-autotag").setup()
+    end,
   },
 
   {

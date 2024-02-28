@@ -4,8 +4,7 @@ local capabilities = configs.capabilities
 
 local lspconfig = require "lspconfig"
 local util = require "lspconfig/util"
--- local servers = {"html", "cssls", "tsserver", "tailwindcss" }
-local servers = {"html", "cssls", "tailwindcss", "pylsp" }
+local servers = {"html", "cssls", "tailwindcss", "pyright" }
 
 lspconfig.gopls.setup {
   on_attach = on_attach,
@@ -23,6 +22,13 @@ lspconfig.gopls.setup {
     },
   },
 }
+
+for _, lsp in ipairs(servers) do
+  lspconfig[lsp].setup {
+    on_attach = on_attach,
+    capabilities = capabilities,
+  }
+end
 
 -- local function organize_imports()
 --   local params = {
@@ -55,9 +61,3 @@ lspconfig.gopls.setup {
 -- }
 
 
-for _, lsp in ipairs(servers) do
-  lspconfig[lsp].setup {
-    on_attach = on_attach,
-    capabilities = capabilities,
-  }
-end
