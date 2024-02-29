@@ -7,6 +7,9 @@ return {
     spell = false, -- sets vim.opt.spell
     signcolumn = "auto", -- sets vim.opt.signcolumn to auto
     wrap = false, -- sets vim.opt.wrap
+    colorcolumn = "80",
+    scrolloff = 4,
+    -- opt.undodir = os.getenv('HOME') .. "/.vim/undodir"
   },
   g = {
     mapleader = " ", -- sets vim.g.mapleader
