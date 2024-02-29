@@ -12,6 +12,7 @@ source ~/.bash_aliases
 source ~/.bash_functions
 source ~/bin/nvim-switcher
 
+
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 
 # ZSH_THEME="robbyrussell"
@@ -79,6 +80,9 @@ HIST_STAMPS="mm/dd/yyyy"
 # plugins=(git zsh-completions zsh-vi-mode)
 # source $ZSH/oh-my-zsh.sh
 
+# zstyle ':omz:plugins:nvm' lazy yes
+# plugins=(nvm)
+
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -124,11 +128,11 @@ export FZF_DEFAULT_OPTS=" \
 --color=fg:#cad3f5,header:#ed8796,info:#c6a0f6,pointer:#f4dbd6 \
 --color=marker:#f4dbd6,fg+:#cad3f5,prompt:#c6a0f6,hl+:#ed8796"
 
-source /usr/share/nvm/init-nvm.sh
+# source /usr/share/nvm/init-nvm.sh
 
-if commond -v pyenv 1>/dev/null 2>&1; then
-  eval "$(pyenv init -)"
-fi
+# if commond -v pyenv 1>/dev/null 2>&1; then
+  # eval "$(pyenv init -)"
+# fi
 
-fpath+=~/.zfunc
-autoload -Uz compinit && compinit
+# fpath+=~/.zfunc
+# autoload -Uz compinit && compinit
