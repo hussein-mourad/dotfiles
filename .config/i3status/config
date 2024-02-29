@@ -6,12 +6,20 @@
 # ß
 # If the above line is not correctly displayed, fix your editor first!
 
+# general {
+#         colors = true
+#         interval = 5
+#         color_good = "#2AA198"
+#         color_bad = "#586E75"
+#         color_degraded = "#DC322F"
+# }
+
 general {
         colors = true
         interval = 5
-        color_good = "#2AA198"
-        color_bad = "#586E75"
-        color_degraded = "#DC322F"
+        color_good = "#a6e3a1"
+        color_bad = "#f38ba8"
+        color_degraded = "#f38ba8"
 }
 
 # order += "ipv6"
