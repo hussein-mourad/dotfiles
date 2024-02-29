@@ -6,6 +6,11 @@
 return {
   -- first key is the mode
   n = {
+    -- ["<leader>s"] = { ":w! <Enter>", "Save File" },
+    ["<C-d>"] = { "<C-d>zz", desc = "Center the cursor after motion" },
+    ["<C-u>"] = { "<C-u>zz", desc = "Center the cursor after motion" },
+    ["n"] = { "nzzzv", desc = "Center the cursor after search" },
+    ["N"] = { "Nzzzv", desc = "Center the cursor after search" },
     -- second key is the lefthand side of the map
 
     -- navigate buffer tabs with `H` and `L`

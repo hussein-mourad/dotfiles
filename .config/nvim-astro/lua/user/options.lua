@@ -8,7 +8,7 @@ return {
     signcolumn = "auto", -- sets vim.opt.signcolumn to auto
     wrap = false, -- sets vim.opt.wrap
     colorcolumn = "80",
-    scrolloff = 4,
+    scrolloff = 2,
     -- opt.undodir = os.getenv('HOME') .. "/.vim/undodir"
   },
   g = {
