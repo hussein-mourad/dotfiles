@@ -157,6 +157,7 @@ alias azkar='nohup zathura --page=54 /mnt/d/linux/Documents/books/islam/hisn-al-
 
 # folder shortcut
 alias term10='cd /mnt/d/college/term10/'
+alias dotfiles='cd ~/dotfiles'
 
 # commands enhancement
 if [ -x "$(command -v lsd)" ]; then
