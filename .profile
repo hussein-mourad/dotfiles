@@ -10,28 +10,30 @@
 
 # if running bash
 if [ -n "$BASH_VERSION" ]; then
-    # include .bashrc if it exists
-    if [ -f "$HOME/.bashrc" ]; then
-	. "$HOME/.bashrc"
-    fi
+	# include .bashrc if it exists
+	if [ -f "$HOME/.bashrc" ]; then
+		. "$HOME/.bashrc"
+	fi
 fi
 
 # set PATH so it includes user's private bin if it exists
-if [ -d "$HOME/bin" ] ; then
-    PATH="$HOME/bin:$PATH"
+if [ -d "$HOME/bin" ]; then
+	PATH="$HOME/bin:$PATH"
 fi
 
 # set PATH so it includes user's private bin if it exists
-if [ -d "$HOME/.local/bin" ] ; then
-    PATH="$HOME/.local/bin:$PATH"
+if [ -d "$HOME/.local/bin" ]; then
+	PATH="$HOME/.local/bin:$PATH"
 fi
 
-#setxkbmap -option caps:escape 
+#setxkbmap -option caps:escape
 #setxkbmap -option shift:both_capslock_cancel
 
 #setxkbmap -model pc105
 #setxkbmap -layout us,ara -variant ,digits
 timedatectl set-local-rtc 1
+
+PATH="$PATH:$HOME/go/bin"
 
 export BROWSER=/usr/bin/firefox
 # export TERM=rxvt-unicode-256color
