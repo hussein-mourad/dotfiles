@@ -9,8 +9,10 @@ return {
 
   -- langs
   { import = "astrocommunity.pack.bash" },
+  { import = "astrocommunity.pack.cpp" },
   { import = "astrocommunity.pack.python" },
   { import = "astrocommunity.pack.go" },
+  { import = "astrocommunity.pack.lua" },
   { import = "astrocommunity.pack.lua" },
 
   -- web dev

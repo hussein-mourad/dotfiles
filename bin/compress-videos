@@ -2,9 +2,9 @@
 
 # Check for the correct number of arguments
 if [ "$#" -ne 2 ]; then
-    echo "Usage: $0 <input_directory> <output_directory>"
-    # echo "Usage: $0 <input_directory> <output_directory> <quality>"
-    exit 1
+	echo "Usage: $0 <input_directory> <output_directory>"
+	# echo "Usage: $0 <input_directory> <output_directory> <quality>"
+	exit 1
 fi
 
 # Assign command-line arguments to variables
@@ -12,18 +12,20 @@ VIDEO_DIR="$1"
 OUTPUT_DIR="$2"
 # QUALITY="$3"
 
+# Check man test for flags options
+[ ! -d "$OUTPUT_DIR" ] && mkdir -v "$OUTPUT_DIR"
+
 # Loop through each video file in the input directory
 for file in "$VIDEO_DIR"/*; do
-    # Check if the file is a regular file
-    if [ -f "$file" ]; then
-        # Get the filename without extension
-        filename=$(basename -- "$file")
-        filename_no_ext="${filename%.*}"
+	# Check if the file is a regular file
+	if [ -f "$file" ]; then
+		# Get the filename without extension
+		filename=$(basename -- "$file")
+		filename_no_ext="${filename%.*}"
 
-        # Compress the video using HandBrakeCLI
-        HandBrakeCLI --input "$file" --output "$OUTPUT_DIR"/"${filename_no_ext}-compressed.mp4"        
-        # HandBrakeCLI --input "$file" --output "$OUTPUT_DIR"/"${filename_no_ext}_compressed.mp4" --quality "$QUALITY"
+		# Compress the video using HandBrakeCLI
+		HandBrakeCLI --input "$file" --output "$OUTPUT_DIR"/"${filename_no_ext}-compressed.mp4"
+		# HandBrakeCLI --input "$file" --output "$OUTPUT_DIR"/"${filename_no_ext}_compressed.mp4" --quality "$QUALITY"
 
-
-    fi
+	fi
 done

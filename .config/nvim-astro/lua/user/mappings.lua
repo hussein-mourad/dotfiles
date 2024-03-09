@@ -11,6 +11,8 @@ return {
     ["<C-u>"] = { "<C-u>zz", desc = "Center the cursor after motion" },
     ["n"] = { "nzzzv", desc = "Center the cursor after search" },
     ["N"] = { "Nzzzv", desc = "Center the cursor after search" },
+    ["="] = { "<C-a>", desc = "Increment" },
+    ["-"] = { "<C-x>", desc = "Decrement" },
     -- second key is the lefthand side of the map
 
     -- navigate buffer tabs with `H` and `L`
