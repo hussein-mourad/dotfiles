@@ -124,6 +124,7 @@ alias browser=firefox
 
 # git
 alias gaf='git add -f'
+alias lg='lazygit'
 
 # netowrking
 alias ping='ping -c 5'
