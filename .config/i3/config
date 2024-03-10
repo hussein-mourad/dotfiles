@@ -86,6 +86,7 @@ bindsym Print exec --no-startup-id i3-scrot
 bindsym $mod+Print --release exec --no-startup-id i3-scrot -w
 bindsym $mod+Shift+Print --release exec --no-startup-id i3-scrot -s
 bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
+bindsym $mod+Shift+w workspace $ws6; exec $HOME/bin/launch-win11-vm;
 #bindsym $mod+Shift+h exec xdg-open /usr/share/doc/manjaro/i3_help.pdf
 #bindsym $mod+f exec pcmanfm
 
