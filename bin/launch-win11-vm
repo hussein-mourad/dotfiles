@@ -1,4 +1,12 @@
 #!/bin/bash
 
-virsh --connect qemu:///system start win11; 
-virt-manager --connect qemu:///system --show-domain-console win11;
+vm_name="win11"
+
+virsh --connect qemu:///system start $vm_name
+virt-viewer --connect qemu:///system $vm_name --full-screen --hotkeys=release-cursor=ctrl+alt
+
+# virt-manager doesn't support full screen from cmdline.
+# virt-manager --connect qemu:///system --show-domain-console $vm_name
+
+# To stop vm from cli:
+# sudo virsh shutdown win11
