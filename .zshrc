@@ -137,3 +137,5 @@ export FZF_DEFAULT_OPTS=" \
 # fpath+=~/.zfunc
 # autoload -Uz compinit && compinit
 eval "$(zoxide init zsh)"
+
+eval "$(starship init zsh)"
