@@ -10,3 +10,4 @@ virt-viewer --connect qemu:///system $vm_name --full-screen --hotkeys=release-cu
 
 # To stop vm from cli:
 # sudo virsh shutdown win11
+# virsh -c qemu:///system shutdown win11
