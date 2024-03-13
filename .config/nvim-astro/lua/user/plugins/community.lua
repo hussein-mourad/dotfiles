@@ -33,4 +33,7 @@ return {
 
   { import = "astrocommunity.editing-support.zen-mode-nvim" },
   { import = "astrocommunity.editing-support.todo-comments-nvim" },
+
+  -- motion
+  { import = "astrocommunity.motion.mini-surround" },
 }
