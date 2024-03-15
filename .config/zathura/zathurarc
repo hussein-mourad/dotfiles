@@ -1,4 +1,7 @@
 include catppuccin-mocha
 map i recolor
+map [fullscreen] i recolor
+map [presentation] i recolor
+map [index] i recolor
 map p print
 set selection-clipboard clipboard
