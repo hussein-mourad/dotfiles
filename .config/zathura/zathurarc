@@ -3,5 +3,9 @@ map i recolor
 map [fullscreen] i recolor
 map [presentation] i recolor
 map [index] i recolor
+map d scroll half-down
+map u scroll half-up
+unmap [fullscreen] <Esc>
+map [fullscreen] <Esc> toggle_fullscreen
 map p print
 set selection-clipboard clipboard
