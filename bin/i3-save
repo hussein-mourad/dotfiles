@@ -1,0 +1,5 @@
+i3-resurrect save -w 1 -d ~/.cache/i3/workspaces/
+i3-resurrect save -w 2 -d ~/.cache/i3/workspaces/
+i3-resurrect save -w 3 -d ~/.cache/i3/workspaces/
+i3-resurrect save -w 4 -d ~/.cache/i3/workspaces/
+i3-resurrect save -w 5 -d ~/.cache/i3/workspaces/
