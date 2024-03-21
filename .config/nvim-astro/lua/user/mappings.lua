@@ -38,6 +38,26 @@ return {
     -- this is useful for naming menus
     ["<leader>b"] = { name = "Buffers" },
     ["<leader>ga"] = { "<cmd>AerialToggle<cr>", desc = "Toggle code outline" },
+    ["!"] = {
+      function()
+        -- Toggle boolean value
+        local word = vim.fn.expand "<cword>"
+        local toggle_map = {
+          ["true"] = "false",
+          ["false"] = "true",
+          ["True"] = "False",
+          ["False"] = "True",
+          ["1"] = "0",
+          ["0"] = "1",
+        }
+        if toggle_map[word] == nil then return end
+        local new_word = toggle_map[word]
+        vim.api.nvim_feedkeys("ciw" .. new_word, "n", true)
+        local key = vim.api.nvim_replace_termcodes("<Esc>", true, true, true)
+        vim.api.nvim_feedkeys(key, "n", true)
+      end,
+      desc = "invert current word",
+    },
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
   },

@@ -153,7 +153,7 @@ alias zshc="vi ~/.zshrc && zsh"
 alias ohmyzsh="vi ~/.oh-my-zsh"
 alias i3c="vi ~/.config/i3/config"
 #alias i3blocksc="vi ~/.config/i3/i3blocks.conf"
-alias tmuxc="vi ~/.config/tmux/tmux.conf && tmux source-file ~/config/tmux/tmux.conf "
+alias tmuxc="vi ~/.config/tmux/tmux.conf && tmux source-file ~/.config/tmux/tmux.conf "
 alias azkar='nohup zathura --page=54 /mnt/d/linux/Documents/books/islam/hisn-al-muslim.pdf > /dev/null 2>&1  &'
 
 # folder shortcut
