@@ -102,13 +102,14 @@ rar)
 	} || exit 1
 	;;
 # PDF documents:
-# pdf)
-# 	try pdftotext -l 10 -nopgbrk -q "$path" - &&
-# 		{
-# 			dump | trim | fmt -s -w $width
-# 			exit 0
-# 		} || exit 1
-# 	;;
+pdf)
+	# try pdftoppm -jpeg -singlefile "$path" "${cached//.jpg}" && exit 6 || exit 1;;
+	try pdftotext -l 10 -nopgbrk -q "$path" - &&
+		{
+			dump | trim | fmt -s -w $width
+			exit 0
+		} || exit 1
+	;;
 # BitTorrent Files
 torrent)
 	try transmission-show "$path" && {
