@@ -175,8 +175,7 @@ set $ws5 5
 set $ws6 6
 # Telegram
 set $ws7 
-set $ws8 8
-
+set $ws8 
 # Icons: https://fontawesome.com/v5/
 
 # switch to workspace
@@ -462,7 +461,7 @@ exec --no-startup-id blueman-applet
 # exec_always --no-startup-id sbxkb
 # exec --no-startup-id start_conky_maia
 #exec --no-startup-id start_conky_green
-exec --no-startup-id megasync
+# exec --no-startup-id megasync
 exec --no-startup-id syncthing --no-browser
 exec --no-startup-id telegram-desktop; workspace $ws1
 # exec --no-startup-id safeeyes
@@ -474,5 +473,5 @@ exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
 exec --no-startup-id redshift -c ~/.config/redshift.conf
 #exec_always --no-startup-id xrandr --output eDP-1 --left-of HDMI-1-1
-exec i3-msg 'workspace $ws1; exec firefox'
-exec i3-msg 'workspace $ws2; exec i3-sensible-terminal -e tmux'
+# exec i3-msg 'workspace $ws1; exec firefox'
+exec --no-startup-id i3-msg 'workspace $ws2; exec --no-startup-id i3-sensible-terminal -e tmux; workspace $w1'
