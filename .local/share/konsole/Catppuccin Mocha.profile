@@ -1,12 +1,12 @@
 [Appearance]
 ColorScheme=Catppuccin-Mocha
 DimmValue=19
-Font=JetBrainsMono Nerd Font Mono,11,-1,5,57,0,0,0,0,0,Medium
+Font=FiraCode Nerd Font,11,-1,5,53,0,0,0,0,0,Retina
 LineSpacing=0
 
 [General]
 DimWhenInactive=false
-Icon=/home/hussein/data/Pictures/icons/catppuccin.png
+Icon=/home/hussein/.local/share/konsole/catppuccin.png
 Name=Catppuccin Mocha
 Parent=FALLBACK/
 ShowTerminalSizeHint=false

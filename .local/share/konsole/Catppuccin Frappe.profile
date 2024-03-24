@@ -6,7 +6,7 @@ LineSpacing=0
 
 [General]
 DimWhenInactive=false
-Icon=/home/hussein/data/Pictures/icons/catppuccin.png
+Icon=/home/hussein/.local/share/konsole/catppuccin.png
 Name=Catppuccin Frappe
 Parent=FALLBACK/
 ShowTerminalSizeHint=false
