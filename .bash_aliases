@@ -1,3 +1,6 @@
+#!/bin/bash
+
+# Notes:
 # How to disable alias temporarily
 # full path, ex:
 # /usr/bin/clear
@@ -9,20 +12,19 @@
 # unalias c
 
 # Environment Variables
-export DATA_ROOT='/mnt/d/linux'
-export DESKTOP="$DATA_ROOT/Desktop"
-export DOCUMENTS="$DATA_ROOT/Documents"
-export DOWNLOADS="$DATA_ROOT/Downloads"
-export PICTURES="$DATA_ROOT/Pictures"
-export VIDEOS="$DATA_ROOT/Videos"
-export MUSIC="$DATA_ROOT/Music"
-export UNI='/mnt/d/college/term9'
-export WORK='/mnt/work'
+export DATA_ROOT='/mnt/d/data'
+export DESKTOP="$HOME/data/desktop"
+export DOCUMENTS="$DATA_ROOT/documents"
+export DOWNLOADS="$DATA_ROOT/downloads"
+export PICTURES="$DATA_ROOT/media/pictures"
+export VIDEOS="$DATA_ROOT/media/videos"
+export MUSIC="$DATA_ROOT/media/music"
 
 # clear
 alias c='clear'
 
 # vim
+alias v="NVIM_APPNAME=nvim-astro command nvim"
 alias vi="NVIM_APPNAME=nvim-astro command nvim"
 alias nvim="NVIM_APPNAME=nvim-astro command nvim"
 
@@ -113,12 +115,12 @@ alias ranger='ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir
 alias wget='wget -c' # continue by default
 
 # browsers
-alias ff4='/opt/firefox4/firefox'
-alias ff13='/opt/firefox13/firefox'
-alias chrome='/opt/google/chrome/chrome'
-alias opera='/opt/opera/opera'
+# alias ff4='/opt/firefox4/firefox'
+# alias ff13='/opt/firefox13/firefox'
+# alias chrome='/opt/google/chrome/chrome'
+# alias opera='/opt/opera/opera'
 #default ff
-alias ff=ff13
+# alias ff=ff13
 #my default browser
 alias browser=firefox
 
@@ -129,11 +131,6 @@ alias lg='lazygit'
 # netowrking
 alias ping='ping -c 5'
 alias fastping='ping -c 100 -s .2'
-
-# navigation
-alias java16="export JAVA_HOME=/home/hussein/Downloads/jdk-16.0.1/bin/;export PATH=$PATH:$JAVA_HOME"
-alias backup="cd /mnt/d/linux/Downloads/fresh_linux_install"
-alias work="/mnt/work"
 
 # package manager
 #alias q='apt search'
@@ -152,12 +149,12 @@ alias functions="vi ~/.bash_functions && source ~/.bash_functions"
 alias zshc="vi ~/.zshrc && zsh"
 alias ohmyzsh="vi ~/.oh-my-zsh"
 alias i3c="vi ~/.config/i3/config"
-#alias i3blocksc="vi ~/.config/i3/i3blocks.conf"
+alias i3blocksc="vi ~/.config/i3/i3blocks.conf"
 alias tmuxc="vi ~/.config/tmux/tmux.conf && tmux source-file ~/.config/tmux/tmux.conf "
-alias azkar='nohup zathura --page=54 /mnt/d/linux/Documents/books/islam/hisn-al-muslim.pdf > /dev/null 2>&1  &'
+alias azkar='nohup zathura --page=54 /mnt/d/data/documents/books/islam/hisn-al-muslim.pdf > /dev/null 2>&1  &'
 
-# folder shortcut
-alias term10='cd /mnt/d/college/term10/'
+# directory shortcut
+alias term10='cd /mnt/d/data/college/term10/'
 alias dotfiles='cd ~/dotfiles'
 
 # commands enhancement

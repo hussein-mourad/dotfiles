@@ -3,9 +3,13 @@ set recolor false
 map i recolor
 map [fullscreen] i recolor
 map [presentation] i recolor
+map [presentation] j scroll full-down
+map [presentation] k scroll full-up
 map [index] i recolor
 map d scroll half-down
 map u scroll half-up
+map [ scroll full-down
+map ] scroll full-up
 unmap [fullscreen] <Esc>
 map [fullscreen] <Esc> toggle_fullscreen
 map p print

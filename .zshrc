@@ -2,9 +2,6 @@ source ~/.profile
 export PATH=$HOME/.local/bin:$HOME/.bin:$HOME/bin:/usr/local/bin:/snap/bin/:$PATH
 
 export ZSH="$HOME/.oh-my-zsh"
- # Microsoft Edge cv_debug.log file fix
- #export TMPDIR="/tmp;microsoft-edge"
-export TMPDIR="/tmp"
 
 # Source files
 source ~/.antigen.conf
@@ -104,8 +101,6 @@ export LANG=en_US.UTF-8
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
-#
-#IPADDR=$(hostname -I | awk '{print $1}')
 
 # bash ~/Downloads/pfetch-0.6.0/pfetch
 # neofetch
@@ -113,20 +108,15 @@ export LANG=en_US.UTF-8
 # figlet -t hussein
 # colorscript random
 
-# Nala
-# autoload bashcompinit;
-# bashcompinit;
-# source /usr/share/bash-completion/completions/nala;
-
 # Remove Background colors
 eval "$(dircolors -p | \
     sed 's/ 4[0-9];/ 01;/; s/;4[0-9];/;01;/g; s/;4[0-9] /;01 /' | \
     dircolors /dev/stdin)"
 
-export FZF_DEFAULT_OPTS=" \
---color=bg+:#363a4f,bg:#24273a,spinner:#f4dbd6,hl:#ed8796 \
---color=fg:#cad3f5,header:#ed8796,info:#c6a0f6,pointer:#f4dbd6 \
---color=marker:#f4dbd6,fg+:#cad3f5,prompt:#c6a0f6,hl+:#ed8796"
+# export FZF_DEFAULT_OPTS=" \
+# --color=bg+:#363a4f,bg:#24273a,spinner:#f4dbd6,hl:#ed8796 \
+# --color=fg:#cad3f5,header:#ed8796,info:#c6a0f6,pointer:#f4dbd6 \
+# --color=marker:#f4dbd6,fg+:#cad3f5,prompt:#c6a0f6,hl+:#ed8796"
 
 # source /usr/share/nvm/init-nvm.sh
 
@@ -137,5 +127,5 @@ export FZF_DEFAULT_OPTS=" \
 # fpath+=~/.zfunc
 # autoload -Uz compinit && compinit
 eval "$(zoxide init zsh)"
-
+# eval "$(fzf --zsh)"
 eval "$(starship init zsh)"

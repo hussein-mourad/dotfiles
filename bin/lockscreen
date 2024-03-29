@@ -12,8 +12,8 @@
 # Catppuccin macchiato
 BLANK='#00000000'
 CLEAR='#24273aee'
-DEFAULT='#c6d0f5'
-TEXT='#c6d0f5'
+DEFAULT='#89b4fa'
+TEXT='#89b4fa'
 WRONG='#303446'
 VERIFYING='#89b4fa'
 BGCOLOR='1e1e2e'

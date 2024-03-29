@@ -472,6 +472,7 @@ exec --no-startup-id xautolock -time 10 -locker $HOME/bin/lockscreen
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
 exec --no-startup-id redshift -c ~/.config/redshift.conf
+exec --no-startup-id flameshot
 #exec_always --no-startup-id xrandr --output eDP-1 --left-of HDMI-1-1
 # exec i3-msg 'workspace $ws1; exec firefox'
-exec --no-startup-id i3-msg 'workspace $ws2; exec --no-startup-id i3-sensible-terminal -e tmux; workspace $w1'
+exec --no-startup-id i3-msg 'workspace $ws2; exec --no-startup-id i3-sensible-terminal -e tmux; workspace $ws1'
