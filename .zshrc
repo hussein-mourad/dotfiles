@@ -129,3 +129,6 @@ eval "$(dircolors -p | \
 eval "$(zoxide init zsh)"
 # eval "$(fzf --zsh)"
 eval "$(starship init zsh)"
+# source fzf key bindings script
+command -v fzf > /dev/null && [ -f ~/.local/share/fzf/completion.zsh.zsh ] && . ~/.local/share/fzf/completion.zsh.zsh || true
+command -v fzf > /dev/null && [ -f ~/.local/share/fzf/key-bindings.zsh ] && . ~/.local/share/fzf/key-bindings.zsh || true

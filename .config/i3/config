@@ -76,15 +76,20 @@ bindsym $mod+equal exec pulseaudio-ctl up +5%
 # Start Applications
 bindsym $mod+Ctrl+b exec i3-sensible-terminal -e 'bmenu'
 bindsym $mod+b exec firefox
-bindsym $mod+p exec keepassxc
+bindsym $mod+p exec --no-startup-id $HOME/bin/keepassxc-open;
 bindsym $mod+f exec i3-sensible-terminal -e 'ranger';
 bindsym $mod+F5 exec i3-sensible-terminal -e 'mocp'
 bindsym $mod+t exec --no-startup-id pkill picom
 bindsym $mod+Ctrl+t exec --no-startup-id picom -b
 bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart dunst'"
-bindsym Print exec --no-startup-id i3-scrot
-bindsym $mod+Print --release exec --no-startup-id i3-scrot -w
-bindsym $mod+Shift+Print --release exec --no-startup-id i3-scrot -s
+bindsym Print exec --no-startup-id flameshot full
+bindsym $mod+Ctrl+Print exec --no-startup-id flameshot full -c
+bindsym $mod+Print exec --no-startup-id flameshot gui
+# bindsym Print exec --no-startup-id i3-scrot
+# bindsym $mod+Print --release exec --no-startup-id i3-scrot -w
+# bindsym $mod+Shift+Print --release exec --no-startup-id i3-scrot -s
+# bindsym $mod+Print --release exec --no-startup-id i3-scrot -w
+# bindsym $mod+Shift+Print --release exec --no-startup-id i3-scrot -s
 bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
 bindsym $mod+Shift+w --release exec $HOME/bin/launch-win11-vm;
 #bindsym $mod+Shift+h exec xdg-open /usr/share/doc/manjaro/i3_help.pdf
@@ -147,11 +152,11 @@ bindsym $mod+Shift+o floating toggle
 bindsym $mod+a focus parent
 
 # move the currently focused window to the scratchpad
-# bindsym $mod+Shift+minus move scratchpad
+bindsym $mod+Shift+minus move scratchpad
 
 # Show the next scratchpad window or hide the focused scratchpad window.
 # If there are multiple scratchpad windows, this command cycles through them.
-# bindsym $mod+minus scratchpad show
+bindsym $mod+Shift+plus scratchpad show
 
 #navigate workspaces next / previous
 bindsym $mod+Ctrl+Right workspace next
@@ -214,8 +219,8 @@ bindsym $mod+Shift+8 move container to workspace $ws8; workspace $ws8
 # assign [class="Pcmanfm"] $ws3
 # assign [class="Skype"] $ws5
 # assign [class="TelegramDesktop"] $ws7
-for_window [class="TelegramDesktop"] move to workspace $ws7
 assign [class="Virt-viewer"] $ws6
+for_window [class="TelegramDesktop"] move to workspace $ws7
 assign [class="KeePassXC"] $ws8
 
 # Open specific applications in floating mode

@@ -33,11 +33,11 @@ alias nvimc="cd ~/.config/nvim-astro/lua/user && vi . && cd - "
 alias nvchadc="cd ~/.config/nvim-chad && vi && cd - "
 
 # ls
+alias l='ls -ChF'
+alias l.='ls -hd .*'
 alias ll='ls -lhF'
 alias la='ls -Ahl'
 alias lsl='ls -ahl | less'
-alias l='ls -ChF'
-alias l.='ls -hd .*'
 
 # cd
 alias cd..='cd ..' # Get rid of command not found
@@ -48,10 +48,9 @@ alias .....='cd ../../../../../'
 alias .4='cd ../../../../'
 alias .5='cd ../../../../../'
 
-# mkdir
 alias mkdir='mkdir -pv'
+alias rmdir='rmdir -pv'
 
-# rsync
 alias rsync='rsync --progress -ravz'
 
 # calculator
@@ -69,17 +68,17 @@ alias path='echo -e ${PATH//:/\\n}' # Print $PATH in a neat way
 alias now='date +"%T"'
 alias nowtime=now
 alias nowdate='date +"%d-%m-%Y"'
-# Add an "alert" alias for long running commands.  Use like so:
+# add an "alert" alias for long running commands.  use like so:
 # sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
-# Add safety
-alias rm="rm -i --preserve-root"
-alias mv='mv -i'
-alias cp='cp -i'
-alias ln='ln -i'
+# add safety
+alias rm="rm -vi --preserve-root"
+alias mv='mv -vi'
+alias cp='cp -vi'
+alias ln='ln -vi'
 
-# Parenting changing perms on / #
+# parenting changing perms on / #
 alias chown='chown --preserve-root'
 alias chmod='chmod --preserve-root'
 alias chgrp='chgrp --preserve-root'
@@ -142,6 +141,21 @@ alias i='sudo pacman -S'
 alias u="sudo pacman -Syu"
 alias r='sudo pacman -Rsc'
 
+# commands enhancement (modern unix tools)
+if [ -x "$(command -v lsd)" ]; then
+	alias ls="lsd"
+	alias lt="lsd --tree"
+fi
+if [ -x "$(command -v dust)" ]; then
+	alias du="dust"
+fi
+if [ -x "$(command -v duf)" ]; then
+	alias df="duf"
+fi
+if [ -x "$(command -v bat)" ]; then
+	alias cat="bat"
+fi
+
 # file shortcut
 alias bashrc="vi ~/.bashrc && source ~/.bashrc"
 alias aliases="vi ~/.bash_aliases && source ~/.bash_aliases"
@@ -156,18 +170,3 @@ alias azkar='nohup zathura --page=54 /mnt/d/data/documents/books/islam/hisn-al-m
 # directory shortcut
 alias term10='cd /mnt/d/data/college/term10/'
 alias dotfiles='cd ~/dotfiles'
-
-# commands enhancement
-if [ -x "$(command -v lsd)" ]; then
-	alias ls="lsd"
-	alias lt="lsd --tree"
-fi
-if [ -x "$(command -v dust)" ]; then
-	alias du="dust"
-fi
-if [ -x "$(command -v duf)" ]; then
-	alias df="duf"
-fi
-if [ -x "$(command -v bat)" ]; then
-	alias cat="bat"
-fi

@@ -1,0 +1,27 @@
+#!/bin/bash
+
+# This script makes filenames to be word1-word2.extension
+
+renamed=0
+skipped=0
+for file in "$@"; do
+	# Check if it's a regular file
+	if [ -f "$file" ]; then
+		# Convert spaces and underscores to hyphens, and make everything lowercase
+		new_name=$(echo "$file" | tr '[:upper:]' '[:lower:]' | sed 's/ \+/-/g' | sed 's/-\+/-/g' | sed 's/_\+/-/g')
+
+		# Check if the new name already exists
+		if [ -e "$new_name" ]; then
+			echo "Skipped: $file, $new_name already exists."
+			((skipped += 1))
+		else
+			# Rename the file
+			mv "$file" "$new_name"
+			echo "Renamed: $file to $new_name"
+			((renamed += 1))
+		fi
+	fi
+done
+
+echo "Renamed $renamed files"
+echo "Skipped $skipped files"

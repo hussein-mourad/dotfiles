@@ -36,4 +36,7 @@ return {
 
   -- motion
   { import = "astrocommunity.motion.mini-surround" },
+
+  -- fuzzy-finder
+  { import = "astrocommunity.fuzzy-finder.telescope-zoxide" },
 }
