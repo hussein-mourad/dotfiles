@@ -1,26 +1,26 @@
 #!/bin/bash
 
-# This script makes filenames to be word1-word2.extension
+# This script makes files and directory names to kebab-case
 
 renamed=0
 skipped=0
 for file in "$@"; do
-	# Check if it's a regular file
-	if [ -f "$file" ]; then
-		# Change camelCase like to kebab-case
-		# Convert spaces and underscores to hyphens, and make everything lowercase
-		new_name=$(echo "$file" | sed -E "s/([a-z0-9])([A-Z])/\\1-\\2/g" | sed 's/ \+/-/g' | sed 's/_\+/-/g' | sed 's/-\+/-/g' | tr '[:upper:]' '[:lower:]')
+	# convert camelCase to kebab-case
+	new_name=$(echo "$file" | sed -E "s/([a-z0-9])([A-Z])/\\1-\\2/g")
+	# convert spaces and underscores to hyphens,
+	new_name=$(echo "$new_name" | sed 's/ \+/-/g' | sed 's/_\+/-/g' | sed 's/-\+/-/g')
+	# convert to lowercase
+	new_name=$(echo "$new_name" | tr '[:upper:]' '[:lower:]')
 
-		# Check if the new name already exists
-		if [ -e "$new_name" ]; then
-			echo "Skipped: $file, $new_name already exists."
-			((skipped += 1))
-		else
-			# Rename the file
-			mv "$file" "$new_name"
-			echo "Renamed: $file to $new_name"
-			((renamed += 1))
-		fi
+	# Check if the new name already exists
+	if [ -e "$new_name" ]; then
+		echo "Skipped: $file, $new_name already exists."
+		((skipped += 1))
+	else
+		# Rename the file
+		mv "$file" "$new_name"
+		echo "Renamed: $file to $new_name"
+		((renamed += 1))
 	fi
 done
 
