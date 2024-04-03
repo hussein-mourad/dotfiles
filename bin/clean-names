@@ -7,8 +7,9 @@ skipped=0
 for file in "$@"; do
 	# Check if it's a regular file
 	if [ -f "$file" ]; then
+		# Change camelCase like to kebab-case
 		# Convert spaces and underscores to hyphens, and make everything lowercase
-		new_name=$(echo "$file" | tr '[:upper:]' '[:lower:]' | sed 's/ \+/-/g' | sed 's/-\+/-/g' | sed 's/_\+/-/g')
+		new_name=$(echo "$file" | sed -E "s/([a-z0-9])([A-Z])/\\1-\\2/g" | sed 's/ \+/-/g' | sed 's/_\+/-/g' | sed 's/-\+/-/g' | tr '[:upper:]' '[:lower:]')
 
 		# Check if the new name already exists
 		if [ -e "$new_name" ]; then
