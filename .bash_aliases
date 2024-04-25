@@ -170,3 +170,6 @@ alias azkar='nohup zathura --page=54 /mnt/d/data/documents/books/islam/hisn-al-m
 # directory shortcut
 alias term10='cd /mnt/d/data/college/term10/'
 alias dotfiles='cd ~/dotfiles'
+
+# functions
+alias homelab-battery="ssh homelab upower -i /org/freedesktop/UPower/devices/battery_BAT1"

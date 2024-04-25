@@ -9,6 +9,26 @@ source ~/.bash_aliases
 source ~/.bash_functions
 source ~/bin/nvim-switcher
 
+# https://read.highgrowthengineer.com/p/how-i-setup-my-terminal-for-max-productivity
+# https://martinheinz.dev/blog/110
+HISTFILE="$HOME/.zsh_history"
+# Display timestamps for each command
+HIST_STAMPS="%T %d.%m.%y"
+
+HISTSIZE=10000000
+SAVEHIST=10000000
+
+# Ignore these commands in history
+HISTORY_IGNORE="(ls|pwd|cd)*"
+
+# Write the history file in the ':start:elapsed;command' format.
+setopt EXTENDED_HISTORY
+
+# Do not record an event starting with a space.
+setopt HIST_IGNORE_SPACE
+
+# Don't store history commands
+setopt HIST_NO_STORE
 
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 
@@ -24,7 +44,7 @@ source ~/bin/nvim-switcher
 
 # Uncomment the following line to use hyphen-insensitive completion.
 # Case-sensitive completion must be off. _ and - will be interchangeable.
-# HYPHEN_INSENSITIVE="true"
+HYPHEN_INSENSITIVE="true"
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
 # DISABLE_AUTO_UPDATE="true"
@@ -63,7 +83,7 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
 # or set a custom format using the strftime function format specifications,
 # see 'man strftime' for details.
-HIST_STAMPS="mm/dd/yyyy"
+# HIST_STAMPS="mm/dd/yyyy"
 
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
@@ -97,26 +117,15 @@ export LANG=en_US.UTF-8
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-
-# bash ~/Downloads/pfetch-0.6.0/pfetch
-# neofetch
-# Fun
-# figlet -t hussein
-# colorscript random
-
 # Remove Background colors
 eval "$(dircolors -p | \
     sed 's/ 4[0-9];/ 01;/; s/;4[0-9];/;01;/g; s/;4[0-9] /;01 /' | \
     dircolors /dev/stdin)"
 
-# export FZF_DEFAULT_OPTS=" \
-# --color=bg+:#363a4f,bg:#24273a,spinner:#f4dbd6,hl:#ed8796 \
-# --color=fg:#cad3f5,header:#ed8796,info:#c6a0f6,pointer:#f4dbd6 \
-# --color=marker:#f4dbd6,fg+:#cad3f5,prompt:#c6a0f6,hl+:#ed8796"
+export FZF_DEFAULT_OPTS=" \
+--color=bg+:#363a4f,bg:#24273a,spinner:#f4dbd6,hl:#ed8796 \
+--color=fg:#cad3f5,header:#ed8796,info:#c6a0f6,pointer:#f4dbd6 \
+--color=marker:#f4dbd6,fg+:#cad3f5,prompt:#c6a0f6,hl+:#ed8796"
 
 # source /usr/share/nvm/init-nvm.sh
 

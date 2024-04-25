@@ -1,28 +1,48 @@
 #!/bin/bash
 
-# This script makes files and directory names to kebab-case
+# This script renames files and directory to match kebab-case
 
 renamed=0
 skipped=0
-for file in "$@"; do
-	# convert camelCase to kebab-case
-	new_name=$(echo "$file" | sed -E "s/([a-z0-9])([A-Z])/\\1-\\2/g")
-	# convert spaces and underscores to hyphens,
-	new_name=$(echo "$new_name" | sed 's/ \+/-/g' | sed 's/_\+/-/g' | sed 's/-\+/-/g')
-	# convert to lowercase
-	new_name=$(echo "$new_name" | tr '[:upper:]' '[:lower:]')
+
+to_kebab_case() {
+	# convert camelCase to kebab-case, spaces and underscores to hyphens,
+	# convert all to lowercase
+	echo "$1" |
+		sed -E "s/([a-z0-9])([A-Z])/\\1-\\2/g; s/[ _]+/-/g; s/[-]+/-/g" |
+		tr '[:upper:]' '[:lower:]'
+}
+
+rename_file() {
+	file=$1
+	parent=$(dirname "$file")
+	original_name=$(basename "$file")
+	new_name=$(to_kebab_case "$original_name")
 
 	# Check if the new name already exists
-	if [ -e "$new_name" ]; then
-		echo "Skipped: $file, $new_name already exists."
+	if [ -e "$parent/$new_name" ]; then
+		echo "skipped: '$file', '$parent/$new_name' already exists."
 		((skipped += 1))
 	else
-		# Rename the file
-		mv "$file" "$new_name"
-		echo "Renamed: $file to $new_name"
+		# helps with renaming file lowercase version
+		# mv -i "$file" "$parent/tmp_$original_name"
+		# mv -i "$parent/tmp_$original_name" "$parent/$new_name"
+		mv -i "$file" "$parent/$new_name"
+		echo "renamed: '$file' -> '$parent/$new_name'"
 		((renamed += 1))
 	fi
-done
+}
 
-echo "Renamed $renamed files"
-echo "Skipped $skipped files"
+# if no arguments passed use files in pwd
+if [ "$#" -eq 0 ]; then
+	for file in *; do
+		rename_file "$file"
+	done
+else
+	for file in "$@"; do
+		rename_file "$file"
+	done
+fi
+
+echo "renamed $renamed files"
+echo "skipped $skipped files"
