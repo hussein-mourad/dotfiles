@@ -58,6 +58,10 @@ return {
       end,
       desc = "invert current word",
     },
+    ["<leader>k"] = { name = "Keymaps" },
+    ["<leader>ka"] = { "<cmd>set keymap=arabic<cr>", desc = "Change keymap to arabic" },
+    ["<leader>ke"] = { '<cmd>set keymap="<cr>', desc = "Change keymap to english" },
+    ["<leader>fT"] = { "<cmd>TodoTelescope<cr>", desc = "Find all todos" },
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
   },
