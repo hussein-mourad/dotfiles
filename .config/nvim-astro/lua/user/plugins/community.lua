@@ -40,4 +40,7 @@ return {
 
   -- fuzzy-finder
   { import = "astrocommunity.fuzzy-finder.telescope-zoxide" },
+  -- completion
+  { import = "astrocommunity.completion.copilot-lua" },
+  { import = "astrocommunity.completion.copilot-lua-cmp" },
 }
