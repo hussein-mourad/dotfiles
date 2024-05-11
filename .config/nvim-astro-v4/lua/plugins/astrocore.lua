@@ -1,4 +1,4 @@
-if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
+-- if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
 
 -- AstroCore provides a central place to modify mappings, vim options, autocommands, and more!
 -- Configuration documentation can be found with `:h astrocore`
@@ -31,7 +31,14 @@ return {
         number = true, -- sets vim.opt.number
         spell = false, -- sets vim.opt.spell
         signcolumn = "auto", -- sets vim.opt.signcolumn to auto
-        wrap = false, -- sets vim.opt.wrap
+        wrap = true, -- sets vim.opt.wrap
+        colorcolumn = "80",
+        scrolloff = 2,
+        linebreak = true,
+        -- columns = 80,
+        undodir = os.getenv "HOME" .. "/.nvim/undodir",
+        -- textwidth = 0,
+        -- wrapmargin = 0,
       },
       g = { -- vim.g.<key>
         -- configure global vim variables (vim.g)
@@ -47,8 +54,8 @@ return {
         -- second key is the lefthand side of the map
 
         -- navigate buffer tabs with `H` and `L`
-        L = { function() require("astrocore.buffer").nav(vim.v.count1) end, desc = "Next buffer" },
-        H = { function() require("astrocore.buffer").nav(-vim.v.count1) end, desc = "Previous buffer" },
+        -- L = { function() require("astrocore.buffer").nav(vim.v.count1) end, desc = "Next buffer" },
+        -- H = { function() require("astrocore.buffer").nav(-vim.v.count1) end, desc = "Previous buffer" },
 
         -- mappings seen under group name "Buffer"
         ["<Leader>bD"] = {
@@ -63,7 +70,40 @@ return {
         -- this is useful for naming menus
         ["<Leader>b"] = { desc = "Buffers" },
         -- quick save
-        -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
+        ["<C-s>"] = { ":w!<cr>", desc = "Save File" }, -- change description but the same command
+
+        ["<C-d>"] = { "<C-d>zz", desc = "Center the cursor after motion" },
+        ["<C-u>"] = { "<C-u>zz", desc = "Center the cursor after motion" },
+        ["n"] = { "nzzzv", desc = "Center the cursor after search" },
+        ["N"] = { "Nzzzv", desc = "Center the cursor after search" },
+        ["="] = { "<C-a>", desc = "Increment" },
+        ["-"] = { "<C-x>", desc = "Decrement" },
+
+        ["<leader>ga"] = { "<cmd>AerialToggle<cr>", desc = "Toggle code outline" },
+        ["!"] = {
+          function()
+            -- Toggle boolean value
+            local word = vim.fn.expand "<cword>"
+            local toggle_map = {
+              ["true"] = "false",
+              ["false"] = "true",
+              ["True"] = "False",
+              ["False"] = "True",
+              ["1"] = "0",
+              ["0"] = "1",
+            }
+            if toggle_map[word] == nil then return end
+            local new_word = toggle_map[word]
+            vim.api.nvim_feedkeys("ciw" .. new_word, "n", true)
+            local key = vim.api.nvim_replace_termcodes("<Esc>", true, true, true)
+            vim.api.nvim_feedkeys(key, "n", true)
+          end,
+          desc = "invert current word",
+        },
+        ["<leader>k"] = { name = "Keymaps" },
+        ["<leader>ka"] = { "<cmd>set keymap=arabic<cr>", desc = "Change keymap to arabic" },
+        ["<leader>ke"] = { '<cmd>set keymap="<cr>', desc = "Change keymap to english" },
+        ["<leader>fT"] = { "<cmd>TodoTelescope<cr>", desc = "Find all todos" },
       },
       t = {
         -- setting a mapping to false will disable it
