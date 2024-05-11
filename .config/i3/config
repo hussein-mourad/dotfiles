@@ -42,13 +42,13 @@ bindsym $mod+Return exec i3-sensible-terminal
 exec --no-startup-id xfce4-terminal --class "floatingTerminal"
 bindsym $mod+Shift+Return exec --no-startup-id xfce4-terminal --class "floatingTerminal"
 for_window [class="floatingTerminal"] floating enable
-for_window [class="floatingTerminal"] move scratchpad
 for_window [class="floatingTerminal"] sticky enable
-for_window [class="floatingTerminal"] scratchpad show
-for_window [class="floatingTerminal"] resize set 1000 600
-for_window [class="floatingTerminal"] move position center
+# for_window [class="floatingTerminal"] resize set 1000 600
 for_window [class="floatingTerminal"] border pixel 1
 for_window [class="floatingTerminal"] border pixel 1
+for_window [class="floatingTerminal"] move scratchpad
+# for_window [class="floatingTerminal"] move position center
+# for_window [class="floatingTerminal"] scratchpad show
 
 
 # bindsym $mod+Shift+Return scratchpad show; exec --no-startup-id i3-sensible-terminal
@@ -270,6 +270,7 @@ for_window [class="Timeset-gui"] floating enable border normal
 for_window [class="(?i)virtualbox"] floating enable border normal
 for_window [class="Xfburn"] floating enable
 for_window [title="PyQt5 Demo"] floating enable border normal
+for_window [title="float"] floating enable border normal
 for_window [title="konsole"] border pixel 1
 
 
