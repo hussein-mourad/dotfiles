@@ -24,13 +24,14 @@ export MUSIC="$DATA_ROOT/media/music"
 alias c='clear'
 
 # vim
-alias v="NVIM_APPNAME=nvim-astro command nvim"
-alias vi="NVIM_APPNAME=nvim-astro command nvim"
-alias nvim="NVIM_APPNAME=nvim-astro command nvim"
+alias v="nvim"
+alias vi="nvim"
+# alias nvim="NVIM_APPNAME=nvim-astro command nvim"
+# alias nvimv4="NVIM_APPNAME=astronvim-v4 command nvim"
 
-alias vimc="vi ~/.vimrc"
-alias nvimc="cd ~/.config/nvim-astro/lua/user && vi . && cd - "
-alias nvchadc="cd ~/.config/nvim-chad && vi && cd - "
+# alias vimc="vi ~/.vimrc"
+# alias nvimc="cd ~/.config/nvim-astro/lua/user && vi . && cd - "
+# alias nvchadc="cd ~/.config/nvim-chad && vi && cd - "
 
 # ls
 alias l='ls -ChF'
