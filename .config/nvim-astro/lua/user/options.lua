@@ -8,12 +8,12 @@ return {
     signcolumn = "auto", -- sets vim.opt.signcolumn to auto
     colorcolumn = "80",
     scrolloff = 2,
-    -- opt.undodir = os.getenv('HOME') .. "/.vim/undodir"
-    -- textwidth = 0,
-    -- wrapmargin = 0,
     wrap = true, -- sets vim.opt.wrap
     linebreak = true,
     -- columns = 80,
+    -- opt.undodir = os.getenv('HOME') .. "/.vim/undodir"
+    -- textwidth = 0,
+    -- wrapmargin = 0,
   },
   g = {
     mapleader = " ", -- sets vim.g.mapleader

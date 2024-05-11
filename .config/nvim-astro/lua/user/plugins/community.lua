@@ -3,6 +3,7 @@ return {
   "AstroNvim/astrocommunity",
   -- example of importing a plugin, comment out to use it or add your own
   -- available plugins can be found at https://github.com/AstroNvim/astrocommunity
+  -- { import = "astrocommunity.recipes.vscode" },
 
   -- colorscheme
   { import = "astrocommunity.colorscheme.catppuccin" },
@@ -18,8 +19,8 @@ return {
 
   -- web dev
   { import = "astrocommunity.pack.html-css" },
-  { import = "astrocommunity.pack.tailwindcss" },
   { import = "astrocommunity.pack.typescript" },
+  { import = "astrocommunity.pack.tailwindcss" },
 
   -- config files
   { import = "astrocommunity.pack.json" },
@@ -40,6 +41,13 @@ return {
 
   -- fuzzy-finder
   { import = "astrocommunity.fuzzy-finder.telescope-zoxide" },
+
+  -- remote-development
+  { import = "astrocommunity.remote-development.netman-nvim" },
+
+  -- media
+  -- { import = "astrocommunity.media.image-nvim" },
+
   -- completion
   { import = "astrocommunity.completion.copilot-lua" },
   { import = "astrocommunity.completion.copilot-lua-cmp" },
