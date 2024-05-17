@@ -26,6 +26,14 @@ if [ -d "$HOME/.local/bin" ]; then
 	PATH="$HOME/.local/bin:$PATH"
 fi
 
+if [ -d "/usr/local/bin" ]; then
+	PATH="/usr/local/bin:$PATH"
+fi
+
+if [ -d "/snap/bin" ]; then
+	PATH="/snap/bin:$PATH"
+fi
+
 #setxkbmap -option caps:escape
 #setxkbmap -option shift:both_capslock_cancel
 
