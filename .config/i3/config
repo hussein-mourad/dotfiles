@@ -112,6 +112,7 @@ bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
 bindsym $mod+Shift+w --release exec $HOME/bin/launch-win11-vm;
 #bindsym $mod+Shift+h exec xdg-open /usr/share/doc/manjaro/i3_help.pdf
 #bindsym $mod+f exec pcmanfm
+bindsym $mod+Tab exec i3-msg 'workspace back_and_forth'
 
 # focus_follows_mouse no
 
@@ -494,7 +495,7 @@ exec --no-startup-id blueman-applet
 #exec --no-startup-id start_conky_green
 # exec --no-startup-id megasync
 exec --no-startup-id syncthing --no-browser
-exec --no-startup-id telegram-desktop; workspace $ws1
+# exec --no-startup-id telegram-desktop; workspace $ws1
 # exec --no-startup-id safeeyes
 #exec --no-startup-id keepassxc
 #exec --no-startup-id $HOME/bin/keyboard
