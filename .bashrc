@@ -188,4 +188,4 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 export EDITOR='nvim'
 
 # Vi mode
-#set -o vi
+set -o vi

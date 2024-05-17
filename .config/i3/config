@@ -47,7 +47,7 @@ for_window [class="floatingTerminal"] sticky enable
 for_window [class="floatingTerminal"] border pixel 1
 for_window [class="floatingTerminal"] border pixel 1
 for_window [class="floatingTerminal"] move scratchpad
-# for_window [class="floatingTerminal"] move position center
+for_window [class="floatingTerminal"] move position center
 # for_window [class="floatingTerminal"] scratchpad show
 
 
