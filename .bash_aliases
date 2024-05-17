@@ -30,7 +30,7 @@ alias vi="nvim"
 # alias nvimv4="NVIM_APPNAME=astronvim-v4 command nvim"
 
 # alias vimc="vi ~/.vimrc"
-# alias nvimc="cd ~/.config/nvim-astro/lua/user && vi . && cd - "
+alias nvimc="cd ~/.config/nvim && vi . && cd - "
 # alias nvchadc="cd ~/.config/nvim-chad && vi && cd - "
 
 # ls
@@ -156,6 +156,9 @@ fi
 if [ -x "$(command -v bat)" ]; then
 	alias cat="bat"
 fi
+
+alias za="zathura"
+alias pdf="zathura"
 
 # file shortcut
 alias bashrc="vi ~/.bashrc && source ~/.bashrc"
