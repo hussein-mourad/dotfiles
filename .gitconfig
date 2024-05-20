@@ -23,3 +23,5 @@
 	conflictStyle = diff3
 [diff]
 	colorMoved = default
+[alias]
+	pushall = !git remote | xargs -L1 git push --all
