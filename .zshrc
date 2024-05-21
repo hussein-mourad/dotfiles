@@ -30,15 +30,15 @@ zinit ice depth=1; zinit light romkatv/powerlevel10k
 zinit light zsh-users/zsh-syntax-highlighting
 zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-autosuggestions
+zinit ice depth=1;zinit light jeffreytse/zsh-vi-mode
 zinit light Aloxaf/fzf-tab
 
 # Add in snippets
 zinit snippet OMZP::git
 zinit snippet OMZP::sudo
 zinit snippet OMZP::archlinux
-# zinit snippet OMZP::aws
-# zinit snippet OMZP::kubectl
-# zinit snippet OMZP::kubectx
+# zinit snippet OMZP::docker
+zinit snippet OMZP::docker-compose
 zinit snippet OMZP::command-not-found
 
 # Load completions
@@ -49,14 +49,9 @@ zinit cdreplay -q
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-# Keybindings
-# bindkey -e
-# bindkey '^p' history-search-backward
-# bindkey '^n' history-search-forward
-# bindkey '^[w' kill-region
 
 # History
-HISTSIZE=100000
+HISTSIZE=1000000
 SAVEHIST=$HISTSIZE
 HISTORY_IGNORE="ls:cd:cd -:cd ..:cd ~:pwd:exit:clear"
 HISTFILE=~/.zsh_history
@@ -76,11 +71,41 @@ zstyle ':completion:*' menu no
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 
+# Shell integrations
+eval "$(fzf --zsh)"
+# Replace the default cd command with zoxide
+# eval "$(zoxide init --cmd cd zsh)"
+eval "$(zoxide init zsh)"
+
 source ~/.profile
 source ~/.bash_aliases
 source ~/.bash_functions
 # source ~/bin/nvim-switcher
 
-# Shell integrations
-eval "$(fzf --zsh)"
-eval "$(zoxide init --cmd cd zsh)"
+# Keybindings
+# bindkey -e # emacs mode
+bindkey -v # vim mode
+bindkey -M vicmd '^p' history-search-backward
+bindkey -M vicmd '^n' history-search-forward
+bindkey -M vicmd '^[w' kill-region
+
+# Remove Background colors
+eval "$(dircolors -p | \
+    sed 's/ 4[0-9];/ 01;/; s/;4[0-9];/;01;/g; s/;4[0-9] /;01 /' | \
+    dircolors /dev/stdin)"
+
+# Catppuccin Mocha
+# https://github.com/catppuccin/fzf
+export FZF_DEFAULT_OPTS=" \
+--color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8 \
+--color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
+--color=marker:#f5e0dc,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8"
+
+# source /usr/share/nvm/init-nvm.sh
+
+# if commond -v pyenv 1>/dev/null 2>&1; then
+  # eval "$(pyenv init -)"
+# fi
+
+# eval "$(starship init zsh)"
+
