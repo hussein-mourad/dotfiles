@@ -34,8 +34,10 @@ return {
   -- writing
   { import = "astrocommunity.pack.typst" },
   { import = "astrocommunity.pack.markdown" },
-  { import = "astrocommunity.markdown-and-latex.vimtex" },
   { import = "astrocommunity.markdown-and-latex.markdown-preview-nvim" },
+  { import = "astrocommunity.markdown-and-latex.peek-nvim" },
+  { import = "astrocommunity.markdown-and-latex.glow-nvim" },
+  { import = "astrocommunity.markdown-and-latex.vimtex" },
 
   { import = "astrocommunity.editing-support.zen-mode-nvim" },
   { import = "astrocommunity.editing-support.todo-comments-nvim" },

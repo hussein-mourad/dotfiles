@@ -54,6 +54,8 @@ alias rmdir='rmdir -pv'
 
 alias rsync='rsync --progress -ravz'
 
+## ssh
+alias sshk="eval \$(ssh-agent -s) && ssh-add ~/.ssh/id_ed25519"
 # calculator
 alias bc='bc -l'
 
@@ -177,3 +179,5 @@ alias dotfiles='cd ~/dotfiles'
 
 # functions
 alias homelab-battery="ssh homelab upower -i /org/freedesktop/UPower/devices/battery_BAT1"
+
+alias notes="v /mnt/d/data/documents/notes/"

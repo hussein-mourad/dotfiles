@@ -49,3 +49,4 @@ export BROWSER=/usr/bin/firefox
 #export TERM=xfce4-terminal
 export TERMINAL=/usr/bin/konsole
 export EDITOR=nvim
+# eval $(ssh-agent)
