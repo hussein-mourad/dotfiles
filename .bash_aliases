@@ -52,7 +52,7 @@ alias .5='cd ../../../../../'
 alias mkdir='mkdir -pv'
 alias rmdir='rmdir -pv'
 
-alias rsync='rsync --progress -ravz'
+alias rsync='rsync -avhz --progress --stats'
 
 ## ssh
 alias sshk="eval \$(ssh-agent -s) && ssh-add ~/.ssh/id_ed25519"

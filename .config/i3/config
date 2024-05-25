@@ -44,8 +44,8 @@ bindsym $mod+Shift+Return exec --no-startup-id xfce4-terminal --class "floatingT
 for_window [class="floatingTerminal"] floating enable
 for_window [class="floatingTerminal"] sticky enable
 for_window [class="floatingTerminal"] resize set 1000 600
-for_window [class="floatingTerminal"] border pixel 2
-for_window [class="floatingTerminal"] border pixel 2
+for_window [class="floatingTerminal"] border pixel 1
+for_window [class="floatingTerminal"] border pixel 1
 for_window [class="floatingTerminal"] move position center;
 for_window [class="floatingTerminal"] move scratchpad
 # for_window [class="floatingTerminal"] scratchpad show
@@ -55,7 +55,7 @@ for_window [class="floatingTerminal"] move scratchpad
 
 # kill focused window
 bindsym $mod+BackSpace kill
-bindsym $mod+q kill
+bindsym $mod+Shift+q kill
 
 # start program launcher
 bindsym $mod+d exec --no-startup-id dmenu_recency
@@ -239,8 +239,9 @@ bindsym $mod+Shift+8 move container to workspace $ws8; workspace $ws8
 # assign [class="Skype"] $ws5
 # assign [class="TelegramDesktop"] $ws7
 assign [class="Virt-viewer"] $ws6
-for_window [class="TelegramDesktop"] move to workspace $ws7
 assign [class="KeePassXC"] $ws8
+for_window [class="TelegramDesktop"] move to workspace $ws7
+for_window [class="Zathura"] move to workspace $ws3
 
 # Open specific applications in floating mode
 for_window [title="alsamixer"] floating enable border pixel 1
@@ -493,7 +494,7 @@ exec --no-startup-id blueman-applet
 # exec_always --no-startup-id sbxkb
 # exec --no-startup-id start_conky_maia
 #exec --no-startup-id start_conky_green
-# exec --no-startup-id megasync
+exec --no-startup-id megasync
 exec --no-startup-id syncthing --no-browser
 # exec --no-startup-id telegram-desktop; workspace $ws1
 # exec --no-startup-id safeeyes
@@ -509,3 +510,5 @@ exec --no-startup-id flameshot
 # exec i3-msg 'workspace $ws1; exec firefox'
 exec --no-startup-id i3-msg 'workspace $ws2; exec --no-startup-id i3-sensible-terminal -e tmux; workspace $ws1'
 exec --no-startup-id gxkb
+exec --no-startup-id prayer-times --latitude 31.2 --longitude 29.9 --method Egyptian --maghrib-mod 0 --fajr-mod 1
+

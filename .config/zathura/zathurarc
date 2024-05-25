@@ -1,5 +1,6 @@
 include catppuccin-mocha
 set recolor false
+set window-title-basename true
 map i recolor
 map [fullscreen] i recolor
 map [presentation] i recolor
