@@ -1,3 +1,5 @@
+# https://github.com/olimorris/tmux-pomodoro-plus
+
 show_pomodoro() { # This function name must match the module name!
   local index icon color text module
 
