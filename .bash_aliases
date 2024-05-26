@@ -20,6 +20,12 @@ export PICTURES="$DATA_ROOT/media/pictures"
 export VIDEOS="$DATA_ROOT/media/videos"
 export MUSIC="$DATA_ROOT/media/music"
 
+# colors
+alias ls='ls --color=auto'
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+
 # clear
 alias c='clear'
 
@@ -180,4 +186,4 @@ alias dotfiles='cd ~/dotfiles'
 # functions
 alias homelab-battery="ssh homelab upower -i /org/freedesktop/UPower/devices/battery_BAT1"
 
-alias notes="v /mnt/d/data/documents/notes/"
+alias notes="cd /mnt/d/data/documents/notes/ && vi ."

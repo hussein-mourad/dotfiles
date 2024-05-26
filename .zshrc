@@ -1,3 +1,5 @@
+# Make sure to have the following packages installed:
+# git wget curl fzf zxoide neovim
 # This config is based on: https://github.com/dreamsofautonomy/zensh
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
