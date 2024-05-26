@@ -46,7 +46,7 @@ for_window [class="floatingTerminal"] sticky enable
 for_window [class="floatingTerminal"] resize set 1000 600
 for_window [class="floatingTerminal"] border pixel 1
 for_window [class="floatingTerminal"] border pixel 1
-for_window [class="floatingTerminal"] move position center;
+for_window [class="floatingTerminal"] move position center
 for_window [class="floatingTerminal"] move scratchpad
 # for_window [class="floatingTerminal"] scratchpad show
 
@@ -330,7 +330,7 @@ mode "resize" {
 }
 
 # Lock screen
-bindsym $mod+9 exec --no-startup-id $lockscreen
+# bindsym $mod+9 exec --no-startup-id $lockscreen
 
 
 # Color palette used for the terminal ( ~/.Xresources file )
