@@ -37,22 +37,6 @@ floating_modifier $mod
 # start a terminal
 bindsym $mod+Return exec i3-sensible-terminal
 
-# scratchpad terminal
-# FIXME: Ensure one instance of the terminal
-exec --no-startup-id xfce4-terminal --class "floatingTerminal"
-bindsym $mod+Shift+Return exec --no-startup-id xfce4-terminal --class "floatingTerminal"
-for_window [class="floatingTerminal"] floating enable
-for_window [class="floatingTerminal"] sticky enable
-for_window [class="floatingTerminal"] resize set 1000 600
-for_window [class="floatingTerminal"] border pixel 1
-for_window [class="floatingTerminal"] border pixel 1
-for_window [class="floatingTerminal"] move position center
-for_window [class="floatingTerminal"] move scratchpad
-# for_window [class="floatingTerminal"] scratchpad show
-
-
-# bindsym $mod+Shift+Return scratchpad show; exec --no-startup-id i3-sensible-terminal
-
 # kill focused window
 bindsym $mod+BackSpace kill
 bindsym $mod+Shift+q kill
@@ -170,12 +154,32 @@ bindsym $mod+Shift+o floating toggle
 # focus the parent container
 bindsym $mod+a focus parent
 
+# Scratchpad
+exec --no-startup-id alacritty --class ttrm,ttrm 
+exec --no-startup-id alacritty --class fm,fm -e ranger  
+
+for_window [class="ttrm"] floating enable
+for_window [class="ttrm"] sticky enable
+for_window [class="ttrm"] resize set 1100 700
+for_window [class="ttrm"] border pixel 1
+for_window [class="ttrm"] move scratchpad
+
+for_window [class="fm"] floating enable
+for_window [class="fm"] sticky enable
+for_window [class="fm"] resize set 1100 700
+for_window [class="fm"] border pixel 1
+for_window [class="fm"] move scratchpad
+
+
 # move the currently focused window to the scratchpad
 bindsym $mod+Shift+minus move scratchpad
 
 # Show the next scratchpad window or hide the focused scratchpad window.
 # If there are multiple scratchpad windows, this command cycles through them.
-bindsym $mod+comma scratchpad show
+bindsym $mod+comma [class="ttrm"] scratchpad show; move position center
+bindsym $mod+m [class="fm"] scratchpad show; move position center
+
+bindsym $mod+Shift+Return exec --no-startup-id "alacritty --class ttrm,ttrm"; 
 
 #navigate workspaces next / previous
 bindsym $mod+Ctrl+Right workspace next
