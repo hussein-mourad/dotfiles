@@ -39,6 +39,9 @@ return {
   { import = "astrocommunity.markdown-and-latex.glow-nvim" },
   { import = "astrocommunity.markdown-and-latex.vimtex" },
 
+  -- note-taking
+  -- { import = "astrocommunity.note-taking.neorg" },
+
   { import = "astrocommunity.editing-support.zen-mode-nvim" },
   { import = "astrocommunity.editing-support.todo-comments-nvim" },
 
@@ -57,4 +60,18 @@ return {
   -- completion
   { import = "astrocommunity.completion.copilot-lua" },
   { import = "astrocommunity.completion.copilot-lua-cmp" },
+
+  -- utility
+  { import = "astrocommunity.utility.nvim-toggler" },
+
+  -- terminal-integration
+  { import = "astrocommunity.terminal-integration.vim-tmux-yank" },
+
+  { import = "astrocommunity.register.nvim-neoclip-lua" },
+
+  { import = "astrocommunity.file-explorer.telescope-file-browser-nvim" },
+
+  { import = "astrocommunity.git.diffview-nvim" },
+
+  { import = "astrocommunity.keybinding.nvcheatsheet-nvim" },
 }
