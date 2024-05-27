@@ -59,11 +59,13 @@ load {
 disk "/" {
         # format = " hdd %avail "
         format = "⛁ %avail"
+        # format = "🖴 %avail"
 }
 
 disk "/home" {
         # format = " hdd %avail "
         format = "  %avail"
+        # format = "🏠 %avail"
 }
 
 wireless _first_ {
@@ -84,7 +86,8 @@ battery all {
         format_down = "No battery"
         last_full_capacity = true
         integer_battery_capacity = true
-        status_chr = "⚡"
+        # status_chr = "⚡"
+        status_chr =" "
         status_bat = "  "
         status_unk = "? "
         status_full = "  "
@@ -100,15 +103,16 @@ battery all {
 }
 
 memory {
-        format = "   %used"
+        format = "   %used"
         threshold_degraded = "1G"
-        format_degraded = "   %used"
+        format_degraded = "   %used"
         # format_degraded = "MEMORY < %available"
 }
 
 tztime local {
         #format = "%d/%m/%Y %H:%M:%S"
-        format = " %a %d %b %Y   %H:%M"
+        format = "  %a %d %b %Y   %H:%M"
+        # format = "📅 %a %d %b %Y  🕙 %H:%M"
 }
 
 tztime berlin {
@@ -118,5 +122,6 @@ tztime berlin {
 
 tztime utc {
         format = " %H:%M"
+        # format = "⏲️ %H:%M"
         timezone = "UTC"
 }
