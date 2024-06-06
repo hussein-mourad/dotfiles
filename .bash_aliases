@@ -145,10 +145,10 @@ alias fastping='ping -c 100 -s .2'
 #alias i='sudo apt install'
 #alias u="sudo apt update && sudo apt upgrade -y && sudo snap refresh"
 #alias r='sudo apt remove'
-alias q='pacman -Ss'
-alias i='sudo pacman -S'
-alias u="sudo pacman -Syu"
-alias r='sudo pacman -Rsc'
+alias q='yay -Ss'
+alias i='yay -S'
+alias u="yay -Syu"
+alias r='yay -Rsc'
 
 # commands enhancement (modern unix tools)
 if [ -x "$(command -v lsd)" ]; then

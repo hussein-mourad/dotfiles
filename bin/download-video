@@ -2,8 +2,7 @@
 
 yt-dlp \
 	-f 'bestvideo[ext=mp4][height=480]+bestaudio[ext=m4a]/best' \
-	-o "%(playlist_index)s-%(title)s.%(ext)s" \
-	--yes-playlist \
+	-o "%(title)s.%(ext)s" \
 	--write-thumbnail \
 	--embed-metadata \
 	--embed-chapters \

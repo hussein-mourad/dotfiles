@@ -1,0 +1,15 @@
+include ~/.newsboat/colorschemes/catppuccin-dark
+
+bind-key j down
+bind-key k up
+bind-key h quit
+bind-key l open
+bind-key G end
+bind-key g home
+bind-key d pagedown
+bind-key u pageup
+bind-key a toggle-article-read
+bind-key U show-urls
+bind-key D pb-download
+bind-key x pb-delete
+

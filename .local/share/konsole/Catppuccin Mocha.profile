@@ -1,7 +1,7 @@
 [Appearance]
 ColorScheme=Catppuccin-Mocha
 DimmValue=19
-Font=FiraCode Nerd Font,11,-1,5,53,0,0,0,0,0,Retina
+Font=FiraCode Nerd Font,11,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
 LineSpacing=0
 
 [General]

@@ -10,7 +10,7 @@ return {
   "AstroNvim/astroui",
   ---@type AstroUIOpts
   opts = {
-    -- change colorscheme
+    -- change colorscheme, default is "astrodark"
     colorscheme = "catppuccin",
     -- AstroUI allows you to easily modify highlight groups easily for any and all colorschemes
     highlights = {

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE xbel>
-<xbel xmlns:mime="http://www.freedesktop.org/standards/shared-mime-info" xmlns:kdepriv="http://www.kde.org/kdepriv" dbusName="konsole" xmlns:bookmark="http://www.freedesktop.org/standards/desktop-bookmarks">
+<xbel dbusName="konsole" xmlns:bookmark="http://www.freedesktop.org/standards/desktop-bookmarks" xmlns:kdepriv="http://www.kde.org/kdepriv" xmlns:mime="http://www.freedesktop.org/standards/shared-mime-info">
  <bookmark href="file:///home/hussein/college/graduation-project/code/frontend">
   <title>frontend</title>
   <info>
@@ -10,7 +10,15 @@
   </info>
  </bookmark>
  <bookmark href="file:///home/hussein/.config">
-  <title></title>
+  <title/>
+  <info>
+   <metadata owner="http://freedesktop.org">
+    <bookmark:icon name=""/>
+   </metadata>
+  </info>
+ </bookmark>
+ <bookmark href="file:///home/hussein">
+  <title>hussein</title>
   <info>
    <metadata owner="http://freedesktop.org">
     <bookmark:icon name=""/>
