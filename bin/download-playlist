@@ -5,6 +5,6 @@ yt-dlp \
 	-o "%(playlist_index)s-%(title)s.%(ext)s" \
 	--yes-playlist \
 	--write-thumbnail \
-	--embed-metadata \
 	--embed-chapters \
+	--embed-metadata \
 	"$1"
