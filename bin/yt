@@ -19,8 +19,8 @@ if [ -z "$1" ]; then
 fi
 
 VIDEO_URL="$1"
-# YOUTUBE_DIR="/mnt/d/data/media/videos/youtube"
-YOUTUBE_DIR="/tmp/yt"
+YOUTUBE_DIR="/mnt/d/data/media/videos/youtube"
+# YOUTUBE_DIR="/tmp/yt"
 FORMAT="bestvideo[height<=480]+bestaudio/bestvideo[height<=720]+bestaudio/bestvideo[height<=360]+bestaudio"
 
 if [[ $VIDEO_URL =~ /playlist\?list= ]]; then
@@ -61,7 +61,7 @@ yt-dlp \
 	--sub-lang en,ar \
 	--convert-subs srt \
 	--convert-thumbnails png \
-	--concurrent-fragments 3 \
+	--concurrent-fragments 5 \
 	--merge-output-format mp4 \
 	${ARCHIVE_FILE:+--download-archive "$ARCHIVE_FILE"} \
 	"$VIDEO_URL"
