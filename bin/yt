@@ -6,6 +6,12 @@ if ! command -v yt-dlp &>/dev/null; then
 	exit
 fi
 
+# Check if jq is installed
+if ! command -v jq &>/dev/null; then
+	echo "jq could not be found. Please install it first."
+	exit 1
+fi
+
 # Check if a video URL is provided
 if [ -z "$1" ]; then
 	echo "No video URL provided. Usage: ./download_video <video_url>"
@@ -13,7 +19,8 @@ if [ -z "$1" ]; then
 fi
 
 VIDEO_URL="$1"
-YOUTUBE_DIR="/mnt/d/data/media/videos/youtube"
+# YOUTUBE_DIR="/mnt/d/data/media/videos/youtube"
+YOUTUBE_DIR="/tmp/yt"
 FORMAT="bestvideo[height<=480]+bestaudio/bestvideo[height<=720]+bestaudio/bestvideo[height<=360]+bestaudio"
 
 if [[ $VIDEO_URL =~ /playlist\?list= ]]; then
@@ -21,19 +28,21 @@ if [[ $VIDEO_URL =~ /playlist\?list= ]]; then
 	CHANNEL_DIR="$YOUTUBE_DIR/%(playlist_uploader)s"
 	OUTPUT_DIR="$CHANNEL_DIR/%(playlist_title)s"
 	FILENAME="%(playlist_index&{}-|)s%(title)s.%(ext)s"
+
+	METADATA=$(yt-dlp --print-json --flat-playlist "$VIDEO_URL")
+	UPLOADER="$(echo "$METADATA" | jq -r '.playlist_uploader' | head -1)"
+	PLAYLIST_TITLE="$(echo "$METADATA" | jq -r '.playlist_title' | head -1)"
+	ARCHIVE_FILE="$YOUTUBE_DIR/$UPLOADER/$PLAYLIST_TITLE/archive.log"
 else
 	CHANNEL_DIR="$YOUTUBE_DIR/%(uploader)s"
 	OUTPUT_DIR="$CHANNEL_DIR/%(title)s"
 	FILENAME="%(title)s.%(ext)s"
-	PLAYLIST_OPTIONS=""
 fi
 
 OUTPUT_FILENAME="$OUTPUT_DIR/$FILENAME"
 THUMBNAIL_PATH="thumbnail:$OUTPUT_DIR/thumbnails/$FILENAME"
 SUBTITLE_PATH="subtitle:$OUTPUT_DIR/subtitles/$FILENAME"
 DESCRIPTION="description:$OUTPUT_DIR/descriptions/$FILENAME"
-
-echo $OUTPUT_FILENAME
 
 yt-dlp \
 	-f "$FORMAT" \
@@ -54,5 +63,5 @@ yt-dlp \
 	--convert-thumbnails png \
 	--concurrent-fragments 3 \
 	--merge-output-format mp4 \
-	--download-archive "$YOUTUBE_DIR/archive.log" \
+	${ARCHIVE_FILE:+--download-archive "$ARCHIVE_FILE"} \
 	"$VIDEO_URL"
