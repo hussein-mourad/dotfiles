@@ -54,5 +54,5 @@ yt-dlp \
 	--convert-thumbnails png \
 	--concurrent-fragments 3 \
 	--merge-output-format mp4 \
-	--download-archive archive.log \
+	--download-archive "$YOUTUBE_DIR/archive.log" \
 	"$VIDEO_URL"
