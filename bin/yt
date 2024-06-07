@@ -27,15 +27,11 @@ FORMAT="bestvideo[height<=480]+bestaudio/bestvideo[height<=720]+bestaudio/bestvi
 if [[ $VIDEO_URL =~ /playlist\?list= ]]; then
 	# Fetch metadata using yt-dlp
 	METADATA=$(yt-dlp --print-json --flat-playlist "$VIDEO_URL")
-	# Extract uploader and playlist title using jq
 	UPLOADER="$(echo "$METADATA" | jq -r '.uploader' | head -1)"
 	PLAYLIST_TITLE="$(echo "$METADATA" | jq -r '.playlist_title' | head -1)"
 	# Prefix playlist index with "_" separator, but only if it is available
 	OUTPUT_DIR="$CHANNEL_DIR/%(playlist_title)s"
 	FILENAME="%(playlist_index&{}-|)s%(title)s.%(ext)s"
-	ARCHIVE_FILE="$YOUTUBE_DIR/$UPLOADER/$PLAYLIST_TITLE/archive.log"
-	echo "$ARCHIVE_FILE"
-	PLAYLIST_OPTIONS="--yes-playlist --download-archive $ARCHIVE_FILE"
 else
 	OUTPUT_DIR="$CHANNEL_DIR/%(title)s"
 	FILENAME="%(title)s.%(ext)s"
@@ -47,7 +43,6 @@ THUMBNAIL_PATH="thumbnail:$OUTPUT_DIR/thumbnails/$FILENAME"
 SUBTITLE_PATH="subtitle:$OUTPUT_DIR/subtitles/$FILENAME"
 DESCRIPTION="description:$OUTPUT_DIR/descriptions/$FILENAME"
 
-# --restrict-filenames \
 yt-dlp \
 	-f "$FORMAT" \
 	-o "$OUTPUT_FILENAME" \
@@ -67,5 +62,7 @@ yt-dlp \
 	--convert-thumbnails png \
 	--concurrent-fragments 3 \
 	--merge-output-format mp4 \
-	$PLAYLIST_OPTIONS \
+	--download-archive archive.log \
 	"$VIDEO_URL"
+
+# --restrict-filenames \
