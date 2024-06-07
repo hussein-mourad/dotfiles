@@ -6,6 +6,12 @@ if ! command -v yt-dlp &>/dev/null; then
 	exit
 fi
 
+# Check if jq is installed
+if ! command -v jq &>/dev/null; then
+	echo "jq could not be found. Please install it first."
+	exit 1
+fi
+
 # Check if a video URL is provided
 if [ -z "$1" ]; then
 	echo "No video URL provided. Usage: ./download_video <video_url>"
@@ -22,13 +28,13 @@ if [[ $VIDEO_URL =~ /playlist\?list= ]]; then
 	# Fetch metadata using yt-dlp
 	METADATA=$(yt-dlp --print-json --flat-playlist "$VIDEO_URL")
 	# Extract uploader and playlist title using jq
-	UPLOADER=$(echo "$METADATA" | jq -r '.uploader' | head -1)
-	PLAYLIST_TITLE=$(echo "$METADATA" | jq -r '.title' | head -1)
+	UPLOADER="$(echo "$METADATA" | jq -r '.uploader' | head -1)"
+	PLAYLIST_TITLE="$(echo "$METADATA" | jq -r '.playlist_title' | head -1)"
 	# Prefix playlist index with "_" separator, but only if it is available
 	OUTPUT_DIR="$CHANNEL_DIR/%(playlist_title)s"
 	FILENAME="%(playlist_index&{}-|)s%(title)s.%(ext)s"
-	ARCHIVE_FILE="$OUTPUT_DIR/archive.log"
-	ARCHIVE_FILE="$CHANNEL_DIR/$PLAYLIST_TITLE/archive.log"
+	ARCHIVE_FILE="$YOUTUBE_DIR/$UPLOADER/$PLAYLIST_TITLE/archive.log"
+	echo "$ARCHIVE_FILE"
 	PLAYLIST_OPTIONS="--yes-playlist --download-archive $ARCHIVE_FILE"
 else
 	OUTPUT_DIR="$CHANNEL_DIR/%(title)s"
