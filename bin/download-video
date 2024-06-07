@@ -1,9 +1,0 @@
-#!/bin/bash
-
-yt-dlp \
-	-f 'bestvideo[ext=mp4][height=480]+bestaudio[ext=m4a]/best' \
-	-o "%(title)s.%(ext)s" \
-	--write-thumbnail \
-	--embed-metadata \
-	--embed-chapters \
-	"$1"

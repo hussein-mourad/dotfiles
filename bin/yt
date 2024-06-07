@@ -1,0 +1,50 @@
+#!/bin/bash
+
+# Check if yt-dlp is installed
+if ! command -v yt-dlp &>/dev/null; then
+	echo "yt-dlp could not be found. Please install it first."
+	exit
+fi
+
+# Check if a video URL is provided
+if [ -z "$1" ]; then
+	echo "No video URL provided. Usage: ./download_video <video_url>"
+	exit
+fi
+
+VIDEO_URL="$1"
+# YOUTUBE_DIR="/mnt/d/data/media/videos/youtube"
+YOUTUBE_DIR="/tmp/yt"
+BASE_DIR="$YOUTUBE_DIR/%(uploader)s"
+OUTPUT_DIR="$BASE_DIR/%(title)s"
+OUTPUT_FILENAME="$OUTPUT_DIR/%(title)s.%(ext)s"
+FORMAT="bestvideo[ext=mp4][height=480]+bestaudio[ext=m4a]/bestvideo[height=720]+bestaudio/bestvideo[height=360]+bestaudio"
+FORMAT="bestvideo[height=720]+bestaudio"
+PLAYLIST_OPTIONS=""
+
+if [[ $VIDEO_URL =~ /playlist\?list= ]]; then
+	# Prefix playlist index with "_" separator, but only if it is available
+	OUTPUT_DIR="$BASE_DIR/%(playlist_title)s"
+	OUTPUT_FIELNAME="$OUTPUT_DIR/%(playlist_index&{}_|)s%(title)s.%(ext)s"
+	PLAYLIST_OPTIONS="--yes-playlist --download-archive $OUTPUT_DIR/archive.log"
+fi
+
+yt-dlp \
+	-f "$FORMAT" \
+	-o "$OUTPUT_FILENAME" \
+	--embed-metadata \
+	--embed-chapters \
+	--embed-subs \
+	--embed-thumbnail \
+	--write-description \
+	--write-thumbnail \
+	--write-subs \
+	--write-auto-subs \
+	--sub-lang en,ar \
+	--convert-subs srt \
+	--convert-thumbnails png \
+	--restrict-filenames \
+	--concurrent-fragments 3 \
+	--merge-output-format mp4 \
+	$PLAYLIST_OPTIONS \
+	"$VIDEO_URL"
