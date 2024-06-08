@@ -21,7 +21,7 @@ fi
 VIDEO_URL="$1"
 YOUTUBE_DIR="/mnt/d/data/media/videos/youtube"
 # YOUTUBE_DIR="/tmp/yt"
-FORMAT="bestvideo[height<=480]+bestaudio/bestvideo[height<=720]+bestaudio/bestvideo[height<=360]+bestaudio"
+FORMAT="22/bestvideo[height<=480]+bestaudio/bestvideo[height<=720]+bestaudio/bestvideo[height<=360]+bestaudio"
 
 if [[ $VIDEO_URL =~ /playlist\?list= ]]; then
 	# Prefix playlist index with "-" separator, but only if it is available
@@ -63,5 +63,6 @@ yt-dlp \
 	--convert-thumbnails png \
 	--concurrent-fragments 5 \
 	--merge-output-format mp4 \
+	--sponsorblock-mark all \
 	${ARCHIVE_FILE:+--download-archive "$ARCHIVE_FILE"} \
 	"$VIDEO_URL"

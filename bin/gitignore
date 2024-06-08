@@ -1,0 +1,2 @@
+#!/bin/bash
+wget -O .gitignore https://www.toptal.com/developers/gitignore/api/latex
