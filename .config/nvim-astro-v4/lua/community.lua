@@ -71,6 +71,7 @@ return {
   { import = "astrocommunity.register.nvim-neoclip-lua" },
 
   { import = "astrocommunity.file-explorer.telescope-file-browser-nvim" },
+  { import = "astrocommunity.file-explorer.oil-nvim" },
 
   { import = "astrocommunity.git.diffview-nvim" },
 
