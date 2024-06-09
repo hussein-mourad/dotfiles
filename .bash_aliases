@@ -135,6 +135,7 @@ alias browser=firefox
 # git
 alias gaf='git add -f'
 alias lg='lazygit'
+alias gpall="git remote | xargs -L1 git push --all"
 
 # netowrking
 alias ping='ping -c 5'
