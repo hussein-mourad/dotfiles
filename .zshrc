@@ -113,4 +113,4 @@ export FZF_DEFAULT_OPTS=" \
 # fi
 
 # eval "$(starship init zsh)"
-
+# setopt noglob

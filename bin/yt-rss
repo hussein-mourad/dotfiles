@@ -1,0 +1,31 @@
+#!/bin/bash
+
+# Function to extract channel ID from YouTube handle URL
+get_channel_id_from_handle() {
+  local handle_url="$1"
+  local channel_id
+
+  # Fetch the page source
+  local page_source=$(curl -s "$handle_url")
+
+  # Extract channel ID from the page source
+  channel_id=$(echo "$page_source" | grep -oP 'channel/[^"/]+' | sed 's/channel\///' | grep "^U" | head -n 1)
+
+  echo "$channel_id"
+}
+
+# Check if a URL is provided as an argument
+if [ $# -eq 0 ]; then
+  echo "Usage: $0 <handle_url>"
+  exit 1
+fi
+
+# Example usage
+handle_url="$1"
+channel_id=$(get_channel_id_from_handle "$handle_url")
+
+if [ -n "$channel_id" ]; then
+  echo "https://www.youtube.com/feeds/videos.xml?channel_id=$channel_id"
+else
+  echo "Channel ID not found"
+fi

@@ -187,3 +187,6 @@ alias dotfiles='cd ~/dotfiles'
 alias homelab-battery="ssh homelab upower -i /org/freedesktop/UPower/devices/battery_BAT1"
 
 alias notes="cd /mnt/d/data/documents/notes/ && vi ."
+
+alias curl="noglob curl"
+alias yt="noglob yt"

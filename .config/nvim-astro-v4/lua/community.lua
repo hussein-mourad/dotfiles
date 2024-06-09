@@ -76,4 +76,6 @@ return {
   { import = "astrocommunity.git.diffview-nvim" },
 
   { import = "astrocommunity.keybinding.nvcheatsheet-nvim" },
+
+  { import = "astrocommunity.project.nvim-spectre" },
 }
