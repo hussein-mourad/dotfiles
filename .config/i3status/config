@@ -36,7 +36,7 @@ order += "ethernet _first_"
 order += "battery all"
 # order += "load"
 # order += "tztime berlin"
-order += "tztime utc"
+# order += "tztime utc"
 order += "tztime local"
 
 

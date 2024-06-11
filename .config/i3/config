@@ -76,7 +76,7 @@ bindsym $mod+equal exec pulseaudio-ctl up +5%
 bindsym $mod+Ctrl+b exec i3-sensible-terminal -e 'bmenu'
 bindsym $mod+b exec firefox
 bindsym $mod+p exec --no-startup-id $HOME/bin/keepassxc-open;
-bindsym $mod+f exec i3-sensible-terminal -e 'ranger';
+# bindsym $mod+f exec i3-sensible-terminal -e 'ranger';
 bindsym $mod+F5 exec i3-sensible-terminal -e 'mocp'
 bindsym $mod+t exec --no-startup-id pkill picom
 bindsym $mod+Ctrl+t exec --no-startup-id picom -b
@@ -275,9 +275,10 @@ bindsym $mod+Shift+plus scratchpad show
 # Show the next scratchpad window or hide the focused scratchpad window.
 # If there are multiple scratchpad windows, this command cycles through them.
 bindsym $mod+comma [class="ttrm"] scratchpad show; move position center
-bindsym $mod+m [class="fm"] scratchpad show; move position center
+bindsym $mod+f [class="fm"] scratchpad show; move position center
 
 bindsym $mod+Shift+Return exec --no-startup-id "alacritty --class ttrm,ttrm"; 
+bindsym $mod+Shift+f exec --no-startup-id "alacritty --class fm,fm -e ranger"; 
 
 # monitor configuration
 bindsym $mod+m --release exec --no-startup-id $HOME/bin/laptop-monitor-only
@@ -498,7 +499,7 @@ exec --no-startup-id redshift-gtk -c ~/.config/redshift.conf
 exec --no-startup-id flameshot
 exec --no-startup-id gxkb
 exec --no-startup-id prayer-times --latitude 31.2 --longitude 29.9 --method Egyptian --maghrib-mod 0 --fajr-mod 1
-# exec --no-startup-id i3-msg 'workspace $ws2; exec --no-startup-id i3-sensible-terminal -e tmux; workspace $ws1'
+exec --no-startup-id i3-msg 'workspace $ws2; exec --no-startup-id i3-sensible-terminal -e tmux; workspace $ws1'
 # exec --no-startup-id telegram-desktop; workspace $ws1
 
 exec_always --no-startup-id ff-theme-util
