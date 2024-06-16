@@ -59,8 +59,8 @@ return {
   -- { import = "astrocommunity.media.image-nvim" },
 
   -- completion
-  { import = "astrocommunity.completion.copilot-lua" },
-  { import = "astrocommunity.completion.copilot-lua-cmp" },
+  -- { import = "astrocommunity.completion.copilot-lua" },
+  -- { import = "astrocommunity.completion.copilot-lua-cmp" },
 
   -- utility
   { import = "astrocommunity.utility.nvim-toggler" },
@@ -78,4 +78,6 @@ return {
   { import = "astrocommunity.keybinding.nvcheatsheet-nvim" },
 
   { import = "astrocommunity.project.nvim-spectre" },
+
+  { import = "astrocommunity.motion.harpoon" },
 }

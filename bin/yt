@@ -21,7 +21,8 @@ fi
 VIDEO_URL="$1"
 YOUTUBE_DIR="/mnt/d/data/media/videos/youtube"
 # YOUTUBE_DIR="/tmp/yt"
-FORMAT="22/bestvideo[height<=480]+bestaudio/bestvideo[height<=720]+bestaudio/bestvideo[height<=360]+bestaudio"
+FORMAT="bestvideo[height<=720]+bestaudio/bestvideo[height<=480]+bestaudio/bestvideo[height<=360]+bestaudio"
+FORMAT="22"
 
 if [[ $VIDEO_URL =~ /playlist\?list= ]]; then
 	# Prefix playlist index with "-" separator, but only if it is available

@@ -25,3 +25,8 @@
 	colorMoved = default
 [alias]
 	pushall = !git remote | xargs -L1 git push --all
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
