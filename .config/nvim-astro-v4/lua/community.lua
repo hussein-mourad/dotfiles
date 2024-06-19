@@ -45,6 +45,9 @@ return {
 
   { import = "astrocommunity.editing-support.zen-mode-nvim" },
   { import = "astrocommunity.editing-support.todo-comments-nvim" },
+  { import = "astrocommunity.editing-support.undotree" },
+  { import = "astrocommunity.editing-support.telescope-undo-nvim" },
+  { import = "astrocommunity.editing-support.true-zen-nvim" },
 
   -- motion
   { import = "astrocommunity.motion.mini-surround" },
@@ -79,5 +82,7 @@ return {
 
   { import = "astrocommunity.project.nvim-spectre" },
 
-  { import = "astrocommunity.motion.harpoon" },
+  -- { import = "astrocommunity.motion.harpoon" },
+  -- { import = "astrocommunity.programming-language-support.rest-nvim" },
+  { import = "astrocommunity.game.leetcode-nvim" },
 }

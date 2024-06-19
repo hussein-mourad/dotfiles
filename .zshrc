@@ -114,3 +114,27 @@ export FZF_DEFAULT_OPTS=" \
 
 # eval "$(starship init zsh)"
 # setopt noglob
+
+# bun completions
+[ -s "/home/hussein/.bun/_bun" ] && source "/home/hussein/.bun/_bun"
+
+# pnpm
+export PNPM_HOME="/home/hussein/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
+
+# Define a function to activate venv if present
+venv_auto_activate() {
+    if [[ -d "venv" ]]; then
+        # Check if already activated to avoid redundant activation
+        if [[ -z "${VIRTUAL_ENV}" ]]; then
+            source venv/bin/activate
+        fi
+    fi
+}
+
+# Hook function to activate venv_auto_activate when changing directories
+chpwd_functions+=venv_auto_activate

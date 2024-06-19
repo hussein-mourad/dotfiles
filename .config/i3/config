@@ -284,6 +284,9 @@ bindsym $mod+Shift+f exec --no-startup-id "alacritty --class fm,fm -e ranger";
 bindsym $mod+m --release exec --no-startup-id $HOME/bin/laptop-monitor-only
 bindsym $mod+Shift+m --release exec --no-startup-id $HOME/bin/external-monitor-only
 
+# dismiss notifications
+bindsym $mod+Shift+n --release exec --no-startup-id dunstctl close-all
+
 # reload the configuration file
 bindsym $mod+Shift+c reload
 
