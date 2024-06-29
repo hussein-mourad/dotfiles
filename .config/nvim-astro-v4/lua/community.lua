@@ -21,11 +21,15 @@ return {
   { import = "astrocommunity.pack.python" },
   { import = "astrocommunity.pack.go" },
   { import = "astrocommunity.pack.lua" },
+  { import = "astrocommunity.pack.rust" },
 
   -- web dev
   { import = "astrocommunity.pack.html-css" },
   { import = "astrocommunity.pack.typescript" },
   { import = "astrocommunity.pack.tailwindcss" },
+  -- { import = "astrocommunity.pack.ruby" },
+  -- { import = "astrocommunity.pack.php" },
+  -- { import = "astrocommunity.pack.sql" },
 
   -- config files
   { import = "astrocommunity.pack.json" },
@@ -35,6 +39,7 @@ return {
   -- writing
   { import = "astrocommunity.pack.typst" },
   { import = "astrocommunity.pack.markdown" },
+
   -- { import = "astrocommunity.markdown-and-latex.markdown-preview-nvim" },
   { import = "astrocommunity.markdown-and-latex.peek-nvim" },
   { import = "astrocommunity.markdown-and-latex.glow-nvim" },
