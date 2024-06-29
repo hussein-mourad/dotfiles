@@ -253,7 +253,7 @@ for_window [title="konsole"] border pixel 1
 for_window [urgent=latest] focus
 
 # Scratchpad
-exec --no-startup-id alacritty --class ttrm,ttrm 
+exec --no-startup-id alacritty --class ttrm,ttrm -e tmux
 exec --no-startup-id alacritty --class fm,fm -e ranger  
 
 for_window [class="ttrm"] floating enable
@@ -277,7 +277,7 @@ bindsym $mod+Shift+plus scratchpad show
 bindsym $mod+comma [class="ttrm"] scratchpad show; move position center
 bindsym $mod+f [class="fm"] scratchpad show; move position center
 
-bindsym $mod+Shift+Return exec --no-startup-id "alacritty --class ttrm,ttrm"; 
+bindsym $mod+Shift+Return exec --no-startup-id "alacritty --class ttrm,ttrm -e tmux";  
 bindsym $mod+Shift+f exec --no-startup-id "alacritty --class fm,fm -e ranger"; 
 
 # monitor configuration
