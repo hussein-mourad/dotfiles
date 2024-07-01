@@ -24,7 +24,6 @@ _darcs
 
 etc
 install.sh
-README.md
 pkgs.txt
 python-packages.txt
 .stowrc
