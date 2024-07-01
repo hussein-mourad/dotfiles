@@ -22,8 +22,8 @@ _darcs
 ^/LICENSE.*
 ^/COPYING
 
-etc/
-install.sh
-README.md
-pkgs.txt
-python-packages.txt
+\etc
+\install.sh
+\README.md
+\pkgs.txt
+\python-packages.txt
