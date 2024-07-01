@@ -16,3 +16,5 @@ map [fullscreen] <Esc> toggle_fullscreen
 map p print
 set selection-clipboard clipboard
 set auto-reload true
+map <Space> navigate next
+map <S-Space> navigate previous

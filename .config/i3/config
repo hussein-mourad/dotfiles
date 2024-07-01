@@ -281,8 +281,8 @@ bindsym $mod+Shift+Return exec --no-startup-id "alacritty --class ttrm,ttrm -e t
 bindsym $mod+Shift+f exec --no-startup-id "alacritty --class fm,fm -e ranger"; 
 
 # monitor configuration
-bindsym $mod+m --release exec --no-startup-id $HOME/bin/laptop-monitor-only
-bindsym $mod+Shift+m --release exec --no-startup-id $HOME/bin/external-monitor-only
+bindsym $mod+m --release exec --no-startup-id $HOME/.screenlayout/laptop-monitor-only
+bindsym $mod+Shift+m --release exec --no-startup-id $HOME/.screenlayout/external-monitor-only
 
 # dismiss notifications
 bindsym $mod+Shift+n --release exec --no-startup-id dunstctl close-all

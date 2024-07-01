@@ -1,0 +1,37 @@
+#!/bin/bash
+
+# Function to extract the username or organization name from the repository URL
+extract_user_or_org_name() {
+	local REPO_URL=$1
+	# Extract the username or organization name from the URL
+	echo "$REPO_URL" | sed -n 's|.*github\.com[:/]\([^/]*\)/.*|\1|p'
+}
+
+# Function to extract the repository name from the repository URL
+extract_repo_name() {
+	local REPO_URL=$1
+	# Extract the repository name from the URL
+	basename "$REPO_URL" .git
+}
+
+# Check if at least one repository URL is provided
+if [ $# -lt 1 ]; then
+	echo "Usage: $0 <repository_url> [repository_url ...]"
+	exit 1
+fi
+
+# Loop over each provided repository URL
+for REPO_URL in "$@"; do
+	# Extract the username or organization name
+	USER_ORG_NAME=$(extract_user_or_org_name "$REPO_URL")
+
+	# Extract the repository name
+	REPO_NAME=$(extract_repo_name "$REPO_URL")
+
+	# Create the directory structure
+	mkdir -p "$USER_ORG_NAME/$REPO_NAME"
+	echo "$USER_ORG_NAME/$REPO_NAME"
+
+	# Clone the repository into the directory
+	git clone "$REPO_URL" "$USER_ORG_NAME/$REPO_NAME"
+done

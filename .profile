@@ -42,6 +42,7 @@ fi
 timedatectl set-local-rtc 1
 
 PATH="$PATH:$HOME/go/bin"
+PATH="$PATH:$HOME/.screenlayout"
 PATH="$PATH:/usr/lib/gcc/avr/13.2.0/"
 export BROWSER=/usr/bin/firefox
 # export TERM=rxvt-unicode-256color
