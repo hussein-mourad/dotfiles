@@ -258,13 +258,13 @@ exec --no-startup-id alacritty --class fm,fm -e ranger
 
 for_window [class="ttrm"] floating enable
 for_window [class="ttrm"] sticky enable
-for_window [class="ttrm"] resize set 1100 700
+for_window [class="ttrm"] resize set 1300 800
 for_window [class="ttrm"] border pixel 1
 for_window [class="ttrm"] move scratchpad
 
 for_window [class="fm"] floating enable
 for_window [class="fm"] sticky enable
-for_window [class="fm"] resize set 1100 700
+for_window [class="fm"] resize set 1300 800
 for_window [class="fm"] border pixel 1
 for_window [class="fm"] move scratchpad
 
