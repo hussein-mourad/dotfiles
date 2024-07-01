@@ -147,8 +147,8 @@ alias fastping='ping -c 100 -s .2'
 #alias u="sudo apt update && sudo apt upgrade -y && sudo snap refresh"
 #alias r='sudo apt remove'
 alias q='yay -Ss'
-alias i='yay -S'
-alias u="yay -Syu"
+alias i='yay -S --noredownload --answerdiff None'
+alias u="yay -Syu --noredownload --answerdiff None"
 alias r='yay -Rsc'
 
 # commands enhancement (modern unix tools)
