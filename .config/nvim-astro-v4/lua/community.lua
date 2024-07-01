@@ -21,7 +21,7 @@ return {
   { import = "astrocommunity.pack.python" },
   { import = "astrocommunity.pack.go" },
   { import = "astrocommunity.pack.lua" },
-  { import = "astrocommunity.pack.rust" },
+  -- { import = "astrocommunity.pack.rust" },
 
   -- web dev
   { import = "astrocommunity.pack.html-css" },
@@ -65,6 +65,7 @@ return {
 
   -- media
   -- { import = "astrocommunity.media.image-nvim" },
+  { import = "astrocommunity.media.codesnap-nvim" },
 
   -- completion
   -- { import = "astrocommunity.completion.copilot-lua" },
