@@ -116,10 +116,10 @@ export FZF_DEFAULT_OPTS=" \
 # setopt noglob
 
 # bun completions
-[ -s "/home/hussein/.bun/_bun" ] && source "/home/hussein/.bun/_bun"
+[ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
 
 # pnpm
-export PNPM_HOME="/home/hussein/.local/share/pnpm"
+export PNPM_HOME="$HOME/.local/share/pnpm"
 case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;
   *) export PATH="$PNPM_HOME:$PATH" ;;
