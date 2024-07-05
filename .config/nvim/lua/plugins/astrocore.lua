@@ -104,6 +104,8 @@ return {
         ["<leader>ka"] = { "<cmd>set keymap=arabic<cr>", desc = "Change keymap to arabic" },
         ["<leader>ke"] = { '<cmd>set keymap="<cr>', desc = "Change keymap to english" },
         ["<leader>fT"] = { "<cmd>TodoTelescope<cr>", desc = "Find all todos" },
+        ["<leader>mp"] = { "<cmd>MarkdownPreviewToggle<cr>", desc = "Markdown Preview in Browser" },
+        ["<leader>mg"] = { "<cmd>Glow<cr>", desc = "Glow Preview" },
       },
       t = {
         -- setting a mapping to false will disable it

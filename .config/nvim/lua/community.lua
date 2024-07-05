@@ -21,14 +21,14 @@ return {
   { import = "astrocommunity.pack.python" },
   { import = "astrocommunity.pack.go" },
   { import = "astrocommunity.pack.lua" },
-  -- { import = "astrocommunity.pack.rust" },
+  { import = "astrocommunity.pack.rust" },
 
   -- web dev
   { import = "astrocommunity.pack.html-css" },
   { import = "astrocommunity.pack.typescript" },
   { import = "astrocommunity.pack.tailwindcss" },
-  -- { import = "astrocommunity.pack.ruby" },
-  -- { import = "astrocommunity.pack.php" },
+  { import = "astrocommunity.pack.ruby" },
+  { import = "astrocommunity.pack.php" },
   -- { import = "astrocommunity.pack.sql" },
 
   -- config files
@@ -76,6 +76,7 @@ return {
 
   -- terminal-integration
   { import = "astrocommunity.terminal-integration.vim-tmux-yank" },
+  { import = "astrocommunity.terminal-integration.vim-tmux-navigator" },
 
   { import = "astrocommunity.register.nvim-neoclip-lua" },
 
