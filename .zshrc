@@ -8,6 +8,8 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+source ~/.profile
+
 # Set the directory we want to store zinit and plugins
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 
@@ -82,7 +84,6 @@ eval "$(fzf --zsh)"
 # eval "$(zoxide init --cmd cd zsh)"
 eval "$(zoxide init zsh)"
 
-source ~/.profile
 source ~/.bash_aliases
 source ~/.bash_functions
 # source ~/bin/nvim-switcher
@@ -144,3 +145,6 @@ chpwd_functions+=venv_auto_activate
 #   eval "$(rbenv init -)"
 # fi
 eval "$(rbenv init -)"
+
+# Load argcomplete
+# eval "$(register-python-argcomplete)"

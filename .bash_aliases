@@ -178,7 +178,7 @@ alias ohmyzsh="vi ~/.oh-my-zsh"
 alias i3c="vi ~/.config/i3/config"
 alias i3blocksc="vi ~/.config/i3/i3blocks.conf"
 alias tmuxc="vi ~/.config/tmux/tmux.conf && tmux source-file ~/.config/tmux/tmux.conf "
-alias azkar='nohup zathura --page=54 /mnt/d/data/documents/books/islam/hisn-al-muslim.pdf > /dev/null 2>&1  &'
+# alias azkar='nohup zathura --page=54 /mnt/d/data/documents/books/islam/hisn-al-muslim.pdf > /dev/null 2>&1  &'
 
 # directory shortcut
 alias term10='cd /mnt/d/data/college/term10/'

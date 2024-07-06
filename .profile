@@ -55,3 +55,5 @@ export TERMINAL=/usr/bin/konsole
 export EDITOR=nvim
 
 # eval $(ssh-agent)
+#
+export PATH
