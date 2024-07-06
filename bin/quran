@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+zathura --config-dir="$HOME/.config/zathura/quran" /mnt/d/data/documents/books/islam/mushaf-al-madinah-green.pdf
