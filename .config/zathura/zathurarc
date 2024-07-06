@@ -1,6 +1,5 @@
 include catppuccin-mocha
-set recolor false
-set window-title-basename true
+
 map i recolor
 map [fullscreen] i recolor
 map [presentation] i recolor
@@ -14,8 +13,13 @@ map ] scroll full-up
 unmap [fullscreen] <Esc>
 map [fullscreen] <Esc> toggle_fullscreen
 map p print
-set selection-clipboard clipboard
-set auto-reload true
 map <Space> navigate next
 map <S-Space> navigate previous
 # set page-right-to-left true
+
+set recolor false
+set window-title-basename true
+set selection-clipboard clipboard
+set auto-reload true
+set statusbar-home-tilde true
+set database sqlite
