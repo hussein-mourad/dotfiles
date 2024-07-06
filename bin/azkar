@@ -1,0 +1,3 @@
+#!/bin/bash
+
+zathura --config-dir="$HOME/.config/zathura/arabic" --page=54 /mnt/d/data/documents/books/islam/hisn-al-muslim.pdf
