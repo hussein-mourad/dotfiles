@@ -29,6 +29,7 @@ return {
   { import = "astrocommunity.pack.tailwindcss" },
   { import = "astrocommunity.pack.ruby" },
   { import = "astrocommunity.pack.php" },
+  { import = "astrocommunity.pack.blade" },
   -- { import = "astrocommunity.pack.sql" },
 
   -- config files
