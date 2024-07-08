@@ -1,5 +1,43 @@
 #!/bin/bash
 
+select_quality() {
+	# Menu for selecting video quality
+	echo "Select video quality:"
+	options=("1080p" "720p" "480p" "360p" "240p" "144p" "Exit")
+	select opt in "${options[@]}"; do
+		case $opt in
+		"1080p")
+			FORMAT="bestvideo[height<=1080]+bestaudio/best"
+			break
+			;;
+		"720p")
+			FORMAT="bestvideo[height<=720]+bestaudio/best"
+			break
+			;;
+		"480p")
+			FORMAT="bestvideo[height<=480]+bestaudio/best"
+			break
+			;;
+		"360p")
+			FORMAT="bestvideo[height<=360]+bestaudio/best"
+			break
+			;;
+		"240p")
+			FORMAT="bestvideo[height<=240]+bestaudio/best"
+			break
+			;;
+		"144p")
+			FORMAT="bestvideo[height<=144]+bestaudio/best"
+			break
+			;;
+		"Exit")
+			exit
+			;;
+		*) echo "invalid option $REPLY" ;;
+		esac
+	done
+}
+
 # Check if yt-dlp is installed
 if ! command -v yt-dlp &>/dev/null; then
 	echo "yt-dlp could not be found. Please install it first."
@@ -18,56 +56,22 @@ if [ -z "$1" ]; then
 	exit
 fi
 
-VIDEO_URL="$1"
+INPUT_URL="$1"
 YOUTUBE_DIR="/mnt/d/data/media/videos/youtube"
-# YOUTUBE_DIR="/tmp/yt"
+YOUTUBE_DIR="/tmp/yt" # used for development
 # FORMAT="bestvideo[height<=720]+bestaudio/bestvideo[height<=480]+bestaudio/bestvideo[height<=360]+bestaudio"
 # FORMAT="22"
 # FORMAT="bestvideo[height<=240]+bestaudio"
 
-# Menu for selecting video quality
-echo "Select video quality:"
-options=("1080p" "720p" "480p" "360p" "240p" "144p" "Exit")
-select opt in "${options[@]}"; do
-	case $opt in
-	"1080p")
-		FORMAT="bestvideo[height<=1080]+bestaudio/best"
-		break
-		;;
-	"720p")
-		FORMAT="bestvideo[height<=720]+bestaudio/best"
-		break
-		;;
-	"480p")
-		FORMAT="bestvideo[height<=480]+bestaudio/best"
-		break
-		;;
-	"360p")
-		FORMAT="bestvideo[height<=360]+bestaudio/best"
-		break
-		;;
-	"240p")
-		FORMAT="bestvideo[height<=240]+bestaudio/best"
-		break
-		;;
-	"144p")
-		FORMAT="bestvideo[height<=144]+bestaudio/best"
-		break
-		;;
-	"Exit")
-		exit
-		;;
-	*) echo "invalid option $REPLY" ;;
-	esac
-done
+select_quality
 
-if [[ $VIDEO_URL =~ /playlist\?list= ]]; then
+if [[ $INPUT_URL =~ /playlist\?list= ]]; then
 	# Prefix playlist index with "-" separator, but only if it is available
 	CHANNEL_DIR="$YOUTUBE_DIR/%(playlist_uploader)s"
 	OUTPUT_DIR="$CHANNEL_DIR/%(playlist_title)s"
 	FILENAME="%(playlist_index&{}-|)s%(title)s.%(ext)s"
 
-	METADATA=$(yt-dlp --print-json --flat-playlist "$VIDEO_URL")
+	METADATA=$(yt-dlp --print-json --flat-playlist "$INPUT_URL")
 	UPLOADER="$(echo "$METADATA" | jq -r '.playlist_uploader' | head -1)"
 	PLAYLIST_TITLE="$(echo "$METADATA" | jq -r '.playlist_title' | head -1)"
 	ARCHIVE_FILE="$YOUTUBE_DIR/$UPLOADER/$PLAYLIST_TITLE/archive.log"
@@ -103,4 +107,4 @@ yt-dlp \
 	--merge-output-format mp4 \
 	--sponsorblock-mark all \
 	${ARCHIVE_FILE:+--download-archive "$ARCHIVE_FILE"} \
-	"$VIDEO_URL"
+	"$INPUT_URL"
