@@ -38,6 +38,19 @@ select_quality() {
 	done
 }
 
+# Function to convert seconds to human-readable format
+function display_time {
+	local T=$1
+	local D=$((T / 60 / 60 / 24))
+	local H=$((T / 60 / 60 % 24))
+	local M=$((T / 60 % 60))
+	local S=$((T % 60))
+	((D > 0)) && printf '%d days ' $D
+	((H > 0)) && printf '%d hours ' $H
+	((M > 0)) && printf '%d minutes ' $M
+	((S >= 0)) && printf '%d seconds\n' $S
+}
+
 # Check if yt-dlp is installed
 if ! command -v yt-dlp &>/dev/null; then
 	echo "yt-dlp could not be found. Please install it first."
@@ -90,6 +103,8 @@ THUMBNAIL_PATH="thumbnail:$OUTPUT_DIR/thumbnails/$FILENAME"
 SUBTITLE_PATH="subtitle:$OUTPUT_DIR/subtitles/$FILENAME"
 DESCRIPTION="description:$OUTPUT_DIR/descriptions/$FILENAME"
 
+SECONDS=0
+
 yt-dlp \
 	-f "$FORMAT" \
 	-o "$OUTPUT_FILENAME" \
@@ -112,6 +127,12 @@ yt-dlp \
 	--sponsorblock-mark all \
 	${ARCHIVE_FILE:+--download-archive "$ARCHIVE_FILE"} \
 	"$INPUT_URL"
+
+echo "Video downloaded successfully..."
+
+ELAPSED_TIME=$SECONDS
+echo "Elapsed time is: "
+display_time $ELAPSED_TIME
 
 # Ensure the directory exists
 mkdir -p "$ACTUAL_OUTPUT_DIR"
