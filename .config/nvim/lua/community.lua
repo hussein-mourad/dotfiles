@@ -30,6 +30,7 @@ return {
   { import = "astrocommunity.pack.ruby" },
   { import = "astrocommunity.pack.php" },
   { import = "astrocommunity.pack.blade" },
+  { import = "astrocommunity.pack.prisma" },
   -- { import = "astrocommunity.pack.sql" },
 
   -- config files
