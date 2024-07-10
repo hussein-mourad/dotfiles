@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# Step 1: Remove timestamps and empty lines, and trim trailing whitespace
+# Step 2: Remove duplicate lines and ensure no odd characters
+# Step 3: Remove empty lines
+
+# Check if srt file is provided
+if [ -z "$1" ]; then
+  echo "No srt file provided. Usage: ./convert_str <file.srt>"
+  exit
+fi
+
+output=$(sed -r '/^[0-9]+$/d; /^$/d; s/^[0-9:,]+ --> [0-9:,]+ *//g; s/[[:space:]]*$//' "$1" | awk '{gsub(/\r/,"")} !seen[$0]++' | sed -r '/^$/d')
+
+echo "$output"
