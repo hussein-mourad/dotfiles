@@ -65,7 +65,7 @@ fi
 
 # Check if a video URL is provided
 if [ -z "$1" ]; then
-	echo "No video URL provided. Usage: ./download_video <video_url>"
+	echo "No video URL provided. Usage: ./yt <video_url>"
 	exit
 fi
 
