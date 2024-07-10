@@ -70,8 +70,12 @@ if [ -z "$1" ]; then
 fi
 
 INPUT_URL="$1"
-YOUTUBE_DIR="/mnt/d/data/media/videos/youtube"
-# YOUTUBE_DIR="/home/$USER/yt" # used for development
+# YOUTUBE_DIR="/mnt/d/data/media/videos/youtube"
+YOUTUBE_DIR="$HOME/yt" # used for development
+LOG_FILE="$YOUTUBE_DIR/output.log"
+
+mkdir -p "$YOUTUBE_DIR"
+touch "$LOG_FILE"
 
 select_quality
 
@@ -88,11 +92,6 @@ if [[ $INPUT_URL =~ /playlist\?list= ]]; then
 
 	ARCHIVE_FILE="$ACTUAL_OUTPUT_DIR/archive.log"
 else
-	METADATA=$(yt-dlp --dump-json --no-download "$INPUT_URL" | jq -r '.')
-	UPLOADER=$(echo "$METADATA" | jq -r '.uploader')
-	TITLE=$(echo "$METADATA" | jq -r '.title')
-	ACTUAL_OUTPUT_DIR="$YOUTUBE_DIR/$UPLOADER/$TITLE"
-
 	CHANNEL_DIR="$YOUTUBE_DIR/%(uploader)s"
 	OUTPUT_DIR="$CHANNEL_DIR/%(title)s"
 	FILENAME="%(title)s.%(ext)s"
@@ -126,16 +125,14 @@ yt-dlp \
 	--merge-output-format mp4 \
 	--sponsorblock-mark all \
 	${ARCHIVE_FILE:+--download-archive "$ARCHIVE_FILE"} \
-	"$INPUT_URL"
+	"$INPUT_URL" | tee "$LOG_FILE"
 
-echo "Video downloaded successfully..."
+ACTUAL_DOWNLOAD_DIR=$(grep "Destination: " "$LOG_FILE" | head -1 | awk -F'Destination: ' '{print $2}' | xargs -I {} dirname "{}")
 
+# Save the URL to the file
+echo "$INPUT_URL" >"$ACTUAL_DOWNLOAD_DIR/url-test.txt"
+
+echo "The video was downloaded to: $ACTUAL_DOWNLOAD_DIR"
 ELAPSED_TIME=$SECONDS
 echo "Elapsed time is: "
 display_time $ELAPSED_TIME
-
-# Ensure the directory exists
-mkdir -p "$ACTUAL_OUTPUT_DIR"
-
-# Save the URL to the file
-echo "$INPUT_URL" >"$ACTUAL_OUTPUT_DIR/url.txt"
