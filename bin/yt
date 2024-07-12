@@ -70,8 +70,8 @@ if [ -z "$1" ]; then
 fi
 
 INPUT_URL="$1"
-# YOUTUBE_DIR="/mnt/d/data/media/videos/youtube"
-YOUTUBE_DIR="$HOME/yt" # used for development
+YOUTUBE_DIR="/mnt/d/data/media/videos/youtube"
+# YOUTUBE_DIR="$HOME/yt" # used for development
 LOG_FILE="$YOUTUBE_DIR/output.log"
 
 mkdir -p "$YOUTUBE_DIR"
@@ -130,7 +130,7 @@ yt-dlp \
 ACTUAL_DOWNLOAD_DIR=$(grep "Destination: " "$LOG_FILE" | head -1 | awk -F'Destination: ' '{print $2}' | xargs -I {} dirname "{}")
 
 # Save the URL to the file
-echo "$INPUT_URL" >"$ACTUAL_DOWNLOAD_DIR/url-test.txt"
+echo "$INPUT_URL" >"$ACTUAL_DOWNLOAD_DIR/url.txt"
 
 echo "The video was downloaded to: $ACTUAL_DOWNLOAD_DIR"
 ELAPSED_TIME=$SECONDS
