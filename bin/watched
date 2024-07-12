@@ -1,0 +1,82 @@
+#!/bin/bash
+
+WATCHED_FILE=".watched"
+
+function sort_file() {
+  sort -u "$WATCHED_FILE" -o "$WATCHED_FILE"
+}
+
+function clean_file() {
+  read -rp "Are you sure you want to delete all entries? (y/n): " confirm
+  if [[ $confirm == [yY] ]]; then
+    if [[ -f "$WATCHED_FILE" ]]; then
+      rm "$WATCHED_FILE"
+      echo "Delete all entries."
+    else
+      echo "File is already empty."
+    fi
+
+  fi
+}
+
+function add_video() {
+  local filename="$1"
+  touch "$WATCHED_FILE"
+  if ! grep -qxF "$filename" "$WATCHED_FILE"; then
+    echo "$filename" >>"$WATCHED_FILE"
+    echo "Added: $filename"
+  else
+    echo "Already added: $filename"
+  fi
+  sort_file
+}
+
+function remove_video() {
+  local filename="$1"
+
+  if [[ ! -f "$WATCHED_FILE" ]]; then
+    echo "No watched list found."
+    return
+  fi
+
+  if grep -qxF "$filename" "$WATCHED_FILE"; then
+    grep -vxF "$filename" "$WATCHED_FILE" >"${WATCHED_FILE}.tmp" && mv "${WATCHED_FILE}.tmp" "$WATCHED_FILE"
+    echo "Removed: $filename"
+  else
+    echo "File not found: $filename"
+  fi
+  sort_file
+}
+
+function list_videos() {
+  if [[ -f "$WATCHED_FILE" ]]; then
+    cat "$WATCHED_FILE"
+  else
+    echo "No watched videos found."
+  fi
+}
+
+case "$1" in
+add)
+  shift
+  for filename in "$@"; do
+    add_video "$filename"
+  done
+  ;;
+rm)
+  shift
+  for filename in "$@"; do
+    remove_video "$@"
+  done
+  ;;
+ls)
+  list_videos
+  ;;
+
+clean)
+  clean_file
+  ;;
+*)
+  echo "Usage: $0 {add|rm|ls} [filename]"
+  ;;
+esac
