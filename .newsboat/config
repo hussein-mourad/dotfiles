@@ -13,3 +13,4 @@ bind-key U show-urls
 bind-key D pb-download
 bind-key x pb-delete
 
+browser "qutebrowser %u"
