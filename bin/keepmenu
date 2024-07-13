@@ -25,12 +25,12 @@ timeout=30
 pass="$(gpg -d ${passgpg} 2>/dev/null)"
 
 # Extract entries list from the database
-entry=$(echo "${pass}" | keepassxc-cli ls -R -f "${database}" 2>/dev/null | $dmenu)
+entry=$(echo "${pass}" | keepassxc-cli ls -qRf "${database}" | $dmenu)
 
 # Exits if no entry is selected
 [[ $entry ]] || exit
 
-details=$(echo "${pass}" | keepassxc-cli show "${database}" "${entry}" 2>/dev/null |
+details=$(echo "${pass}" | keepassxc-cli show -q "${database}" "${entry}" |
 	$dmenu)
 
 # Exit if nothing is selected
@@ -43,11 +43,9 @@ field=$(echo "$details" | cut -d ':' -f 1)
 # clipboard after the specified timeout.
 # If the selected field is not password. copy its contents to the clipboard
 if [[ "$field" == "Password" ]]; then
-	echo "${pass}" | keepassxc-cli clip "${database}" "${entry}" >/dev/null
 	notify-send "keepmenu" "Password copied to clipboard for ${timeout} seconds"
-	sleep $timeout
+	echo "${pass}" | keepassxc-cli clip -q "${database}" "${entry}" "$timeout"
 	echo '' | xclip -sel clip
-
 	# Remove entry from clipboard managers e.g. for copyq
 	# copyq remove 0 2> /dev/null
 else
