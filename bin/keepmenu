@@ -10,36 +10,28 @@ passgpg="/mnt/d/data/.pass.gpg"
 [[ ! -e "$database" ]] && notify-send "keepmenu" "Please check if the database variable is set properly" && exit
 [[ ! -e "$passgpg" ]] && notify-send "keepmenu" "Please check if the passgpg variable is set properly" && exit
 
+. "$HOME/.dmenurc"
+
 # Customize dmenu
-dmenu="dmenu -i"
+dmenu="dmenu -i $DMENU_OPTIONS"
+
 # dmenu="dmenu -i -l 20 -sb '#5555ff' -sf '#ffffff' -nb '#111111' -nf '#eeeeee'\
 # -fn 'monospace:size=14'"
 
 # Timeout after which clipboard will be cleared
-timeout=15
+timeout=30
 
 # Decrypt the password
 pass="$(gpg -d ${passgpg} 2>/dev/null)"
 
 # Extract entries list from the database
-entry=$(echo ${pass} | keepassxc-cli ls "${database}" 2>/dev/null |
-	eval $dmenu)
+entry=$(echo "${pass}" | keepassxc-cli ls -R -f "${database}" 2>/dev/null | $dmenu)
 
 # Exits if no entry is selected
 [[ $entry ]] || exit
 
-# Checks if the entry selected is a group or a regular entry. If it is a group,
-# extract the entries of that group
-if [[ ! "$entry" =~ .*/ ]]; then
-	details=$(echo ${pass} | keepassxc-cli show "${database}" "${entry}" 2>/dev/null |
-		eval $dmenu)
-else
-	gentry=$(echo ${pass} | keepassxc-cli ls "${database}" "${entry}" 2>/dev/null |
-		eval $dmenu)
-
-	details=$(echo ${pass} | keepassxc-cli show "${database}" "${entry}${gentry}" 2>/dev/null |
-		eval $dmenu)
-fi
+details=$(echo "${pass}" | keepassxc-cli show "${database}" "${entry}" 2>/dev/null |
+	$dmenu)
 
 # Exit if nothing is selected
 [[ $details ]] || exit
@@ -51,11 +43,7 @@ field=$(echo "$details" | cut -d ':' -f 1)
 # clipboard after the specified timeout.
 # If the selected field is not password. copy its contents to the clipboard
 if [[ "$field" == "Password" ]]; then
-	if [[ "$entry" =~ .*/ ]]; then
-		echo ${pass} | keepassxc-cli clip "${database}" "${entry}${gentry}" >/dev/null
-	else
-		echo ${pass} | keepassxc-cli clip "${database}" "${entry}" >/dev/null
-	fi
+	echo "${pass}" | keepassxc-cli clip "${database}" "${entry}" >/dev/null
 	notify-send "keepmenu" "Password copied to clipboard for ${timeout} seconds"
 	sleep $timeout
 	echo '' | xclip -sel clip
