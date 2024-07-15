@@ -254,20 +254,20 @@ for_window [title="konsole"] border pixel 1
 for_window [urgent=latest] focus
 
 # Scratchpad
-exec --no-startup-id alacritty --class ttrm,ttrm -e tmux
-exec --no-startup-id alacritty --class fm,fm -e ranger  
+exec --no-startup-id xfce4-terminal --title ttmux -e tmux
+exec --no-startup-id xfce4-terminal --title ranger-fm -e ranger  
 
-for_window [class="ttrm"] floating enable
-for_window [class="ttrm"] sticky enable
-for_window [class="ttrm"] resize set 1300 800
-for_window [class="ttrm"] border pixel 1
-for_window [class="ttrm"] move scratchpad
+for_window [title="ttmux"] floating enable
+for_window [title="ttmux"] sticky enable
+for_window [title="ttmux"] resize set 1300 800
+for_window [title="ttmux"] border pixel 1
+for_window [title="ttmux"] move scratchpad
 
-for_window [class="fm"] floating enable
-for_window [class="fm"] sticky enable
-for_window [class="fm"] resize set 1300 800
-for_window [class="fm"] border pixel 1
-for_window [class="fm"] move scratchpad
+for_window [title="ranger-fm"] floating enable
+for_window [title="ranger-fm"] sticky enable
+for_window [title="ranger-fm"] resize set 1300 800
+for_window [title="ranger-fm"] border pixel 1
+for_window [title="ranger-fm"] move scratchpad
 
 # move the currently focused window to the scratchpad
 bindsym $mod+Shift+minus move scratchpad
@@ -275,11 +275,11 @@ bindsym $mod+Shift+plus scratchpad show
 
 # Show the next scratchpad window or hide the focused scratchpad window.
 # If there are multiple scratchpad windows, this command cycles through them.
-bindsym $mod+comma [class="ttrm"] scratchpad show; move position center
-bindsym $mod+f [class="fm"] scratchpad show; move position center
+bindsym $mod+comma [title="ttmux"] scratchpad show; move position center
+bindsym $mod+f [title="ranger-fm"] scratchpad show; move position center
 
-bindsym $mod+Shift+Return exec --no-startup-id "alacritty --class ttrm,ttrm -e tmux";  
-bindsym $mod+Shift+f exec --no-startup-id "alacritty --class fm,fm -e ranger"; 
+bindsym $mod+Shift+Return exec --no-startup-id "xfce4-terminal --title ttmux -e tmux";  
+bindsym $mod+Shift+f exec --no-startup-id "xfce4-terminal --title ranger-fm -e ranger"; 
 
 # monitor configuration
 bindsym $mod+m --release exec --no-startup-id $HOME/.screenlayout/laptop-monitor-only
