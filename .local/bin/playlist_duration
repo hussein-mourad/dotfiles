@@ -1,0 +1,37 @@
+#!/bin/bash
+
+# Function to display usage message
+usage() {
+  echo "Usage: $(basename "$0") [video files]"
+  exit 1
+}
+
+# Check if ffprobe is installed
+if ! command -v ffprobe &>/dev/null; then
+  echo "ffprobe is not installed. Please install ffmpeg package."
+  exit 1
+fi
+
+# Check if at least one argument is provided
+if [ $# -eq 0 ]; then
+  usage
+fi
+
+total_seconds=0
+
+for file in "$@"; do
+  # Get the duration of the video in seconds
+  duration=$(ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 "$file")
+
+  # If the duration was successfully retrieved, add it to the total
+  if [ -n "$duration" ]; then
+    total_seconds=$(echo "$total_seconds + $duration" | bc)
+  fi
+done
+
+# Convert the total seconds to hours, minutes, and seconds
+hours=$(awk "BEGIN {printf \"%.0f\", $total_seconds/3600}")
+minutes=$(awk "BEGIN {printf \"%.0f\", ($total_seconds%3600)/60}")
+seconds=$(awk "BEGIN {printf \"%.0f\", $total_seconds%60}")
+
+printf "Total Duration: %02d:%02d:%02d\n" "$hours" "$minutes" "$seconds"

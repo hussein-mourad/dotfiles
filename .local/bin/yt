@@ -64,8 +64,8 @@ if ! command -v jq &>/dev/null; then
 fi
 
 # Check if a video URL is provided
-if [ -z "$1" ]; then
-	echo "No video URL provided. Usage: ./yt <video_url>"
+if [ $# -ne 1 ]; then
+	echo "Usage: $(basename "$0") <video_url>"
 	exit
 fi
 
