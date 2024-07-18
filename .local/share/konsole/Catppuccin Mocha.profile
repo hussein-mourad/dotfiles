@@ -2,6 +2,7 @@
 ColorScheme=Catppuccin-Mocha
 DimmValue=19
 Font=FiraCode Nerd Font,11,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
+IgnoreWcWidth=false
 LineSpacing=0
 
 [General]
@@ -18,8 +19,8 @@ ScrollBarPosition=2
 
 [Terminal Features]
 BellMode=3
-BidiLineLTR=false
+BidiLineLTR=true
 BidiRenderingEnabled=true
-BidiTableDirOverride=false
+BidiTableDirOverride=true
 BlinkingCursorEnabled=true
 VerticalLine=false
