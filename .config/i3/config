@@ -6,10 +6,12 @@ include ~/.config/i3/themes/bar-config
 
 #set $lockscreen "blurlock"
 #set $lockscreen "xlock -mode random"
-set $lockscreen $HOME/bin/lockscreen
+set $lockscreen $HOME/.local/bin/lockscreen
 
 # Set mod key (Mod1=<Alt>, Mod4=<Super>)
 set $mod Mod4
+
+set $border_size 2
 
 set $terminal i3-sensible-terminal
 
@@ -17,7 +19,7 @@ set $terminal i3-sensible-terminal
 # workspace_layout tabbed <stacking|tabbed>
 
 # Configure border style <normal|1pixel|pixel xx|none|pixel>
-default_border pixel 1 
+default_border pixel $border_size
 default_floating_border normal
 
 # Hide borders
@@ -25,7 +27,7 @@ hide_edge_borders none
 
 # change borders
 bindsym $mod+u border none
-bindsym $mod+y border pixel 1
+bindsym $mod+y border pixel $border_size
 bindsym $mod+n border normal
 
 # Font for window titles. Will also be used by the bar unless a different font
@@ -76,7 +78,7 @@ bindsym $mod+equal exec pulseaudio-ctl up +5%
 # Start Applications
 bindsym $mod+Ctrl+b exec i3-sensible-terminal -e 'bmenu'
 bindsym $mod+b exec firefox
-bindsym $mod+p exec --no-startup-id $HOME/bin/keepassxc-open;
+bindsym $mod+p exec --no-startup-id $HOME/.local/bin/keepassxc-open;
 # bindsym $mod+f exec i3-sensible-terminal -e 'ranger';
 bindsym $mod+F5 exec i3-sensible-terminal -e 'mocp'
 bindsym $mod+t exec --no-startup-id pkill picom
@@ -86,7 +88,7 @@ bindsym Print exec --no-startup-id flameshot full
 bindsym $mod+Ctrl+Print exec --no-startup-id flameshot full -c
 bindsym $mod+Print exec --no-startup-id flameshot gui
 bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
-bindsym $mod+Shift+w --release exec $HOME/bin/launch-win11-vm;
+bindsym $mod+Shift+w --release exec $HOME/.local/bin/launch-win11-vm;
 # bindsym $mod+Shift+h exec xdg-open /usr/share/doc/manjaro/i3_help.pdf
 # bindsym Print exec --no-startup-id i3-scrot
 # bindsym $mod+Print --release exec --no-startup-id i3-scrot -w
@@ -219,12 +221,12 @@ for_window [class="TelegramDesktop"] move to workspace $ws7
 # for_window [class="Zathura"] move to workspace $ws3
 
 # Open specific applications in floating mode
-for_window [title="alsamixer"] floating enable border pixel 1
+for_window [title="alsamixer"] floating enable border pixel $border_size
 for_window [class="calamares"] floating enable border normal
 for_window [class="Clipgrab"] floating enable
 for_window [title="File Transfer*"] floating enable
 for_window [class="fpakman"] floating enable
-for_window [class="Galculator"] floating enable border pixel 1
+for_window [class="Galculator"] floating enable border pixel $border_size
 for_window [class="GParted"] floating enable border normal
 for_window [title="i3_help"] floating enable sticky enable border normal
 for_window [class="Lightdm-settings"] floating enable
@@ -248,7 +250,7 @@ for_window [class="(?i)virtualbox"] floating enable border normal
 for_window [class="Xfburn"] floating enable
 for_window [title="PyQt5 Demo"] floating enable border normal
 for_window [title="float"] floating enable border normal
-for_window [title="konsole"] border pixel 1
+for_window [title="konsole"] border pixel $border_size
 
 # switch to workspace with urgent window automatically
 for_window [urgent=latest] focus
@@ -260,13 +262,13 @@ exec --no-startup-id xfce4-terminal --title ranger-fm -e ranger
 for_window [title="ttmux"] floating enable
 for_window [title="ttmux"] sticky enable
 for_window [title="ttmux"] resize set 1300 800
-for_window [title="ttmux"] border pixel 1
+for_window [title="ttmux"] border pixel $border_size
 for_window [title="ttmux"] move scratchpad
 
 for_window [title="ranger-fm"] floating enable
 for_window [title="ranger-fm"] sticky enable
 for_window [title="ranger-fm"] resize set 1300 800
-for_window [title="ranger-fm"] border pixel 1
+for_window [title="ranger-fm"] border pixel $border_size
 for_window [title="ranger-fm"] move scratchpad
 
 # move the currently focused window to the scratchpad
@@ -494,14 +496,14 @@ exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id nitrogen --restore; sleep 1; 
 exec --no-startup-id xfce4-power-manager
 exec --no-startup-id syncthing --no-browser
-exec --no-startup-id xautolock -time 10 -locker $HOME/bin/lockscreen
+exec --no-startup-id xautolock -time 10 -locker $HOME/.local/bin/lockscreen
 exec --no-startup-id prayer-times --latitude 31.2 --longitude 29.9 --method Egyptian --maghrib-mod 0 --fajr-mod 1
 exec --no-startup-id i3-msg 'workspace $ws2; exec --no-startup-id i3-sensible-terminal -e tmux; workspace $ws1'
 # exec --no-startup-id telegram-desktop; workspace $ws1
 
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
-exec_always --no-startup-id $HOME/bin/keyboard
+exec_always --no-startup-id $HOME/.local/bin/keyboard
 
 # Applets
 exec --no-startup-id nm-applet
