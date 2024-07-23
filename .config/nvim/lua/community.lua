@@ -30,6 +30,7 @@ return {
   { import = "astrocommunity.pack.ruby" },
   { import = "astrocommunity.pack.php" },
   { import = "astrocommunity.pack.blade" },
+  { import = "astrocommunity.pack.laravel" },
   { import = "astrocommunity.pack.prisma" },
   -- { import = "astrocommunity.pack.sql" },
 
@@ -55,6 +56,10 @@ return {
   { import = "astrocommunity.editing-support.undotree" },
   { import = "astrocommunity.editing-support.telescope-undo-nvim" },
   { import = "astrocommunity.editing-support.true-zen-nvim" },
+  { import = "astrocommunity.editing-support.nvim-origami" },
+  { import = "astrocommunity.editing-support.bigfile-nvim" },
+  { import = "astrocommunity.editing-support.dial-nvim" },
+  { import = "astrocommunity.editing-support.vim-doge" },
 
   -- motion
   { import = "astrocommunity.motion.mini-surround" },
@@ -89,7 +94,7 @@ return {
 
   { import = "astrocommunity.keybinding.nvcheatsheet-nvim" },
 
-  { import = "astrocommunity.project.nvim-spectre" },
+  { import = "astrocommunity.search.nvim-spectre" },
 
   -- { import = "astrocommunity.motion.harpoon" },
   -- { import = "astrocommunity.programming-language-support.rest-nvim" },
