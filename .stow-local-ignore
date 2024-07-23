@@ -27,3 +27,4 @@ install.sh
 pkgs.txt
 python-packages.txt
 .stowrc
+Makefile
