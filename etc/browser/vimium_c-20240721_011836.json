@@ -1,0 +1,39 @@
+{
+	"name": "Vimium C",
+	"@time": "7/21/2024, 1:18:36 AM",
+	"time": 1721513916083,
+	"environment": {
+		"extension": "1.99.997",
+		"platform": "linux",
+		"firefox": 128
+	},
+	"exclusionRules": [
+		{
+			"passKeys": "f m ",
+			"pattern": "^https://www.youtube.com/watch?v=*"
+		},
+		{
+			"passKeys": "f m ",
+			"pattern": ":https://www.youtube.com/"
+		},
+		{
+			"passKeys": "",
+			"pattern": ":https://excalidraw.com/"
+		},
+		{
+			"passKeys": "",
+			"pattern": ":https://www.tldraw.com/"
+		}
+	],
+	"keyLayout": 18,
+	"keyMappings": [
+		"#!no-check",
+		"unmap <c-e>",
+		"unmap <c-y>",
+		"unmap <f1>",
+		""
+	],
+	"searchUrl": "https://duckduckgo.com/?q=$s DuckDuckGo",
+	"vimSync": true,
+	"ignoreCapsLock": 2
+}
