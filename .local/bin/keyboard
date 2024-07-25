@@ -1,19 +1,27 @@
 #!/bin/sh
 
+# Reset options
+setxkbmap -option
 # setxkbmap options in /usr/share/X11/xkb/rules/base.lst
 # Change key repeat rate
 # Default: xset r rate 500 30
-xset r rate 250 30
+xset r rate 200 30
 # For console use: sudo kbdrate -d 300 -r 30
 # Configure keyboard
 setxkbmap -model pc105
 # Set Arabic Language
 setxkbmap -layout us,ara -variant ,digits -option grp:alt_space_toggle
-#setxkbmap -option caps:escape
-setxkbmap -option caps:super
 setxkbmap -option shift:both_capslock_cancel
-# capslock behaves like escape when press alone else super key
-killall xcape 2>/dev/null
-xcape -e 'Super_L=Escape'
+#setxkbmap -option caps:escape
+# setxkbmap -option caps:super
+
+# Capslock behaves like escape when press alone else super key
+# killall xcape 2>/dev/null
+# xcape -e 'Super_L=Escape'
+
 # menu is additional super
-xmodmap -e 'keycode 135 = Super_R'
+# xmodmap -e 'keycode 135 = Super_R'
+
+# esc/ctrl
+# setxkbmap -option caps:ctrl_modifier
+# xcape -e 'Caps_Lock=Escape'

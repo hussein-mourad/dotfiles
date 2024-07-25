@@ -1,0 +1,14 @@
+;; Caps to escape/control configuration for Kanata
+;; lmeta for super key
+
+(defsrc
+  caps
+)
+
+(defalias
+  escctrl (tap-hold 200 200 esc lctl)
+)
+
+(deflayer base
+  @escctrl
+)
