@@ -16,6 +16,6 @@ if [ ${#image_files[@]} -eq 0 ]; then
 fi
 
 # Combine images into a single PDF
-convert "${image_files[@]}" output.pdf
+magick "${image_files[@]}" output.pdf
 
 echo "Images have been combined into output.pdf"
