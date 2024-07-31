@@ -127,3 +127,24 @@ class compress(Command):
             "compress " + os.path.basename(self.fm.thisdir.path) + ext
             for ext in extension
         ]
+
+
+class bulkrename(Command):
+    """:bulkrename
+
+    This command opens a list of selected files in an external editor.
+    After you edit and save the file, it will generate a shell script
+    which does bulk renaming according to the changes you did in the file.
+
+    This shell script is opened in an editor for you to review.
+    After you close it, it will be executed.
+    """
+
+    def __init__(self, *args, **kwargs):
+        super(bulkrename, self).__init__(*args, **kwargs)
+        self.flags, _ = self.parse_flags()
+        if not self.flags:
+            self.flags = "w"
+
+    def execute(self):
+        self.fm.run("brn")
