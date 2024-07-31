@@ -7,4 +7,5 @@ yt-dlp \
 	--write-thumbnail \
 	--embed-chapters \
 	--embed-metadata \
+	--embed-subs \
 	"$1"
