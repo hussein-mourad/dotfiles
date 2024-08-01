@@ -30,8 +30,6 @@ for file in "$@"; do
 done
 
 # Convert the total seconds to hours, minutes, and seconds
-hours=$(awk "BEGIN {printf \"%.0f\", $total_seconds/3600}")
-minutes=$(awk "BEGIN {printf \"%.0f\", ($total_seconds%3600)/60}")
-seconds=$(awk "BEGIN {printf \"%.0f\", $total_seconds%60}")
+total_duration=$(date -d@"$total_seconds" -u +%H:%M:%S)
 
-printf "Total Duration: %02d:%02d:%02d\n" "$hours" "$minutes" "$seconds"
+echo "Total Duration: $total_duration"

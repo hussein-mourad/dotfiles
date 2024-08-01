@@ -1,9 +1,48 @@
 #!/bin/bash
 
+select_quality() {
+	# Menu for selecting video quality
+	echo "Select video quality:"
+	options=("1080p" "720p" "480p" "360p" "240p" "144p" "Exit")
+	select opt in "${options[@]}"; do
+		case $opt in
+		"1080p")
+			FORMAT="bestvideo[height<=1080]+bestaudio/best"
+			break
+			;;
+		"720p")
+			FORMAT="bestvideo[height<=720]+bestaudio/best"
+			break
+			;;
+		"480p")
+			FORMAT="bestvideo[height<=480]+bestaudio/best"
+			break
+			;;
+		"360p")
+			FORMAT="bestvideo[height<=360]+bestaudio/best"
+			break
+			;;
+		"240p")
+			FORMAT="bestvideo[height<=240]+bestaudio/best"
+			break
+			;;
+		"144p")
+			FORMAT="bestvideo[height<=144]+bestaudio/best"
+			break
+			;;
+		"Exit")
+			exit
+			;;
+		*) echo "invalid option $REPLY" ;;
+		esac
+	done
+}
+
+select_quality
+
 yt-dlp \
-	-f 'bestvideo[ext=mp4][height=480]+bestaudio[ext=m4a]/best' \
+	-f "$FORMAT" \
 	-o "%(title)s.%(ext)s" \
-	--write-thumbnail \
 	--embed-metadata \
 	--embed-chapters \
 	--embed-subs \

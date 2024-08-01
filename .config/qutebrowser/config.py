@@ -15,4 +15,4 @@ if os.path.exists(config.configdir / "theme.py"):
 
     theme.setup(c, "mocha", True)
 
-config.set("colors.webpage.darkmode.enabled", True)
+# config.set("colors.webpage.darkmode.enabled", True)

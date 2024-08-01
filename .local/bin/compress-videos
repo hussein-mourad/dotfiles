@@ -21,10 +21,10 @@ for file in "$VIDEO_DIR"/*; do
 	if [ -f "$file" ]; then
 		# Get the filename without extension
 		filename=$(basename -- "$file")
-		filename_no_ext="${filename%.*}"
+		# filename_no_ext="${filename%.*}"
 
 		# Compress the video using HandBrakeCLI
-		HandBrakeCLI --input "$file" --output "$OUTPUT_DIR"/"${filename_no_ext}-compressed.mp4"
+		HandBrakeCLI --input "$file" --output "$OUTPUT_DIR/$filename"
 		# HandBrakeCLI --input "$file" --output "$OUTPUT_DIR"/"${filename_no_ext}_compressed.mp4" --quality "$QUALITY"
 
 	fi
