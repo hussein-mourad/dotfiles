@@ -24,7 +24,10 @@ _darcs
 
 etc
 install.sh
-pkgs.txt
+.pkgslist.txt
+.pkgslist-explicit.txt
+.piplist.txt
+.pipxlist.txt
 python-packages.txt
 .stowrc
 Makefile

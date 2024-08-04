@@ -26,6 +26,15 @@ stow --adapt .
 git restore .
 ```
 
+## Backup Packages
+
+```bash
+yay -Qq > .pkgslist.txt
+yay -Qqe > .pkgslist-explicit.txt
+pip list > .piplist.txt
+pipx list --short > .pipxlist.txt
+```
+
 # TODO
 
 - [ ] Configure nvim from scartch to avoid depending on an external distro
