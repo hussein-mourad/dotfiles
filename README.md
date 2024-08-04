@@ -35,6 +35,22 @@ pip list > .piplist.txt
 pipx list --short > .pipxlist.txt
 ```
 
+## Change Theme checklist
+
+- [ ] i3 Configuration, Path: `~/.config/i3/`
+- [ ] i3status or i3blocks Configuration
+- [ ] dunst Configuration
+- [ ] rofi Configuration
+- [ ] dmenu `.dmenurc` or rofi
+- [ ] Terminal Configuration
+- [ ] tmux Configuration
+- [ ] neovim Configuration
+- [ ] zathura Configuration
+- [ ] yazi Configuration
+- [ ] bat Configuration
+- [ ] change wallpaper
+- [ ] GTK/QT Applications
+
 # TODO
 
 - [ ] Configure nvim from scartch to avoid depending on an external distro
