@@ -1,13 +1,14 @@
 [Appearance]
-ColorScheme=Catppuccin-Macchiato
+ColorScheme=Catppuccin-Dark
 DimmValue=19
-Font=FiraCode Nerd Font Mono,11,-1,5,500,0,0,0,0,0,0,0,0,0,0,1,Medium
+Font=FiraCode Nerd Font,11,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
+IgnoreWcWidth=false
 LineSpacing=0
 
 [General]
 DimWhenInactive=false
 Icon=/home/hussein/.local/share/konsole/catppuccin.png
-Name=Catppuccin Macchiato
+Name=Catppuccin Dark
 Parent=FALLBACK/
 ShowTerminalSizeHint=false
 TerminalCenter=false
@@ -18,8 +19,8 @@ ScrollBarPosition=2
 
 [Terminal Features]
 BellMode=3
-BidiLineLTR=false
+BidiLineLTR=true
 BidiRenderingEnabled=true
-BidiTableDirOverride=false
+BidiTableDirOverride=true
 BlinkingCursorEnabled=true
 VerticalLine=false

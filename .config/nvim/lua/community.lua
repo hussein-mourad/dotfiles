@@ -12,6 +12,7 @@ return {
 
   -- colorscheme
   { import = "astrocommunity.colorscheme.catppuccin" },
+  { import = "astrocommunity.colorscheme.onedarkpro-nvim" },
   { import = "astrocommunity.colorscheme.tokyonight-nvim" },
 
   -- langs
