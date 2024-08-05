@@ -11,6 +11,13 @@ vim.cmd [[
   let g:mkdp_browserfunc = 'OpenMarkdownPreview'
 ]]
 
+vim.cmd [[
+  augroup i3config
+    autocmd!
+    autocmd BufRead,BufNewFile ~/dotfiles/.config/i3/* setfiletype i3config
+  augroup END
+]]
+
 -- Set up custom filetypes
 -- vim.filetype.add {
 --   extension = {

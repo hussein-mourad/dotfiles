@@ -1,0 +1,37 @@
+# Startup applications
+exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+exec --no-startup-id nitrogen --restore; sleep 1; 
+exec --no-startup-id xfce4-power-manager
+exec --no-startup-id syncthing --no-browser
+exec --no-startup-id xautolock -time 10 -locker $HOME/.local/bin/lockscreen
+exec --no-startup-id prayer-times --latitude 31.2 --longitude 29.9 --method Egyptian --maghrib-mod 0 --fajr-mod 1
+# exec --no-startup-id i3-msg 'workspace $ws2; exec --no-startup-id i3-sensible-terminal -e tmux; workspace $ws1'
+# exec --no-startup-id telegram-desktop; workspace $ws1
+
+exec_always --no-startup-id ff-theme-util
+exec_always --no-startup-id fix_xcursor
+exec_always --no-startup-id $HOME/.local/bin/keyboard
+
+# Applets
+exec --no-startup-id nm-applet
+exec --no-startup-id pa-applet
+exec --no-startup-id blueman-applet
+exec --no-startup-id redshift-gtk -c ~/.config/redshift.conf
+exec --no-startup-id gxkb
+exec --no-startup-id flameshot
+exec --no-startup-id megasync
+exec --no-startup-id libinput-gestures-setup start
+# exec --no-startup-id clipit
+
+# exec --no-startup-id pulseaudio
+# exec --no-startup-id nitrogen --restore; sleep 1; picom -b
+# exec --no-startup-id manjaro-hello
+# exec --no-startup-id pamac-tray
+# exec --no-startup-id start_conky_maia
+# exec --no-startup-id start_conky_green
+# exec --no-startup-id safeeyes
+# exec --no-startup-id keepassxc
+# exec --no-startup-id volumeicon
+# exec i3-msg 'workspace $ws1; exec firefox'
+# exec_always --no-startup-id sbxkb
+# exec_always --no-startup-id xrandr --output eDP-1 --left-of HDMI-1-1

@@ -103,7 +103,7 @@ XTerm*selectToClipboard: true
 *color7: #BAC2DE
 *color15: #A6ADC8
 
-Xcursor.theme: catppuccin-mocha-dark-cursors
+Xcursor.theme: catppuccin-mocha-blue-cursors
 Xcursor.size: 0
 
 !URxvt.font:                       9x15,xft:TerminessTTFNerdFontMono:antialias=True

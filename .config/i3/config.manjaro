@@ -318,6 +318,7 @@ set_from_resource $term_color13    color13
 set_from_resource $term_color14    color14
 set_from_resource $term_color15    color15
 
+
 # Start i3bar to display a workspace bar (plus the system information i3status if available)
 bar {
 	i3bar_command i3bar
@@ -351,13 +352,23 @@ bar {
 bindsym $mod+m bar mode toggle
 
 # Theme colors
-# class                   border  backgr. text    indic.   child_border
-  client.focused          #556064 #556064 #80FFF9 #FDF6E3
-  client.focused_inactive #2F3D44 #2F3D44 #1ABC9C #454948
-  client.unfocused        #2F3D44 #2F3D44 #1ABC9C #454948
-  client.urgent           #CB4B16 #FDF6E3 #1ABC9C #268BD2
-  client.placeholder      #000000 #0c0c0c #ffffff #000000 
+set $bgcolor    #556064
+set $in_bgcolor #2F3D44
+set $text       #80FFF9
+set $u_bgcolor  #CB4B16
+set $u_indicator #268BD2
+set $indicator  #FDF6E3
+set $indicator2  #454948
+set $in_text    #1ABC9C
 
+# Theme colors
+# class                   border      backgr. 	  text     indic.   	child_border
+  client.focused          $bgcolor    $bgcolor 	  $text    $indicator
+  client.focused_inactive $in_bgcolor $in_bgcolor $in_text $indicator2
+  client.unfocused        $in_bgcolor $in_bgcolor $in_text $indicator2
+  client.urgent           $u_bgcolor  $indicator  $in_text $u_indicator
+
+  client.placeholder      #000000     #0c0c0c  	  #ffffff  #000000 
   client.background       #2B2C2B
 
 #############################
