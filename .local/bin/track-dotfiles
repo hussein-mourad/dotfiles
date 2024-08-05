@@ -1,0 +1,47 @@
+#!/bin/bash
+
+# Check if the correct number of arguments is provided
+if [ "$#" -ne 1 ]; then
+  echo "Usage: $0 <file_or_directory>"
+  exit 1
+fi
+
+DOTFILES_DIR="$HOME/dotfiles"
+
+SOURCE=$1
+
+# Check if the target exists
+if [ ! -e "$SOURCE" ]; then
+  echo "Error: $SOURCE does not exist."
+  exit 1
+fi
+
+# Check if the dotfiles exists
+if [ ! -e "$DOTFILES_DIR" ]; then
+  echo "Error: $DOTFILES_DIR does not exist."
+  exit 1
+fi
+
+# Get the absolute path of the target
+SOURCE=$(realpath "$SOURCE")
+
+# Remove $HOME from the target path
+SOURCE_REL="${SOURCE#"$HOME"/}"
+
+TARGET="$DOTFILES_DIR/$SOURCE_REL"
+
+# Create the necessary directory structure in the dotfiles directory
+mkdir -p "$TARGET"
+
+# # Move the target to the dotfiles directory
+mv "$SOURCE" "$TARGET"
+
+# Change to the dotfiles directory to use stow
+cd "$DOTFILES_DIR" || {
+  echo "Error: Failed to change directory to $DOTFILES_DIR"
+  exit 1
+}
+
+make
+
+echo "Moved $SOURCE to $TARGET and created a symlink."
