@@ -23,18 +23,18 @@ if [ ! -e "$DOTFILES_DIR" ]; then
 fi
 
 # Get the absolute path of the target
-SOURCE=$(realpath "$SOURCE")
+SOURCE_ABS=$(realpath "$SOURCE")
 
 # Remove $HOME from the target path
-SOURCE_REL="${SOURCE#"$HOME"/}"
+SOURCE_REL="${SOURCE_ABS#"$HOME"/}"
 
-TARGET="$DOTFILES_DIR/$SOURCE_REL"
+TARGET=$(dirname "$DOTFILES_DIR/$SOURCE_REL")
 
 # Create the necessary directory structure in the dotfiles directory
 mkdir -p "$TARGET"
 
 # # Move the target to the dotfiles directory
-mv "$SOURCE" "$TARGET"
+mv "$SOURCE_ABS" "$TARGET"
 
 # Change to the dotfiles directory to use stow
 cd "$DOTFILES_DIR" || {
@@ -44,4 +44,4 @@ cd "$DOTFILES_DIR" || {
 
 make
 
-echo "Moved $SOURCE to $TARGET and created a symlink."
+echo "Moved $SOURCE to $TARGET and used stow to create a symlink."
