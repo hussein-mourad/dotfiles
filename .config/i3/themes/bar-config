@@ -26,9 +26,9 @@ set $base      #1e1e2e
 set $mantle    #181825
 set $crust     #11111b
 
-set $base      #111111
-set $mantle    #111111
-set $crust     #111111
+set $base      #222222
+set $mantle    #222222
+set $crust     #222222
 
 
 # target                 title     bg    text   indicator  border

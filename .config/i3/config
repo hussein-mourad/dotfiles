@@ -77,7 +77,7 @@ bindsym $mod+equal exec pulseaudio-ctl up +5%
 
 # Start Applications
 bindsym $mod+Ctrl+b exec i3-sensible-terminal -e 'bmenu'
-bindsym $mod+b exec firefox
+bindsym $mod+b exec chromium 
 bindsym $mod+p exec --no-startup-id $HOME/.local/bin/keepassxc-open;
 # bindsym $mod+f exec i3-sensible-terminal -e 'ranger';
 bindsym $mod+F5 exec i3-sensible-terminal -e 'mocp'
