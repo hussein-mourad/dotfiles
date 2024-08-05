@@ -46,6 +46,7 @@ pipx list --short > .pipxlist.txt
 - [ ] Terminal Configuration
 - [ ] tmux Configuration
 - [ ] neovim Configuration
+- [ ] fzf in zshrc
 - [ ] zathura Configuration
 - [ ] yazi Configuration
 - [ ] bat Configuration

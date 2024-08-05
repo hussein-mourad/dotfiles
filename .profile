@@ -49,6 +49,7 @@ PATH="$PATH:/mnt/d/data/appimages"
 # PATH="$PATH:$HOME/.local/share/gem/ruby/3.0.0/bin"
 
 export BROWSER=/usr/bin/firefox
+export BROWSER=/usr/bin/chromium
 # export TERM=rxvt-unicode-256color
 # export TERMINAL=urxvt
 #export TERM=xfce4-terminal

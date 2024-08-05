@@ -18,7 +18,7 @@ WRONG='#303446'
 VERIFYING='#89b4fa'
 BGCOLOR='1e1e2e'
 
-BGCOLOR='111111'
+BGCOLOR='222222'
 
 i3lock \
 	--ignore-empty-password \
