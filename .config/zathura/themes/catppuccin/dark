@@ -1,5 +1,5 @@
 set default-fg                "#CDD6F4"
-set default-bg 			          "#111111"
+set default-bg 			          "#222222"
 
 set completion-bg		          "#313244"
 set completion-fg		          "#CDD6F4"
@@ -22,15 +22,15 @@ set inputbar-fg			          "#CDD6F4"
 set inputbar-bg 		          "#313244"
 
 set recolor                   "true"
-set recolor-lightcolor		    "#111111"
+set recolor-lightcolor		    "#222222"
 set recolor-darkcolor		      "#CDD6F4"
 
 set index-fg			            "#CDD6F4"
-set index-bg			            "#111111"
+set index-bg			            "#222222"
 set index-active-fg		        "#CDD6F4"
 set index-active-bg		        "#313244"
 
-set render-loading-bg		      "#111111"
+set render-loading-bg		      "#222222"
 set render-loading-fg		      "#CDD6F4"
 
 set highlight-color		        "#575268"

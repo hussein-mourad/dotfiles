@@ -1,4 +1,4 @@
-include catppuccin-dark
+include themes/catppuccin/dark
 
 map i recolor
 map [fullscreen] i recolor
