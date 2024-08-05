@@ -1,10 +1,10 @@
 [Scheme]
 Name=Catppuccin-Dark
 ColorCursor=#F5E0DC
-ColorCursorForeground=#111111
+ColorCursorForeground=#222222
 ColorCursorUseDefault=FALSE
 ColorForeground=#CDD6F4
-ColorBackground=#111111
+ColorBackground=#222222
 ColorSelectionBackground=#585B70
 ColorSelection=#CDD6F4
 ColorSelectionUseDefault=FALSE

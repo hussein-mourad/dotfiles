@@ -43,7 +43,7 @@ pipx list --short > .pipxlist.txt
 - [ ] dunst Configuration
 - [ ] rofi Configuration
 - [ ] dmenu `.dmenurc` or rofi
-- [ ] Terminal Configuration
+- [ ] Terminals Configuration (konsole, xfce4-terminal, alacritty, kitty)
 - [ ] tmux Configuration
 - [ ] neovim Configuration
 - [ ] fzf in zshrc
