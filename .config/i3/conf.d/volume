@@ -1,0 +1,7 @@
+# Volume Control
+bindsym $mod+0 exec pulseaudio-ctl mute
+bindsym $mod+minus exec pulseaudio-ctl down +5%
+bindsym $mod+equal exec pulseaudio-ctl up +5%
+# bindsym $mod+0 exec pactl set-sink-mute @DEFAULT_SINK@ toggle
+# bindsym $mod+minus exec pactl set-sink-volume @DEFAULT_SINK@ -5%
+# bindsym $mod+equal exec pactl set-sink-volume @DEFAULT_SINK@ +5%
