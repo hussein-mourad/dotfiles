@@ -175,7 +175,7 @@ alias aliases="vi ~/.bash_aliases && source ~/.bash_aliases"
 alias functions="vi ~/.bash_functions && source ~/.bash_functions"
 alias zshc="vi ~/.zshrc && zsh"
 alias ohmyzsh="vi ~/.oh-my-zsh"
-alias i3c="vi ~/.config/i3/config"
+alias i3c="cd ~/.config/i3/ && vi . && cd -"
 alias i3blocksc="vi ~/.config/i3/i3blocks.conf"
 alias tmuxc="vi ~/.config/tmux/tmux.conf && tmux source-file ~/.config/tmux/tmux.conf "
 # alias azkar='nohup zathura --page=54 /mnt/d/data/documents/books/islam/hisn-al-muslim.pdf > /dev/null 2>&1  &'
