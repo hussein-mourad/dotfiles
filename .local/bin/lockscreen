@@ -9,15 +9,15 @@
 # VERIFYING='#00564dE6'
 # BGCOLOR='1C1C1C'
 
-# Catppuccin macchiato
+# Catppuccin Dark
 BLANK='#00000000'
-CLEAR='#24273aee'
+# CLEAR='#24273aee'
+CLEAR="#3a3a3aff"
 DEFAULT='#89b4fa'
 TEXT='#89b4fa'
 WRONG='#303446'
 VERIFYING='#89b4fa'
-BGCOLOR='1e1e2e'
-
+# BGCOLOR='1e1e2e'
 BGCOLOR='222222'
 
 i3lock \
