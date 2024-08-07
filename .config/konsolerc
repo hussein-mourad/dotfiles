@@ -28,6 +28,7 @@ HDMI-1-1=HDMI-1-1
 HDMI-1-1 eDP-1=eDP-1
 HDMI-1-3=HDMI-1-3
 HDMI-1-3 eDP-1=HDMI-1-3
+MenuBar=Disabled
 ToolBarsMovable=Disabled
 eDP-1=eDP-1
 
