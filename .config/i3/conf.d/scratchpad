@@ -1,18 +1,20 @@
 # Scratchpad
-exec --no-startup-id xfce4-terminal --title ttmux -e tmux
-exec --no-startup-id xfce4-terminal --title ranger-fm -e ranger  
+# Scratchpad tmux (stmux)
+exec --no-startup-id konsole -p tabtitle=stmux -e tmux new-session -A -s scratchpad  
+# Scratchpad file manager (sfm)
+exec --no-startup-id konsole -p tabtitle=sfm -e ranger
 
-for_window [title="ttmux"] floating enable
-for_window [title="ttmux"] sticky enable
-for_window [title="ttmux"] resize set 1300 800
-for_window [title="ttmux"] border pixel $border_size
-for_window [title="ttmux"] move scratchpad
+for_window [title="stmux"] floating enable
+for_window [title="stmux"] sticky enable
+for_window [title="stmux"] resize set 1300 800
+for_window [title="stmux"] border pixel $border_size
+for_window [title="stmux"] move scratchpad
 
-for_window [title="ranger-fm"] floating enable
-for_window [title="ranger-fm"] sticky enable
-for_window [title="ranger-fm"] resize set 1300 800
-for_window [title="ranger-fm"] border pixel $border_size
-for_window [title="ranger-fm"] move scratchpad
+for_window [title="sfm"] floating enable
+for_window [title="sfm"] sticky enable
+for_window [title="sfm"] resize set 1300 800
+for_window [title="sfm"] border pixel $border_size
+for_window [title="sfm"] move scratchpad
 
 # for_window [class="KeePassXC"] floating enable
 # for_window [class="KeePassXC"] sticky enable
@@ -26,9 +28,9 @@ bindsym $mod+Shift+plus scratchpad show
 
 # Show the next scratchpad window or hide the focused scratchpad window.
 # If there are multiple scratchpad windows, this command cycles through them.
-bindsym $mod+comma [title="ttmux"] scratchpad show; move position center
-bindsym $mod+f [title="ranger-fm"] scratchpad show; move position center
+bindsym $mod+comma [title="stmux"] scratchpad show; move position center
+bindsym $mod+f [title="sfm"] scratchpad show; move position center
 # bindsym $mod+p [class="KeePassXC"] scratchpad show; move position center
 
-bindsym $mod+Shift+Return exec --no-startup-id "xfce4-terminal --title ttmux -e tmux";  
-bindsym $mod+Shift+f exec --no-startup-id "xfce4-terminal --title ranger-fm -e ranger"; 
+bindsym $mod+Shift+Return exec --no-startup-id "konsole -p tabtitle=stmux -e tmux new-session -A -s scratchpad";  
+bindsym $mod+Shift+f exec --no-startup-id "konsole -p tabtitle=sfm -e ranger"; 
