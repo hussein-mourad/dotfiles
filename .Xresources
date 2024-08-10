@@ -55,21 +55,21 @@ Xft.lcdfilter: lcddefault
 ! *color7:                          #d8d8d8
 ! *color15:                         #f8f8f8
 !
-XTERM*background:        #1E1E2E
-XTerm*foreground:        #CDD6F4
+XTERM*background:        #222222
+XTerm*foreground:        #F4F4F4
 XTerm*pointerColor:      #94E2D5
 XTerm*faceName:          Fixed
 XTerm*faceSize:          11
 XTerm*reverseVideo:      on
 XTerm*selectToClipboard: true
 
-*background: #1E1E2E
-*foreground: #CDD6F4
+*background: #222222
+*foreground: #F4F4F4
 *fading:                          8
 *fadeColor:                       black
 *cursorColor:                     #94E2D5
-*POINTERCOLORBACKGROUND:          #1E1E2E
-*pointerColorForeground:          #CDD6F4
+*POINTERCOLORBACKGROUND:          #222222
+*pointerColorForeground:          #F4F4F4
 
 ! black
 *color0: #45475A
@@ -118,7 +118,7 @@ URxvt.font: xft:JetBrainsMonoNerdFontMono:style=Regualr:size=11:antialias=true,m
 
 URxvt.depth:                      32
 ! URxvt.background:                 [100]#222D31
-URxvt.background:                 [100]#1E1E2E
+URxvt.background:                 [100]#222222
 URxvt*scrollBar:                  false
 URxvt*mouseWheelScrollPage:       true
 URxvt*cursorBlink:                true
