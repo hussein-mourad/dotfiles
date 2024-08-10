@@ -40,6 +40,7 @@ pipx list --short > .pipxlist.txt
 - [ ] i3 Configuration, Path: `~/.config/i3/`
 - [ ] i3status or i3blocks Configuration
 - [ ] i3lock Configuration `~/.local/bin/lockscreen`
+- [ ] Xresources file
 - [ ] dunst Configuration
 - [ ] rofi Configuration
 - [ ] dmenu `.dmenurc` or rofi
