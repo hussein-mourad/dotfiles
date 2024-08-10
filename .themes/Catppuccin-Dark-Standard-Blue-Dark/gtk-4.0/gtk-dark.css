@@ -1906,7 +1906,7 @@ button.combo:only-child:disabled {
   padding: 6px;
   border-radius: 12px;
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.15), 0 3px 3px 0 rgba(0, 0, 0, 0.18), 0 3px 6px 0 rgba(0, 0, 0, 0.12), inset 0 1px rgba(255, 255, 255, 0.1);
-  background-color: #313244;
+  background-color: #444444;
   color: #FFFFFF;
 }
 
@@ -2352,8 +2352,8 @@ headerbar .pathbar {
  **************/
 columnview.view,
 treeview.view {
-  border-left-color: #393947;
-  border-top-color: #393947;
+  border-left-color: #474747;
+  border-top-color: #474747;
 }
 
 columnview.view:hover, columnview.view:selected,
@@ -2635,7 +2635,7 @@ popover > arrow,
 popover > contents {
   transition: box-shadow 200ms ease-out;
   padding: 6px;
-  background-color: #313244;
+  background-color: #444444;
   border-radius: 12px;
   color: #FFFFFF;
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -2674,7 +2674,7 @@ popover > contents > box > button {
 
 popover .view:not(:selected),
 popover toolbar {
-  background-color: #313244;
+  background-color: #444444;
 }
 
 popover.menu button,
@@ -4339,7 +4339,7 @@ list.boxed-list {
   border-radius: 7px;
   box-shadow: none;
   border: 1px solid rgba(255, 255, 255, 0.12);
-  background-color: #313244;
+  background-color: #444444;
 }
 
 listview,
@@ -5011,7 +5011,7 @@ window.messagedialog .response-area button:only-child, window.dialog.message .di
 }
 
 window.dialog.message.background {
-  background-color: #313244;
+  background-color: #444444;
 }
 
 window.dialog.message box.dialog-vbox.vertical {
@@ -5032,12 +5032,12 @@ window.dialog.message .titlebar {
   min-height: 24px;
   border-style: none;
   box-shadow: inset 0 1px rgba(255, 255, 255, 0.1);
-  background-color: #313244;
+  background-color: #444444;
   color: #FFFFFF;
 }
 
 window.dialog.message .titlebar:backdrop {
-  background-color: #313244;
+  background-color: #444444;
   color: rgba(255, 255, 255, 0.7);
 }
 
@@ -5071,7 +5071,7 @@ window.aboutdialog.background.csd scrolledwindow.frame, window.aboutdialog.backg
  * AdwMessageDialog *
  ********************/
 window.messagedialog {
-  background-color: #313244;
+  background-color: #444444;
   color: #FFFFFF;
 }
 
@@ -5299,7 +5299,7 @@ paned > separator {
   -gtk-icon-source: none;
   border-style: none;
   background-color: transparent;
-  background-image: image(#393947);
+  background-image: image(#474747);
   background-size: 1px 1px;
   background-clip: content-box;
   box-shadow: none;
@@ -5309,7 +5309,7 @@ paned > separator.wide {
   min-width: 6px;
   min-height: 6px;
   background-color: #222222;
-  background-image: image(#393947), image(#393947);
+  background-image: image(#474747), image(#474747);
   background-size: 1px 1px, 1px 1px;
 }
 
@@ -5558,7 +5558,7 @@ colorchooser .popover.osd {
   transition: box-shadow 200ms ease-out;
   border-radius: 6px;
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.15), 0 3px 3px 0 rgba(0, 0, 0, 0.18), 0 3px 6px 0 rgba(0, 0, 0, 0.12), inset 0 1px rgba(255, 255, 255, 0.1);
-  background-color: #313244;
+  background-color: #444444;
 }
 
 colorchooser .popover.osd:backdrop {
@@ -5608,7 +5608,7 @@ window.solid-csd {
   padding: 2px;
   border-radius: 0;
   background-color: #222222;
-  border: 1px solid #393947;
+  border: 1px solid #474747;
 }
 
 window.solid-csd:backdrop {
@@ -5748,7 +5748,7 @@ shortcut > .keycap {
   border: solid 1px rgba(255, 255, 255, 0.12);
   border-radius: 7px;
   box-shadow: inset 0 -2px rgba(255, 255, 255, 0.12);
-  background-color: #313244;
+  background-color: #444444;
   color: #FFFFFF;
   font-size: smaller;
 }
@@ -7460,7 +7460,7 @@ avatar.image {
   color: rgba(255, 255, 255, 0.7);
   box-shadow: none;
   outline: none;
-  background-color: #313244;
+  background-color: #444444;
   color: #FFFFFF;
 }
 
