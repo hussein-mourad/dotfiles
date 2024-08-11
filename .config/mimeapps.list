@@ -24,6 +24,7 @@ application/x-trash=sxiv.desktop
 application/octet-stream=sxiv.desktop
 application/lrf=calibre-lrfviewer.desktop
 inode/directory=thunar.desktop
+x-scheme-handler/mailspring=Mailspring.desktop
 
 [Added Associations]
 x-scheme-handler/http=userapp-firefox.desktop;chromium.desktop;
@@ -37,9 +38,9 @@ application/x-extension-shtml=firefox.desktop;chromium.desktop;
 application/xhtml+xml=firefox.desktop;chromium.desktop;
 application/x-extension-xhtml=firefox.desktop;chromium.desktop;
 application/x-extension-xht=firefox.desktop;chromium.desktop;
-image/jpeg=feh.desktop;viewnior.desktop;sxiv.desktop;gpicview.desktop;
+image/jpeg=viewnior.desktop;feh.desktop;sxiv.desktop;gpicview.desktop;
 image/png=sxiv.desktop;viewnior.desktop;gpicview.desktop;
-text/plain=mousepad.desktop;
+text/plain=org.xfce.mousepad.desktop;mousepad.desktop;
 x-scheme-handler/mailto=userapp-Thunderbird.desktop;
 message/rfc822=userapp-Thunderbird.desktop;
 application/pdf=mupdf.desktop;org.gnome.Evince.desktop;chromium.desktop;org.pwmt.zathura-pdf-mupdf.desktop;zathura.desktop;
@@ -50,3 +51,4 @@ application/octet-stream=org.xfce.mousepad.desktop;sxiv.desktop;
 application/vnd.openxmlformats-officedocument.wordprocessingml.document=libreoffice-writer.desktop;
 video/x-matroska=mpv.desktop;
 application/epub+zip=mupdf.desktop;
+video/quicktime=mpv.desktop;

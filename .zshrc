@@ -56,7 +56,6 @@ autoload -Uz compinit && compinit
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-
 # History
 HISTSIZE=1000000
 SAVEHIST=$HISTSIZE
@@ -77,12 +76,6 @@ zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 zstyle ':completion:*' menu no
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
-
-# Shell integrations
-eval "$(fzf --zsh)"
-# Replace the default cd command with zoxide
-# eval "$(zoxide init --cmd cd zsh)"
-eval "$(zoxide init zsh)"
 
 source ~/.bash_aliases
 source ~/.bash_functions
@@ -122,7 +115,7 @@ export FZF_DEFAULT_OPTS=" \
 # setopt noglob
 
 # bun completions
-[ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
+# [ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
 
 # pnpm
 export PNPM_HOME="$HOME/.local/share/pnpm"
@@ -133,23 +126,29 @@ esac
 # pnpm end
 
 # Define a function to activate venv if present
-venv_auto_activate() {
-    if [[ -d "venv" ]]; then
-        # Check if already activated to avoid redundant activation
-        if [[ -z "${VIRTUAL_ENV}" ]]; then
-            source venv/bin/activate
-        fi
-    fi
-}
+# venv_auto_activate() {
+#     if [[ -d "venv" ]]; then
+#         # Check if already activated to avoid redundant activation
+#         if [[ -z "${VIRTUAL_ENV}" ]]; then
+#             source venv/bin/activate
+#         fi
+#     fi
+# }
 
 # Hook function to activate venv_auto_activate when changing directories
-chpwd_functions+=venv_auto_activate
+# chpwd_functions+=venv_auto_activate
 
 
 # if commond -v rbenv 1>/dev/null 2>&1; then
 #   eval "$(rbenv init -)"
 # fi
-eval "$(rbenv init -)"
+# eval "$(rbenv init -)"
 
 # Load argcomplete
 # eval "$(register-python-argcomplete)"
+
+# Shell integrations
+eval "$(fzf --zsh)"
+# Replace the default cd command with zoxide
+# eval "$(zoxide init --cmd cd zsh)"
+eval "$(zoxide init zsh)"
