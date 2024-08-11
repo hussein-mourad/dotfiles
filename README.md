@@ -35,6 +35,15 @@ pip list > .piplist.txt
 pipx list --short > .pipxlist.txt
 ```
 
+cronjob
+
+```bash
+* */2 * * * yay -Qq > $HOME/dotfiles/.pkgslist.txt # every 2 hours
+* */2 * * * yay -Qeq > $HOME/dotfiles/.pkgslist.explicit.txt
+* */3 * * * pip list > $HOME/dotfiles/.piplist.txt
+* */3 * * * pipx list --short > $HOME/dotfiles/.pipxlist.txt
+```
+
 ## Change Theme checklist
 
 - [ ] i3 Configuration, Path: `~/.config/i3/`
