@@ -1,0 +1,23 @@
+#!/bin/bash
+
+# Directory to process
+TARGET_DIR="$1"
+
+# Temporary files
+CHECKSUMS_FILE=$(mktemp)
+UNIQUE_FILES_FILE=$(mktemp)
+
+# Generate checksums for all files
+find "$TARGET_DIR" -type f -exec md5sum {} + | sort | uniq -w32 >"$CHECKSUMS_FILE"
+
+# Extract unique checksums and their associated files
+awk '{ print $1, $2 }' "$CHECKSUMS_FILE" | awk '!seen[$1]++ { print $2 }' >"$UNIQUE_FILES_FILE"
+
+# Calculate total size of unique files
+total_size=$(xargs -a "$UNIQUE_FILES_FILE" du | awk '{ sum += $1 } END { print sum }')
+
+# Clean up temporary files
+rm "$CHECKSUMS_FILE" "$UNIQUE_FILES_FILE"
+
+# Output total size
+echo "Total size of unique files: $((total_size)) KB"
