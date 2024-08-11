@@ -6,6 +6,7 @@ acl
 acorn
 acpi
 acpid
+ada
 adapta-maia-theme
 adobe-source-code-pro-fonts
 adwaita-cursors
@@ -91,7 +92,6 @@ calibre
 cantarell-fonts
 capstone
 catdoc
-catppuccin-cursors-mocha
 catppuccin-gtk-theme-mocha
 cblas
 cdparanoia
@@ -109,6 +109,7 @@ cli11
 clipit
 clucene
 cmake
+cmark
 cmatrix
 cmus
 colord
@@ -126,6 +127,7 @@ cpanminus
 cpio
 cppdap
 cpupower
+cracklib
 cronie
 cryptsetup
 cups
@@ -134,6 +136,7 @@ cups-pdf
 curl
 curlie
 cutecom
+cyrus-sasl-gssapi
 dav1d
 db
 db5.3
@@ -155,6 +158,8 @@ dialog
 diffutils
 ding-libs
 discord
+distro-info
+distro-info-data
 djvulibre
 dmenu-manjaro
 dmg2img
@@ -196,6 +201,8 @@ entr
 eslint
 ethtool
 evince
+evolution
+evolution-data-server
 exfatprogs
 exiv2
 exo
@@ -207,6 +214,7 @@ faac
 faad2
 fakeroot
 fd
+fdupes
 feh
 ffcall
 ffmpeg
@@ -222,6 +230,7 @@ flac
 flameshot
 flex
 fluidsynth
+folks
 fontconfig
 foomatic-db
 foomatic-db-engine
@@ -252,8 +261,11 @@ gdbm
 gdk-pixbuf-xlib
 gdk-pixbuf2
 gdu
+geary
 gegl
 geoclue
+geocode-glib-2
+geocode-glib-common
 geoip
 geoip-database
 gettext
@@ -281,9 +293,12 @@ glu
 glusterfs
 gmime3
 gmp
+gnome-autoar
 gnome-desktop
 gnome-desktop-common
+gnome-disk-utility
 gnome-keyring
+gnome-online-accounts
 gnome-pomodoro-git
 gnome-themes-extra
 gnupg
@@ -299,9 +314,11 @@ gperf
 gperftools
 gpgme
 gpick
+gping
 gpm
 gptfdisk
 graphene
+graphicsmagick
 graphite
 graphviz
 grep
@@ -309,10 +326,14 @@ grilo
 groff
 grpc
 grub
+grub-customizer-git
 grub-theme-manjaro
 gsettings-desktop-schemas
+gsettings-system-schemas
 gsfonts
+gsl
 gsm
+gsound
 gspell
 gssdp
 gssproxy
@@ -615,6 +636,7 @@ imath
 imlib2
 inetutils
 iniparser
+inkscape
 intel-ucode
 intltool
 inxi
@@ -632,6 +654,7 @@ jbig2dec
 jbigkit
 jemalloc
 jfsutils
+jose
 jpegoptim
 jq
 jqp
@@ -730,12 +753,14 @@ lapack
 lazydocker-bin
 lazygit
 lazynpm
+lazysql
 lcms2
 ldb
 ldns
 lensfun
 leptonica
 less
+lib2geom
 lib32-brotli
 lib32-bzip2
 lib32-curl
@@ -891,6 +916,7 @@ libfontenc
 libfreeaptx
 libfreehand
 libgcrypt
+libgee
 libgexiv2
 libgirepository
 libgit2
@@ -899,6 +925,7 @@ libglvnd
 libgme
 libgnomecanvas
 libgnomekbd
+libgoa
 libgovirt
 libgpg-error
 libgphoto2
@@ -909,6 +936,7 @@ libgtop
 libgudev
 libguestfs
 libgusb
+libgweather-4
 libgxps
 libhandy
 libheif
@@ -1008,6 +1036,7 @@ libpcap
 libpciaccess
 libpeas
 libpgm
+libphonenumber
 libpipeline
 libpipewire
 libplacebo
@@ -1018,8 +1047,10 @@ libportal-gtk3
 libppd
 libproxy
 libpsl
+libpst
 libptytty
 libpulse
+libpwquality
 libqmi
 libqrtr-glib
 libqxp
@@ -1151,6 +1182,7 @@ libxv
 libxvmc
 libxxf86vm
 libyaml
+libytnef
 libyuv
 libzen
 libzip
@@ -1330,6 +1362,7 @@ openconnect
 opencore-amr
 opencv
 openexr
+openh264
 openjpeg2
 openmotif
 openmpi
@@ -1463,10 +1496,11 @@ pyside6
 python
 python-annotated-types
 python-anyio
+python-appdirs
 python-apsw
 python-argcomplete
+python-argon2-cffi
 python-argon2-cffi-bindings
-python-argon2_cffi
 python-asttokens
 python-async-lru
 python-async-timeout
@@ -1494,6 +1528,7 @@ python-click-log
 python-colorama
 python-comm
 python-constantly
+python-coverage
 python-crashtest
 python-cryptography
 python-css-parser
@@ -1580,6 +1615,7 @@ python-natsort
 python-nest-asyncio
 python-netifaces
 python-npyscreen
+python-numpy
 python-oauth2client
 python-ordered-set
 python-overrides
@@ -1633,6 +1669,7 @@ python-pyqt6
 python-pyqt6-sip
 python-pyqt6-webengine
 python-pyrsistent
+python-pyserial
 python-pysocks
 python-pytest
 python-pytz
@@ -1814,6 +1851,7 @@ qt6-webchannel
 qt6-webengine
 quran-companion
 qutebrowser
+ragel
 range-v3
 ranger
 rapidjson
@@ -1835,6 +1873,7 @@ rmlint
 rnnoise
 rofi
 rpcbind
+rpcsvc-proto
 rsync
 rtkit
 rtmpdump
@@ -1904,6 +1943,7 @@ sane
 sane-airscan
 sbc
 sbxkb
+scour
 scrcpy
 screen
 screenfetch
@@ -1930,6 +1970,7 @@ slang
 sleuthkit
 slides
 slop
+smartmontools
 smbclient
 snapd
 snappy
@@ -1957,6 +1998,8 @@ squashfs-tools
 squashfuse
 sratom
 srt
+sshs
+sssd
 starship
 startup-notification
 stfl
@@ -2081,6 +2124,7 @@ urxvt-resize-font-git
 usbmuxd
 usbredir
 usbutils
+uthash
 util-linux
 util-linux-libs
 v4l-utils
@@ -2122,6 +2166,7 @@ wavpack
 wayland
 web-installer-url-handler
 webkit2gtk
+webkit2gtk-4.1
 webrtc-audio-processing
 webrtc-audio-processing-1
 wget
