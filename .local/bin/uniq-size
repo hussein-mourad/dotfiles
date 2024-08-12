@@ -20,4 +20,4 @@ total_size=$(xargs -a "$UNIQUE_FILES_FILE" du | awk '{ sum += $1 } END { print s
 rm "$CHECKSUMS_FILE" "$UNIQUE_FILES_FILE"
 
 # Output total size
-echo "Total size of unique files: $((total_size)) KB"
+echo "$((total_size)) $TARGET_DIR"
