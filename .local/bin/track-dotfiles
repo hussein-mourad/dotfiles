@@ -2,7 +2,7 @@
 
 # Check if the correct number of arguments is provided
 if [ "$#" -ne 1 ]; then
-  echo "Usage: $0 <file_or_directory>"
+  echo "Usage: $(basename "$0") <file_or_directory>"
   exit 1
 fi
 

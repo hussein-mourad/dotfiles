@@ -77,6 +77,6 @@ clean)
   clean_file
   ;;
 *)
-  echo "Usage: $0 {add|rm|ls} [filename]"
+  echo "Usage: $(basename "$0") {add|rm|ls} [filename]"
   ;;
 esac

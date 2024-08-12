@@ -16,7 +16,7 @@ extract_repo_name() {
 
 # Check if at least one repository URL is provided
 if [ $# -lt 1 ]; then
-	echo "Usage: $0 <repository_url> [repository_url ...]"
+	echo "Usage: $(basename "$0") <repository_url> [repository_url ...]"
 	exit 1
 fi
 
