@@ -2,7 +2,7 @@
 
 # Check if the correct number of arguments is provided
 if [ "$#" -ne 2 ]; then
-  echo "Usage: $0 <source_directory> <destination_directory>"
+  echo "Usage: $0 <source_directory> <destination_directory>" >&2
   exit 1
 fi
 
@@ -14,13 +14,13 @@ DEST_DIR=$(realpath "$2")
 
 # Validate that ROOT_DIR exists
 if [ ! -d "$ROOT_DIR" ]; then
-  echo "Error: Source directory '$ROOT_DIR' does not exist."
+  echo "Error: Source directory '$ROOT_DIR' does not exist." >&2
   exit 1
 fi
 
 # Validate that DEST_DIR is writable
 if [ ! -w "$(dirname "$DEST_DIR")" ]; then
-  echo "Error: Destination directory '$DEST_DIR' is not writable."
+  echo "Error: Destination directory '$DEST_DIR' is not writable." >&2
   exit 1
 fi
 
@@ -28,65 +28,114 @@ fi
 create_dir_if_not_exists() {
   local dir=$1
   if [ ! -d "$dir" ]; then
-    mkdir -p "$dir"
+    mkdir -p "$dir" || {
+      echo "Error: Failed to create directory '$dir'." >&2
+      exit 1
+    }
   fi
 }
 
-# Function to move files into category folders by date
+# Function to determine the category based on file extension
+get_category() {
+  local file=$1
+  case "${file##*.}" in
+  # Document file types
+  txt | pdf | docx | doc | xls | xlsx | ppt | pptx | odt | rtf | csv | json | xml) echo "Documents" ;;
+
+  # Image file types
+  jpg | jpeg | png | gif | bmp | tiff | webp | svg | ico | raw | heif) echo "Images" ;;
+
+  # Video file types
+  mp4 | avi | mkv | mov | wmv | flv | mpeg | mpg | webm | ts | 3gp | ogv) echo "Videos" ;;
+
+  # Audio file types
+  mp3 | wav | flac | aac | ogg | m4a | wma | opus | alac | aiFF) echo "Audio" ;;
+
+  # Archive file types
+  zip | rar | tar | gz | bz2 | 7z | xz | iso | dmg) echo "Archives" ;;
+
+  # Code and markup file types
+  html | css | js | cpp | py | java | go | php | rb | sh | pl | bat | sql) echo "Code" ;;
+
+  # Executable file types
+  exe | bin | run | app | jar | elf | com | msi) echo "Executables" ;;
+
+  # Others
+  *) echo "Others" ;;
+  esac
+}
+
+# Function to calculate the checksum of a file
+calculate_checksum() {
+  local file=$1
+  sha256sum "$file" | awk '{ print $1 }'
+}
+
+# Function to backup existing files if content matches
+backup_existing_files() {
+  local src_file=$1
+  local dest_file=$2
+
+  # Calculate checksums
+  local src_checksum
+  src_checksum=$(calculate_checksum "$src_file")
+  local dest_checksum
+  dest_checksum=$(calculate_checksum "$dest_file" 2>/dev/null || echo "")
+
+  if [ "$src_checksum" = "$dest_checksum" ]; then
+    echo "Backup: '$dest_file' matches '$src_file' (checksum: $src_checksum)"
+    return 0
+  else
+    echo "Backup: '$dest_file' does not match '$src_file' or does not exist."
+    return 1
+  fi
+}
+
+# To Cateogrize by date
+# Get file's modification date (Year-Month)
+# FILE_DATE=$(date -r "$file" +"%Y-%m")
+# YEAR_MONTH_DIR="$CATEGORY_DIR/$FILE_DATE"
+# create_dir_if_not_exists "$YEAR_MONTH_DIR"
+
+# Function to organize files
 organize_files() {
-  local category=$1
-  local files_list=$2
+  find "$ROOT_DIR" -type f -print0 | while IFS= read -r -d '' file; do
+    # Determine the category
+    category=$(get_category "$file")
 
-  # Create the category directory
-  CATEGORY_DIR="$DEST_DIR/$category"
-  create_dir_if_not_exists "$CATEGORY_DIR"
+    # Create the category directory
+    CATEGORY_DIR="$DEST_DIR/$category"
+    create_dir_if_not_exists "$CATEGORY_DIR"
 
-  # Find and organize files by extension
-  echo "$files_list" | while IFS= read -r file; do
-    # Cateogrize by date
-    # Get file's modification date (Year-Month)
-    # FILE_DATE=$(date -r "$file" +"%Y-%m")
-    # YEAR_MONTH_DIR="$CATEGORY_DIR/$FILE_DATE"
-    # create_dir_if_not_exists "$YEAR_MONTH_DIR"
-
-    # Get only base directory
-    # DEST="$(basename "$(dirname "$file")")"
-
-    # Preserve folder structure
-    # Preserve folder nesting relative to parent directory
-    # echo "dest 1: $DEST"
+    # Prepare destination path
     DEST=${file#"$ROOT_DIR/"}
     DEST="$CATEGORY_DIR/$DEST"
-    DEST="$(dirname "$DEST")"
-    create_dir_if_not_exists "$DEST"
+    DEST_DIR_NAME="$(dirname "$DEST")"
+    create_dir_if_not_exists "$DEST_DIR_NAME"
 
-    # Debugging output
-    # echo "Moving '$file' to '$YEAR_MONTH_DIR/'"
-    echo "Coping '$file' to '$DEST/'"
+    # Backup existing files if content matches
+    if [ -f "$DEST" ]; then
+      if backup_existing_files "$file" "$DEST"; then
+        continue
+      fi
+    fi
 
-    # Move the file
-    # mv -n "$file" "$YEAR_MONTH_DIR/"
-    cp "$file" "$DEST/"
+    # Log copying action
+    echo "Copying '$file' to '$DEST_DIR_NAME/'"
+
+    # Copy the file and log any errors
+    if [ -r "$file" ] && [ -w "$DEST_DIR_NAME" ]; then
+      cp "$file" "$DEST_DIR_NAME/" 2>>/dev/stderr
+    else
+      echo "Warning: File '$file' cannot be read or destination '$DEST_DIR_NAME' cannot be written to." >&2
+    fi
   done
 }
 
-# Organize documents
-documents=$(find "$ROOT_DIR" -type f \( -iname '*.txt' -o -iname '*.pdf' -o -iname '*.docx' -o -iname '*.doc' -o -iname '*.xls' -o -iname '*.xlsx' -o -iname '*.ppt' -o -iname '*.pptx' -o -iname '*.odt' -o -iname '*.rtf' \))
-organize_files "Documents" "$documents"
+# Organize all files
+organize_files
 
-# Organize images
-images=$(find "$ROOT_DIR" -type f \( -iname '*.jpg' -o -iname '*.jpeg' -o -iname '*.png' -o -iname '*.gif' -o -iname '*.bmp' -o -iname '*.tiff' -o -iname '*.webp' -o -iname '*.svg' \))
-organize_files "Images" "$images"
-
-# Organize videos
-videos=$(find "$ROOT_DIR" -type f \( -iname '*.mp4' -o -iname '*.avi' -o -iname '*.mkv' -o -iname '*.mov' -o -iname '*.wmv' -o -iname '*.flv' -o -iname '*.mpeg' \))
-organize_files "Videos" "$videos"
-
-# Organize audio
-audio=$(find "$ROOT_DIR" -type f \( -iname '*.mp3' -o -iname '*.wav' -o -iname '*.flac' -o -iname '*.aac' -o -iname '*.ogg' -o -iname '*.m4a' -o -iname '*.wma' \))
-organize_files "Audio" "$audio"
-
-# Optional: Remove empty directories
+# Remove empty directories
 find "$ROOT_DIR" -type d -empty -delete
 
 echo "Files have been organized into $DEST_DIR."
