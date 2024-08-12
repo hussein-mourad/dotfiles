@@ -1,5 +1,7 @@
 #!/bin/bash
 
+## Oneliner: exiftool -ext jpg '-FileName<CreateDate' -d %Y_%m_%d__%H_%M_%S%%-c.%%e .
+
 # Function to display usage message
 display_help() {
   cat <<EOF
@@ -63,7 +65,7 @@ generate_unique_filename() {
 # Function to rename a single photo
 rename_photo() {
   local filepath="$1"
-  local date_format='%Y-%m-%d_%H-%M-%S'
+  local date_format='%Y%m%d_T%H%M%S'
 
   if [ ! -f "$filepath" ]; then
     echo "Error: '$filepath' is not a valid file" >&2

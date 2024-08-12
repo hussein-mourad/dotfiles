@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# Copies files to desired location
+exiftool '-Directory<DateTimeOriginal' -d %Y/%B .
+
+# Make others directory if not exists
+if [ ! -d "./others" ]; then
+  mkdir -p ./others/
+fi
+
+# Move unrename files to others directory
+find . -maxdepth 1 -type f -exec mv -n {} ./others/ \;
