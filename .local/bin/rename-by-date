@@ -1,0 +1,149 @@
+#!/bin/bash
+
+# Function to display usage message
+display_help() {
+  cat <<EOF
+Usage: $(basename "$0") [options] [files...]
+
+Rename image files based on the date they were taken or their modification date.
+
+Options:
+  -h, --help            Display this help message and exit
+  -d, --use-file-date
+                        Use file modification date instead of EXIF metadata for renaming
+  [files...]            List of files to rename. If no files are specified, read file paths from stdin
+
+Examples:
+  Rename specified files using EXIF metadata:
+    $(basename "$0") /path/to/photo1.jpg /path/to/photo2.png
+
+  Rename files using file modification date instead of EXIF metadata:
+    $(basename "$0") -n /path/to/photo1.jpg /path/to/photo2.png
+
+  Rename files read from stdin using EXIF metadata:
+    find /path/to/your/photos -type f -name '*.{jpg,jpeg,png,tiff,bmp}' | $(basename "$0")
+
+  Rename files read from stdin using file modification date:
+    find /path/to/your/photos -type f -name '*.{jpg,jpeg,png,tiff,bmp}' | $(basename "$0") -n
+EOF
+}
+
+# Function to check if a command is available
+check_command() {
+  if ! command -v "$1" &>/dev/null; then
+    echo "Error: Required command '$1' not found." >&2
+    exit 1
+  fi
+}
+
+# Check for required commands
+check_command exiftool
+check_command awk
+check_command mv
+
+# Function to generate a unique filename
+generate_unique_filename() {
+  local filepath="$1"
+  local new_filename="$2"
+  local directory
+  directory="$(dirname "$filepath")"
+  local destination="$directory/$new_filename"
+  local counter=1
+
+  while [ -e "$destination" ]; do
+    local base_name="${new_filename%.*}"
+    local extension="${new_filename##*.}"
+    destination="$directory/${base_name}_${counter}.${extension}"
+    counter=$((counter + 1))
+  done
+
+  echo "$destination"
+}
+
+# Function to rename a single photo
+rename_photo() {
+  local filepath="$1"
+  local date_format='%Y-%m-%d_%H-%M-%S'
+
+  if [ ! -f "$filepath" ]; then
+    echo "Error: '$filepath' is not a valid file" >&2
+    return 1
+  fi
+
+  # Extract the date the photo was taken
+  local date_taken
+  date_taken=$(exiftool -d $date_format -DateTimeOriginal "$filepath" 2>/dev/null | awk -F': ' '{print $2}')
+
+  if [ -z "$date_taken" ]; then
+    date_taken=$(exiftool -d $date_format -ProfileDateTime "$filepath" 2>/dev/null | awk -F': ' '{print $2}')
+  fi
+
+  if [ "$use_file_date" -eq 1 ]; then
+    if [ -z "$date_taken" ]; then
+      date_taken=$(exiftool -d '%Y-%m-%d_%H-%M-%S' -CreateDate "$filepath" 2>/dev/null | awk -F': ' '{print $2}')
+    fi
+
+    if [ -z "$date_taken" ]; then
+      date_taken=$(exiftool -d '%Y-%m-%d_%H-%M-%S' -ModifyDate "$filepath" 2>/dev/null | awk -F': ' '{print $2}')
+    fi
+
+    if [ -z "$date_taken" ]; then
+      date_taken=$(exiftool -d '%Y-%m-%d_%H-%M-%S' -FileModificationDateTime "$filepath" 2>/dev/null | awk -F': ' '{print $2}')
+    fi
+
+    # Fall back to file modification date if metadata not used or no date found
+    if [ -z "$date_taken" ]; then
+      date_taken=$(date -r "$filepath" +"%Y-%m-%d_%H-%M-%S")
+    fi
+  fi
+
+  if [ -z "$date_taken" ]; then
+    echo "Error: Could not retrieve date information for '$filepath'" >&2
+    return 1
+  fi
+
+  # Get the file extension
+  local extension="${filepath##*.}"
+  # Create the new filename
+  local new_filename="${date_taken}.${extension}"
+
+  # Generate a unique filename if the destination already exists
+  destination=$(generate_unique_filename "$filepath" "$new_filename")
+
+  # Rename the file
+  mv -vn "$filepath" "$destination"
+}
+
+# Parse command-line arguments
+use_file_date=0
+while [[ "$1" == -* ]]; do
+  case "$1" in
+  -h | --help)
+    display_help
+    exit 0
+    ;;
+  -d | --use-file-date)
+    use_file_date=1
+    shift
+    ;;
+  *)
+    echo "Error: Unknown option '$1'" >&2
+    display_help
+    exit 1
+    ;;
+  esac
+done
+
+# Process command-line arguments
+for filepath in "$@"; do
+  rename_photo "$filepath"
+done
+
+# Read filenames from stdin
+# Check if stdin is available and has data
+if [ ! -t 0 ]; then
+  # Process filenames from stdin
+  while IFS= read -r filepath; do
+    rename_photo "$filepath"
+  done
+fi
