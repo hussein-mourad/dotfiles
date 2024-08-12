@@ -1,8 +1,57 @@
 #!/bin/bash
 
+# Function to display usage message
+usage() {
+  cat <<EOF
+Usage: $(basename "$0") [OPTIONS] <source_directory> <destination_directory>
+
+Organize files from the source directory into categorized subdirectories
+in the destination directory based on file type.
+
+Options:
+  -h, --help            Show this help message and exit
+  -m, --move            Move files instead of copying them
+
+Arguments:
+  <source_directory>    Directory containing files to organize
+  <destination_directory> Directory where organized files will be placed
+
+Examples:
+  $(basename "$0") /path/to/source /path/to/destination
+  $(basename "$0") -m /path/to/source /path/to/destination
+
+EOF
+}
+
+# Initialize move flag to false
+MOVE_FLAG=false
+
+# Parse options
+while [[ $# -gt 0 ]]; do
+  case $1 in
+  -h | --help)
+    usage
+    exit 0
+    ;;
+  -m | --move)
+    MOVE_FLAG=true
+    shift
+    ;;
+  -*)
+    echo "Error: Unknown option $1" >&2
+    usage
+    exit 1
+    ;;
+  *)
+    break
+    ;;
+  esac
+done
+
 # Check if the correct number of arguments is provided
 if [ "$#" -ne 2 ]; then
-  echo "Usage: $(basename "$0") <source_directory> <destination_directory>" >&2
+  echo "Error: Invalid number of arguments" >&2
+  usage
   exit 1
 fi
 
@@ -123,15 +172,24 @@ organize_files() {
       fi
     fi
 
-    # Log copying action
-    echo "Copying '$file' to '$DEST_DIR_NAME/'"
-
-    # Copy the file and log any errors
-    if [ -r "$file" ] && [ -w "$DEST_DIR_NAME" ]; then
-      cp "$file" "$DEST_DIR_NAME/" 2>>/dev/stderr
+    # Log action (copy or move)
+    if [ "$MOVE_FLAG" = true ]; then
+      echo "Moving '$file' to '$DEST_DIR_NAME/'"
+      mv -b "$file" "$DEST_DIR_NAME/" 2>>/dev/stderr
     else
-      echo "Warning: File '$file' cannot be read or destination '$DEST_DIR_NAME' cannot be written to." >&2
+      echo "Copying '$file' to '$DEST_DIR_NAME/'"
+      cp -b "$file" "$DEST_DIR_NAME/" 2>>/dev/stderr
     fi
+
+    # # Log copying action
+    # echo "Copying '$file' to '$DEST_DIR_NAME/'"
+
+    # # Copy the file and log any errors
+    # if [ -r "$file" ] && [ -w "$DEST_DIR_NAME" ]; then
+    #   cp "$file" "$DEST_DIR_NAME/" 2>>/dev/stderr
+    # else
+    #   echo "Warning: File '$file' cannot be read or destination '$DEST_DIR_NAME' cannot be written to." >&2
+    # fi
   done
 }
 
