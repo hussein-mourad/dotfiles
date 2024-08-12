@@ -1,12 +1,102 @@
 #!/bin/bash
 
-# Copies files to desired location
-exiftool '-Directory<DateTimeOriginal' -d %Y/%B .
+# Base directory containing images (current directory by default)
+BASE_DIR="${1:-.}"
 
-# Make others directory if not exists
-if [ ! -d "./others" ]; then
-  mkdir -p ./others/
-fi
+# Function to display usage message
+usage() {
+  cat <<EOF
+Usage: $(basename "$0") [options] [directory]
 
-# Move unrename files to others directory
-find . -maxdepth 1 -type f -exec mv -n {} ./others/ \;
+Organize image files based on the date they were taken or their modification date.
+
+Options:
+  -h, --help            Display this help message and exit
+  [directory]           Base Directory to organize files in
+EOF
+}
+
+# Function to check if a command is available
+check_command() {
+  if ! command -v "$1" &>/dev/null; then
+    echo "Error: Required command '$1' not found." >&2
+    exit 1
+  fi
+}
+
+# # Function to generate a unique filename
+# generate_unique_filename() {
+#   local filepath="$1"
+#   local new_filename="$2"
+#   local directory
+#   directory="$(dirname "$filepath")"
+#   local destination="$directory/$new_filename"
+#   local counter=1
+#
+#   while [ -e "$destination" ]; do
+#     local base_name="${new_filename%.*}"
+#     local extension="${new_filename##*.}"
+#     destination="$directory/${base_name}_${counter}.${extension}"
+#     counter=$((counter + 1))
+#   done
+#
+#   echo "$destination"
+# }
+
+# Check for required commands
+check_command exiftool
+check_command awk
+check_command mv
+
+# Function to organize images
+organize_images() {
+  local dir="$1"
+
+  # Find all image files and process them
+  find "$dir" -type f \
+    \( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" -o -iname "*.gif" -o -iname "*.bmp" -o -iname "*.webp" -o -iname "*.svg" -o -iname "*.tiff" -o -iname "*.ico" -o -iname "*.raw" -o -iname "*.heif" \) \
+    -print0 | while read -r -d '' file; do
+
+    # rename_photo "$file"
+
+    # Get the creation date from the image
+    date=$(exiftool -DateTimeOriginal -d "%Y/%B" -s3 "$file")
+
+    # If DateTimeOriginal tag is not available, use the file modification date
+    if [ -z "$date" ]; then
+      # date=$(date -r "$file" +"%Y/%m")
+      date="others"
+    fi
+
+    # Create the destination directory if it doesn't exist
+    dest="$dir/$date"
+    mkdir -p "$dest"
+
+    # Move the file
+    mv --backup=numbered --suffix=- "$file" "$dest/"
+    echo "'$file' -> '$dest/'"
+  done
+}
+
+# Parse command-line arguments
+use_file_date=0
+while [[ "$1" == -* ]]; do
+  case "$1" in
+  -h | --help)
+    usage
+    exit 0
+    ;;
+  *)
+    echo "Error: Unknown option '$1'" >&2
+    usage
+    exit 1
+    ;;
+  esac
+done
+
+source rename-by-date
+
+# Organize images in the base directory and its subdirectories
+organize_images "$BASE_DIR"
+
+echo "Images have been organized by date."
