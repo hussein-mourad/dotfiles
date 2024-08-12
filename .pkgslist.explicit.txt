@@ -35,7 +35,6 @@ calcurse
 calibre
 cantarell-fonts
 catdoc
-catppuccin-cursors-mocha
 catppuccin-gtk-theme-mocha
 cheat
 chntpw
@@ -84,10 +83,12 @@ entr
 eslint
 ethtool
 evince
+evolution
 exfatprogs
 expac
 f2fs-tools
 fd
+fdupes
 feh
 ffmpeg
 ffmpegthumbnailer
@@ -103,6 +104,7 @@ gcalcli
 gcc
 gcolor3
 gdu
+geary
 gimp
 git
 git-delta
@@ -110,13 +112,16 @@ git-lfs
 gitflow-avh
 github-cli
 glow
+gnome-disk-utility
 gnome-keyring
 gnome-pomodoro-git
 go
 gobang-bin
 gparted
 gpick
+gping
 grub
+grub-customizer-git
 grub-theme-manjaro
 gst-libav
 gst-plugins-bad
@@ -151,6 +156,7 @@ i3exit
 i3lock-color
 i3status
 inetutils
+inkscape
 intel-ucode
 inxi
 ipp-usb
@@ -167,6 +173,7 @@ kvantum-manjaro
 lazydocker-bin
 lazygit
 lazynpm
+lazysql
 less
 lib32-flex
 lib32-libva-vdpau-driver
@@ -340,11 +347,13 @@ simple-scan
 simplescreenrecorder
 sl
 slides
+smartmontools
 snapd
 sof-firmware
 spectre-meltdown-checker
 speedtest-cli
 sqlitebrowser
+sshs
 starship
 stow
 subversion
