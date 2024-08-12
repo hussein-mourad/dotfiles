@@ -192,3 +192,4 @@ alias notes="cd /mnt/d/data/documents/notes/ && vi ."
 alias curl="noglob curl"
 alias yt="noglob yt"
 alias sl="sl -e" # enable escaping by ctrl+c
+alias ra="ranger"
