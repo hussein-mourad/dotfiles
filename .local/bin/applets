@@ -1,0 +1,13 @@
+#!/bin/bash
+
+killall nm-applet
+killall pa-applet
+killall blueman-applet
+killall gxkb
+killall redshift-gtk
+
+nm-applet &
+pa-applet &
+blueman-applet &
+gxkb &
+redshift-gtk -c "$HOME/.config/redshift.conf" &

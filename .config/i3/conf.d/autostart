@@ -12,11 +12,12 @@ exec_always --no-startup-id fix_xcursor
 exec_always --no-startup-id $HOME/.local/bin/keyboard
 
 # Applets
-exec --no-startup-id nm-applet
-exec --no-startup-id pa-applet
-exec --no-startup-id blueman-applet
-exec --no-startup-id redshift-gtk -c ~/.config/redshift.conf
-exec --no-startup-id gxkb
+# exec --no-startup-id nm-applet
+# exec --no-startup-id pa-applet;
+# exec --no-startup-id blueman-applet
+# exec --no-startup-id redshift-gtk -c ~/.config/redshift.conf
+# exec --no-startup-id gxkb
+exec_always --no-startup-id $HOME/.local/bin/applets
 exec --no-startup-id flameshot
 exec --no-startup-id megasync
 exec --no-startup-id libinput-gestures-setup start

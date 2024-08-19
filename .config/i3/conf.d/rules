@@ -6,7 +6,7 @@
 # assign [class="Skype"] $ws5
 # assign [class="TelegramDesktop"] $ws7
 assign [class="Virt-viewer"] $ws6
-assign [class="KeePassXC"] $ws8
+# assign [class="KeePassXC"] $ws8
 for_window [class="TelegramDesktop"] move to workspace $ws7
 # for_window [class="Zathura"] move to workspace $ws3
 
