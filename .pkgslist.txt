@@ -6,6 +6,7 @@ acl
 acorn
 acpi
 acpid
+act
 ada
 adapta-maia-theme
 adobe-source-code-pro-fonts
@@ -22,6 +23,8 @@ alsa-ucm-conf
 alsa-utils
 android-tools
 android-udev
+ansible
+ansible-core
 antlr4-runtime
 aom
 apparmor
@@ -68,6 +71,7 @@ bmenu
 boost-libs
 borg
 botan
+botan2
 bottom
 box2d
 breeze-icons
@@ -1481,7 +1485,6 @@ potrace
 powertop
 ppp
 pptpclient
-prayer-times
 procps-ng
 procs
 proj
@@ -1494,7 +1497,6 @@ pulseaudio-ctl
 pyenv
 pyside6
 python
-python-annotated-types
 python-anyio
 python-appdirs
 python-apsw
@@ -1509,6 +1511,7 @@ python-attrs
 python-autocommand
 python-automat
 python-babel
+python-bcrypt
 python-beautifulsoup4
 python-bleach
 python-brotli
@@ -1621,6 +1624,7 @@ python-ordered-set
 python-overrides
 python-packaging
 python-pandocfilters
+python-paramiko
 python-parsedatetime
 python-parsimonious
 python-parso
@@ -1653,11 +1657,10 @@ python-pychm
 python-pycparser
 python-pycryptodome
 python-pycryptodomex
-python-pydantic
-python-pydantic-core
 python-pyfiglet
 python-pygments
 python-pyinotify
+python-pynacl
 python-pyopenssl
 python-pyparsing
 python-pyppmd
@@ -1682,6 +1685,7 @@ python-regex
 python-rencode
 python-requests
 python-requests-toolbelt
+python-resolvelib
 python-rich
 python-rpds-py
 python-rsa
@@ -1858,7 +1862,6 @@ rapidjson
 raptor
 rasqal
 rav1e
-rbenv
 rdesktop
 rdfind
 re2
@@ -1949,6 +1952,7 @@ screen
 screenfetch
 scrot
 sd
+sddm
 sdl12-compat
 sdl2
 sdl2_image
@@ -2058,6 +2062,7 @@ the_silver_searcher
 thin-provisioning-tools
 thunar
 thunar-volman
+thunderbird
 tidy
 timew
 tinyxml2

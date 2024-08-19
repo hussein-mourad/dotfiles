@@ -1,10 +1,12 @@
 accountsservice
 acpi
 acpid
+act
 alacritty
 alsa-firmware
 alsa-plugins
 alsa-utils
+ansible
 apparmor
 appimagelauncher
 arandr
@@ -303,7 +305,6 @@ polkit-gnome
 polybar
 poppler-data
 powertop
-prayer-times
 procs
 pulseaudio
 pulseaudio-bluetooth
@@ -319,7 +320,6 @@ qt5ct
 quran-companion
 qutebrowser
 ranger
-rbenv
 rdesktop
 rdfind
 redshift
@@ -343,6 +343,7 @@ scrcpy
 screen
 screenfetch
 sd
+sddm
 simple-scan
 simplescreenrecorder
 sl
@@ -383,6 +384,7 @@ texlive-xetex
 the_silver_searcher
 thunar
 thunar-volman
+thunderbird
 tidy
 timew
 tiv
