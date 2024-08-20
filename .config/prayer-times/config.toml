@@ -1,0 +1,19 @@
+[location]
+lat = 31.24
+lon = 29.97
+
+[prayer]
+method = "Egyptian"
+madhab = "Shafi"
+fajr_mod = 0
+dohr_mod = 0
+asr_mod = 0
+maghrib_mod = 0
+isha_mod = 0
+
+[notification]
+notify_before = false
+urgency = "Normal"
+icon = "/usr/share/icons/mosque-svgrepo-com-56x56.png"
+interval = 5
+
