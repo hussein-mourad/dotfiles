@@ -193,3 +193,4 @@ alias curl="noglob curl"
 alias yt="noglob yt"
 alias sl="sl -e" # enable escaping by ctrl+c
 alias ra="ranger"
+alias virsh="sudo virsh"

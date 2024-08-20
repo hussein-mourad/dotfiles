@@ -138,12 +138,6 @@ esac
 # Hook function to activate venv_auto_activate when changing directories
 # chpwd_functions+=venv_auto_activate
 
-
-# if commond -v rbenv 1>/dev/null 2>&1; then
-#   eval "$(rbenv init -)"
-# fi
-# eval "$(rbenv init -)"
-
 # Load argcomplete
 # eval "$(register-python-argcomplete)"
 

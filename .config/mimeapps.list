@@ -25,6 +25,7 @@ application/octet-stream=sxiv.desktop
 application/lrf=calibre-lrfviewer.desktop
 inode/directory=thunar.desktop
 x-scheme-handler/mailspring=Mailspring.desktop
+x-scheme-handler/tonsite=org.telegram.desktop.desktop
 
 [Added Associations]
 x-scheme-handler/http=userapp-firefox.desktop;chromium.desktop;
@@ -52,3 +53,4 @@ application/vnd.openxmlformats-officedocument.wordprocessingml.document=libreoff
 video/x-matroska=mpv.desktop;
 application/epub+zip=mupdf.desktop;
 video/quicktime=mpv.desktop;
+x-scheme-handler/tonsite=org.telegram.desktop.desktop;
