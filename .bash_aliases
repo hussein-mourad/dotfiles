@@ -194,3 +194,5 @@ alias yt="noglob yt"
 alias sl="sl -e" # enable escaping by ctrl+c
 alias ra="ranger"
 alias virsh="sudo virsh"
+alias make_playlist="find . -maxdepth 1 \( -iname '*.mp4' -o -iname '*.mkv' -iname '*.avi' \) -print0 | xargs -0 ls -v | tee /tmp/playlist_file && mv -i /tmp/playlist_file playlist.m3u"
+alias playlist="mpv --playlist=playlist.m3u"
