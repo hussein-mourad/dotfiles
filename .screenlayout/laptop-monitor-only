@@ -13,3 +13,4 @@ xrandr --output eDP-1 --primary --mode 1920x1080 --pos 0x0 --rotate normal --out
 # sleep 1
 # nitrogen --head=0 --set-zoom-fill /mnt/d/data/media/pictures/wallpapers/linux/tux/tux-mocha.png
 # nitrogen --restore
+feh --bg-fill "$HOME"/.local/share/wallpaper.jpg

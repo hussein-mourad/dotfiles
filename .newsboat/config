@@ -1,3 +1,23 @@
+# color listnormal         color15 default
+# color listnormal_unread  color2  default
+#color listfocus_unread   color2  color0
+#color listfocus          default color0
+#color background         default default
+#color article            default default
+# color end-of-text-marker color8  default
+color info               color11 color4 bold
+color hint-separator     color11 color4 bold
+color hint-description   color11 color4 bold
+color title              color11 color4 bold
+
+#highlight article "^(Feed|Title|Author|Link|Date): .+" color4 default bold
+#highlight article "^(Feed|Title|Author|Link|Date):" color14 default bold
+
+#highlight article "\\((link|image|video)\\)" color8 default
+#highlight article "https?://[^ ]+" color4 default
+#highlight article "\[[0-9]+\]" color6 default bold
+
+
 bind-key j down
 bind-key k up
 bind-key h quit
@@ -11,5 +31,4 @@ bind-key U show-urls
 bind-key D pb-download
 bind-key x pb-delete
 
-browser "qutebrowser %u"
-browser "chromium %u"
+browser "zen-browser %u"

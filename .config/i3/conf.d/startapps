@@ -1,6 +1,6 @@
 # Start Applications
 bindsym $mod+Ctrl+b exec i3-sensible-terminal -e 'bmenu'
-bindsym $mod+b exec chromium 
+bindsym $mod+b exec zen-browser
 bindsym $mod+p exec --no-startup-id $HOME/.local/bin/keepassxc-open;
 bindsym $mod+F5 exec i3-sensible-terminal -e 'mocp'
 bindsym $mod+t exec --no-startup-id pkill picom

@@ -1,0 +1,36 @@
+#!/bin/bash
+
+. "$HOME"/.dmenurc
+dmenu_cmd="dmenu $DMENU_OPTIONS"
+direction=$(echo -e 'normal\nleft\ninverted\nright' | $dmenu_cmd)
+
+case "$direction" in
+"normal")
+  xrandr --output HDMI-1-1 --rotate normal
+  # or
+  xrandr --output HDMI-1-3 --rotate normal
+  ;;
+"left")
+  xrandr --output HDMI-1-1 --rotate left
+  # or
+  xrandr --output HDMI-1-3 --rotate left
+  ;;
+"inverted")
+  xrandr --output HDMI-1-1 --rotate inverted
+  # or
+  xrandr --output HDMI-1-3 --rotate inverted
+  ;;
+"right")
+  xrandr --output HDMI-1-1 --rotate right
+  # or
+  xrandr --output HDMI-1-3 --rotate right
+  ;;
+*) ;;
+esac
+
+# nitrogen --head=0 --set-zoom-fill /mnt/d/data/media/pictures/wallpapers/linux/tux/tux-dark.png
+# nitrogen --head=1 --set-zoom-fill /mnt/d/data/media/pictures/wallpapers/linux/tux/tux-dark.png
+# nitrogen --restore
+feh --bg-fill "$HOME"/.local/share/wallpaper.jpg
+
+# xrandr --output eDP-1 --mode 1920x1080 --pos 0x0 --rotate normal --output DP-1 --off --output HDMI-2 --off --output DP-2 --off --output HDMI-3 --off --output HDMI-1-1 --primary --mode 1920x1080 --pos 1920x0 --rotate normal

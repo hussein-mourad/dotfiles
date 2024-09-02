@@ -79,7 +79,7 @@ touch "$LOG_FILE"
 
 select_quality
 
-if [[ $INPUT_URL =~ /playlist\?list= ]]; then
+if [[ $INPUT_URL =~ list= ]]; then
 	# Prefix playlist index with "-" separator, but only if it is available
 	CHANNEL_DIR="$YOUTUBE_DIR/%(playlist_uploader)s"
 	OUTPUT_DIR="$CHANNEL_DIR/%(playlist_title)s"

@@ -7,7 +7,7 @@
 # assign [class="TelegramDesktop"] $ws7
 assign [class="Virt-viewer"] $ws6
 # assign [class="KeePassXC"] $ws8
-for_window [class="TelegramDesktop"] move to workspace $ws7
+# for_window [class="TelegramDesktop"] move to workspace $ws7
 # for_window [class="Zathura"] move to workspace $ws3
 
 # Open specific applications in floating mode
@@ -43,7 +43,7 @@ for_window [class="Skype"] floating enable border normal
 for_window [class="Timeset-gui"] floating enable border normal
 for_window [class="(?i)virtualbox"] floating enable border normal
 for_window [class="Xfburn"] floating enable
-for_window [title="PyQt5 Demo"] floating enable border normal
+for_window [title="PyQt5 Dev"] floating enable border normal
 for_window [title="float"] floating enable border normal
 for_window [title="konsole"] border pixel $border_size
 

@@ -40,6 +40,15 @@ zinit light zsh-users/zsh-autosuggestions
 zinit ice depth=1;zinit light jeffreytse/zsh-vi-mode
 zinit light Aloxaf/fzf-tab
 
+# Atuin install
+# line 1: `atuin` binary as command, from github release, only look at .tar.gz files, use the `atuin` file from the extracted archive
+# line 2: setup at clone(create init.zsh, completion)
+# line 3: pull behavior same as clone, source init.zsh
+# zinit ice as"command" from"gh-r" bpick"atuin-*.tar.gz" mv"atuin*/atuin -> atuin" \
+#     atclone"./atuin init zsh > init.zsh; ./atuin gen-completions --shell zsh > _atuin" \
+#     atpull"%atclone" src"init.zsh"
+# zinit light atuinsh/atuin
+
 # Add in snippets
 zinit snippet OMZP::git
 zinit snippet OMZP::sudo
@@ -87,6 +96,7 @@ bindkey -v # vim mode
 bindkey -M vicmd '^p' history-search-backward
 bindkey -M vicmd '^n' history-search-forward
 bindkey -M vicmd '^[w' kill-region
+bindkey -M vicmd "^X^E" edit-command-line
 
 # Remove Background colors
 eval "$(dircolors -p | \
@@ -126,14 +136,14 @@ esac
 # pnpm end
 
 # Define a function to activate venv if present
-# venv_auto_activate() {
-#     if [[ -d "venv" ]]; then
-#         # Check if already activated to avoid redundant activation
-#         if [[ -z "${VIRTUAL_ENV}" ]]; then
-#             source venv/bin/activate
-#         fi
-#     fi
-# }
+venv_auto_activate() {
+    if [[ -d "venv" ]]; then
+        # Check if already activated to avoid redundant activation
+        if [[ -z "${VIRTUAL_ENV}" ]]; then
+            source venv/bin/activate
+        fi
+    fi
+}
 
 # Hook function to activate venv_auto_activate when changing directories
 # chpwd_functions+=venv_auto_activate
@@ -146,3 +156,8 @@ eval "$(fzf --zsh)"
 # Replace the default cd command with zoxide
 # eval "$(zoxide init --cmd cd zsh)"
 eval "$(zoxide init zsh)"
+
+eval "$(_PIPENV_COMPLETE=zsh_source pipenv)"
+
+venv_auto_activate
+

@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+find . -maxdepth 1 \( -iname '*.mp4' -o -iname '*.mkv' -iname '*.avi' \) -print0 | xargs -0 realpath | xargs -I {} ls -v "{}" | tee /tmp/playlist_file && mv -i /tmp/playlist_file ./playlist.m3u
+mpv --playlist=playlist.m3u

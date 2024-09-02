@@ -4,4 +4,4 @@ xrandr --output eDP-1 --primary --mode 1920x1080 --pos 1080x840 --rotate normal 
 # nitrogen --head=0 --set-zoom-fill /mnt/d/data/media/pictures/wallpapers/linux/tux/tux-mocha.png
 # nitrogen --head=1 --set-zoom-fill /mnt/d/data/media/pictures/wallpapers/linux/tux/tux-mocha.png
 #
-# nitrogen --restore
+nitrogen --restore

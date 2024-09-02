@@ -99,6 +99,7 @@ firefox-pwa-bin
 flac
 flameshot
 flex
+fpp
 fx
 galculator
 garcon
@@ -107,12 +108,14 @@ gcc
 gcolor3
 gdu
 geary
+gfeeds
 gimp
 git
 git-delta
 git-lfs
 gitflow-avh
 github-cli
+gitleaks
 glow
 gnome-disk-utility
 gnome-keyring
@@ -489,6 +492,8 @@ ytfzf
 zaread-git
 zathura
 zathura-pdf-mupdf
+zeal
+zen-browser-bin
 zensu
 zip
 zoxide

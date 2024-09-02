@@ -2,3 +2,4 @@ export TERMINAL=/usr/bin/konsole
 export PATH="$HOME/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.screenlayout:$PATH"
+export PATH="/mnt/d/data/apps/appimages:$PATH"
