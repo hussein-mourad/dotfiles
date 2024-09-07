@@ -104,9 +104,12 @@ return {
         ["<leader>ka"] = { "<cmd>set keymap=arabic<cr>", desc = "Change keymap to arabic" },
         ["<leader>ke"] = { '<cmd>set keymap="<cr>', desc = "Change keymap to english" },
         ["<leader>fT"] = { "<cmd>TodoTelescope<cr>", desc = "Find all todos" },
-        ["<Leader>m"] = { desc = "Markdown" },
-        ["<leader>mp"] = { "<cmd>MarkdownPreviewToggle<cr>", desc = "Markdown Preview in Browser" },
-        ["<leader>mg"] = { "<cmd>Glow<cr>", desc = "Glow Preview" },
+        -- ["<Leader>m"] = { desc = "Markdown" },
+        -- ["<leader>mp"] = { "<cmd>MarkdownPreviewToggle<cr>", desc = "Markdown Preview in Browser" },
+        -- ["<leader>mg"] = { "<cmd>Glow<cr>", desc = "Glow Preview" },
+        ["<leader>Mg"] = { "<cmd>Glow<cr>", desc = "Glow Preview" },
+        ["<leader>Me"] = { "<cmd>PeekOpen<cr>", desc = "Peek Open Preview" },
+        ["<leader>Mc"] = { "<cmd>PeekClose<cr>", desc = "Peek Close Preview" },
       },
       t = {
         -- setting a mapping to false will disable it
