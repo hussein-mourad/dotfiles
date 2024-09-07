@@ -43,9 +43,14 @@ for_window [class="Skype"] floating enable border normal
 for_window [class="Timeset-gui"] floating enable border normal
 for_window [class="(?i)virtualbox"] floating enable border normal
 for_window [class="Xfburn"] floating enable
-for_window [title="PyQt5 Dev"] floating enable border normal
+# for_window [title="PyQt5"] floating enable border normal
+# for_window [title="PyQt5 Dev"] floating enable border normal
+for_window [title="i3 float"] floating enable border normal
 for_window [title="float"] floating enable border normal
 for_window [title="konsole"] border pixel $border_size
 
 # switch to workspace with urgent window automatically
 for_window [urgent=latest] focus
+
+# do not focus preview window on open
+no_focus [title="^Peek preview$"]
