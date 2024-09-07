@@ -6,7 +6,7 @@
 
 vim.cmd [[
   function OpenMarkdownPreview (url)
-    execute "silent ! chromium --new-window " . a:url
+    execute "silent ! zen-browser --new-window " . a:url
   endfunction
   let g:mkdp_browserfunc = 'OpenMarkdownPreview'
 ]]
