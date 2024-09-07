@@ -45,7 +45,7 @@ PATH="$PATH:$HOME/go/bin"
 PATH="$PATH:$HOME/.screenlayout"
 PATH="$PATH:/usr/lib/gcc/avr/13.2.0"
 PATH="$PATH:$HOME/.config/composer/vendor/bin"
-PATH="$PATH:/mnt/d/data/apps/appimages"
+PATH="$PATH:/mnt/d/data/apps"
 # PATH="$PATH:$HOME/.local/share/gem/ruby/3.0.0/bin"
 
 export BROWSER=/usr/bin/zen-browser
