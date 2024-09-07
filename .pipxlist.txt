@@ -1,4 +1,5 @@
 organize-tool 3.2.5
 poetry 1.7.1
 pre-commit 3.7.0
+uv 0.4.3
 you-get 0.4.1710

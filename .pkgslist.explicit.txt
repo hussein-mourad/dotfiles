@@ -58,6 +58,7 @@ curlie
 cutecom
 debugedit
 deluge
+deno
 device-mapper
 dfc
 dhclient
@@ -81,6 +82,7 @@ dust
 e2fsprogs
 ecryptfs-utils
 efibootmgr
+endeavour
 entr
 eslint
 ethtool
@@ -312,6 +314,7 @@ procs
 pulseaudio
 pulseaudio-bluetooth
 pulseaudio-ctl
+pycharm-community-edition
 pyenv
 python-llfuse
 python-mutagen

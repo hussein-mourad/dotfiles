@@ -153,6 +153,7 @@ debootstrap
 debugedit
 default-cursors
 deluge
+deno
 desktop-file-utils
 device-mapper
 dfc
@@ -201,6 +202,7 @@ electron30
 electron31
 elementary-icon-theme
 enchant
+endeavour
 entr
 eslint
 ethtool
@@ -637,6 +639,7 @@ i3exit
 i3lock-color
 i3status
 iana-etc
+icon-naming-utils
 icu
 ijs
 imagemagick
@@ -654,12 +657,16 @@ iptables
 iputils
 ipython
 iso-codes
+itstool
 iw
 jack2
 jansson
 jasper
+java-environment-common
+java-runtime-common
 jbig2dec
 jbigkit
+jdk17-openjdk
 jemalloc
 jfsutils
 jose
@@ -1462,6 +1469,8 @@ perl-xml-namespacesupport
 perl-xml-parser
 perl-xml-sax
 perl-xml-sax-base
+perl-xml-sax-expat
+perl-xml-simple
 perl-xml-writer
 phodav
 php
@@ -1499,6 +1508,7 @@ pugixml
 pulseaudio
 pulseaudio-bluetooth
 pulseaudio-ctl
+pycharm-community-edition
 pyenv
 pyside6
 python
@@ -1526,6 +1536,7 @@ python-cachecontrol
 python-cachetools
 python-cachy
 python-cairo
+python-caldav
 python-certifi
 python-cffi
 python-chardet
@@ -1549,6 +1560,7 @@ python-distlib
 python-distro
 python-dnspython
 python-docopt
+python-docutils
 python-dulwich
 python-dunamai
 python-executing
@@ -1563,6 +1575,7 @@ python-google-api-core
 python-google-api-python-client
 python-google-auth
 python-google-auth-httplib2
+python-google-auth-oauthlib
 python-googleapis-common-protos
 python-h11
 python-html2text
@@ -1615,6 +1628,7 @@ python-matplotlib-inline
 python-mdurl
 python-mechanize
 python-mistune
+python-mock
 python-more-itertools
 python-msgpack
 python-multidict
@@ -1623,9 +1637,11 @@ python-mutagen
 python-natsort
 python-nest-asyncio
 python-netifaces
+python-nose
 python-npyscreen
 python-numpy
 python-oauth2client
+python-oauthlib
 python-ordered-set
 python-overrides
 python-packaging
@@ -1681,18 +1697,22 @@ python-pyrsistent
 python-pyserial
 python-pysocks
 python-pytest
+python-pytest-cov
 python-pytz
 python-pyxdg
 python-pyzmq
 python-pyzstd
 python-rapidfuzz
 python-readability-lxml
+python-recurring-ical-events
 python-referencing
 python-regex
 python-rencode
 python-requests
+python-requests-oauthlib
 python-requests-toolbelt
 python-resolvelib
+python-restructuredtext_lint
 python-rich
 python-rpds-py
 python-rsa
@@ -1724,6 +1744,8 @@ python-trove-classifiers
 python-twisted
 python-typeguard
 python-typing_extensions
+python-tzdata
+python-tzlocal
 python-uc-micro-py
 python-unrardll
 python-uritemplate
@@ -1732,10 +1754,12 @@ python-urwid
 python-userpath
 python-validate-pyproject
 python-virtualenv
+python-vobject
 python-wcwidth
 python-webencodings
 python-websocket-client
 python-wheel
+python-x-wr-timezone
 python-xapp
 python-xlib
 python-xmltodict
