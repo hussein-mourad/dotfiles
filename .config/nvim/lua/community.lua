@@ -20,20 +20,22 @@ return {
   { import = "astrocommunity.pack.docker" },
   { import = "astrocommunity.pack.cpp" },
   { import = "astrocommunity.pack.python" },
+  -- { import = "astrocommunity.pack.python-ruff" },
   { import = "astrocommunity.pack.go" },
   { import = "astrocommunity.pack.lua" },
   { import = "astrocommunity.pack.rust" },
 
   -- web dev
   { import = "astrocommunity.pack.html-css" },
-  { import = "astrocommunity.pack.typescript" },
+  -- { import = "astrocommunity.pack.typescript" },
+  { import = "astrocommunity.pack.typescript-deno" },
   { import = "astrocommunity.pack.tailwindcss" },
   -- { import = "astrocommunity.pack.ruby" },
   { import = "astrocommunity.pack.php" },
   { import = "astrocommunity.pack.blade" },
   { import = "astrocommunity.pack.laravel" },
   { import = "astrocommunity.pack.prisma" },
-  -- { import = "astrocommunity.pack.sql" },
+  { import = "astrocommunity.pack.sql" },
 
   -- config files
   { import = "astrocommunity.pack.json" },
@@ -44,7 +46,7 @@ return {
   { import = "astrocommunity.pack.typst" },
   { import = "astrocommunity.pack.markdown" },
 
-  -- { import = "astrocommunity.markdown-and-latex.markdown-preview-nvim" },
+  { import = "astrocommunity.markdown-and-latex.markdown-preview-nvim" },
   { import = "astrocommunity.markdown-and-latex.peek-nvim" },
   { import = "astrocommunity.markdown-and-latex.glow-nvim" },
   { import = "astrocommunity.markdown-and-latex.vimtex" },
@@ -99,5 +101,5 @@ return {
 
   -- { import = "astrocommunity.motion.harpoon" },
   -- { import = "astrocommunity.programming-language-support.rest-nvim" },
-  { import = "astrocommunity.game.leetcode-nvim" },
+  -- { import = "astrocommunity.game.leetcode-nvim" },
 }
