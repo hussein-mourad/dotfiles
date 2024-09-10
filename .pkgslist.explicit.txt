@@ -126,6 +126,7 @@ gnome-keyring
 gnome-pomodoro-git
 go
 gobang-bin
+goreleaser
 gparted
 gpick
 gping
@@ -312,6 +313,7 @@ pkgconf
 polkit-gnome
 polybar
 poppler-data
+postgresql
 powertop
 procs
 pulseaudio

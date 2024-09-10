@@ -208,6 +208,7 @@ prompt-toolkit                1.0.18
 prompt_toolkit1               1.0.18
 protobuf                      5.27.3
 psutil                        6.0.0
+psycopg2                      2.9.9
 ptyprocess                    0.7.0
 pure_eval                     0.2.3
 pwquality                     1.4.5

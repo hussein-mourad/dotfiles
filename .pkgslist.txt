@@ -322,6 +322,7 @@ gobang-bin
 gobject-introspection
 gobject-introspection-runtime
 gom
+goreleaser
 gparted
 gperf
 gperftools
@@ -1498,6 +1499,8 @@ poppler-data
 poppler-glib
 popt
 portaudio
+postgresql
+postgresql-libs
 potrace
 powertop
 ppp
