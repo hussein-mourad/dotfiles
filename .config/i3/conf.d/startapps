@@ -3,7 +3,7 @@ bindsym $mod+Ctrl+b exec i3-sensible-terminal -e 'bmenu'
 bindsym $mod+b exec zen-browser
 bindsym $mod+p exec --no-startup-id $HOME/.local/bin/keepassxc-open;
 bindsym $mod+F5 exec i3-sensible-terminal -e 'mocp'
-bindsym $mod+t exec --no-startup-id pkill picom
+# bindsym $mod+t exec --no-startup-id pkill picom
 bindsym $mod+Ctrl+t exec --no-startup-id picom -b
 bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart dunst'"
 bindsym Print exec --no-startup-id flameshot full
@@ -12,6 +12,7 @@ bindsym $mod+Print exec --no-startup-id flameshot gui
 bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
 bindsym $mod+Shift+w --release exec $HOME/.local/bin/launch-win11-vm;
 bindsym $mod+Ctrl+m exec pavucontrol
+bindsym $mod+t exec thunderbird
 
 # bindsym $mod+Ctrl+m exec i3-sensible-terminal -e 'alsamixer'
 # bindsym $mod+f exec i3-sensible-terminal -e 'ranger';
