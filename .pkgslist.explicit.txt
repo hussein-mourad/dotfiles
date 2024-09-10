@@ -42,6 +42,7 @@ cheat
 chntpw
 chromium
 clipit
+clock-tui
 cmatrix
 cmus
 colorpicker
@@ -102,6 +103,7 @@ flac
 flameshot
 flex
 fpp
+freeze-bin
 fx
 galculator
 garcon
@@ -171,6 +173,7 @@ jfsutils
 jpegoptim
 jqp
 jupyter-notebook
+kakoune
 kanata
 kcolorchooser
 keepassxc

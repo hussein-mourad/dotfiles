@@ -111,6 +111,7 @@ ckbcomp
 clang
 cli11
 clipit
+clock-tui
 clucene
 cmake
 cmark
@@ -200,6 +201,7 @@ electron
 electron28
 electron30
 electron31
+electron32
 elementary-icon-theme
 enchant
 endeavour
@@ -248,6 +250,7 @@ foomatic-db-ppds
 fpp
 freeglut
 freetype2
+freeze-bin
 fribidi
 fuse-common
 fuse2
@@ -686,6 +689,7 @@ jupyterlab
 jupyterlab-pygments
 just
 jxrlib
+kakoune
 kanata
 karchive
 karchive5
