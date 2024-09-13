@@ -197,3 +197,4 @@ alias virsh="sudo virsh"
 alias pn="pnpm"
 alias astro="v /mnt/d/data/code/source/astrocommunity/lua/astrocommunity"
 alias clip="xclip -sel clip"
+alias ldo='lazydocker'
