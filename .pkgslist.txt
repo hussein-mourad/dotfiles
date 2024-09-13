@@ -13,6 +13,7 @@ adobe-source-code-pro-fonts
 adwaita-cursors
 adwaita-icon-theme
 adwaita-icon-theme-legacy
+akonadi-contacts
 alacritty
 alsa-firmware
 alsa-lib
@@ -62,6 +63,7 @@ bc
 bind
 binutils
 bison
+bitwarden
 blas
 blueman
 bluez
@@ -126,6 +128,7 @@ confuse
 conky
 conky-i3
 containerd
+convertlit
 coreutils
 cowsay
 cpanminus
@@ -162,6 +165,7 @@ dhclient
 dhcpcd
 dialog
 diffutils
+digikam
 ding-libs
 discord
 distro-info
@@ -191,6 +195,7 @@ dunst
 dust
 dvisvgm
 e2fsprogs
+ebook-tools
 ecryptfs-utils
 edk2-aarch64
 edk2-arm
@@ -331,6 +336,7 @@ gpick
 gping
 gpm
 gptfdisk
+grantleetheme
 graphene
 graphicsmagick
 graphite
@@ -690,6 +696,7 @@ jupyterlab
 jupyterlab-pygments
 just
 jxrlib
+kaccounts-integration
 kakoune
 kanata
 karchive
@@ -699,6 +706,8 @@ kauth5
 kbd
 kbookmarks
 kbookmarks5
+kcalendarcore
+kcmutils
 kcodecs
 kcodecs5
 kcolorchooser
@@ -709,6 +718,7 @@ kconfig
 kconfig5
 kconfigwidgets
 kconfigwidgets5
+kcontacts
 kcoreaddons
 kcoreaddons5
 kcrash
@@ -718,6 +728,7 @@ kdbusaddons5
 kded5
 keepassxc
 keyutils
+kfilemetadata
 kglobalaccel
 kglobalaccel5
 kguiaddons
@@ -728,6 +739,8 @@ kiconthemes
 kiconthemes5
 kio
 kio5
+kirigami
+kitemmodels
 kitemmodels5
 kitemviews
 kitemviews5
@@ -736,6 +749,7 @@ kitty-shell-integration
 kitty-terminfo
 kjobwidgets
 kjobwidgets5
+kmime
 kmod
 knewstuff
 knewstuff5
@@ -751,8 +765,11 @@ kparts5
 kpty
 kpty5
 krb5
+ksanecore
 kservice
 kservice5
+ktextaddons
+ktexttemplate
 ktextwidgets
 ktextwidgets5
 kvantum
@@ -842,8 +859,11 @@ lib32-xz
 lib32-zlib
 lib32-zstd
 libabw
+libaccounts-glib
+libaccounts-qt
 libadwaita
 libaio
+libakonadi
 libao
 libappimage
 libappindicator-gtk3
@@ -905,6 +925,7 @@ libdecor
 libdeflate
 libdiscid
 libdispatch
+libdmtx
 libdovi
 libdrm
 libdv
@@ -983,6 +1004,7 @@ libjpeg-turbo
 libjuice
 libjxl
 libkate
+libksane
 libksba
 liblangtag
 liblc3
@@ -1037,6 +1059,7 @@ libnma
 libnma-common
 libnotify
 libnsl
+libnss_nis
 libnumbertext
 libnvme
 liboauth
@@ -1420,6 +1443,7 @@ papirus-icon-theme
 papirus-maia-icon-theme
 parted
 pass
+pass-import
 patch
 patchutils
 pavucontrol
@@ -1497,6 +1521,7 @@ polybar
 poppler
 poppler-data
 poppler-glib
+poppler-qt6
 popt
 portaudio
 postgresql
@@ -1505,6 +1530,7 @@ potrace
 powertop
 ppp
 pptpclient
+prison
 procps-ng
 procs
 proj
@@ -1776,6 +1802,7 @@ python-zeroconf
 python-zipp
 python-zope-interface
 python-zstandard
+python-zxcvbn
 qca-qt5
 qca-qt6
 qcustomplot
@@ -1883,7 +1910,9 @@ qt6-declarative
 qt6-imageformats
 qt6-multimedia
 qt6-multimedia-ffmpeg
+qt6-networkauth
 qt6-positioning
+qt6-scxml
 qt6-shadertools
 qt6-speech
 qt6-svg
@@ -1891,6 +1920,7 @@ qt6-translations
 qt6-wayland
 qt6-webchannel
 qt6-webengine
+qtkeychain-qt6
 quran-companion
 qutebrowser
 ragel
@@ -1981,6 +2011,10 @@ shaderc
 shadow
 shared-mime-info
 shiboken6
+signon-kwallet-extension
+signon-plugin-oauth2
+signon-ui
+signond
 simple-scan
 simplescreenrecorder
 sl
@@ -2037,6 +2071,7 @@ syncthing
 syndication
 syndication-domination
 syndication5
+syntax-highlighting
 sysfsutils
 syslinux
 syslog-ng
@@ -2075,6 +2110,7 @@ texlive-pictures
 texlive-xetex
 the_silver_searcher
 thin-provisioning-tools
+threadweaver
 thunar
 thunar-volman
 thunderbird
