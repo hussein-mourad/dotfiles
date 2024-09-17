@@ -27,8 +27,8 @@ return {
 
   -- web dev
   { import = "astrocommunity.pack.html-css" },
-  -- { import = "astrocommunity.pack.typescript" },
-  { import = "astrocommunity.pack.typescript-deno" },
+  { import = "astrocommunity.pack.typescript" },
+  -- { import = "astrocommunity.pack.typescript-deno" },
   { import = "astrocommunity.pack.tailwindcss" },
   -- { import = "astrocommunity.pack.ruby" },
   { import = "astrocommunity.pack.php" },
