@@ -331,6 +331,7 @@ python-pipx
 python-pyqt5
 qemu-full
 qt5ct
+qtcreator
 quran-companion
 qutebrowser
 ranger
