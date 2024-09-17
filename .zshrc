@@ -136,14 +136,14 @@ esac
 # pnpm end
 
 # Define a function to activate venv if present
-venv_auto_activate() {
-    if [[ -d "venv" ]]; then
-        # Check if already activated to avoid redundant activation
-        if [[ -z "${VIRTUAL_ENV}" ]]; then
-            source venv/bin/activate
-        fi
-    fi
-}
+# venv_auto_activate() {
+#     if [[ -d "venv" ]]; then
+#         # Check if already activated to avoid redundant activation
+#         if [[ -z "${VIRTUAL_ENV}" ]]; then
+#             source venv/bin/activate
+#         fi
+#     fi
+# }
 
 # Hook function to activate venv_auto_activate when changing directories
 # chpwd_functions+=venv_auto_activate
@@ -159,6 +159,6 @@ eval "$(zoxide init zsh)"
 
 eval "$(_PIPENV_COMPLETE=zsh_source pipenv)"
 
-venv_auto_activate
+# venv_auto_activate
 
 eval "$(uv generate-shell-completion zsh)"
