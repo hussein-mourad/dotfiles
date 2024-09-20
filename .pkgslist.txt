@@ -240,6 +240,7 @@ filesystem
 findutils
 firefox
 firefox-pwa-bin
+fish
 flac
 flameshot
 flex
