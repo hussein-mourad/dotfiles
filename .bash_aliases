@@ -195,6 +195,6 @@ alias sl="sl -e" # enable escaping by ctrl+c
 alias ra="ranger"
 alias virsh="sudo virsh"
 alias pn="pnpm"
-alias astro="v /mnt/d/data/code/source/astrocommunity/lua/astrocommunity"
+alias astro="cd /mnt/d/data/code/source/astrocommunity/lua/astrocommunity && vi . && cd -"
 alias clip="xclip -sel clip"
 alias ldo='lazydocker'
