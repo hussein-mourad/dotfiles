@@ -80,6 +80,12 @@ return {
   -- completion
   -- { import = "astrocommunity.completion.copilot-lua" },
   -- { import = "astrocommunity.completion.copilot-lua-cmp" },
+  { import = "astrocommunity.completion.cmp-calc" },
+  { import = "astrocommunity.completion.cmp-cmdline" },
+  { import = "astrocommunity.completion.cmp-emoji" },
+  { import = "astrocommunity.completion.cmp-git" },
+  { import = "astrocommunity.completion.cmp-nerdfont" },
+  { import = "astrocommunity.completion.cmp-spell" },
 
   -- utility
   { import = "astrocommunity.utility.nvim-toggler" },
