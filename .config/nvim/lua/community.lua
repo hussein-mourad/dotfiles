@@ -8,12 +8,9 @@
 return {
   "AstroNvim/astrocommunity",
   -- import/override with your plugins folder
-  -- { import = "astrocommunity.recipes.vscode" },
 
   -- colorscheme
   { import = "astrocommunity.colorscheme.catppuccin" },
-  { import = "astrocommunity.colorscheme.onedarkpro-nvim" },
-  { import = "astrocommunity.colorscheme.tokyonight-nvim" },
 
   -- langs
   { import = "astrocommunity.pack.bash" },
@@ -29,7 +26,6 @@ return {
   { import = "astrocommunity.pack.html-css" },
   { import = "astrocommunity.pack.typescript-all-in-one" },
   { import = "astrocommunity.pack.tailwindcss" },
-  -- { import = "astrocommunity.pack.ruby" },
   { import = "astrocommunity.pack.php" },
   { import = "astrocommunity.pack.blade" },
   { import = "astrocommunity.pack.laravel" },
@@ -49,9 +45,6 @@ return {
   { import = "astrocommunity.markdown-and-latex.peek-nvim" },
   { import = "astrocommunity.markdown-and-latex.glow-nvim" },
   { import = "astrocommunity.markdown-and-latex.vimtex" },
-
-  -- note-taking
-  -- { import = "astrocommunity.note-taking.neorg" },
 
   { import = "astrocommunity.editing-support.zen-mode-nvim" },
   { import = "astrocommunity.editing-support.todo-comments-nvim" },
@@ -77,8 +70,6 @@ return {
   { import = "astrocommunity.media.codesnap-nvim" },
 
   -- completion
-  -- { import = "astrocommunity.completion.copilot-lua" },
-  -- { import = "astrocommunity.completion.copilot-lua-cmp" },
   { import = "astrocommunity.completion.cmp-calc" },
   { import = "astrocommunity.completion.cmp-cmdline" },
   { import = "astrocommunity.completion.cmp-emoji" },
@@ -104,7 +95,6 @@ return {
 
   { import = "astrocommunity.search.nvim-spectre" },
 
-  -- { import = "astrocommunity.motion.harpoon" },
   { import = "astrocommunity.code-runner.overseer-nvim" },
   -- { import = "astrocommunity.programming-language-support.rest-nvim" },
   -- { import = "astrocommunity.game.leetcode-nvim" },
