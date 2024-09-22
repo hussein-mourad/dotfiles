@@ -106,6 +106,7 @@ return {
   { import = "astrocommunity.search.nvim-spectre" },
 
   -- { import = "astrocommunity.motion.harpoon" },
+  { import = "astrocommunity.code-runner.overseer-nvim" },
   -- { import = "astrocommunity.programming-language-support.rest-nvim" },
   -- { import = "astrocommunity.game.leetcode-nvim" },
 }
