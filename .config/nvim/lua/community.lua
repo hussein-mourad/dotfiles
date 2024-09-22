@@ -34,6 +34,7 @@ return {
 
   -- config files
   { import = "astrocommunity.pack.json" },
+  { import = "astrocommunity.pack.xml" },
   { import = "astrocommunity.pack.toml" },
   { import = "astrocommunity.pack.yaml" },
 
@@ -47,14 +48,21 @@ return {
   { import = "astrocommunity.markdown-and-latex.vimtex" },
 
   { import = "astrocommunity.editing-support.zen-mode-nvim" },
+  { import = "astrocommunity.editing-support.true-zen-nvim" },
   { import = "astrocommunity.editing-support.todo-comments-nvim" },
   { import = "astrocommunity.editing-support.undotree" },
   { import = "astrocommunity.editing-support.telescope-undo-nvim" },
-  { import = "astrocommunity.editing-support.true-zen-nvim" },
-  { import = "astrocommunity.editing-support.nvim-origami" },
+  { import = "astrocommunity.editing-support.nvim-origami" }, -- easy folding
   { import = "astrocommunity.editing-support.bigfile-nvim" },
-  { import = "astrocommunity.editing-support.dial-nvim" },
-  { import = "astrocommunity.editing-support.vim-doge" },
+  { import = "astrocommunity.editing-support.dial-nvim" }, -- increment/decrement
+  { import = "astrocommunity.editing-support.neogen" }, -- documentation generation
+  { import = "astrocommunity.editing-support.auto-save-nvim" },
+  { import = "astrocommunity.editing-support.cloak-nvim" }, -- hide .env variables
+  { import = "astrocommunity.editing-support.comment-box-nvim" },
+  { import = "astrocommunity.editing-support.conform-nvim" }, -- formatting
+  { import = "astrocommunity.editing-support.refactoring-nvim" }, -- formatting
+  { import = "astrocommunity.editing-support.suda-vim" }, -- sudo support
+  { import = "astrocommunity.editing-support.text-case-nvim" }, -- sudo support
 
   -- motion
   { import = "astrocommunity.motion.mini-surround" },
@@ -95,7 +103,16 @@ return {
 
   { import = "astrocommunity.search.nvim-spectre" },
 
+  { import = "astrocommunity.lsp.ts-error-translator-nvim" },
+  { import = "astrocommunity.lsp.inc-rename-nvim" },
+
+  { import = "astrocommunity.docker.lazydocker" },
+
   { import = "astrocommunity.code-runner.overseer-nvim" },
+
   -- { import = "astrocommunity.programming-language-support.rest-nvim" },
+
   -- { import = "astrocommunity.game.leetcode-nvim" },
+  --
+  { import = "astrocommunity.git.gitgraph-nvim" },
 }
