@@ -39,6 +39,15 @@ return {
         -- undodir = os.getenv "HOME" .. "/.nvim/undodir",
         -- textwidth = 0,
         -- wrapmargin = 0,
+        fillchars = {
+          vert = "│",
+          horiz = "─",
+          horizup = "┴",
+          horizdown = "┬",
+          vertleft = "┤",
+          vertright = "├",
+          verthoriz = "┼",
+        },
       },
       g = { -- vim.g.<key>
         -- configure global vim variables (vim.g)

@@ -38,8 +38,12 @@ return {
           }
         end,
       },
+      custom_highlights = function(colors)
+        return {
+          WinSeparator = { fg = colors.surface2, bg = "NONE" }, -- Adjust color to fit Catppuccin theme
+        }
+      end,
     }
-
     vim.cmd.colorscheme "catppuccin"
   end,
 }
