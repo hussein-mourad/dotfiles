@@ -83,7 +83,7 @@ Color=205,214,244
 Color=205,214,244
 
 [Color7Intense]
-Color=205,214,244
+Color=84,89,100
 
 [Foreground]
 Color=205,214,244
@@ -91,12 +91,12 @@ RandomHueRange=360
 RandomSaturationRange=100
 
 [ForegroundFaint]
-Color=205,214,244
+Color=244,244,244
 RandomHueRange=360
 RandomSaturationRange=100
 
 [ForegroundIntense]
-Color=205,214,244
+Color=244,244,244
 RandomHueRange=360
 RandomSaturationRange=100
 
