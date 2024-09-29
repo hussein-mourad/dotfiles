@@ -20,7 +20,11 @@ VERIFYING='#89b4fa'
 # BGCOLOR='1e1e2e'
 BGCOLOR='222222'
 
+# Disable notifications
+dunstctl set-paused true
+# No fork flag is important for disabling notification
 i3lock \
+	--nofork \
 	--ignore-empty-password \
 	--show-failed-attempts \
 	--color=$BGCOLOR \
@@ -51,3 +55,6 @@ i3lock \
 	--keylayout 1
 
 # --blur 9                     \
+
+# Enable notifications
+dunstctl set-paused false
