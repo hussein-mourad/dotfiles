@@ -16,8 +16,8 @@ return {
   { import = "astrocommunity.pack.bash" },
   { import = "astrocommunity.pack.docker" },
   { import = "astrocommunity.pack.cpp" },
-  -- { import = "astrocommunity.pack.python" },
-  { import = "astrocommunity.pack.python-ruff" },
+  { import = "astrocommunity.pack.python" },
+  -- { import = "astrocommunity.pack.python-ruff" },
   { import = "astrocommunity.pack.go" },
   { import = "astrocommunity.pack.lua" },
   { import = "astrocommunity.pack.rust" },
@@ -109,10 +109,13 @@ return {
   { import = "astrocommunity.docker.lazydocker" },
 
   { import = "astrocommunity.code-runner.overseer-nvim" },
+  -- { import = "astrocommunity.code-runner.compiler-nvim" },
 
   -- { import = "astrocommunity.programming-language-support.rest-nvim" },
 
   -- { import = "astrocommunity.game.leetcode-nvim" },
   --
   { import = "astrocommunity.git.gitgraph-nvim" },
+
+  -- { import = "astrocommunity.note-taking.obsidian-nvim" },
 }
