@@ -32,6 +32,7 @@ alias c='clear'
 # vim
 alias v="nvim"
 alias vi="nvim"
+alias nvd="NVIM_APPNAME=nvim-default command nvim"
 # alias nvim="NVIM_APPNAME=nvim-astro command nvim"
 # alias nvimv4="NVIM_APPNAME=astronvim-v4 command nvim"
 
