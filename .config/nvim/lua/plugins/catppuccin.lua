@@ -40,7 +40,7 @@ return {
       },
       custom_highlights = function(colors)
         return {
-          WinSeparator = { fg = colors.surface2, bg = "NONE" }, -- Adjust color to fit Catppuccin theme
+          WinSeparator = { fg = colors.blue, bg = "NONE" }, -- Adjust color to fit Catppuccin theme
         }
       end,
     }
