@@ -4,10 +4,15 @@
 # assign [class="Pale moon"] $ws2
 # assign [class="Pcmanfm"] $ws3
 # assign [class="Skype"] $ws5
+
+# Zen browser
+assign [class="zen-alpha"] $ws1
+for_window [title="mtmux"] move to workspace $ws2
+for_window [class="Virt-viewer"] move to workspace $ws6
+for_window [class="TelegramDesktop"] move to workspace $ws7
 # assign [class="TelegramDesktop"] $ws7
-assign [class="Virt-viewer"] $ws6
+
 # assign [class="KeePassXC"] $ws8
-# for_window [class="TelegramDesktop"] move to workspace $ws7
 # for_window [class="Zathura"] move to workspace $ws3
 
 # Open specific applications in floating mode
