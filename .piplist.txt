@@ -246,6 +246,7 @@ PyQt6-WebEngine               6.7.0
 PyQtWebEngine                 5.15.7
 pyrsistent                    0.19.3
 pyserial                      3.5
+PySide2                       5.13.2
 PySide6                       6.7.2
 PySocks                       1.7.1
 pytest                        8.3.2
@@ -261,11 +262,12 @@ pyxdg                         0.28
 PyYAML                        6.0.2
 pyzmq                         25.1.2
 pyzstd                        0.16.1
+qtodotxt2                     2.0.0a6
 qutebrowser                   3.2.1
 ranger-fm                     1.9.3
 rapidfuzz                     3.6.2
 readability-lxml              0.8.1
-recurring_ical_events         3.2.0
+recurring_ical_events         3.3.0
 referencing                   0.35.1
 regex                         2024.7.24
 rencode                       1.0.6
@@ -282,6 +284,7 @@ ruamel.yaml.clib              0.2.8
 s-tui                         1.1.6
 safeeyes                      2.2.2
 scour                         0.38.2
+screenkey                     1.5
 SecretStorage                 3.3.3
 semver                        3.0.2
 Send2Trash                    1.8.2
@@ -290,6 +293,7 @@ setproctitle                  1.3.3
 setuptools                    69.5.1
 sgmllib3k                     1.0.0
 shellingham                   1.5.4
+shiboken2                     5.13.2
 shiboken6                     6.7.2
 shiboken6-generator           6.7.2
 shtab                         1.7.1

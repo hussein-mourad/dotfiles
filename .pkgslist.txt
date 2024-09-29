@@ -60,6 +60,7 @@ bash
 bash-completion
 bat
 bc
+bcg729
 bind
 binutils
 bison
@@ -185,6 +186,7 @@ docker-buildx
 docker-compose
 dog
 dosfstools
+dotconf
 double-conversion
 downgrade
 dpkg
@@ -1263,6 +1265,7 @@ lua
 lua-lpeg
 lua51
 lua51-lpeg
+lua52
 lua53
 luajit
 luarocks
@@ -1930,6 +1933,7 @@ qt6-webchannel
 qt6-webengine
 qtcreator
 qtkeychain-qt6
+qtodotxt2-git
 quran-companion
 qutebrowser
 ragel
@@ -2003,6 +2007,7 @@ scour
 scrcpy
 screen
 screenfetch
+screenkey
 scrot
 sd
 sddm
@@ -2045,6 +2050,7 @@ sound-theme-freedesktop
 soundtouch
 spandsp
 spectre-meltdown-checker
+speech-dispatcher
 speedtest-cli
 speex
 speexdsp
@@ -2241,6 +2247,8 @@ which
 wildmidi
 wireless-regdb
 wireless_tools
+wireshark-cli
+wireshark-qt
 wmutils
 woff2
 wolfssl

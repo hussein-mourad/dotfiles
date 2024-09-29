@@ -333,6 +333,7 @@ python-pyqt5
 qemu-full
 qt5ct
 qtcreator
+qtodotxt2-git
 quran-companion
 qutebrowser
 ranger
@@ -358,6 +359,7 @@ sbxkb
 scrcpy
 screen
 screenfetch
+screenkey
 sd
 sddm
 simple-scan
@@ -368,6 +370,7 @@ smartmontools
 snapd
 sof-firmware
 spectre-meltdown-checker
+speech-dispatcher
 speedtest-cli
 sqlitebrowser
 sshs
@@ -453,6 +456,7 @@ wallpapers-juhraya
 wget
 which
 wireless-regdb
+wireshark-qt
 wmutils
 wpa_supplicant
 xarchiver
