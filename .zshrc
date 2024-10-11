@@ -162,3 +162,5 @@ eval "$(_PIPENV_COMPLETE=zsh_source pipenv)"
 # venv_auto_activate
 
 eval "$(uv generate-shell-completion zsh)"
+
+. /opt/asdf-vm/asdf.sh
