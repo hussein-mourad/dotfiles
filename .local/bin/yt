@@ -116,6 +116,8 @@ yt-dlp \
 	--embed-thumbnail \
 	--write-description \
 	--write-thumbnail \
+	--write-info-json \
+	--write-annotations \
 	--write-subs \
 	--write-auto-subs \
 	--sub-lang en,ar \
