@@ -72,7 +72,7 @@ fi
 INPUT_URL="$1"
 YOUTUBE_DIR="/mnt/d/data/media/videos/youtube"
 # YOUTUBE_DIR="$HOME/yt" # used for development
-LOG_FILE="$YOUTUBE_DIR/output.log"
+LOG_FILE="$(mktemp -d)/output.log"
 
 mkdir -p "$YOUTUBE_DIR"
 touch "$LOG_FILE"
