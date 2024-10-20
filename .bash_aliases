@@ -199,3 +199,4 @@ alias pn="pnpm"
 alias astro="cd /mnt/d/data/code/source/astrocommunity/lua/astrocommunity && vi . && cd -"
 alias clip="xclip -sel clip"
 alias ldo='lazydocker'
+alias code='code --password-store="gnome-libsecret"'

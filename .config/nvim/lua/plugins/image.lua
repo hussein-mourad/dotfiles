@@ -7,6 +7,7 @@ return {
       build = ":TSUpdate",
       config = function()
         require("nvim-treesitter.configs").setup {
+          auto_install = true,
           ensure_installed = { "markdown" },
           highlight = { enable = true },
         }
@@ -45,6 +46,7 @@ return {
     max_height = nil,
     max_width_window_percentage = nil,
     max_height_window_percentage = 50,
+    tmux_show_only_in_active_window = true, -- auto show/hide images in the correct Tmux window (needs visual-activity off)
     -- kitty_method = "normal",
     hijack_file_patterns = { "*.png", "*.jpg", "*.jpeg", "*.gif", "*.webp" }, -- render image files as images when opened
   },
