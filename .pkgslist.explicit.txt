@@ -11,6 +11,7 @@ apparmor
 appimagelauncher
 arandr
 artwork-i3
+asdf-vm
 atomicparsley
 atool
 auto-cpufreq
@@ -99,7 +100,6 @@ fdupes
 feh
 ffmpeg
 ffmpegthumbnailer
-firefox
 firefox-pwa-bin
 fish
 flac
@@ -124,6 +124,7 @@ gitflow-avh
 github-cli
 gitleaks
 glow
+gnome-clocks
 gnome-disk-utility
 gnome-keyring
 gnome-pomodoro-git
@@ -159,6 +160,7 @@ hplip
 htop
 httpie
 hub
+hugo
 i3-help
 i3-resurrect
 i3-scripts
@@ -206,10 +208,10 @@ libva-mesa-driver
 libva-vdpau-driver
 lightdm-settings
 lightdm-slick-greeter
+linux-headers-meta
+linux-meta
 linux66
 linux66-headers
-linux68
-linux68-headers
 logrotate
 lsd
 lshw
@@ -274,7 +276,9 @@ networkmanager-openvpn
 networkmanager-pptp
 networkmanager-vpnc
 newsboat
+newsflash
 nfs-utils
+ngrok
 nitrogen
 nmap
 nnn
@@ -329,7 +333,10 @@ python-llfuse
 python-mutagen
 python-pip
 python-pipx
+python-pydantic
 python-pyqt5
+python-setuptools-scm
+python-truststore
 qemu-full
 qt5ct
 qtcreator
@@ -337,10 +344,12 @@ qtodotxt2-git
 quran-companion
 qutebrowser
 ranger
+rclone
 rdesktop
 rdfind
 redshift
 reiserfsprogs
+restic
 rhythmbox
 ripgrep
 rmlint
@@ -413,7 +422,7 @@ todoman
 traceroute
 translate-shell
 transmission-cli
-trash-cli
+trashy
 tree
 ts-node
 ttf-dejavu
@@ -426,6 +435,9 @@ ttf-inconsolata
 ttf-indic-otf
 ttf-liberation
 ttf-meslo-nerd
+ttf-montserrat
+ttf-poppins
+ttf-roboto
 ttf-ubuntu-nerd
 tumbler
 twingate
@@ -488,7 +500,6 @@ xfdesktop
 xfsprogs
 xfwm4
 xfwm4-themes
-xlockmore
 xorg-server
 xorg-twm
 xorg-xcalc

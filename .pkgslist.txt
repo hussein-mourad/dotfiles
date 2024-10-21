@@ -39,6 +39,7 @@ archlinux-keyring
 argon2
 aribb24
 artwork-i3
+asdf-vm
 at-spi2-core
 atkmm
 atomicparsley
@@ -240,7 +241,6 @@ fftw
 file
 filesystem
 findutils
-firefox
 firefox-pwa-bin
 fish
 flac
@@ -316,7 +316,9 @@ glusterfs
 gmime3
 gmp
 gnome-autoar
+gnome-clocks
 gnome-desktop
+gnome-desktop-4
 gnome-desktop-common
 gnome-disk-utility
 gnome-keyring
@@ -406,6 +408,7 @@ harfbuzz-icu
 haskell-aeson
 haskell-aeson-pretty
 haskell-ansi-terminal
+haskell-ansi-terminal-types
 haskell-ansi-wl-pprint
 haskell-appar
 haskell-asn1-encoding
@@ -532,6 +535,7 @@ haskell-onetuple
 haskell-only
 haskell-optparse-applicative
 haskell-ordered-containers
+haskell-os-string
 haskell-pandoc
 haskell-pandoc-lua-engine
 haskell-pandoc-lua-marshal
@@ -637,6 +641,7 @@ htop
 http-parser
 httpie
 hub
+hugo
 hunspell
 hwdata
 hwinfo
@@ -910,6 +915,8 @@ libcdio
 libcdio-paranoia
 libcdr
 libcgif
+libclapper
+libclapper-gtk
 libcloudproviders
 libcmis
 libcolord
@@ -1191,7 +1198,6 @@ libxaw
 libxcb
 libxcomposite
 libxcrypt
-libxcrypt-compat
 libxcursor
 libxcvt
 libxdamage
@@ -1214,7 +1220,6 @@ libxml2
 libxmlb
 libxmu
 libxnvctrl
-libxp
 libxpm
 libxpresent
 libxrandr
@@ -1242,12 +1247,14 @@ lilv
 linux-api-headers
 linux-firmware
 linux-firmware-whence
+linux-headers-meta
+linux-meta
 linux419
 linux419-virtualbox-host-modules
+linux610
+linux610-headers
 linux66
 linux66-headers
-linux68
-linux68-headers
 litehtml
 llvm
 llvm-libs
@@ -1372,9 +1379,11 @@ networkmanager-openvpn
 networkmanager-pptp
 networkmanager-vpnc
 newsboat
+newsflash
 nfs-utils
 nfsidmap
 nftables
+ngrok
 nilfs-utils
 ninja
 nitrogen
@@ -1413,7 +1422,6 @@ opencv
 openexr
 openh264
 openjpeg2
-openmotif
 openmpi
 openpmix
 openresolv
@@ -1551,6 +1559,7 @@ pycharm-community-edition
 pyenv
 pyside6
 python
+python-annotated-types
 python-anyio
 python-appdirs
 python-apsw
@@ -1718,6 +1727,8 @@ python-pychm
 python-pycparser
 python-pycryptodome
 python-pycryptodomex
+python-pydantic
+python-pydantic-core
 python-pyfiglet
 python-pygments
 python-pyinotify
@@ -1762,6 +1773,7 @@ python-send2trash
 python-service-identity
 python-setproctitle
 python-setuptools
+python-setuptools-scm
 python-sgmllib3k
 python-shellingham
 python-shtab
@@ -1780,6 +1792,7 @@ python-tornado
 python-tqdm
 python-traitlets
 python-trove-classifiers
+python-truststore
 python-twisted
 python-typeguard
 python-typing_extensions
@@ -1861,7 +1874,6 @@ qemu-system-m68k
 qemu-system-microblaze
 qemu-system-microblaze-firmware
 qemu-system-mips
-qemu-system-nios2
 qemu-system-or1k
 qemu-system-ppc
 qemu-system-ppc-firmware
@@ -1889,6 +1901,7 @@ qemu-ui-spice-app
 qemu-ui-spice-core
 qemu-user
 qemu-vhost-user-gpu
+qemu-vmsr-helper
 qhexedit2
 qpdf
 qrencode
@@ -1943,6 +1956,7 @@ rapidjson
 raptor
 rasqal
 rav1e
+rclone
 rdesktop
 rdfind
 re2
@@ -1950,6 +1964,7 @@ readline
 redland
 redshift
 reiserfsprogs
+restic
 rhash
 rhythmbox
 ripgrep
@@ -2142,7 +2157,7 @@ traceroute
 tracker3
 translate-shell
 transmission-cli
-trash-cli
+trashy
 tree
 tree-sitter
 tree-sitter-bash
@@ -2167,9 +2182,12 @@ ttf-indic-otf
 ttf-liberation
 ttf-meslo-nerd
 ttf-meslo-nerd-font-powerlevel10k
+ttf-montserrat
 ttf-nerd-fonts-symbols
 ttf-nerd-fonts-symbols-common
 ttf-opensans
+ttf-poppins
+ttf-roboto
 ttf-terminus-nerd
 ttf-ubuntu-nerd
 tumbler
@@ -2302,7 +2320,6 @@ xfsprogs
 xfwm4
 xfwm4-themes
 xkeyboard-config
-xlockmore
 xmlsec
 xorg-fonts-alias-misc
 xorg-fonts-encodings
