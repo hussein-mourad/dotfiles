@@ -63,6 +63,12 @@ if ! command -v jq &>/dev/null; then
 	exit 1
 fi
 
+# Check if xdg-user-dir is installed
+if ! command -v xdg-user-dir &>/dev/null; then
+	echo "xdg-user-dir could not be found. Please install xdg-utils"
+	exit 1
+fi
+
 # Check if a video URL is provided
 if [ $# -ne 1 ]; then
 	echo "Usage: $(basename "$0") <video_url>"
@@ -70,9 +76,9 @@ if [ $# -ne 1 ]; then
 fi
 
 INPUT_URL="$1"
-YOUTUBE_DIR="/mnt/d/data/media/videos/youtube"
+YOUTUBE_DIR="$(xdg-user-dir VIDEOS)/youtube"
 # YOUTUBE_DIR="$HOME/yt" # used for development
-LOG_FILE="$YOUTUBE_DIR/output.log"
+LOG_FILE="$(mktemp -d)/output.log"
 
 mkdir -p "$YOUTUBE_DIR"
 touch "$LOG_FILE"
@@ -116,6 +122,8 @@ yt-dlp \
 	--embed-thumbnail \
 	--write-description \
 	--write-thumbnail \
+	--write-info-json \
+	--write-annotations \
 	--write-subs \
 	--write-auto-subs \
 	--sub-lang en,ar \

@@ -201,3 +201,4 @@ alias clip="xclip -sel clip"
 alias ldo='lazydocker'
 alias gopher='zen-browser /mnt/d/data/media/pictures/gopher-dance.gif'
 alias open='xdg-open'
+alias code='code --password-store="gnome-libsecret"'

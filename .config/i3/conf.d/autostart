@@ -8,9 +8,9 @@ exec --no-startup-id prayer-times
 
 # exec --no-startup-id zen-browser
 
-exec --no-startup-id tmux start-server  
-exec --no-startup-id $HOME/.tmux/plugins/tmux-resurrect/scripts/restore.sh
-exec --no-startup-id konsole -p tabtitle=mtmux -e tmux attach
+# exec --no-startup-id tmux start-server
+# exec --no-startup-id $HOME/.tmux/plugins/tmux-resurrect/scripts/restore.sh
+# exec --no-startup-id konsole -p tabtitle=mtmux -e tmux attach
 
 # exec --no-startup-id telegram-desktop
 
@@ -30,9 +30,6 @@ exec --no-startup-id megasync
 exec --no-startup-id libinput-gestures-setup start
 # exec --no-startup-id clipit
 
-# exec --no-startup-id nitrogen --restore; sleep 1; 
-exec_always --no-startup-id feh --bg-fill "$HOME/.local/share/wallpaper.jpg" 
-
 # exec --no-startup-id pulseaudio
 # exec --no-startup-id nitrogen --restore; sleep 1; picom -b
 exec --no-startup-id picom -b -o 0;
@@ -46,3 +43,7 @@ exec --no-startup-id picom -b -o 0;
 # exec i3-msg 'workspace $ws1; exec firefox'
 # exec_always --no-startup-id sbxkb
 # exec_always --no-startup-id xrandr --output eDP-1 --left-of HDMI-1-1
+
+# exec --no-startup-id nitrogen --restore; sleep 1; 
+exec --no-startup-id $HOME/.screenlayout/primary; sleep 1;
+exec_always --no-startup-id sleep 1; feh --bg-fill "$HOME/.local/share/wallpaper.jpg" 
