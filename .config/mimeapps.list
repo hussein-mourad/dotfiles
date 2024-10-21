@@ -55,3 +55,7 @@ application/epub+zip=mupdf.desktop;
 video/quicktime=mpv.desktop;
 x-scheme-handler/tonsite=org.telegram.desktop.desktop;
 application/atom+xml=zen-browser.desktop;
+image/gif=viewnior.desktop;org.kde.showfoto.desktop;feh.desktop;nsxiv.desktop;zen-alpha.desktop;
+image/svg+xml=nsxiv.desktop;
+image/heif=nsxiv.desktop;
+image/webp=nsxiv.desktop;
