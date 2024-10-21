@@ -6,13 +6,13 @@ exec --no-startup-id xautolock -time 10 -locker $HOME/.local/bin/lockscreen
 exec --no-startup-id syncthing --no-browser
 exec --no-startup-id prayer-times
 
-exec --no-startup-id zen-browser
+# exec --no-startup-id zen-browser
 
 exec --no-startup-id tmux start-server  
 exec --no-startup-id $HOME/.tmux/plugins/tmux-resurrect/scripts/restore.sh
 exec --no-startup-id konsole -p tabtitle=mtmux -e tmux attach
 
-exec --no-startup-id telegram-desktop
+# exec --no-startup-id telegram-desktop
 
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
