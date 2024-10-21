@@ -1,3 +1,4 @@
+if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
 return {
   "epwalsh/obsidian.nvim",
   -- the obsidian vault in this default config  ~/obsidian-vault
