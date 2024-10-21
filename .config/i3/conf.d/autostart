@@ -35,6 +35,7 @@ exec_always --no-startup-id feh --bg-fill "$HOME/.local/share/wallpaper.jpg"
 
 # exec --no-startup-id pulseaudio
 # exec --no-startup-id nitrogen --restore; sleep 1; picom -b
+exec --no-startup-id picom -b -o 0;
 # exec --no-startup-id manjaro-hello
 # exec --no-startup-id pamac-tray
 # exec --no-startup-id start_conky_maia
