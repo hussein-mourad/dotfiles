@@ -18,6 +18,18 @@ return {
           ["cmp.entry.get_documentation"] = true,
         },
       },
+      routes = {
+        -- Hide annoying written popup message
+        -- Ref: https://github.com/folke/noice.nvim/wiki/A-Guide-to-Messages
+        {
+          filter = {
+            event = "msg_show",
+            kind = "",
+            find = "written",
+          },
+          opts = { skip = true },
+        },
+      },
       presets = {
         bottom_search = false, -- use a classic bottom cmdline for search
         command_palette = false, -- position the cmdline and popupmenu together
