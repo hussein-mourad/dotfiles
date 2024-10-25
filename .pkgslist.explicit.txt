@@ -34,12 +34,12 @@ brn-git
 btop
 btrfs-progs
 bzip2
+cadaver
 calc
 calcurse
 calibre
 cantarell-fonts
 catdoc
-catppuccin-gtk-theme-mocha
 cheat
 chntpw
 chromium
@@ -120,7 +120,7 @@ gimp
 git
 git-delta
 git-lfs
-gitflow-avh
+gitflow-cjs
 github-cli
 gitleaks
 glow
@@ -159,6 +159,7 @@ haveged
 hplip
 htop
 httpie
+httpie-desktop-bin
 hub
 hugo
 i3-help
@@ -177,7 +178,6 @@ inxi
 ipp-usb
 jfsutils
 jpegoptim
-jqp
 jupyter-notebook
 kakoune
 kanata
@@ -251,9 +251,7 @@ mesa-vdpau
 mhwd
 mhwd-db
 mkinitcpio-openswap
-mlocate
 mobile-broadband-provider-info
-moc
 modemmanager
 morc_menu
 mousepad
@@ -298,7 +296,7 @@ openssh
 os-prober
 otree
 p7zip
-pa-applet
+pa-applet-git
 pacseek
 pacui
 pamac-gtk
@@ -318,6 +316,7 @@ php-fpm
 php-sqlite
 pipes.sh
 pkgconf
+plocate
 polkit-gnome
 polybar
 poppler-data
@@ -329,6 +328,7 @@ pulseaudio-bluetooth
 pulseaudio-ctl
 pycharm-community-edition
 pyenv
+python-httpie-jwt-auth
 python-llfuse
 python-mutagen
 python-pip
@@ -337,10 +337,10 @@ python-pydantic
 python-pyqt5
 python-setuptools-scm
 python-truststore
+qdirstat-bin
 qemu-full
 qt5ct
 qtcreator
-qtodotxt2-git
 quran-companion
 qutebrowser
 ranger
@@ -387,6 +387,7 @@ starship
 stow
 subversion
 sudo
+superproductivity-bin
 swtpm
 sxiv
 syncthing
@@ -416,7 +417,7 @@ thunderbird
 tidy
 timew
 tiv
-tldr
+tlrc-bin
 tmux
 todoman
 traceroute
@@ -440,7 +441,6 @@ ttf-poppins
 ttf-roboto
 ttf-ubuntu-nerd
 tumbler
-twingate
 typst
 unarchiver
 unrar
