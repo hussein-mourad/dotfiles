@@ -91,6 +91,7 @@ c-ares
 ca-certificates
 ca-certificates-mozilla
 ca-certificates-utils
+cadaver
 cairo
 cairomm
 cairomm-1.16
@@ -100,7 +101,6 @@ calibre
 cantarell-fonts
 capstone
 catdoc
-catppuccin-gtk-theme-mocha
 cblas
 cdparanoia
 cfitsio
@@ -298,7 +298,7 @@ girara
 git
 git-delta
 git-lfs
-gitflow-avh
+gitflow-cjs
 github-cli
 gitleaks
 glew
@@ -640,6 +640,7 @@ hslua-cli
 htop
 http-parser
 httpie
+httpie-desktop-bin
 hub
 hugo
 hunspell
@@ -691,7 +692,6 @@ jfsutils
 jose
 jpegoptim
 jq
-jqp
 json-c
 json-glib
 jsoncpp
@@ -994,7 +994,6 @@ libhandy
 libheif
 libical
 libice
-libid3tag
 libidn
 libidn2
 libiec61883
@@ -1339,9 +1338,7 @@ mjpegtools
 mkinitcpio
 mkinitcpio-busybox
 mkinitcpio-openswap
-mlocate
 mobile-broadband-provider-info
-moc
 modemmanager
 morc_menu
 mousepad
@@ -1438,7 +1435,7 @@ osinfo-db
 otree
 p11-kit
 p7zip
-pa-applet
+pa-applet-git
 pacman
 pacman-contrib
 pacman-mirrors
@@ -1526,6 +1523,7 @@ pipewire
 pixman
 pkcs11-helper
 pkgconf
+plocate
 podofo
 polkit
 polkit-gnome
@@ -1630,6 +1628,7 @@ python-html2text
 python-html5-parser
 python-html5lib
 python-httpcore
+python-httpie-jwt-auth
 python-httplib2
 python-httpx
 python-humanize
@@ -1776,14 +1775,12 @@ python-setuptools
 python-setuptools-scm
 python-sgmllib3k
 python-shellingham
-python-shtab
 python-six
 python-sniffio
 python-soupsieve
 python-stack-data
 python-systemd
 python-tasklib
-python-termcolor
 python-texttable
 python-tinycss2
 python-tomli
@@ -1825,6 +1822,7 @@ python-zxcvbn
 qca-qt5
 qca-qt6
 qcustomplot
+qdirstat-bin
 qemu-audio-alsa
 qemu-audio-dbus
 qemu-audio-jack
@@ -1946,7 +1944,6 @@ qt6-webchannel
 qt6-webengine
 qtcreator
 qtkeychain-qt6
-qtodotxt2-git
 quran-companion
 qutebrowser
 ragel
@@ -2093,6 +2090,7 @@ subversion
 sudo
 suitesparse
 supermin
+superproductivity-bin
 svt-av1
 svt-hevc
 swtpm
@@ -2148,7 +2146,7 @@ tidy
 timew
 tinyxml2
 tiv
-tldr
+tlrc-bin
 tmux
 todoman
 totem-pl-parser
@@ -2192,7 +2190,6 @@ ttf-terminus-nerd
 ttf-ubuntu-nerd
 tumbler
 turbo-base64
-twingate
 twolame
 typescript
 typst
