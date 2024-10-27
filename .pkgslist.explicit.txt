@@ -16,6 +16,7 @@ atomicparsley
 atool
 auto-cpufreq
 autoconf
+autofs
 automake
 avahi
 b43-fwcutter
