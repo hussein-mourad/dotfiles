@@ -51,6 +51,7 @@ audit
 augeas
 auto-cpufreq
 autoconf
+autofs
 automake
 avahi
 ayatana-ido
