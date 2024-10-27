@@ -39,6 +39,7 @@ archlinux-keyring
 argon2
 aribb24
 artwork-i3
+asdf-vm
 at-spi2-core
 atkmm
 atomicparsley
@@ -90,6 +91,7 @@ c-ares
 ca-certificates
 ca-certificates-mozilla
 ca-certificates-utils
+cadaver
 cairo
 cairomm
 cairomm-1.16
@@ -99,7 +101,6 @@ calibre
 cantarell-fonts
 capstone
 catdoc
-catppuccin-gtk-theme-mocha
 cblas
 cdparanoia
 cfitsio
@@ -240,7 +241,6 @@ fftw
 file
 filesystem
 findutils
-firefox
 firefox-pwa-bin
 fish
 flac
@@ -298,7 +298,7 @@ girara
 git
 git-delta
 git-lfs
-gitflow-avh
+gitflow-cjs
 github-cli
 gitleaks
 glew
@@ -316,7 +316,9 @@ glusterfs
 gmime3
 gmp
 gnome-autoar
+gnome-clocks
 gnome-desktop
+gnome-desktop-4
 gnome-desktop-common
 gnome-disk-utility
 gnome-keyring
@@ -406,6 +408,7 @@ harfbuzz-icu
 haskell-aeson
 haskell-aeson-pretty
 haskell-ansi-terminal
+haskell-ansi-terminal-types
 haskell-ansi-wl-pprint
 haskell-appar
 haskell-asn1-encoding
@@ -532,6 +535,7 @@ haskell-onetuple
 haskell-only
 haskell-optparse-applicative
 haskell-ordered-containers
+haskell-os-string
 haskell-pandoc
 haskell-pandoc-lua-engine
 haskell-pandoc-lua-marshal
@@ -636,7 +640,9 @@ hslua-cli
 htop
 http-parser
 httpie
+httpie-desktop-bin
 hub
+hugo
 hunspell
 hwdata
 hwinfo
@@ -686,7 +692,6 @@ jfsutils
 jose
 jpegoptim
 jq
-jqp
 json-c
 json-glib
 jsoncpp
@@ -910,6 +915,8 @@ libcdio
 libcdio-paranoia
 libcdr
 libcgif
+libclapper
+libclapper-gtk
 libcloudproviders
 libcmis
 libcolord
@@ -987,7 +994,6 @@ libhandy
 libheif
 libical
 libice
-libid3tag
 libidn
 libidn2
 libiec61883
@@ -1191,7 +1197,6 @@ libxaw
 libxcb
 libxcomposite
 libxcrypt
-libxcrypt-compat
 libxcursor
 libxcvt
 libxdamage
@@ -1214,7 +1219,6 @@ libxml2
 libxmlb
 libxmu
 libxnvctrl
-libxp
 libxpm
 libxpresent
 libxrandr
@@ -1242,12 +1246,14 @@ lilv
 linux-api-headers
 linux-firmware
 linux-firmware-whence
+linux-headers-meta
+linux-meta
 linux419
 linux419-virtualbox-host-modules
+linux610
+linux610-headers
 linux66
 linux66-headers
-linux68
-linux68-headers
 litehtml
 llvm
 llvm-libs
@@ -1332,9 +1338,7 @@ mjpegtools
 mkinitcpio
 mkinitcpio-busybox
 mkinitcpio-openswap
-mlocate
 mobile-broadband-provider-info
-moc
 modemmanager
 morc_menu
 mousepad
@@ -1372,9 +1376,11 @@ networkmanager-openvpn
 networkmanager-pptp
 networkmanager-vpnc
 newsboat
+newsflash
 nfs-utils
 nfsidmap
 nftables
+ngrok
 nilfs-utils
 ninja
 nitrogen
@@ -1413,7 +1419,6 @@ opencv
 openexr
 openh264
 openjpeg2
-openmotif
 openmpi
 openpmix
 openresolv
@@ -1430,7 +1435,7 @@ osinfo-db
 otree
 p11-kit
 p7zip
-pa-applet
+pa-applet-git
 pacman
 pacman-contrib
 pacman-mirrors
@@ -1518,6 +1523,7 @@ pipewire
 pixman
 pkcs11-helper
 pkgconf
+plocate
 podofo
 polkit
 polkit-gnome
@@ -1551,6 +1557,7 @@ pycharm-community-edition
 pyenv
 pyside6
 python
+python-annotated-types
 python-anyio
 python-appdirs
 python-apsw
@@ -1621,6 +1628,7 @@ python-html2text
 python-html5-parser
 python-html5lib
 python-httpcore
+python-httpie-jwt-auth
 python-httplib2
 python-httpx
 python-humanize
@@ -1718,6 +1726,8 @@ python-pychm
 python-pycparser
 python-pycryptodome
 python-pycryptodomex
+python-pydantic
+python-pydantic-core
 python-pyfiglet
 python-pygments
 python-pyinotify
@@ -1762,16 +1772,15 @@ python-send2trash
 python-service-identity
 python-setproctitle
 python-setuptools
+python-setuptools-scm
 python-sgmllib3k
 python-shellingham
-python-shtab
 python-six
 python-sniffio
 python-soupsieve
 python-stack-data
 python-systemd
 python-tasklib
-python-termcolor
 python-texttable
 python-tinycss2
 python-tomli
@@ -1780,6 +1789,7 @@ python-tornado
 python-tqdm
 python-traitlets
 python-trove-classifiers
+python-truststore
 python-twisted
 python-typeguard
 python-typing_extensions
@@ -1812,6 +1822,7 @@ python-zxcvbn
 qca-qt5
 qca-qt6
 qcustomplot
+qdirstat-bin
 qemu-audio-alsa
 qemu-audio-dbus
 qemu-audio-jack
@@ -1861,7 +1872,6 @@ qemu-system-m68k
 qemu-system-microblaze
 qemu-system-microblaze-firmware
 qemu-system-mips
-qemu-system-nios2
 qemu-system-or1k
 qemu-system-ppc
 qemu-system-ppc-firmware
@@ -1889,6 +1899,7 @@ qemu-ui-spice-app
 qemu-ui-spice-core
 qemu-user
 qemu-vhost-user-gpu
+qemu-vmsr-helper
 qhexedit2
 qpdf
 qrencode
@@ -1933,7 +1944,6 @@ qt6-webchannel
 qt6-webengine
 qtcreator
 qtkeychain-qt6
-qtodotxt2-git
 quran-companion
 qutebrowser
 ragel
@@ -1943,6 +1953,7 @@ rapidjson
 raptor
 rasqal
 rav1e
+rclone
 rdesktop
 rdfind
 re2
@@ -1950,6 +1961,7 @@ readline
 redland
 redshift
 reiserfsprogs
+restic
 rhash
 rhythmbox
 ripgrep
@@ -2078,6 +2090,7 @@ subversion
 sudo
 suitesparse
 supermin
+superproductivity-bin
 svt-av1
 svt-hevc
 swtpm
@@ -2133,7 +2146,7 @@ tidy
 timew
 tinyxml2
 tiv
-tldr
+tlrc-bin
 tmux
 todoman
 totem-pl-parser
@@ -2142,7 +2155,7 @@ traceroute
 tracker3
 translate-shell
 transmission-cli
-trash-cli
+trashy
 tree
 tree-sitter
 tree-sitter-bash
@@ -2167,14 +2180,16 @@ ttf-indic-otf
 ttf-liberation
 ttf-meslo-nerd
 ttf-meslo-nerd-font-powerlevel10k
+ttf-montserrat
 ttf-nerd-fonts-symbols
 ttf-nerd-fonts-symbols-common
 ttf-opensans
+ttf-poppins
+ttf-roboto
 ttf-terminus-nerd
 ttf-ubuntu-nerd
 tumbler
 turbo-base64
-twingate
 twolame
 typescript
 typst
@@ -2302,7 +2317,6 @@ xfsprogs
 xfwm4
 xfwm4-themes
 xkeyboard-config
-xlockmore
 xmlsec
 xorg-fonts-alias-misc
 xorg-fonts-encodings

@@ -32,3 +32,8 @@ bind-key D pb-download
 bind-key x pb-delete
 
 browser "zen-browser %u"
+
+freshrss-login "hussein"
+freshrss-passwordfile ".secret"
+freshrss-url "https://rss.husseinm.duckdns.org/api/greader.php"
+urls-source "freshrss"

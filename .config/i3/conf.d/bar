@@ -9,7 +9,7 @@ bar {
     bindsym button5 nop
 
     colors {
-      background         $base
+        background         $base
         statusline         $text
         focused_statusline $text
         active_workspace   $base $text $blue
@@ -18,6 +18,6 @@ bar {
         active_workspace   $base $base $blue
         inactive_workspace $base $base $surface1
         urgent_workspace   $base $base $surface1
-        binding_mode       $base $base $surface1
+        binding_mode       $base $base $overlay1
     }
 }

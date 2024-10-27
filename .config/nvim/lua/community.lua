@@ -57,7 +57,7 @@ return {
   { import = "astrocommunity.editing-support.dial-nvim" }, -- increment/decrement
   { import = "astrocommunity.editing-support.neogen" }, -- documentation generation
   { import = "astrocommunity.editing-support.auto-save-nvim" },
-  { import = "astrocommunity.editing-support.cloak-nvim" }, -- hide .env variables
+  -- { import = "astrocommunity.editing-support.cloak-nvim" }, -- hide .env variables
   { import = "astrocommunity.editing-support.comment-box-nvim" },
   { import = "astrocommunity.editing-support.conform-nvim" }, -- formatting
   { import = "astrocommunity.editing-support.refactoring-nvim" }, -- formatting

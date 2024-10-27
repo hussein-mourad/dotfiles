@@ -2,7 +2,7 @@
 
 # author: https://github.com/neelkamal0310/keepassxc-dmenu
 # Path to keepass database
-database="/mnt/d/data/passwords/passwords.kdbx"
+database="$HOME/.passwords/passwords.kdbx"
 
 # Path to gpg encpypted file containing password for the database
 passgpg="/mnt/d/data/.pass.gpg"
