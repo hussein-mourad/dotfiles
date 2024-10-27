@@ -11,15 +11,6 @@
 # unalias, ex:
 # unalias c
 
-# Environment Variables
-export DATA_ROOT='/mnt/d/data'
-export DESKTOP="$HOME/data/desktop"
-export DOCUMENTS="$DATA_ROOT/documents"
-export DOWNLOADS="$DATA_ROOT/downloads"
-export PICTURES="$DATA_ROOT/media/pictures"
-export VIDEOS="$DATA_ROOT/media/videos"
-export MUSIC="$DATA_ROOT/media/music"
-
 # colors
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
@@ -131,7 +122,7 @@ alias wget='wget -c' # continue by default
 #default ff
 # alias ff=ff13
 #my default browser
-alias browser=firefox
+alias browser=zen-browser
 
 # git
 alias gaf='git add -f'
@@ -181,14 +172,14 @@ alias i3blocksc="vi ~/.config/i3/i3blocks.conf"
 alias tmuxc="vi ~/.config/tmux/tmux.conf && tmux source-file ~/.config/tmux/tmux.conf "
 # alias azkar='nohup zathura --page=54 /mnt/d/data/documents/books/islam/hisn-al-muslim.pdf > /dev/null 2>&1  &'
 
-# directory shortcut
-alias term10='cd /mnt/d/data/college/term10/'
+# shortcuts
 alias dotfiles='cd ~/dotfiles'
+alias notes="cd ~/Documents/notes/ && vi ."
+alias astro="cd ~/repos/astrocommunity/lua/astrocommunity && vi . && cd -"
+alias gopher='browser ~/Pictures/gopher-dance.gif'
 
 # functions
 alias homelab-battery="ssh homelab upower -i /org/freedesktop/UPower/devices/battery_BAT1"
-
-alias notes="cd /mnt/d/data/documents/notes/ && vi ."
 
 alias curl="noglob curl"
 alias yt="noglob yt"
@@ -196,9 +187,7 @@ alias sl="sl -e" # enable escaping by ctrl+c
 alias ra="ranger"
 alias virsh="sudo virsh"
 alias pn="pnpm"
-alias astro="cd /mnt/d/data/code/source/astrocommunity/lua/astrocommunity && vi . && cd -"
 alias clip="xclip -sel clip"
 alias ldo='lazydocker'
-alias gopher='zen-browser /mnt/d/data/media/pictures/gopher-dance.gif'
 alias open='xdg-open'
 alias code='code --password-store="gnome-libsecret"'
