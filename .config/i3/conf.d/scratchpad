@@ -1,6 +1,7 @@
 # Scratchpad
 # Scratchpad tmux (stmux)
-exec --no-startup-id konsole -p tabtitle=stmux -e tmux new-session -A -s scratchpad  
+# exec --no-startup-id konsole -p tabtitle=stmux -e tmux new-session -A -s scratchpad
+exec --no-startup-id konsole -p tabtitle=stmux
 # Scratchpad file manager (sfm)
 exec --no-startup-id konsole -p tabtitle=sfm -e ranger
 
@@ -32,5 +33,6 @@ bindsym $mod+comma [title="stmux"] scratchpad show; move position center
 bindsym $mod+f [title="sfm"] scratchpad show; move position center
 # bindsym $mod+p [class="KeePassXC"] scratchpad show; move position center
 
-bindsym $mod+Shift+Return exec --no-startup-id "konsole -p tabtitle=stmux -e tmux new-session -A -s scratchpad";  
+#bindsym $mod+Shift+Return exec --no-startup-id "konsole -p tabtitle=stmux -e tmux new-session -A -s scratchpad";
+bindsym $mod+Shift+Return exec --no-startup-id "konsole -p tabtitle=stmux";
 bindsym $mod+Shift+f exec --no-startup-id "konsole -p tabtitle=sfm -e ranger"; 
