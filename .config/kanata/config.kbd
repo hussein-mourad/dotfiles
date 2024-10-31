@@ -1,14 +1,39 @@
 ;; Caps to escape/control configuration for Kanata
 ;; lmeta for super key
+;; key reference is found in the repo at kanata/parser/src/keys/mod.rs
+
+(defcfg
+  process-unmapped-keys yes
+)
 
 (defsrc
   caps
+  a s d f
+  j k l ;
+)
+
+(defvar
+  tap-time 200
+  hold-time 200
 )
 
 (defalias
-  escctrl (tap-hold 200 200 esc lctl)
+  escctrl (tap-hold $tap-time $hold-time esc lctl)
+
+  a (tap-hold $tap-time $hold-time a lmeta)
+  s (tap-hold $tap-time $hold-time s lalt)
+  d (tap-hold $tap-time $hold-time d lsft)
+  f (tap-hold $tap-time $hold-time f lctl)
+
+  j (tap-hold $tap-time $hold-time j lctl)
+  k (tap-hold $tap-time $hold-time k lsft)
+  l (tap-hold $tap-time $hold-time l lalt)
+  ; (tap-hold $tap-time $hold-time ; lmeta)
 )
+
 
 (deflayer base
   @escctrl
+  @a @s @d @f
+  @j @k @l @;
 )
