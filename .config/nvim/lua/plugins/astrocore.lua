@@ -119,8 +119,10 @@ return {
         ["<leader>Mg"] = { "<cmd>Glow<cr>", desc = "Glow Preview" },
         ["<leader>Me"] = { "<cmd>PeekOpen<cr>", desc = "Peek Open Preview" },
         ["<leader>Mc"] = { "<cmd>PeekClose<cr>", desc = "Peek Close Preview" },
+        ["<M-t>"] = { "<cmd>ToggleTerm size=12 direction=horizontal<cr>", desc = "Toggle horizontal terminal" },
       },
       t = {
+        ["<M-t>"] = { "<cmd>ToggleTerm<cr>", desc = "Toggle horizontal terminal" },
         -- setting a mapping to false will disable it
         -- ["<esc>"] = false,
       },
