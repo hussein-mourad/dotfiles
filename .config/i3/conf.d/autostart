@@ -2,6 +2,7 @@
 
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id xfce4-power-manager
+exec --no-startup-id dunst
 exec --no-startup-id xautolock -time 10 -locker $HOME/.local/bin/lockscreen
 exec --no-startup-id syncthing --no-browser
 exec --no-startup-id prayer-times
