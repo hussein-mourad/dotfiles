@@ -58,6 +58,7 @@ cpanminus
 cpupower
 cronie
 cryptsetup
+ctop
 curlie
 cutecom
 debugedit
@@ -69,6 +70,7 @@ dhclient
 dhcpcd
 diffutils
 digikam
+direnv
 discord
 dmg2img
 dmidecode
@@ -180,6 +182,7 @@ ipp-usb
 jfsutils
 jpegoptim
 jupyter-notebook
+jwt-cli
 kakoune
 kanata
 kcolorchooser

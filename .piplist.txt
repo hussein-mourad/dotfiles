@@ -270,7 +270,7 @@ qutebrowser                   3.2.1
 ranger-fm                     1.9.3
 rapidfuzz                     3.6.2
 readability-lxml              0.8.1
-recurring_ical_events         3.3.2
+recurring_ical_events         3.3.3
 referencing                   0.35.1
 regex                         2024.7.24
 rencode                       1.0.6
