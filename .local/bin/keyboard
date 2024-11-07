@@ -5,7 +5,7 @@ setxkbmap -option
 # setxkbmap options in /usr/share/X11/xkb/rules/base.lst
 # Change key repeat rate
 # Default: xset r rate 500 30
-xset r rate 250 30
+# xset r rate 200 30
 # For console use: sudo kbdrate -d 300 -r 30
 # Configure keyboard
 setxkbmap -model pc105
