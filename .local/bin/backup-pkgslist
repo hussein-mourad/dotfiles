@@ -1,0 +1,19 @@
+#!/bin/bash
+
+DOTFILES_PATH="$HOME/dotfiles"
+
+PKGS_LIST="$DOTFILES_PATH/.pkgslist.txt"
+PKGS_EXCIPLICIT="$DOTFILES_PATH/.pkgslist.explicit.txt"
+PIP_LIST="$DOTFILES_PATH/.piplist.txt"
+PIPX_LIST="$DOTFILES_PATH/.pipxlist.txt"
+
+yay -Qq >"$PKGS_LIST"
+yay -Qeq >"$PKGS_EXCIPLICIT"
+pip list >"$PIP_LIST"
+pipx list --short >"$PIPX_LIST"
+
+cd "$DOTFILES_PATH" || return
+
+git add "$PKGS_LIST" "$PKGS_EXCIPLICIT" "$PIP_LIST" "$PIPX_LIST"
+git commit -m "backup: pkgslist"
+git push
