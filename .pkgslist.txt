@@ -84,6 +84,7 @@ bridge-utils
 brltty
 brn-git
 brotli
+bruno-bin
 btop
 btrfs-progs
 bubblewrap
@@ -671,6 +672,7 @@ imlib2
 inetutils
 iniparser
 inkscape
+insomnia-bin
 intel-ucode
 intltool
 inxi
@@ -1542,6 +1544,7 @@ popt
 portaudio
 postgresql
 postgresql-libs
+postman-bin
 potrace
 powertop
 ppp

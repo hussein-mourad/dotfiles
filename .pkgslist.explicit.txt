@@ -32,6 +32,7 @@ borg
 bottom
 bridge-utils
 brn-git
+bruno-bin
 btop
 btrfs-progs
 bzip2
@@ -176,6 +177,7 @@ i3lock-color
 i3status
 inetutils
 inkscape
+insomnia-bin
 intel-ucode
 inxi
 ipp-usb
@@ -325,6 +327,7 @@ polkit-gnome
 polybar
 poppler-data
 postgresql
+postman-bin
 powertop
 procs
 pulseaudio
