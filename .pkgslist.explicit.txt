@@ -133,6 +133,7 @@ gnome-disk-utility
 gnome-keyring
 gnome-pomodoro-git
 go
+go-task
 gobang-bin
 goreleaser
 gparted

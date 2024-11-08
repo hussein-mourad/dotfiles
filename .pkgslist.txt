@@ -333,6 +333,7 @@ gnupg
 gnustep-base
 gnutls
 go
+go-task
 gobang-bin
 gobject-introspection
 gobject-introspection-runtime
