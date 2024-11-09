@@ -104,6 +104,7 @@ fdupes
 feh
 ffmpeg
 ffmpegthumbnailer
+firefox
 firefox-pwa-bin
 fish
 flac

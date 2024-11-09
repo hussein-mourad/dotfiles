@@ -245,6 +245,7 @@ fftw
 file
 filesystem
 findutils
+firefox
 firefox-pwa-bin
 fish
 flac
