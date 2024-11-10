@@ -102,6 +102,7 @@ f2fs-tools
 fd
 fdupes
 feh
+ferdium-bin
 ffmpeg
 ffmpegthumbnailer
 firefox
@@ -193,6 +194,7 @@ kcolorchooser
 keepassxc
 kitty
 konsole
+kubectl
 kvantum-manjaro
 lazydocker-bin
 lazygit
@@ -258,6 +260,7 @@ mesa-utils
 mesa-vdpau
 mhwd
 mhwd-db
+minikube
 mkinitcpio-openswap
 mobile-broadband-provider-info
 modemmanager

@@ -39,6 +39,7 @@ archlinux-keyring
 argon2
 aribb24
 artwork-i3
+asar
 asdf-vm
 at-spi2-core
 atkmm
@@ -237,6 +238,7 @@ fakeroot
 fd
 fdupes
 feh
+ferdium-bin
 ffcall
 ffmpeg
 ffmpeg4.4
@@ -789,6 +791,7 @@ ktextaddons
 ktexttemplate
 ktextwidgets
 ktextwidgets5
+kubectl
 kvantum
 kvantum-manjaro
 kvantum-qt5
@@ -1340,6 +1343,7 @@ mhwd-db
 mhwd-nvidia
 mhwd-nvidia-390xx
 mhwd-nvidia-470xx
+minikube
 miniupnpc
 minizip
 mjpegtools
