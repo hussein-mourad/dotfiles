@@ -59,6 +59,7 @@ ayatana-ido
 b43-fwcutter
 babl
 base
+base-devel
 bash
 bash-completion
 bat

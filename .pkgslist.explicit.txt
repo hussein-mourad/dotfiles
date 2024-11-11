@@ -21,6 +21,7 @@ automake
 avahi
 b43-fwcutter
 base
+base-devel
 bat
 bind
 bison
