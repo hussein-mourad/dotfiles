@@ -63,6 +63,7 @@ return {
   { import = "astrocommunity.editing-support.refactoring-nvim" }, -- formatting
   { import = "astrocommunity.editing-support.suda-vim" }, -- sudo support
   { import = "astrocommunity.editing-support.text-case-nvim" }, -- sudo support
+  { import = "astrocommunity.editing-support.nvim-treesitter-context" }, -- sticks current function signature at the top of the page
 
   -- motion
   { import = "astrocommunity.motion.mini-surround" },
