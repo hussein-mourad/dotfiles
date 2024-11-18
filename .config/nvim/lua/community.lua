@@ -30,7 +30,7 @@ return {
   { import = "astrocommunity.pack.blade" },
   { import = "astrocommunity.pack.laravel" },
   { import = "astrocommunity.pack.prisma" },
-  { import = "astrocommunity.pack.sql" },
+  -- { import = "astrocommunity.pack.sql" },
 
   -- config files
   { import = "astrocommunity.pack.json" },
