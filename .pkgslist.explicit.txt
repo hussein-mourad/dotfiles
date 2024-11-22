@@ -10,6 +10,7 @@ ansible
 apparmor
 appimagelauncher
 arandr
+arch-wiki-docs
 artwork-i3
 asdf-vm
 atomicparsley
@@ -480,6 +481,7 @@ w3m
 wallpapers-juhraya
 wget
 which
+wikiman
 wireless-regdb
 wireshark-qt
 wmutils
@@ -537,4 +539,5 @@ zeal
 zen-browser-bin
 zensu
 zip
+zk
 zoxide

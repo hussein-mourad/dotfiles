@@ -34,6 +34,7 @@ appstream
 apr
 apr-util
 arandr
+arch-wiki-docs
 archlinux-appstream-data
 archlinux-keyring
 argon2
@@ -1465,6 +1466,7 @@ pangomm
 pangomm-2.48
 papirus-icon-theme
 papirus-maia-icon-theme
+parallel
 parted
 pass
 pass-import
@@ -2029,6 +2031,7 @@ sane
 sane-airscan
 sbc
 sbxkb
+scdoc
 scour
 scrcpy
 screen
@@ -2273,6 +2276,7 @@ webrtc-audio-processing
 webrtc-audio-processing-1
 wget
 which
+wikiman
 wildmidi
 wireless-regdb
 wireless_tools
@@ -2383,6 +2387,7 @@ zeromq
 zimg
 zip
 zix
+zk
 zlib
 zoxide
 zsh
