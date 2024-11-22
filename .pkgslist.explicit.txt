@@ -408,6 +408,7 @@ sof-firmware
 spectre-meltdown-checker
 speech-dispatcher
 speedtest-cli
+sqlc
 sqlitebrowser
 sshs
 starship
