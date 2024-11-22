@@ -54,6 +54,7 @@ export BROWSER=/usr/bin/zen-browser
 #export TERM=xfce4-terminal
 export TERMINAL=/usr/bin/konsole
 export EDITOR=nvim
+export MANPAGER='nvim +Man!'
 
 # eval $(ssh-agent)
 #
