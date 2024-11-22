@@ -191,3 +191,5 @@ alias clip="xclip -sel clip"
 alias ldo='lazydocker'
 alias open='xdg-open'
 alias code='code --password-store="gnome-libsecret"'
+# alias npx="npm_execpath=$(which pnpm) npx"
+alias serve="python3 -m http.server"
