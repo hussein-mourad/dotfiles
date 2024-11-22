@@ -27,6 +27,7 @@ bat
 bind
 bison
 bitwarden
+blender-benchmark
 blueman
 bluez-utils
 bmenu
@@ -107,6 +108,7 @@ feh
 ferdium-bin
 ffmpeg
 ffmpegthumbnailer
+ffnvcodec-headers
 firefox
 firefox-pwa-bin
 fish
@@ -131,6 +133,7 @@ git-lfs
 gitflow-cjs
 github-cli
 gitleaks
+glmark2
 glow
 gnome-clocks
 gnome-disk-utility
@@ -143,6 +146,7 @@ goreleaser
 gparted
 gpick
 gping
+gputest
 grub
 grub-customizer-git
 grub-theme-manjaro
@@ -207,6 +211,7 @@ lib32-flex
 lib32-libva-vdpau-driver
 lib32-mesa-utils
 lib32-mesa-vdpau
+lib32-nvidia-utils
 lib32-vulkan-intel
 lib32-vulkan-radeon
 libdiscid
@@ -218,12 +223,16 @@ libreoffice-still
 libtool
 libva-mesa-driver
 libva-vdpau-driver
+libxnvctrl
 lightdm-settings
 lightdm-slick-greeter
 linux-headers-meta
 linux-meta
+linux419-nvidia
+linux610-nvidia
 linux66
 linux66-headers
+linux66-nvidia
 logrotate
 lsd
 lshw
@@ -299,7 +308,11 @@ nsxiv
 ntfs-3g
 ntp
 numlockx
+nvidia-prime
+nvidia-settings
+nvidia-utils
 nvm
+nvtop
 obs-studio
 obsidian
 openbsd-netcat

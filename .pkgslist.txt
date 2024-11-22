@@ -71,6 +71,7 @@ binutils
 bison
 bitwarden
 blas
+blender-benchmark
 blueman
 bluez
 bluez-libs
@@ -213,6 +214,8 @@ edk2-arm
 edk2-ovmf
 efibootmgr
 efivar
+egl-wayland
+eglexternalplatform
 electron
 electron28
 electron30
@@ -245,6 +248,7 @@ ffcall
 ffmpeg
 ffmpeg4.4
 ffmpegthumbnailer
+ffnvcodec-headers
 fftw
 file
 filesystem
@@ -318,6 +322,7 @@ glib2-docs
 glibc
 glibmm
 glibmm-2.68
+glmark2
 glow
 glslang
 glu
@@ -352,6 +357,7 @@ gpick
 gping
 gpm
 gptfdisk
+gputest
 grantleetheme
 graphene
 graphicsmagick
@@ -869,6 +875,7 @@ lib32-mesa
 lib32-mesa-utils
 lib32-mesa-vdpau
 lib32-ncurses
+lib32-nvidia-utils
 lib32-openssl
 lib32-pam
 lib32-systemd
@@ -1262,11 +1269,14 @@ linux-firmware-whence
 linux-headers-meta
 linux-meta
 linux419
+linux419-nvidia
 linux419-virtualbox-host-modules
 linux610
 linux610-headers
+linux610-nvidia
 linux66
 linux66-headers
+linux66-nvidia
 litehtml
 llvm
 llvm-libs
@@ -1418,7 +1428,11 @@ ntfs-3g
 ntp
 numactl
 numlockx
+nvidia-prime
+nvidia-settings
+nvidia-utils
 nvm
+nvtop
 oath-toolkit
 obs-studio
 obsidian
