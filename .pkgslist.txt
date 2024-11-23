@@ -66,6 +66,7 @@ bash-completion
 bat
 bc
 bcg729
+beekeeper-studio-bin
 bind
 binutils
 bison
