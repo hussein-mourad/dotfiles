@@ -43,6 +43,7 @@ artwork-i3
 asar
 asdf-vm
 at-spi2-core
+atac
 atkmm
 atomicparsley
 atool
@@ -710,6 +711,7 @@ jfsutils
 jose
 jpegoptim
 jq
+jqp
 json-c
 json-glib
 jsoncpp

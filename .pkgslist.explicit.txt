@@ -13,6 +13,7 @@ arandr
 arch-wiki-docs
 artwork-i3
 asdf-vm
+atac
 atomicparsley
 atool
 auto-cpufreq
@@ -193,6 +194,7 @@ inxi
 ipp-usb
 jfsutils
 jpegoptim
+jqp
 jupyter-notebook
 jwt-cli
 kakoune
