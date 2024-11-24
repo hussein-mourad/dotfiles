@@ -339,8 +339,6 @@ pcmanfm
 perl
 perl-anyevent-i3
 perl-file-mimeinfo
-pgadmin4-desktop
-pgadmin4-server
 php
 php-fpm
 php-sqlite
