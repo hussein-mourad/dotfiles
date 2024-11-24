@@ -245,7 +245,6 @@ fakeroot
 fd
 fdupes
 feh
-ferdium-bin
 ffcall
 ffmpeg
 ffmpeg4.4
@@ -1544,6 +1543,8 @@ perl-xml-sax-base
 perl-xml-sax-expat
 perl-xml-simple
 perl-xml-writer
+pgadmin4-desktop
+pgadmin4-server
 phodav
 php
 php-fpm
