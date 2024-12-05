@@ -212,7 +212,6 @@ less
 lib32-flex
 lib32-libva-vdpau-driver
 lib32-mesa-utils
-lib32-mesa-vdpau
 lib32-nvidia-utils
 lib32-vulkan-intel
 lib32-vulkan-radeon
@@ -223,15 +222,14 @@ libguestfs
 libinput-gestures
 libreoffice-still
 libtool
-libva-mesa-driver
 libva-vdpau-driver
 libxnvctrl
 lightdm-settings
 lightdm-slick-greeter
 linux-headers-meta
 linux-meta
+linux-nvidia-meta
 linux419-nvidia
-linux610-nvidia
 linux66
 linux66-headers
 linux66-nvidia
@@ -270,7 +268,6 @@ megasync
 memtest86+
 memtest86+-efi
 mesa-utils
-mesa-vdpau
 mhwd
 mhwd-db
 minikube
@@ -358,6 +355,7 @@ pulseaudio-ctl
 pycharm-community-edition
 pyenv
 python-httpie-jwt-auth
+python-hypothesis
 python-llfuse
 python-mutagen
 python-pip

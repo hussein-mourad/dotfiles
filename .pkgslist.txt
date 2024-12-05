@@ -74,6 +74,7 @@ bison
 bitwarden
 blas
 blender-benchmark
+blosc
 blueman
 bluez
 bluez-libs
@@ -148,6 +149,7 @@ cppdap
 cpupower
 cracklib
 cronie
+crypto++
 cryptsetup
 ctop
 cups
@@ -223,6 +225,7 @@ electron28
 electron30
 electron31
 electron32
+electron33
 elementary-icon-theme
 enchant
 endeavour
@@ -291,6 +294,7 @@ gcolor3
 gcr
 gcr-4
 gd
+gdal
 gdbm
 gdk-pixbuf-xlib
 gdk-pixbuf2
@@ -302,6 +306,7 @@ geocode-glib-2
 geocode-glib-common
 geoip
 geoip-database
+geos
 gettext
 gfeeds
 ghc-libs
@@ -837,6 +842,7 @@ lib32-flex
 lib32-gcc-libs
 lib32-glibc
 lib32-icu
+lib32-json-c
 lib32-keyutils
 lib32-krb5
 lib32-libcap
@@ -875,7 +881,6 @@ lib32-llvm-libs
 lib32-lm_sensors
 lib32-mesa
 lib32-mesa-utils
-lib32-mesa-vdpau
 lib32-ncurses
 lib32-nvidia-utils
 lib32-openssl
@@ -893,6 +898,7 @@ libabw
 libaccounts-glib
 libaccounts-qt
 libadwaita
+libaec
 libaio
 libakonadi
 libao
@@ -989,8 +995,10 @@ libfm-gtk2
 libfontenc
 libfreeaptx
 libfreehand
+libfreexl
 libgcrypt
 libgee
+libgeotiff
 libgexiv2
 libgirepository
 libgit2
@@ -1137,6 +1145,7 @@ librest
 librevenge
 librsvg
 librsync
+librttopo
 libsamplerate
 libsasl
 libseccomp
@@ -1153,6 +1162,7 @@ libsodium
 libsoup
 libsoup3
 libsoxr
+libspatialite
 libspectre
 libspeechd
 libspiro
@@ -1190,7 +1200,6 @@ libutempter
 libutf8proc
 libuv
 libva
-libva-mesa-driver
 libva-vdpau-driver
 libvdpau
 libverto
@@ -1199,6 +1208,7 @@ libvirt
 libvirt-glib
 libvirt-python
 libvisio
+libvlc
 libvorbis
 libvpl
 libvpx
@@ -1270,12 +1280,13 @@ linux-firmware
 linux-firmware-whence
 linux-headers-meta
 linux-meta
+linux-nvidia-meta
 linux419
 linux419-nvidia
 linux419-virtualbox-host-modules
-linux610
-linux610-headers
-linux610-nvidia
+linux611
+linux611-headers
+linux611-nvidia
 linux66
 linux66-headers
 linux66-nvidia
@@ -1348,7 +1359,6 @@ memtest86+-efi
 menu-cache
 mesa
 mesa-utils
-mesa-vdpau
 meson
 mhwd
 mhwd-amdgpu
@@ -1457,6 +1467,7 @@ openssh
 openssl
 openucx
 openvpn
+openxr
 optipng
 opus
 orc
@@ -1665,6 +1676,7 @@ python-httplib2
 python-httpx
 python-humanize
 python-hyperlink
+python-hypothesis
 python-i3ipc
 python-icalendar
 python-idna
@@ -1677,6 +1689,7 @@ python-iniconfig
 python-installer
 python-ipykernel
 python-jaraco.classes
+python-jaraco.collections
 python-jaraco.context
 python-jaraco.functools
 python-jaraco.text
@@ -1809,6 +1822,7 @@ python-sgmllib3k
 python-shellingham
 python-six
 python-sniffio
+python-sortedcontainers
 python-soupsieve
 python-stack-data
 python-systemd
@@ -1933,6 +1947,7 @@ qemu-user
 qemu-vhost-user-gpu
 qemu-vmsr-helper
 qhexedit2
+qhull
 qpdf
 qrencode
 qscintilla-qt5
@@ -2178,6 +2193,7 @@ thunar-volman
 thunderbird
 tidy
 timew
+tinysparql
 tinyxml2
 tiv
 tlrc-bin
@@ -2186,7 +2202,6 @@ todoman
 totem-pl-parser
 tpm2-tss
 traceroute
-tracker3
 translate-shell
 transmission-cli
 trashy
@@ -2329,6 +2344,7 @@ xdg-desktop-portal-gtk
 xdg-user-dirs
 xdg-utils
 xdotool
+xerces-c
 xf86-input-elographics
 xf86-input-evdev
 xf86-input-libinput
