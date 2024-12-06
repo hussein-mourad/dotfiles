@@ -193,3 +193,6 @@ alias open='xdg-open'
 alias code='code --password-store="gnome-libsecret"'
 # alias npx="npm_execpath=$(which pnpm) npx"
 alias serve="python3 -m http.server"
+alias gowebly="go run github.com/gowebly/gowebly/v2@latest"
+alias handbrakegui="ghb"
+alias handbrakecli="HandBrakeCLI"
