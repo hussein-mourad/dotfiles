@@ -62,6 +62,7 @@ coreutils
 cowsay
 cpanminus
 cpupower
+criu
 cronie
 cryptsetup
 ctop
@@ -85,6 +86,7 @@ dnsmasq
 docker
 docker-buildx
 docker-compose
+docker-scan
 dog
 dosfstools
 downgrade
@@ -339,6 +341,7 @@ perl-file-mimeinfo
 php
 php-fpm
 php-sqlite
+pigz
 pipes.sh
 pkgconf
 plocate

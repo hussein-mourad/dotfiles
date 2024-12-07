@@ -148,6 +148,7 @@ cpio
 cppdap
 cpupower
 cracklib
+criu
 cronie
 crypto++
 cryptsetup
@@ -197,6 +198,7 @@ docbook-xsl
 docker
 docker-buildx
 docker-compose
+docker-scan
 dog
 dosfstools
 dotconf
@@ -1559,6 +1561,7 @@ php
 php-fpm
 php-sqlite
 picom
+pigz
 pinentry
 pipes.sh
 pipewire
@@ -1590,6 +1593,7 @@ procps-ng
 procs
 proj
 protobuf
+protobuf-c
 prrte
 psmisc
 pugixml
