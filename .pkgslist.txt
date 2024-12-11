@@ -28,6 +28,7 @@ ansible
 ansible-core
 antlr4-runtime
 aom
+apache-tools
 apparmor
 appimagelauncher
 appstream
