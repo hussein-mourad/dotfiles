@@ -7,13 +7,14 @@ exec --no-startup-id konsole -p tabtitle=sfm -e ranger
 
 for_window [title="stmux"] floating enable
 for_window [title="stmux"] sticky enable
-for_window [title="stmux"] resize set 1300 800
+#for_window [title="stmux"] resize set 1300 800
+for_window [title="stmux"] resize set 900 600
 for_window [title="stmux"] border pixel $border_size
 for_window [title="stmux"] move scratchpad
 
 for_window [title="sfm"] floating enable
 for_window [title="sfm"] sticky enable
-for_window [title="sfm"] resize set 1300 800
+for_window [title="sfm"] resize set 900 600
 for_window [title="sfm"] border pixel $border_size
 for_window [title="sfm"] move scratchpad
 
