@@ -8,7 +8,7 @@
 # Zen browser
 # assign [class="zen-alpha"] $ws1
 for_window [title="mtmux"] move to workspace $ws2
-for_window [class="Virt-viewer"] move to workspace $ws6
+#for_window [class="Virt-viewer"] move to workspace $ws6
 for_window [class="TelegramDesktop"] move to workspace $ws7
 # assign [class="TelegramDesktop"] $ws7
 
