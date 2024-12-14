@@ -51,6 +51,7 @@ atool
 attica
 attica5
 attr
+atuin
 audit
 augeas
 auto-cpufreq
@@ -697,6 +698,8 @@ insomnia-bin
 intel-ucode
 intltool
 inxi
+iperf
+iperf3
 ipp-usb
 iproute2
 iptables
@@ -1294,6 +1297,7 @@ linux66
 linux66-headers
 linux66-nvidia
 litehtml
+lksctp-tools
 llvm
 llvm-libs
 lm_sensors

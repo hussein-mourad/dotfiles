@@ -17,6 +17,7 @@ asdf-vm
 atac
 atomicparsley
 atool
+atuin
 auto-cpufreq
 autoconf
 autofs
@@ -193,6 +194,8 @@ inkscape
 insomnia-bin
 intel-ucode
 inxi
+iperf
+iperf3
 ipp-usb
 jfsutils
 jpegoptim
