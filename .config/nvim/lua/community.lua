@@ -28,9 +28,15 @@ return {
   { import = "astrocommunity.pack.tailwindcss" },
   { import = "astrocommunity.pack.php" },
   { import = "astrocommunity.pack.blade" },
-  { import = "astrocommunity.pack.laravel" },
+  -- { import = "astrocommunity.pack.laravel" },
   { import = "astrocommunity.pack.prisma" },
+  { import = "astrocommunity.pack.templ" },
+  { import = "astrocommunity.pack.vue" },
   -- { import = "astrocommunity.pack.sql" },
+
+  -- devops
+  { import = "astrocommunity.pack.terraform" },
+  { import = "astrocommunity.pack.ansible" },
 
   -- config files
   { import = "astrocommunity.pack.json" },
@@ -67,6 +73,10 @@ return {
 
   -- motion
   { import = "astrocommunity.motion.mini-surround" },
+
+  -- scrolling --
+  -- Smooth scrolling for window movement commands (mappings optional): <C-u>, <C-d>, <C-b>, <C-f>, <C-y>, <C-e>, zt, zz, zb.
+  -- { import = "astrocommunity.scrolling.neoscroll-nvim" },
 
   -- fuzzy-finder
   { import = "astrocommunity.fuzzy-finder.telescope-zoxide" },
