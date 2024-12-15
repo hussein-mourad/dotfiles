@@ -1163,6 +1163,7 @@ libsigsegv
 libsixel
 libslirp
 libsm
+libsmbios
 libsndfile
 libsodium
 libsoup
@@ -1410,6 +1411,7 @@ net-snmp
 net-tools
 netctl
 netpbm
+netperf
 netstat-nat
 nettle
 network-manager-applet
@@ -1451,6 +1453,7 @@ nvidia-prime
 nvidia-settings
 nvidia-utils
 nvm
+nvme-cli
 nvtop
 oath-toolkit
 obs-studio

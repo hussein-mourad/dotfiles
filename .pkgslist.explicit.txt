@@ -293,6 +293,7 @@ neomutt
 neovim
 net-tools
 netctl
+netperf
 netstat-nat
 network-manager-applet
 networkmanager
@@ -317,6 +318,7 @@ nvidia-prime
 nvidia-settings
 nvidia-utils
 nvm
+nvme-cli
 nvtop
 obs-studio
 obsidian
