@@ -407,6 +407,7 @@ screenfetch
 screenkey
 sd
 sddm
+sesh-bin
 simple-scan
 simplescreenrecorder
 sl

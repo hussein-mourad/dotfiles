@@ -2091,6 +2091,7 @@ sed
 semver
 serd
 serf
+sesh-bin
 sfsexp
 sg3_utils
 shaderc
