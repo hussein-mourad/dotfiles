@@ -328,6 +328,7 @@ openshot
 openssh
 os-prober
 otree
+owncloud-client
 p7zip
 pa-applet-git
 pacseek

@@ -766,6 +766,7 @@ kcrash5
 kdbusaddons
 kdbusaddons5
 kded5
+kdsingleapplication
 keepassxc
 keyutils
 kfilemetadata
@@ -1146,6 +1147,7 @@ libqxp
 libraqm
 libraw
 libraw1394
+libre-graph-api
 libreoffice-still
 librest
 librevenge
@@ -1484,6 +1486,7 @@ orc
 os-prober
 osinfo-db
 otree
+owncloud-client
 p11-kit
 p7zip
 pa-applet-git
