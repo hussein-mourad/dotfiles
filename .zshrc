@@ -98,6 +98,10 @@ bindkey -M vicmd '^p' history-search-backward
 bindkey -M vicmd '^n' history-search-forward
 bindkey -M vicmd '^[w' kill-region
 bindkey -M vicmd "^X^E" edit-command-line
+zle     -N             sesh-sessions
+bindkey -M emacs '\es' sesh-sessions
+bindkey -M vicmd '\es' sesh-sessions
+bindkey -M viins '\es' sesh-sessions
 
 # ---------- COLOR SETTINGS ----------
 # Remove Background colors
