@@ -418,6 +418,7 @@ gtop
 gts
 gufw
 guile
+gum
 gumbo-parser
 gupnp
 gupnp-igd

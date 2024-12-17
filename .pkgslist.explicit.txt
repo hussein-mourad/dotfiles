@@ -167,6 +167,7 @@ gtkmm
 gtksourceview-pkgbuild
 gtop
 gufw
+gum
 gvfs
 gvfs-afc
 gvfs-gphoto2
