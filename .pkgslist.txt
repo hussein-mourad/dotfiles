@@ -694,7 +694,6 @@ imlib2
 inetutils
 iniparser
 inkscape
-insomnia-bin
 intel-ucode
 intltool
 inxi
@@ -2142,6 +2141,7 @@ squashfs-tools
 squashfuse
 sratom
 srt
+sshpass
 sshs
 sssd
 starship
@@ -2438,6 +2438,7 @@ zip
 zix
 zk
 zlib
+zlib-ng
 zoxide
 zsh
 zsh-autosuggestions

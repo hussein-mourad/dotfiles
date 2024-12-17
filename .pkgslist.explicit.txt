@@ -191,7 +191,6 @@ i3lock-color
 i3status
 inetutils
 inkscape
-insomnia-bin
 intel-ucode
 inxi
 iperf
@@ -421,6 +420,7 @@ speech-dispatcher
 speedtest-cli
 sqlc
 sqlitebrowser
+sshpass
 sshs
 starship
 stow
