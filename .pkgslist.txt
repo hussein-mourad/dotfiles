@@ -188,6 +188,7 @@ direnv
 discord
 distro-info
 distro-info-data
+dive
 djvulibre
 dmenu-manjaro
 dmg2img
@@ -209,6 +210,7 @@ downgrade
 dpkg
 drawing
 dtc
+ducker
 duf
 duktape
 dunst
@@ -797,6 +799,7 @@ knotifications
 knotifications5
 knotifyconfig
 knotifyconfig5
+kompose
 konsole
 kpackage
 kpackage5

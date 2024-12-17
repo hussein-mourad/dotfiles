@@ -81,6 +81,7 @@ diffutils
 digikam
 direnv
 discord
+dive
 dmg2img
 dmidecode
 dmraid
@@ -93,6 +94,7 @@ dog
 dosfstools
 downgrade
 drawing
+ducker
 duf
 dunst
 dust
@@ -206,6 +208,7 @@ kanata
 kcolorchooser
 keepassxc
 kitty
+kompose
 konsole
 kubectl
 kvantum-manjaro
