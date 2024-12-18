@@ -1085,6 +1085,7 @@ libmpc
 libmpcdec
 libmpdclient
 libmpeg2
+libmspack
 libmspub
 libmtp
 libmupdf
@@ -2289,6 +2290,7 @@ vagrant
 vala
 vapoursynth
 vde2
+veracrypt
 verdict
 vi
 vibrancy-icons-teal
@@ -2339,6 +2341,8 @@ woff2
 wolfssl
 wpa_supplicant
 wpebackend-fdo
+wxwidgets-common
+wxwidgets-gtk3
 x264
 x265
 xapian-core

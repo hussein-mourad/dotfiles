@@ -493,6 +493,7 @@ urlview
 urxvt-resize-font-git
 usbutils
 vagrant
+veracrypt
 vi
 vibrancy-icons-teal
 viewnior
