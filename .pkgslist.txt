@@ -738,6 +738,7 @@ jupyterlab-pygments
 just
 jwt-cli
 jxrlib
+k9s
 kaccounts-integration
 kakoune
 kanata

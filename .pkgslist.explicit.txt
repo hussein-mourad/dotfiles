@@ -204,6 +204,7 @@ jpegoptim
 jqp
 jupyter-notebook
 jwt-cli
+k9s
 kakoune
 kanata
 kcolorchooser
