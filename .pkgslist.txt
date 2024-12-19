@@ -82,6 +82,7 @@ bluez
 bluez-libs
 bluez-utils
 bmenu
+bmon
 boost-libs
 borg
 botan
@@ -352,6 +353,7 @@ gnome-online-accounts
 gnome-pomodoro-git
 gnome-themes-extra
 gnupg
+gnuplot
 gnustep-base
 gnutls
 go
@@ -690,6 +692,7 @@ i3status
 iana-etc
 icon-naming-utils
 icu
+iftop
 ijs
 imagemagick
 imath
@@ -953,6 +956,7 @@ libcap-ng
 libcdio
 libcdio-paranoia
 libcdr
+libcerf
 libcgif
 libclapper
 libclapper-gtk
@@ -1417,6 +1421,7 @@ neovim
 net-snmp
 net-tools
 netctl
+nethogs
 netpbm
 netperf
 netstat-nat
@@ -2174,6 +2179,7 @@ syntax-highlighting
 sysfsutils
 syslinux
 syslog-ng
+sysstat
 systemd
 systemd-libs
 systemd-sysvcompat
@@ -2218,6 +2224,7 @@ timew
 tinysparql
 tinyxml2
 tiv
+tk
 tlrc-bin
 tmux
 todoman
@@ -2309,6 +2316,7 @@ visual-studio-code-bin
 vit
 vlc
 vmaf
+vnstat
 volume_key
 volumeicon
 vpnc

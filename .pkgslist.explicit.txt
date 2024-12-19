@@ -35,6 +35,7 @@ blender-benchmark
 blueman
 bluez-utils
 bmenu
+bmon
 borg
 bottom
 bridge-utils
@@ -146,6 +147,7 @@ gnome-clocks
 gnome-disk-utility
 gnome-keyring
 gnome-pomodoro-git
+gnuplot
 go
 go-task
 gobang-bin
@@ -192,6 +194,7 @@ i3blocks
 i3exit
 i3lock-color
 i3status
+iftop
 inetutils
 inkscape
 intel-ucode
@@ -297,6 +300,7 @@ neomutt
 neovim
 net-tools
 netctl
+nethogs
 netperf
 netstat-nat
 network-manager-applet
@@ -437,6 +441,7 @@ sxiv
 syncthing
 sysfsutils
 syslog-ng
+sysstat
 systemd
 tabiew
 tabview-git
@@ -461,6 +466,7 @@ thunderbird
 tidy
 timew
 tiv
+tk
 tlrc-bin
 tmux
 todoman
@@ -505,6 +511,7 @@ virtualbox
 visual-studio-code-bin
 vit
 vlc
+vnstat
 volumeicon
 vulkan-intel
 vulkan-radeon
