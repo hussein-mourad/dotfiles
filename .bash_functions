@@ -102,3 +102,5 @@ sesh-sessions() {
     sesh connect $session
   }
 }
+
+function gi() { curl -sLw "\n" https://www.toptal.com/developers/gitignore/api/$@ ;}
