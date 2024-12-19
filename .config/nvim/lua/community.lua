@@ -128,5 +128,7 @@ return {
   --
   { import = "astrocommunity.git.gitgraph-nvim" },
 
+  { import = "astrocommunity.docker.lazydocker" },
+
   -- { import = "astrocommunity.note-taking.obsidian-nvim" },
 }
