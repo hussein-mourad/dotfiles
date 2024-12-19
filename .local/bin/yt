@@ -69,14 +69,15 @@ if ! command -v xdg-user-dir &>/dev/null; then
 	exit 1
 fi
 
-# Check if a video URL is provided
-if [ $# -ne 1 ]; then
-	echo "Usage: $(basename "$0") <video_url>"
-	exit
+if [ $# -lt 1 ]; then
+	echo "Usage: $(basename "$0") <video_url> [youtube_directory]"
+	exit 1
 fi
 
 INPUT_URL="$1"
-YOUTUBE_DIR="$(xdg-user-dir VIDEOS)/youtube"
+DEFAULT_YOUTUBE_DIR="$(xdg-user-dir VIDEOS)/youtube"
+# Second argument (if provided) will be used as the YouTube directory
+YOUTUBE_DIR="${2:-$DEFAULT_YOUTUBE_DIR}"
 # YOUTUBE_DIR="$HOME/yt" # used for development
 LOG_FILE="$(mktemp -d)/output.log"
 
