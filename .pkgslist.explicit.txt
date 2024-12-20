@@ -179,6 +179,7 @@ gxkb
 handbrake
 handbrake-cli
 haveged
+hl
 hplip
 htop
 httpie
@@ -247,6 +248,7 @@ linux66
 linux66-headers
 linux66-nvidia
 logrotate
+lolcat
 lsd
 lshw
 lua51
@@ -519,6 +521,7 @@ w3m
 wallpapers-juhraya
 wget
 which
+whois
 wikiman
 wireless-regdb
 wireshark-qt

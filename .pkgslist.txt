@@ -666,6 +666,7 @@ hidapi
 highlight
 highway
 hivex
+hl
 hplip
 hslua-cli
 htop
@@ -1315,6 +1316,7 @@ llvm-libs
 lm_sensors
 lmdb
 logrotate
+lolcat
 lpsolve
 lrzip
 lsb-release
@@ -2054,12 +2056,15 @@ ruby-debug
 ruby-default-gems
 ruby-erb
 ruby-irb
+ruby-manpages
 ruby-matrix
 ruby-minitest
 ruby-net-ftp
 ruby-net-imap
 ruby-net-pop
 ruby-net-smtp
+ruby-optimist
+ruby-paint
 ruby-power_assert
 ruby-prime
 ruby-racc
@@ -2339,6 +2344,7 @@ webrtc-audio-processing
 webrtc-audio-processing-1
 wget
 which
+whois
 wikiman
 wildmidi
 wireless-regdb
