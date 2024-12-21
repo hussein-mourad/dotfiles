@@ -83,6 +83,7 @@ bluez-libs
 bluez-utils
 bmenu
 bmon
+boost
 boost-libs
 borg
 botan
@@ -285,6 +286,7 @@ freeglut
 freetype2
 freeze-bin
 fribidi
+fritzing
 fuse-common
 fuse2
 fuse3
@@ -358,6 +360,7 @@ gnustep-base
 gnutls
 go
 go-task
+goaccess
 gobang-bin
 gobject-introspection
 gobject-introspection-runtime
@@ -1440,6 +1443,7 @@ nfs-utils
 nfsidmap
 nftables
 ngrok
+ngspice
 nilfs-utils
 ninja
 nitrogen
@@ -1598,6 +1602,7 @@ polkit-gnome
 polkit-qt5
 polkit-qt6
 polybar
+polyclipping
 poppler
 poppler-data
 poppler-glib
@@ -2018,6 +2023,7 @@ qt6-webchannel
 qt6-webengine
 qtcreator
 qtkeychain-qt6
+quazip-qt6
 quran-companion
 qutebrowser
 ragel

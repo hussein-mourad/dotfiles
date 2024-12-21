@@ -125,6 +125,7 @@ flameshot
 flex
 fpp
 freeze-bin
+fritzing
 fx
 galculator
 garcon
@@ -150,6 +151,7 @@ gnome-pomodoro-git
 gnuplot
 go
 go-task
+goaccess
 gobang-bin
 goreleaser
 gparted
