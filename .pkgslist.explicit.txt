@@ -205,6 +205,7 @@ inxi
 iperf
 iperf3
 ipp-usb
+jellyfin-mpv-shim
 jfsutils
 jpegoptim
 jqp
@@ -496,6 +497,7 @@ ttf-indic-otf
 ttf-liberation
 ttf-meslo-nerd
 ttf-montserrat
+ttf-noto-emoji-monochrome
 ttf-poppins
 ttf-roboto
 ttf-ubuntu-nerd

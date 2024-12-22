@@ -726,6 +726,7 @@ java-runtime-common
 jbig2dec
 jbigkit
 jdk17-openjdk
+jellyfin-mpv-shim
 jemalloc
 jfsutils
 jose
@@ -1734,6 +1735,7 @@ python-jaraco.functools
 python-jaraco.text
 python-jedi
 python-jeepney
+python-jellyfin-apiclient
 python-jinja
 python-json-logger
 python-json5
@@ -1761,6 +1763,8 @@ python-mechanize
 python-mistune
 python-mock
 python-more-itertools
+python-mpv
+python-mpv-jsonipc
 python-msgpack
 python-multidict
 python-multivolumefile
@@ -2281,6 +2285,7 @@ ttf-meslo-nerd-font-powerlevel10k
 ttf-montserrat
 ttf-nerd-fonts-symbols
 ttf-nerd-fonts-symbols-common
+ttf-noto-emoji-monochrome
 ttf-opensans
 ttf-poppins
 ttf-roboto
