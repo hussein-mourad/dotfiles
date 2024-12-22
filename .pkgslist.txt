@@ -668,6 +668,7 @@ hicolor-icon-theme
 hidapi
 highlight
 highway
+hiredis
 hivex
 hl
 hplip
@@ -1369,6 +1370,7 @@ manjaro-settings-manager
 manjaro-settings-manager-notifier
 manjaro-system
 manjaro-zsh-config
+mariadb-libs
 mathjax
 mbedtls
 mbedtls2
@@ -1401,6 +1403,7 @@ mkinitcpio-openswap
 mobile-broadband-provider-info
 modemmanager
 morc_menu
+most
 mousepad
 mpdecimal
 mpfr
@@ -1419,6 +1422,7 @@ nano-syntax-highlighting
 ncdu
 ncurses
 ndctl
+ndpi
 neofetch
 neomutt
 neon
@@ -1442,6 +1446,7 @@ newsflash
 nfs-utils
 nfsidmap
 nftables
+ngrep
 ngrok
 ngspice
 nilfs-utils
@@ -1464,6 +1469,7 @@ nss
 nss-mdns
 nsxiv
 ntfs-3g
+ntopng
 ntp
 numactl
 numlockx
@@ -1620,6 +1626,7 @@ prison
 procps-ng
 procs
 proj
+prometheus
 protobuf
 protobuf-c
 prrte
@@ -2038,6 +2045,7 @@ rdesktop
 rdfind
 re2
 readline
+redis
 redland
 redshift
 reiserfsprogs
@@ -2050,6 +2058,7 @@ rnnoise
 rofi
 rpcbind
 rpcsvc-proto
+rrdtool
 rsync
 rtkit
 rtmpdump

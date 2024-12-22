@@ -292,6 +292,7 @@ mkinitcpio-openswap
 mobile-broadband-provider-info
 modemmanager
 morc_menu
+most
 mousepad
 mpv
 mupdf
@@ -299,6 +300,7 @@ mysql-workbench
 nano
 nano-syntax-highlighting
 ncdu
+ndpi
 neofetch
 neomutt
 neovim
@@ -316,6 +318,7 @@ networkmanager-vpnc
 newsboat
 newsflash
 nfs-utils
+ngrep
 ngrok
 nitrogen
 nmap
@@ -324,6 +327,7 @@ noto-fonts-emoji
 nss-mdns
 nsxiv
 ntfs-3g
+ntopng
 ntp
 numlockx
 nvidia-prime
@@ -371,6 +375,7 @@ postgresql
 postman-bin
 powertop
 procs
+prometheus
 pulseaudio
 pulseaudio-bluetooth
 pulseaudio-ctl
