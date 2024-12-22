@@ -558,7 +558,7 @@ function submit_segment(category)
 end
 
 mp.register_event("file-loaded", file_loaded)
-mp.add_key_binding("g", "set_segment", set_segment)
+mp.add_key_binding("alt+g", "set_segment", set_segment)
 mp.add_key_binding("G", "submit_segment", submit_segment)
 mp.add_key_binding("h", "upvote_segment", function() return vote("1") end)
 mp.add_key_binding("H", "downvote_segment", function() return vote("0") end)
