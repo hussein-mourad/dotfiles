@@ -375,6 +375,7 @@ gping
 gpm
 gptfdisk
 gputest
+grafana
 grantleetheme
 graphene
 graphicsmagick
@@ -729,6 +730,7 @@ jdk17-openjdk
 jellyfin-mpv-shim
 jemalloc
 jfsutils
+jftui
 jose
 jpegoptim
 jq
@@ -1628,6 +1630,7 @@ procps-ng
 procs
 proj
 prometheus
+prometheus-node-exporter
 protobuf
 protobuf-c
 prrte
@@ -1833,6 +1836,7 @@ python-pyqt6-webengine
 python-pyrsistent
 python-pyserial
 python-pysocks
+python-pystray
 python-pytest
 python-pytest-cov
 python-pytz

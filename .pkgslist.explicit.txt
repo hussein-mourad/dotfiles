@@ -158,6 +158,7 @@ gparted
 gpick
 gping
 gputest
+grafana
 grub
 grub-customizer-git
 grub-theme-manjaro
@@ -207,6 +208,7 @@ iperf3
 ipp-usb
 jellyfin-mpv-shim
 jfsutils
+jftui
 jpegoptim
 jqp
 jupyter-notebook
@@ -377,6 +379,7 @@ postman-bin
 powertop
 procs
 prometheus
+prometheus-node-exporter
 pulseaudio
 pulseaudio-bluetooth
 pulseaudio-ctl
@@ -390,6 +393,7 @@ python-pip
 python-pipx
 python-pydantic
 python-pyqt5
+python-pystray
 python-setuptools-scm
 python-truststore
 qdirstat-bin
