@@ -23,6 +23,7 @@ _darcs
 ^/COPYING
 
 etc
+pkgs
 install.sh
 .pkgslist.txt
 .pkgslist-explicit.txt
