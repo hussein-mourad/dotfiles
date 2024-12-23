@@ -1,19 +1,29 @@
 #!/bin/bash
 
 DOTFILES_PATH="$HOME/dotfiles"
+DEVICE_NAME=$1
 
-PKGS_LIST="$DOTFILES_PATH/.pkgslist.txt"
-PKGS_EXCIPLICIT="$DOTFILES_PATH/.pkgslist.explicit.txt"
-PIP_LIST="$DOTFILES_PATH/.piplist.txt"
-PIPX_LIST="$DOTFILES_PATH/.pipxlist.txt"
+if [[ -z $DEVICE_NAME ]]; then
+  echo "Error: Please enter device name"
+  exit 1
+fi
 
-yay -Qq >"$PKGS_LIST"
-yay -Qeq >"$PKGS_EXCIPLICIT"
+save_path="$DOTFILES_PATH/pkgs/$DEVICE_NAME"
+
+mkdir -p "$save_path"
+
+PKGS_LIST="$save_path/pkgslist.txt"
+PKGS_EXCIPLICIT="$save_path/pkgslist.explicit.txt"
+PIP_LIST="$save_path/piplist.txt"
+PIPX_LIST="$save_path/pipxlist.txt"
+
+yay -Q >"$PKGS_LIST"
+yay -Qe >"$PKGS_EXCIPLICIT"
 pip list >"$PIP_LIST"
 pipx list --short >"$PIPX_LIST"
 
 cd "$DOTFILES_PATH" || return
 
 git add "$PKGS_LIST" "$PKGS_EXCIPLICIT" "$PIP_LIST" "$PIPX_LIST"
-git commit -m "backup: pkgslist"
+git commit -m "backup: $DEVICE_NAME pkgs"
 git push
