@@ -36,6 +36,7 @@ brn-git r31.454e213-1
 broot 1.44.2-1
 bruno-bin 1.35.0-1
 btrfs-progs 6.11-1
+bwm-ng 0.6.3-3
 bzip2 1.0.8-6
 cantarell-fonts 1:0.303.1-2
 cdrtools 3.02a09-6
