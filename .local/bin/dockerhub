@@ -26,16 +26,17 @@ get_readme() {
   echo "$output" | jq -r '.full_description'
 }
 
-list_tags_and_sizes() {
+list_tags() {
   local namespace="$1"
   local repo="$2"
   local output
   output=$(curl -s "${BASE_URL}/repositories/${namespace}/${repo}/tags/?page_size=25")
   {
-    echo -e "Tag\tSize"
-    echo "$output" | jq -r '.results[] | [.name,.full_size] | @tsv' | while IFS=$'\t' read -r tag size; do
+    echo -e "Tag\tSize\tLast Updated"
+    echo "$output" | jq -r '.results[] | [.name,.full_size,.last_updated] | @tsv' | while IFS=$'\t' read -r tag size last_updated; do
       formatted_size=$(echo "$size" | numfmt --to=si --suffix=B)
-      echo -e "$tag\t$formatted_size"
+      formatted_date=$(date -d "$last_updated" +%Y-%m-%d)
+      echo -e "$tag\t$formatted_size\t$formatted_date"
     done
   } | column -t -s $'\t'
 }
@@ -95,7 +96,7 @@ main() {
       echo "Error: 'tags' requires <namespace> and <repo> arguments."
       show_help
     fi
-    list_tags_and_sizes "$@"
+    list_tags "$@"
     ;;
   tag)
     if [[ $# -ne 3 ]]; then
