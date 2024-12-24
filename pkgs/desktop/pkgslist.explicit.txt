@@ -80,6 +80,7 @@ ffmpegthumbnailer 2.2.3-3
 flac 1.4.3-2
 flameshot 12.1.0-5
 flex 2.6.4-5
+fx 35.0.0-1
 gcc 14.2.1+r134+gab884fffe3fc-1
 gcolor3 2.4.0-8
 gdu 5.29.0-1
