@@ -1394,7 +1394,6 @@ ripgrep 14.1.1-1
 rnnoise 1:0.2-1
 rofi 1.7.5-3
 rpcbind 1.2.7-1
-rrdtool 1.9.0-2
 rsync 3.3.0-2
 rtkit 0.13-3
 rtmpdump 1:2.4.r105.6f6bb13-1

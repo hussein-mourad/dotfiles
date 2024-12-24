@@ -114,7 +114,6 @@ reportlab              4.2.2
 requests               2.32.3
 requests-toolbelt      1.0.0
 rich                   13.9.4
-rrdtool                0.1.10
 rsa                    4.9
 s3transfer             0.10.3
 scapy                  2.6.1
