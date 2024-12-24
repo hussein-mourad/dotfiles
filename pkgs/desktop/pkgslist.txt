@@ -354,6 +354,7 @@ i3lock-color 2.13.c.5-3
 i3status-manjaro 2.13-3
 iana-etc 20241016-1
 icu 75.1-1
+iftop 1.0pre4-6
 ijs 0.35-6
 imagemagick 7.1.1.41-1
 imath 3.1.12-1
