@@ -200,6 +200,8 @@ i3lock-color
 i3status
 iftop
 inetutils
+influx-cli
+influxdb
 inkscape
 intel-ucode
 inxi
