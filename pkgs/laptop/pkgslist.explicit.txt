@@ -464,6 +464,7 @@ tabview-git
 tailscale
 task
 taskwarrior-tui
+tcpdump
 tea
 telegram-desktop
 termdown

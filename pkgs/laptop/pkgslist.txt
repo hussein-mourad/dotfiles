@@ -2223,6 +2223,7 @@ tar
 task
 taskwarrior-tui
 tcl
+tcpdump
 tdb
 tea
 telegram-desktop
