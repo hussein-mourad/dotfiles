@@ -1,601 +1,601 @@
-accountsservice
-acpi
-acpid
-act
-alacritty
-alsa-firmware
-alsa-plugins
-alsa-utils
-ansible
-apache-tools
-apparmor
-appimagelauncher
-arandr
-arch-wiki-docs
-artwork-i3
-asdf-vm
-atac
-atomicparsley
-atool
-atuin
-auto-cpufreq
-autoconf
-autofs
-automake
-avahi
-b43-fwcutter
-base
-base-devel
-bat
-beekeeper-studio-bin
-bind
-bison
-bitwarden
-blender-benchmark
-blueman
-bluez-utils
-bmenu
-bmon
-borg
-bottom
-bridge-utils
-brn-git
-bruno-bin
-btop
-btrfs-progs
-bzip2
-cadaver
-calc
-calcurse
-calibre
-cantarell-fonts
-catdoc
-cheat
-chntpw
-chromium
-clipit
-clock-tui
-cmatrix
-cmus
-colorpicker
-composer
-conky
-conky-i3
-coreutils
-cowsay
-cpanminus
-cpupower
-criu
-cronie
-cryptsetup
-ctop
-curlie
-cutecom
-debugedit
-deluge
-deno
-device-mapper
-dfc
-dhclient
-dhcpcd
-diffutils
-digikam
-direnv
-discord
-dive
-dmg2img
-dmidecode
-dmraid
-dnsmasq
-docker
-docker-buildx
-docker-compose
-docker-scan
-dog
-dosfstools
-downgrade
-drawing
-ducker
-duf
-dunst
-dust
-e2fsprogs
-ecryptfs-utils
-efibootmgr
-endeavour
-entr
-eslint
-ethtool
-evince
-evolution
-exfatprogs
-expac
-f2fs-tools
-fd
-fdupes
-feh
-ffmpeg
-ffmpegthumbnailer
-ffnvcodec-headers
-firefox
-firefox-pwa-bin
-fish
-flac
-flameshot
-flex
-fpp
-freeze-bin
-fritzing
-fx
-galculator
-garcon
-gcalcli
-gcc
-gcolor3
-gdu
-geary
-gfeeds
-gimp
-git
-git-delta
-git-lfs
-gitflow-cjs
-github-cli
-gitleaks
-glmark2
-glow
-gnome-clocks
-gnome-disk-utility
-gnome-keyring
-gnome-pomodoro-git
-gnuplot
-go
-go-task
-goaccess
-gobang-bin
-goreleaser
-gparted
-gpick
-gping
-gputest
-grafana
-grub
-grub-customizer-git
-grub-theme-manjaro
-gst-libav
-gst-plugins-bad
-gst-plugins-base
-gst-plugins-good
-gst-plugins-ugly
-gstreamer
-gtkmm
-gtksourceview-pkgbuild
-gtop
-gufw
-gum
-gvfs
-gvfs-afc
-gvfs-gphoto2
-gvfs-mtp
-gvfs-smb
-gxkb
-handbrake
-handbrake-cli
-haveged
-hl
-hplip
-htop
-httpie
-httpie-desktop-bin
-hub
-hugo
-i3-help
-i3-resurrect
-i3-scripts
-i3-scrot
-i3-wm
-i3blocks
-i3exit
-i3lock-color
-i3status
-iftop
-inetutils
-influx-cli
-influxdb
-inkscape
-intel-ucode
-inxi
-iperf
-iperf3
-ipp-usb
-jellyfin-mpv-shim
-jfsutils
-jftui
-jpegoptim
-jqp
-jupyter-notebook
-jwt-cli
-k9s
-kakoune
-kanata
-kcolorchooser
-keepassxc
-kitty
-ko
-kompose
-konsole
-kubectl
-kvantum-manjaro
-lazydocker-bin
-lazygit
-lazynpm
-lazysql
-less
-lib32-flex
-lib32-libva-vdpau-driver
-lib32-mesa-utils
-lib32-nvidia-utils
-lib32-vulkan-intel
-lib32-vulkan-radeon
-libdiscid
-libdvdcss
-libgpod
-libguestfs
-libinput-gestures
-libreoffice-still
-libtool
-libva-vdpau-driver
-libxnvctrl
-lightdm-settings
-lightdm-slick-greeter
-linux-headers-meta
-linux-meta
-linux-nvidia-meta
-linux419-nvidia
-linux66
-linux66-headers
-linux66-nvidia
-logrotate
-lolcat
-lsd
-lshw
-lua51
-luarocks
-lvm2
-lxappearance
-lxinput
-lxrandr
-lynx
-m4
-maia-console
-maim
-make
-man-db
-man-pages
-manjaro-alsa
-manjaro-application-utility
-manjaro-base-skel
-manjaro-browser-settings
-manjaro-hello
-manjaro-hotfixes
-manjaro-i3-settings
-manjaro-printer
-manjaro-ranger-settings
-manjaro-release
-manjaro-settings-manager-notifier
-manjaro-system
-manjaro-zsh-config
-mdadm
-megacmd
-megasync
-memtest86+
-memtest86+-efi
-mesa-utils
-mhwd
-mhwd-db
-minikube
-mkinitcpio-openswap
-mobile-broadband-provider-info
-modemmanager
-morc_menu
-most
-mousepad
-mpv
-mupdf
-mysql-workbench
-nano
-nano-syntax-highlighting
-ncdu
-ndpi
-neofetch
-neomutt
-neovim
-net-tools
-netctl
-nethogs
-netperf
-netstat-nat
-network-manager-applet
-networkmanager
-networkmanager-openconnect
-networkmanager-openvpn
-networkmanager-pptp
-networkmanager-vpnc
-newsboat
-newsflash
-nfs-utils
-ngrep
-ngrok
-nitrogen
-nmap
-nnn
-noto-fonts-emoji
-nss-mdns
-nsxiv
-ntfs-3g
-ntopng
-ntp
-numlockx
-nvidia-prime
-nvidia-settings
-nvidia-utils
-nvm
-nvme-cli
-nvtop
-obs-studio
-obsidian
-openbsd-netcat
-openresolv
-openshot
-openssh
-os-prober
-otree
-owncloud-client
-p7zip
-pa-applet-git
-pacseek
-pacui
-pamac-gtk
-pandoc-cli
-papirus-maia-icon-theme
-pass
-pass-import
-patch
-patchutils
-pavucontrol
-pcmanfm
-perl
-perl-anyevent-i3
-perl-file-mimeinfo
-php
-php-fpm
-php-sqlite
-pigz
-pipes.sh
-pkgconf
-plocate
-polkit-gnome
-polybar
-poppler-data
-postgresql
-postman-bin
-powertop
-procs
-prometheus
-prometheus-node-exporter
-pulseaudio
-pulseaudio-bluetooth
-pulseaudio-ctl
-pycharm-community-edition
-pyenv
-python-httpie-jwt-auth
-python-hypothesis
-python-llfuse
-python-mutagen
-python-pip
-python-pipx
-python-pydantic
-python-pyqt5
-python-pystray
-python-setuptools-scm
-python-truststore
-qdirstat-bin
-qemu-full
-qt5ct
-qtcreator
-quran-companion
-qutebrowser
-ranger
-rclone
-rdesktop
-rdfind
-redshift
-reiserfsprogs
-restic
-rhythmbox
-ripgrep
-rmlint
-rofi
-rsync
-ruby-build
-rust-kanban
-rustlings
-rustup
-s-nail
-s-tui
-sad
-safeeyes
-sane-airscan
-sbxkb
-scrcpy
-screen
-screenfetch
-screenkey
-sd
-sddm
-sesh-bin
-simple-scan
-simplescreenrecorder
-sl
-slides
-smartmontools
-snapd
-sof-firmware
-spectre-meltdown-checker
-speech-dispatcher
-speedtest-cli
-sqlc
-sqlitebrowser
-sshpass
-sshs
-starship
-stow
-subversion
-sudo
-superproductivity-bin
-swtpm
-sxiv
-syncthing
-sysfsutils
-syslog-ng
-sysstat
-systemd
-tabiew
-tabview-git
-tailscale
-task
-taskwarrior-tui
-tcpdump
-tea
-telegram-desktop
-termdown
-terminus-font
-texinfo
-texlive-binextra
-texlive-fontsextra
-texlive-fontsrecommended
-texlive-latexextra
-texlive-latexrecommended
-texlive-xetex
-the_silver_searcher
-thunar
-thunar-volman
-thunderbird
-tidy
-timew
-tiv
-tk
-tlrc-bin
-tmux
-todoman
-traceroute
-translate-shell
-transmission-cli
-trashy
-tree
-ts-node
-ttf-dejavu
-ttf-droid
-ttf-firacode-nerd
-ttf-font-awesome
-ttf-font-icons
-ttf-hack-nerd
-ttf-inconsolata
-ttf-indic-otf
-ttf-liberation
-ttf-meslo-nerd
-ttf-montserrat
-ttf-noto-emoji-monochrome
-ttf-poppins
-ttf-roboto
-ttf-ubuntu-nerd
-tumbler
-typst
-unarchiver
-unrar
-unzip
-upower
-urlview
-urxvt-resize-font-git
-usbutils
-vagrant
-veracrypt
-vi
-vibrancy-icons-teal
-viewnior
-vim
-virt-manager
-virt-viewer
-virtualbox
-visual-studio-code-bin
-vit
-vlc
-vnstat
-volumeicon
-vulkan-intel
-vulkan-radeon
-w3m
-wallpapers-juhraya
-wget
-which
-whois
-wikiman
-wireless-regdb
-wireshark-qt
-wmutils
-wpa_supplicant
-xarchiver
-xautolock
-xcape
-xclip
-xcursor-maia
-xdg-desktop-portal-gtk
-xdg-user-dirs
-xdg-utils
-xdotool
-xf86-input-elographics
-xf86-input-evdev
-xf86-input-libinput
-xf86-input-void
-xf86-video-amdgpu
-xf86-video-ati
-xf86-video-intel
-xf86-video-nouveau
-xfburn
-xfce4-appfinder
-xfce4-panel
-xfce4-power-manager
-xfce4-screenshooter
-xfce4-session
-xfce4-settings
-xfce4-terminal
-xfdesktop
-xfsprogs
-xfwm4
-xfwm4-themes
-xorg-server
-xorg-twm
-xorg-xcalc
-xorg-xev
-xorg-xhost
-xorg-xinit
-xorg-xinput
-xorg-xkill
-xorg-xprop
-xournalpp
-xsane
-xsel
-xterm
-yay
-yazi
-yt-dlp
-ytfzf
-zaread-git
-zathura
-zathura-pdf-mupdf
-zeal
-zen-browser-bin
-zensu
-zip
-zk
-zoxide
+accountsservice 23.13.9-2
+acpi 1.7-4
+acpid 2.0.34-2
+act 0.2.70-1
+alacritty 0.14.0-1
+alsa-firmware 1.2.4-4
+alsa-plugins 1:1.2.12-4
+alsa-utils 1.2.13-2
+ansible 11.1.0-1
+apache-tools 2.4.62-2
+apparmor 4.0.3-1
+appimagelauncher 2.2.0-10
+arandr 0.1.11-3
+arch-wiki-docs 20241202-1
+artwork-i3 20190912-2
+asdf-vm 0.14.1-1
+atac 0.18.1-1
+atomicparsley 20240608.083822.1ed9031-1
+atool 0.39.0-9
+atuin 18.3.0-1
+auto-cpufreq 2.4.0-1
+autoconf 2.72-1
+autofs 5.1.9-5
+automake 1.17-1
+avahi 1:0.8+r194+g3f79789-2
+b43-fwcutter 019-5
+base 3-3
+base-devel 1-3
+bat 0.24.0-2
+beekeeper-studio-bin 4.6.8-1
+bind 9.20.4-1
+bison 3.8.2-8
+bitwarden 2024.11.2-1
+blender-benchmark 1:3.1.0-1
+blueman 2.4.3-1
+bluez-utils 5.79-1
+bmenu 0.26-1
+bmon 4.0-5
+borg 1.4.0-2
+bottom 0.10.2-1
+bridge-utils 1.7.1-2
+brn-git r31.454e213-1
+bruno-bin 1.35.0-1
+btop 1.4.0-4
+btrfs-progs 6.12-1
+bzip2 1.0.8-6
+cadaver 0.24-2
+calc 2.15.1.0-1
+calcurse 4.8.1-2
+calibre 7.17.0-5
+cantarell-fonts 1:0.303.1-2
+catdoc 0.95-6
+cheat 4.4.2-3
+chntpw 140201-5
+chromium 131.0.6778.139-1
+clipit 1:1.4.5+21+ge5fa64c-2
+clock-tui 0.5.0-2
+cmatrix 2.0-3
+cmus 2.12.0-1
+colorpicker 1.0.f5d441a-2
+composer 2.8.4-1
+conky 1.21.5-1
+conky-i3 20210907-1
+coreutils 9.5-2
+cowsay 3.8.4-1
+cpanminus 1.7047-2
+cpupower 6.12-1
+criu 4.0-1
+cronie 1.7.2-1
+cryptsetup 2.7.5-1
+ctop 0.7.7-3
+curlie 1.7.2-2
+cutecom 0.51.0-4
+debugedit 5.1-1
+deluge 1:2.1.1-6
+deno 2.0.5-1
+device-mapper 2.03.29-1
+dfc 3.1.1-4
+dhclient 4.4.3.P1-3
+dhcpcd 10.1.0-1
+diffutils 3.10-1
+digikam 8.5.0-1
+direnv 2.35.0-1
+discord 0.0.77-1
+dive 0.12.0-1
+dmg2img 1.6.7-5
+dmidecode 3.6-1
+dmraid 1.0.0.rc16.3-15
+dnsmasq 2.90-1
+docker 1:27.3.1-1
+docker-buildx 0.19.2-1
+docker-compose 2.31.0-1
+docker-scan 0.26.0-2
+dog 0.1.0-5
+dosfstools 4.2-5
+downgrade 11.4.2-1
+drawing 1.0.2-2
+ducker 0.2.2-1
+duf 0.8.1-3
+dunst 1.12.0-1
+dust 1.1.1-1
+e2fsprogs 1.47.1-4
+ecryptfs-utils 111-9
+efibootmgr 18-3
+endeavour 43.0-3
+entr 5.6-1
+eslint 9.16.0-1
+ethtool 1:6.9-1
+evince 46.3.1-2
+evolution 3.54.2-1
+exfatprogs 1.2.6-1
+expac 10-11
+f2fs-tools 1.16.0-3
+fd 10.2.0-1
+fdupes 1:2.3.2-1
+feh 3.10.3-1
+ffmpeg 2:7.1-3
+ffmpegthumbnailer 2.2.3-3
+ffnvcodec-headers 12.2.72.0-1
+firefox 133.0.3-2
+firefox-pwa-bin 2.13.1-1
+fish 3.7.1-2
+flac 1.4.3-2
+flameshot 12.1.0-5
+flex 2.6.4-5
+fpp 0.9.5-1
+freeze-bin 0.1.6-1
+fritzing 1.0.4-1
+fx 35.0.0-1
+galculator 2.1.4-10
+garcon 4.18.2-3
+gcalcli 4.5.1-1
+gcc 14.2.1+r134+gab884fffe3fc-1
+gcolor3 2.4.0-8
+gdu 5.29.0-1
+geary 1:46.0-2
+gfeeds 2.2.0-3
+gimp 2.10.38-5
+git 2.47.1-1
+git-delta 0.18.2-1
+git-lfs 3.6.0-1
+gitflow-cjs 2.2.1-1
+github-cli 2.63.2-1
+gitleaks 8.21.2-1
+glmark2 2023.01-2
+glow 2.0.0-1
+gnome-clocks 47.0-1
+gnome-disk-utility 46.1-1
+gnome-keyring 1:46.2-1
+gnome-pomodoro-git r1304.1e48d37-1
+gnuplot 6.0.1-1
+go 2:1.23.4-1
+go-task 3.40.0-1
+goaccess 1.9.3-1
+gobang-bin 0.1.0-1
+goreleaser 2.1.0-1
+gparted 1.6.0-2
+gpick 0.3-2
+gping 1.18.0-1
+gputest 0.7.0-1
+grafana 11.4.0-1
+grub 2:2.12-3
+grub-customizer-git r795.2ecdc4c-1
+grub-theme-manjaro 20.2-16
+gst-libav 1.24.10-1
+gst-plugins-bad 1.24.10-1
+gst-plugins-base 1.24.10-1
+gst-plugins-good 1.24.10-1
+gst-plugins-ugly 1.24.10-1
+gstreamer 1.24.10-1
+gtkmm 1:2.24.5-5
+gtksourceview-pkgbuild 5-3
+gtop 1.1.5-2
+gufw 24.04-2
+gum 0.14.5-1
+gvfs 1.56.1-1
+gvfs-afc 1.56.1-1
+gvfs-gphoto2 1.56.1-1
+gvfs-mtp 1.56.1-1
+gvfs-smb 1.56.1-1
+gxkb 0.9.6-1
+handbrake 1.8.2-1
+handbrake-cli 1.8.2-1
+haveged 1.9.19-1
+hl 0.29.9-1
+hplip 1:3.24.4-2
+htop 3.3.0-3
+httpie 3.2.3-1
+httpie-desktop-bin 2024.1.2-2
+hub 2.14.2-4
+hugo 0.139.4-1
+i3-help 20180110-2
+i3-resurrect 1.4.5-1
+i3-scripts 20220913-1
+i3-scrot 2.1-2
+i3-wm 4.24-1
+i3blocks 1.5-4
+i3exit 20201126-1
+i3lock-color 2.13.c.5-3
+i3status 2.15-1
+iftop 1.0pre4-6
+inetutils 2.5-1
+influx-cli 2.7.3-1
+influxdb 2.7.10-1
+inkscape 1.4-2
+intel-ucode 20241112-1
+inxi 3.3.36.1-2
+iperf 2.2.0-1
+iperf3 3.17.1-1
+ipp-usb 0.9.28-1
+jellyfin-mpv-shim 2.8.0-2
+jfsutils 1.1.15-9
+jftui 0.7.2-1
+jpegoptim 1.5.5-3
+jqp 0.7.0-1
+jupyter-notebook 7.3.1-1
+jwt-cli 6.2.0-1
+k9s 0.32.7-1
+kakoune 2024.05.18-2
+kanata 1.7.0-1
+kcolorchooser 24.08.3-1
+keepassxc 2.7.9-4
+kitty 0.37.0-1
+ko 0.15.1-1
+kompose 1.34.0-1
+konsole 24.08.3-1
+kubectl 1.31.3-1
+kvantum-manjaro 0.13.5+5+g0179d45-4
+lazydocker-bin 0.24.1-1
+lazygit 0.44.1-1
+lazynpm 0.1.4-1
+lazysql 0.2.9-1
+less 1:668-1
+lib32-flex 2.6.4-5
+lib32-libva-vdpau-driver 0.7.4-8
+lib32-mesa-utils 9.0.0-2
+lib32-nvidia-utils 550.135-1
+lib32-vulkan-intel 1:24.2.8-1
+lib32-vulkan-radeon 1:24.2.8-1
+libdiscid 0.6.4-3
+libdvdcss 1.4.3-2
+libgpod 0.8.3-16
+libguestfs 1.54.0-1
+libinput-gestures 2.78-1
+libreoffice-still 24.2.7-2
+libtool 2.5.4+r1+gbaa1fe41-1
+libva-vdpau-driver 0.7.4-7
+libxnvctrl 550.135-1.0
+lightdm-settings 2.0.6-1
+lightdm-slick-greeter 2.0.8-1
+linux-headers-meta 6.11-1
+linux-meta 6.11-1
+linux-nvidia-meta 6.11-1
+linux419-nvidia 550.135-2
+linux66 6.6.65-1
+linux66-headers 6.6.65-1
+linux66-nvidia 550.135-5
+logrotate 3.22.0-1
+lolcat 100.0.1-3
+lsd 1.1.5-1
+lshw B.02.20-1
+lua51 5.1.5-12
+luarocks 3.11.1-2
+lvm2 2.03.29-1
+lxappearance 0.6.3-5
+lxinput 0.3.5-4
+lxrandr 0.3.2-4
+lynx 2.9.2-1
+m4 1.4.19-3
+maia-console 1.2-7
+maim 5.8.0-2
+make 4.4.1-2
+man-db 2.13.0-1
+man-pages 6.9.1-1
+manjaro-alsa 20221002-1
+manjaro-application-utility 1.3.3-11
+manjaro-base-skel 20171029-4
+manjaro-browser-settings 20231111-1
+manjaro-hello 0.7.2-10
+manjaro-hotfixes 2024.1-2
+manjaro-i3-settings 20240224-1
+manjaro-printer 20240827-1
+manjaro-ranger-settings 20240626-1
+manjaro-release 24.2.1-1
+manjaro-settings-manager-notifier 0.5.7-22
+manjaro-system 20230401-1
+manjaro-zsh-config 0.26-1
+mdadm 4.3-2
+megacmd 1.7.0-8
+megasync 5.6.1-1
+memtest86+ 7.00-1
+memtest86+-efi 7.00-1
+mesa-utils 9.0.0-5
+mhwd 0.6.6-2
+mhwd-db 20241216-1
+minikube 1.34.0-2
+mkinitcpio-openswap 0.1.0-4
+mobile-broadband-provider-info 20240407-1
+modemmanager 1.22.0-1
+morc_menu 1.0+3+g2d89cb6-1
+most 5.2.0-2
+mousepad 0.6.3-2
+mpv 1:0.39.0-4
+mupdf 1.25.1-1
+mysql-workbench 8.0.40-4
+nano 8.2-1
+nano-syntax-highlighting 2022.11.02.r102.gbb94603-1
+ncdu 2.7-1
+ndpi 4.8-1
+neofetch 7.1.0-2
+neomutt 20241212-1
+neovim 0.10.2-2
+net-tools 2.10-3
+netctl 1.29-2
+nethogs 0.8.8-1
+netperf 2.7.0-6
+netstat-nat 1.4.10-5
+network-manager-applet 1.36.0-1
+networkmanager 1.50.0-1
+networkmanager-openconnect 1.2.10-2
+networkmanager-openvpn 1.12.0-1
+networkmanager-pptp 1.2.12-4
+networkmanager-vpnc 1.4.0-1
+newsboat 2.37-1
+newsflash 3.3.5-1
+nfs-utils 2.8.1-1
+ngrep 1.47-4
+ngrok 3.18.4-1
+nitrogen 1.6.1-6
+nmap 7.95-1
+nnn 5.0-1
+noto-fonts-emoji 1:2.047-1
+nss-mdns 0.15.1-2
+nsxiv 32-5
+ntfs-3g 2022.10.3-1
+ntopng 6.2-1
+ntp 4.2.8.p18-2
+numlockx 1.2-6
+nvidia-prime 1.0-5
+nvidia-settings 550.135-1.0
+nvidia-utils 550.135-2
+nvm 0.40.1-1
+nvme-cli 2.11-1
+nvtop 3.1.0-1
+obs-studio 31.0.0-1
+obsidian 1.7.7-1
+openbsd-netcat 1.226_1-3
+openresolv 3.13.2-2
+openshot 3.2.1-1
+openssh 9.9p1-2
+os-prober 1.81-1
+otree 0.3.0-1
+owncloud-client 5.3.1.14018-1
+p7zip 1:17.05-2
+pa-applet-git r19.3b4f8b3-8
+pacseek 1.8.3-2
+pacui 1.14+84+g8032578-1
+pamac-gtk 11.7.2-1
+pandoc-cli 3.1.11.1-9
+papirus-maia-icon-theme 20200702-1
+pass 1.7.4-5
+pass-import 3.5-2
+patch 2.7.6-10
+patchutils 0.4.2-3
+pavucontrol 1:6.1-1
+pcmanfm 1.3.2-1
+perl 5.40.0-1
+perl-anyevent-i3 0.19-1
+perl-file-mimeinfo 0.35-2
+php 8.3.14-1
+php-fpm 8.3.14-1
+php-sqlite 8.3.14-1
+pigz 2.8-2
+pipes.sh 1.3.0-1
+pkgconf 2.3.0-1
+plocate 1.1.23-1
+polkit-gnome 0.105-11
+polybar 3.7.2-2
+poppler-data 0.4.12-2
+postgresql 16.3-4
+postman-bin 11.21.0-1
+powertop 2.15-2
+procs 0.14.8-1
+prometheus 3.0.1-1
+prometheus-node-exporter 1.8.2-2
+pulseaudio 17.0+r43+g3e2bb8a1e-1
+pulseaudio-bluetooth 17.0+r43+g3e2bb8a1e-1
+pulseaudio-ctl 1.70-2
+pycharm-community-edition 2024.1.5-1
+pyenv 1:2.4.19-1
+python-httpie-jwt-auth 0.4.0-2
+python-hypothesis 6.118.7-1
+python-llfuse 1.5.0-2
+python-mutagen 1.47.0-2
+python-pip 24.3.1-1
+python-pipx 1.7.1-1
+python-pydantic 2.9.2-1
+python-pyqt5 5.15.11-1
+python-pystray 0.19.5-5
+python-setuptools-scm 8.1.0-1
+python-truststore 0.10.0-1
+qdirstat-bin 1.9-1
+qemu-full 9.1.2-1
+qt5ct 1.8-2
+qtcreator 15.0.0-1
+quran-companion 1.3.2-1
+qutebrowser 3.3.1-1
+ranger 1.9.4-1
+rclone 1.68.2-1
+rdesktop 1.9.0-2
+rdfind 1.6.0-4
+redshift 1.12-13
+reiserfsprogs 3.6.27-5
+restic 0.17.3-1
+rhythmbox 3.4.8-2
+ripgrep 14.1.1-1
+rmlint 2.10.2-2
+rofi 1.7.5-3
+rsync 3.3.0-2
+ruby-build 20241213-1
+rust-kanban 0.10.5-1
+rustlings 6.4.0-1
+rustup 1.27.1-1
+s-nail 14.9.24-2
+s-tui 1.1.6-2
+sad 0.4.31-1
+safeeyes 2.2.2-3
+sane-airscan 0.99.30-1
+sbxkb 0.7.6-7
+scrcpy 3.1-1
+screen 5.0.0-1
+screenfetch 3.9.9-1
+screenkey 1.5-4
+sd 1.0.0-1
+sddm 0.21.0-4
+sesh-bin 2.7.0-1
+simple-scan 46.0-2
+simplescreenrecorder 0.4.4-3
+sl 5.05-5
+slides 0.9.0-2
+smartmontools 7.4-2
+snapd 2.66.1-1
+sof-firmware 2024.09.2-1
+spectre-meltdown-checker 0.46-1
+speech-dispatcher 0.11.5-2
+speedtest-cli 2.1.3-8
+sqlc 1.27.0-1
+sqlitebrowser 3.12.2-4
+sshpass 1.10-2
+sshs 3.4.0-1
+starship 1.21.1-1
+stow 2.4.1-1
+subversion 1.14.4-1
+sudo 1.9.16.p2-1
+superproductivity-bin 11.0.0-1
+swtpm 0.10.0-1
+sxiv 26-2
+syncthing 1.28.1-1
+sysfsutils 2.1.1-2
+syslog-ng 4.8.1-3
+sysstat 12.7.6-1
+systemd 256.9-1
+tabiew 0.8.0-1
+tabview-git r229.a5b120d-1
+tailscale 1.78.1-1
+task 3.2.0-2
+taskwarrior-tui 0.26.3-1
+tcpdump 4.99.5-1
+tea 0.9.2-1
+telegram-desktop 5.9.0-1
+termdown 1.18.0-5
+terminus-font 4.49.1-7
+texinfo 7.1.1-1
+texlive-binextra 2024.2-3
+texlive-fontsextra 2024.2-3
+texlive-fontsrecommended 2024.2-3
+texlive-latexextra 2024.2-3
+texlive-latexrecommended 2024.2-3
+texlive-xetex 2024.2-3
+the_silver_searcher 2.2.0-3
+thunar 4.18.11-3
+thunar-volman 4.18.0-4
+thunderbird 128.5.1-1
+tidy 5.8.0-3
+timew 1.7.1-1
+tiv 2015-4
+tk 8.6.15-1
+tlrc-bin 1.9.3-1
+tmux 3.5_a-1
+todoman 4.5.0-1
+traceroute 2.1.6-1
+translate-shell 0.9.7.1-2
+transmission-cli 4.0.6-2
+trashy 2.0.0-1
+tree 2.1.3-1
+ts-node 10.9.2-1
+ttf-dejavu 2.37+18+g9b5d1b2f-7
+ttf-droid 20121017-11
+ttf-firacode-nerd 3.3.0-1
+ttf-font-awesome 6.7.1-1
+ttf-font-icons 1.1-3
+ttf-hack-nerd 3.3.0-1
+ttf-inconsolata 1:3.000-4
+ttf-indic-otf 0.2-12
+ttf-liberation 2.1.5-2
+ttf-meslo-nerd 3.3.0-1
+ttf-montserrat 7.222-2
+ttf-noto-emoji-monochrome 1.0.0-6
+ttf-poppins 4.003-1
+ttf-roboto 2.138-5
+ttf-ubuntu-nerd 3.3.0-1
+tumbler 4.18.2-3
+typst 1:0.12.0-2
+unarchiver 1.10.8-3
+unrar 1:7.1.2-1
+unzip 6.0-21
+upower 1.90.6-1
+urlview 1.d-1
+urxvt-resize-font-git 27.b593580-1
+usbutils 018-1
+vagrant 2.4.2-1
+veracrypt 1.26.15-1
+vi 1:070224-6
+vibrancy-icons-teal 2.7-2
+viewnior 1.8-5
+vim 9.1.0866-1
+virt-manager 4.1.0-3
+virt-viewer 11.0-3
+virtualbox 7.1.4-2
+visual-studio-code-bin 1.96.0-1
+vit 2.3.2-1
+vlc 3.0.21-9
+vnstat 2.12-3
+volumeicon 0.5.1-6
+vulkan-intel 1:24.2.8-1
+vulkan-radeon 1:24.2.8-1
+w3m 0.5.3.git20230713_1-1
+wallpapers-juhraya 1.1-3
+wget 1.25.0-1
+which 2.21-6
+whois 5.5.23-1
+wikiman 2.13.2-2
+wireless-regdb 2024.10.07-1
+wireshark-qt 4.4.2-3
+wmutils 1:1.7-1
+wpa_supplicant 2:2.11-2
+xarchiver 0.5.4.23-1
+xautolock 2.2-7
+xcape 1.2-5
+xclip 0.13-6
+xcursor-maia 20160417-2
+xdg-desktop-portal-gtk 1.15.1-2
+xdg-user-dirs 0.18-2
+xdg-utils 1.2.1-1
+xdotool 3.20211022.1-2
+xf86-input-elographics 1.4.4-1
+xf86-input-evdev 2.11.0-1
+xf86-input-libinput 1.5.0-1
+xf86-input-void 1.4.2-2
+xf86-video-amdgpu 23.0.0-2
+xf86-video-ati 1:22.0.0-2
+xf86-video-intel 1:2.99.917+923+gb74b67f0-2
+xf86-video-nouveau 1.0.18-1
+xfburn 0.7.2-3
+xfce4-appfinder 4.18.1-4
+xfce4-panel 4.18.6-3
+xfce4-power-manager 4.18.4-3
+xfce4-screenshooter 1.11.1-3
+xfce4-session 4.18.4-3
+xfce4-settings 4.18.6-4
+xfce4-terminal 1.1.3-3
+xfdesktop 4.18.1-4
+xfsprogs 6.12.0-1
+xfwm4 4.18.0-4
+xfwm4-themes 4.10.0-6
+xorg-server 21.1.14-1
+xorg-twm 1.0.12-2
+xorg-xcalc 1.1.2-2
+xorg-xev 1.2.6-1
+xorg-xhost 1.0.9-2
+xorg-xinit 1.4.2-2
+xorg-xinput 1.6.4-2
+xorg-xkill 1.0.6-2
+xorg-xprop 1.2.8-1
+xournalpp 1.2.5-1
+xsane 0.999-7
+xsel 1.2.1-2
+xterm 396-2
+yay 12.4.2-1
+yazi 0.3.3-1
+yt-dlp 2024.12.06-1
+ytfzf 2.6.2-1
+zaread-git r120.c2d45e1-1
+zathura 0.5.8-1
+zathura-pdf-mupdf 0.4.4-6
+zeal 0.7.2-1
+zen-browser-bin 1.0.2.b.2-1
+zensu 0.3-7
+zip 3.0-11
+zk 0.14.1-1
+zoxide 0.9.6-1
