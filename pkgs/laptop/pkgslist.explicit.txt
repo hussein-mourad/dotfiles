@@ -221,6 +221,7 @@ kanata
 kcolorchooser
 keepassxc
 kitty
+ko
 kompose
 konsole
 kubectl

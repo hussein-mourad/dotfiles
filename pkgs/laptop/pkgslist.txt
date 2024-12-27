@@ -814,6 +814,7 @@ knotifications
 knotifications5
 knotifyconfig
 knotifyconfig5
+ko
 kompose
 konsole
 kpackage
