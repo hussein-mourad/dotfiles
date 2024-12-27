@@ -41,9 +41,9 @@ alias lsl='ls -ahl | less'
 # cd
 alias cd..='cd ..' # Get rid of command not found
 alias ..='cd ..'
-alias ...='cd ../../../'
-alias ....='cd ../../../../'
-alias .....='cd ../../../../../'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias .....='cd ../../../..'
 alias .4='cd ../../../../'
 alias .5='cd ../../../../../'
 
