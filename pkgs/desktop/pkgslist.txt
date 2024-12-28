@@ -27,6 +27,7 @@ appstream 1.0.3-1
 apr 1.7.5-3
 apr-util 1.6.3-2
 arandr 0.1.11-3
+arch-wiki-docs 20241202-1
 archlinux-appstream-data 20240914-1
 archlinux-keyring 20241015-1
 arduino-cli 1.1.1-1
