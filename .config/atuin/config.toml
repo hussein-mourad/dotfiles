@@ -65,7 +65,7 @@ sync_address = "https://atuin.husseinm.duckdns.org"
 
 ## the maximum number of lines the interface should take up
 ## set it to 0 to always go full screen
-inline_height = 15
+inline_height = 20
 
 ## Invert the UI - put the search bar at the top , Default to `false`
 invert = false
@@ -104,6 +104,9 @@ invert = false
 #   "^innocuous-cmd .*--secret=.+",
 # ]
 
+history_filter = ["^cd", "^ls$", "^ll$", "^la$", "^ls -al", "^rm"]
+
+
 ## prevent commands run with cwd matching any of these regexes from being written
 ## to history. Note that these regular expressions are unanchored, i.e. if they don't
 ## start with ^ or end with $, they'll match anywhere in CWD.
@@ -132,7 +135,7 @@ invert = false
 ## 3. Slack oauth tokens (bot, user)
 ## 4. Slack webhooks
 ## 5. Stripe live/test keys
-# secrets_filter = true
+secrets_filter = true
 
 ## Defaults to true. If enabled, upon hitting enter Atuin will immediately execute the command. Press tab to return to the shell and edit.
 # This applies for new installs. Old installs will keep the old behaviour unless configured otherwise.
