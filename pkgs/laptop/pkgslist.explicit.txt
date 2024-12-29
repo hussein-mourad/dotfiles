@@ -112,6 +112,7 @@ evolution 3.54.2-1
 exfatprogs 1.2.6-1
 expac 10-11
 f2fs-tools 1.16.0-3
+fast 0.0.4-1
 fd 10.2.0-1
 fdupes 1:2.3.2-1
 feh 3.10.3-1

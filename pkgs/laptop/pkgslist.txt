@@ -254,6 +254,7 @@ f2fs-tools 1.16.0-3
 faac 1.30-5
 faad2 2.11.1-1
 fakeroot 1.36-1
+fast 0.0.4-1
 fd 10.2.0-1
 fdupes 1:2.3.2-1
 feh 3.10.3-1
