@@ -23,6 +23,7 @@ autoconf 2.72-1
 autofs 5.1.9-5
 automake 1.17-1
 avahi 1:0.8+r194+g3f79789-2
+aws-cli 1.35.2-1
 b43-fwcutter 019-5
 base 3-3
 base-devel 1-3
@@ -520,6 +521,7 @@ urlview 1.d-1
 urxvt-resize-font-git 27.b593580-1
 usbutils 018-1
 vagrant 2.4.2-1
+vault 1.18.2-1
 veracrypt 1.26.15-1
 vi 1:070224-6
 vibrancy-icons-teal 2.7-2
