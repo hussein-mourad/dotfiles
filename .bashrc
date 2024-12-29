@@ -188,3 +188,5 @@ export EDITOR='nvim'
 
 # Vi mode
 set -o vi
+
+#complete -C /usr/bin/terraform terraform

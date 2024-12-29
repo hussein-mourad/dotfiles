@@ -177,3 +177,6 @@ esac
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
 
+
+# autoload -U +X bashcompinit && bashcompinit
+# complete -o nospace -C /usr/bin/terraform terraform
