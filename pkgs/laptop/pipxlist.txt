@@ -1,3 +1,4 @@
+aws-shell 0.2.2
 harlequin 1.25.2
 organize-tool 3.2.5
 poetry 1.7.1
