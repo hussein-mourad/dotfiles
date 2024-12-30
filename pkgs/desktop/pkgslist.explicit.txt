@@ -196,6 +196,7 @@ memtest86+-efi 7.00-1
 mesa-utils 9.0.0-5
 mhwd 0.6.6-2
 mhwd-db 20241117-1
+minicom 2.9-2
 mkinitcpio-openswap 0.1.0-4
 mobile-broadband-provider-info 20240407-1
 moc 1:2.5.2-8
