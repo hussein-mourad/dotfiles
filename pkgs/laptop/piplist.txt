@@ -1,5 +1,10 @@
 Package                       Version
 ----------------------------- -------------------
+agate                         1.12.0
+agate-dbf                     0.2.3
+agate-excel                   0.4.1
+agate-sql                     0.7.2
+alabaster                     1.0.0
 annotated-types               0.7.0
 ansible                       11.1.0
 ansible-core                  2.17.3
@@ -53,6 +58,8 @@ crit                          4.0
 cryptography                  43.0.3
 css-parser                    1.0.10
 cssselect                     1.2.0
+csvkit                        2.0.1
+dbfread                       2.0.7
 dbus-python                   1.3.2
 debugpy                       1.8.1
 decorator                     5.1.1
@@ -82,6 +89,7 @@ fastjsonschema                2.20.0
 faust-cchardet                2.1.19
 feedparser                    6.0.11
 filelock                      3.16.1
+furo                          2024.8.6
 future                        1.0.0
 gcalcli                       4.5.1
 GeoIP                         1.3.2
@@ -111,6 +119,7 @@ i3ipc                         2.2.1
 icalendar                     5.0.13
 idna                          3.10
 ifaddr                        0.2.0
+imagesize                     1.4.1
 importlib_metadata            7.2.1
 incremental                   22.10.0
 inflate64                     1.0.0
@@ -119,6 +128,7 @@ iniconfig                     2.0.0
 installer                     0.7.0
 ipykernel                     6.29.5
 ipython                       8.29.0
+isodate                       0.6.1
 jaraco.classes                3.4.0
 jaraco.collections            5.0.1
 jaraco.context                5.3.0
@@ -142,6 +152,7 @@ jupyterlab_pygments           0.3.0
 jupyterlab_server             2.27.3
 keyring                       25.5.0
 lark                          1.2.2
+leather                       0.4.0
 lensfun                       0.3.4
 LibAppArmor                   4.0.3
 libfdt                        1.7.2
@@ -189,6 +200,7 @@ npyscreen                     4.10.5
 numpy                         2.2.0
 oauth2client                  4.1.3
 oauthlib                      3.2.2
+olefile                       0.47
 openpyxl                      3.1.5
 openshot-qt                   3.2.1
 ordered-set                   4.1.0
@@ -243,6 +255,7 @@ pydantic_core                 2.23.4
 pyfiglet                      1.0.2
 Pygments                      2.18.0
 PyGObject                     3.50.0
+PyICU                         2.12
 pyinotify                     0.9.6
 PyJWT                         2.8.0
 PyNaCl                        1.5.0
@@ -272,7 +285,9 @@ python-jose                   3.3.0
 python-json-logger            2.0.7
 python-magic                  0.4.27
 python-mpv-jsonipc            1.2.0
+python-slugify                8.0.4
 python-xlib                   0.33
+pytimeparse                   1.1.8
 pytz                          2024.2
 pyxdg                         0.28
 PyYAML                        6.0.2
@@ -316,9 +331,21 @@ shiboken6                     6.8.1
 shiboken6-generator           6.8.1
 six                           1.16.0
 sniffio                       1.3.1
+snowballstemmer               2.2.0
 sortedcontainers              2.4.0
 soupsieve                     2.6
 speedtest-cli                 2.1.3
+Sphinx                        8.1.3
+sphinx_basic_ng               1.0.0b2
+sphinx_rtd_theme              2.0.0
+sphinxcontrib-applehelp       2.0.0
+sphinxcontrib-devhelp         2.0.0
+sphinxcontrib-htmlhelp        2.1.0
+sphinxcontrib-jquery          4.1
+sphinxcontrib-jsmath          1.0.1
+sphinxcontrib-qthelp          2.0.0
+sphinxcontrib-serializinghtml 2.0.0
+SQLAlchemy                    2.0.36.dev0
 sqlparse                      0.5.0
 SSSDConfig                    2.10.0
 stack_data                    0.6.3
@@ -329,6 +356,7 @@ tailer                        0.4.1
 tasklib                       2.5.1
 TBB                           0.2
 termdown                      1.18.0
+text-unidecode                1.3
 texttable                     1.7.0
 tinycss2                      1.4.0
 todoman                       4.5.0
@@ -362,6 +390,7 @@ webencodings                  0.5.1
 websocket-client              1.8.0
 wheel                         0.45.0
 x_wr_timezone                 2.0.0
+xlrd                          2.0.1
 xmltodict                     0.13.0
 xxhash                        3.4.1
 yq                            3.4.3
