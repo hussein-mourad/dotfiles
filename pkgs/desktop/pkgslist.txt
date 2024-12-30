@@ -8,6 +8,7 @@ acpid 2.0.34-2
 ada 2.9.0-2
 adapta-maia-theme 3.94.0.149-3
 adobe-source-code-pro-fonts 2.042u+1.062i+1.026vf-2
+advancecomp 2.6-2
 adwaita-cursors 47.0-1
 adwaita-icon-theme 47.0-1
 adwaita-icon-theme-legacy 46.2-3
@@ -1016,6 +1017,7 @@ openssh 9.9p1-2
 openssl 3.4.0-1
 openucx 1.17.0-3
 openvpn 2.6.12-1
+optipng 0.7.8-1
 opus 1.5.2-1
 opusfile 0.12-4
 orc 0.4.40-1
@@ -1137,6 +1139,7 @@ pixman 0.44.0-1
 pkcs11-helper 1.30.0-1
 pkgconf 2.1.1-1
 plocate 1.1.23-1
+pngcrush 1.8.13-3
 pnpm 9.12.3-1
 polkit 125-1
 polkit-gnome 0.105-11
@@ -1510,6 +1513,7 @@ tree-sitter-markdown 0.3.1-1
 tree-sitter-query 0.4.0-1
 tree-sitter-vim 0.4.0-1
 tree-sitter-vimdoc 3.0.0-1
+trimage 1.0.6-2
 tslib 1.23-1
 ttf-bitstream-vera 1.10-16
 ttf-dejavu 2.37+18+g9b5d1b2f-7

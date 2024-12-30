@@ -140,6 +140,7 @@ tomli                  2.0.1
 tomlkit                0.13.2
 tqdm                   4.67.1
 tqdm                   4.67.1
+trimage                1.0.6
 trove-classifiers      2024.10.21.16
 Twisted                24.3.0
 typeguard              4.3.0
