@@ -1417,6 +1417,7 @@ sane-airscan 0.99.30-1
 sbc 2.0-2
 sbxkb 0.7.6-7
 sc 7.16-8
+sc-im 0.8.4-1
 screen 5.0.0-1
 screenfetch 3.9.1-4
 screenkey 1.5-4
