@@ -233,6 +233,7 @@ numlockx 1.2-6
 nvm 0.40.1-1
 nvme-cli 2.11-1
 obs-studio 30.2.3-1
+openoffice-bin 4.1.15-1
 openresolv 3.13.2-2
 openssh 9.9p1-2
 os-prober 1.81-1

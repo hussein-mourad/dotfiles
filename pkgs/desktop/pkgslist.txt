@@ -1238,6 +1238,7 @@ openexr 3.3.2-1
 openh264 2.5.0-1
 openjpeg2 2.5.2-1
 openmpi 5.0.5-2
+openoffice-bin 4.1.15-1
 openpmix 5.0.4-1
 openresolv 3.13.2-2
 openssh 9.9p1-2
