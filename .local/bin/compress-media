@@ -1,0 +1,88 @@
+#!/usr/bin/env python
+
+import argparse
+import os
+import subprocess
+
+from PIL import Image
+
+
+def compress_and_resize_image(input_path, output_path, quality=85, max_resolution=1080):
+    """Compress and resize an image using Pillow."""
+    try:
+        with Image.open(input_path) as img:
+            # Resize the image while maintaining aspect ratio
+            img.thumbnail((max_resolution, max_resolution))
+            img.save(output_path, optimize=True, quality=quality)
+            print(f"Compressed and resized image saved to: {output_path}")
+    except Exception as e:
+        print(f"Failed to process image {input_path}: {e}")
+
+
+def compress_video(input_path, output_path, use_gpu=False):
+    """Compress a video using ffmpeg, with optional GPU acceleration."""
+    try:
+        command = ["ffmpeg", "-i", input_path]
+
+        if use_gpu:
+            # Use GPU acceleration (NVIDIA NVENC as an example)
+            command = ["prime-run", "ffmpeg", "-i", input_path, "-vcodec", "h264_nvenc"]
+            # command = ["prime-run", "ffmpeg", "-i", input_path, "-vcodec", "h264_nvenc", "-b:v", "4k"]
+        else:
+            # Use CPU (libx264)
+            command.extend(["-vcodec", "libx264", "-crf", "28"])
+
+        command.append(output_path)
+
+        subprocess.run(command, check=True)
+        print(f"Compressed video saved to: {output_path}")
+    except Exception as e:
+        print(f"Failed to compress video {input_path}: {e}")
+
+
+def main(input_dir, use_gpu=False):
+    """Compress all videos and images in the input directory."""
+    compressed_dir = os.path.join(input_dir, "compressed")
+    os.makedirs(compressed_dir, exist_ok=True)
+
+    for root, _, files in os.walk(input_dir):
+        for file in files:
+            input_path = os.path.join(root, file)
+
+            if "compressed" in input_path:
+                continue  # Skip files in the "compressed" folder
+
+            if file.lower().endswith((".jpg", ".jpeg", ".png")):
+                # Compress and resize image
+                output_path = os.path.join(compressed_dir, f"compressed_{file}")
+                compress_and_resize_image(input_path, output_path)
+
+            elif file.lower().endswith((".mp4", ".mov", ".avi", ".mkv")):
+                # Compress video with optional GPU acceleration
+                output_path = os.path.join(compressed_dir, f"compressed_{file}")
+                compress_video(input_path, output_path, use_gpu)
+
+
+if __name__ == "__main__":
+    # Set up argument parser with short flags and help options
+    parser = argparse.ArgumentParser(
+        description="Compress and resize images and videos with optional GPU acceleration."
+    )
+    parser.add_argument(
+        "input_dir", help="Directory containing media files to compress.", type=str
+    )
+    parser.add_argument(
+        "-g",
+        "--use_gpu",
+        action="store_true",
+        help="Enable GPU acceleration for video compression (use NVENC for NVIDIA GPUs).",
+    )
+
+    # Parse arguments
+    args = parser.parse_args()
+
+    # Check if input directory is valid
+    if os.path.isdir(args.input_dir):
+        main(args.input_dir, args.use_gpu)
+    else:
+        print(f"Invalid directory path: {args.input_dir}")
