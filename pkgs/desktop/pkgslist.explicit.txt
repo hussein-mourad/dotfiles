@@ -207,6 +207,7 @@ mpv 1:0.39.0-3
 mupdf 1.24.11-1
 nano 8.2-1
 nano-syntax-highlighting 2022.11.02.r102.gbb94603-1
+nb 7.14.0-1
 ncdu 2.7-1
 ndpi 4.8-1
 neovim 0.10.2-2
@@ -240,6 +241,7 @@ p7zip 1:17.05-2
 pa-applet-git r19.3b4f8b3-8
 packer 1.11.2-1
 pamac-gtk 11.7.2-1
+pandoc-cli 3.1.11.1-9
 papirus-folders-catppuccin-git r30.f83671d1-2
 patch 2.7.6-10
 patchutils 0.4.2-3
@@ -315,6 +317,7 @@ terraform 1.10.0-1
 texinfo 7.1.1-1
 thunar 4.18.11-3
 tidy 5.8.0-3
+tig 2.5.10-1
 tlrc-bin 1.9.3-1
 tmux 3.5_a-1
 translate-shell 0.9.7.1-2
