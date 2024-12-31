@@ -1,88 +1,144 @@
-#!/usr/bin/env python
+#!/bin/bash
 
-import argparse
-import os
-import subprocess
+# Ensure ffmpeg and imagemagick are installed
+if ! command -v ffmpeg &>/dev/null; then
+  echo "Error: ffmpeg is not installed." >&2
+  exit 1
+fi
 
-from PIL import Image
+if ! command -v magick &>/dev/null; then
+  echo "Error: ImageMagick is not installed." >&2
+  exit 1
+fi
 
+if ! command -v exiftool &>/dev/null; then
+  echo "Error: exiftool is not installed." >&2
+  exit 1
+fi
 
-def compress_and_resize_image(input_path, output_path, quality=85, max_resolution=1080):
-    """Compress and resize an image using Pillow."""
-    try:
-        with Image.open(input_path) as img:
-            # Resize the image while maintaining aspect ratio
-            img.thumbnail((max_resolution, max_resolution))
-            img.save(output_path, optimize=True, quality=quality)
-            print(f"Compressed and resized image saved to: {output_path}")
-    except Exception as e:
-        print(f"Failed to process image {input_path}: {e}")
+if [[ ! -d "$1" ]]; then
+  echo "Error: $1 is not a directory"
+  exit 1
+fi
 
+SCRIPT_NAME=$(basename "$0")
 
-def compress_video(input_path, output_path, use_gpu=False):
-    """Compress a video using ffmpeg, with optional GPU acceleration."""
-    try:
-        command = ["ffmpeg", "-i", input_path]
+# Check for input directory
+if [ -z "$1" ]; then
+  echo "Usage: $SCRIPT_NAME [-g|--gpu] <directory>" >&2
+  exit 1
+fi
 
-        if use_gpu:
-            # Use GPU acceleration (NVIDIA NVENC as an example)
-            command = ["prime-run", "ffmpeg", "-i", input_path, "-vcodec", "h264_nvenc"]
-            # command = ["prime-run", "ffmpeg", "-i", input_path, "-vcodec", "h264_nvenc", "-b:v", "4k"]
-        else:
-            # Use CPU (libx264)
-            command.extend(["-vcodec", "libx264", "-crf", "28"])
+# Parse GPU option
+USE_GPU=false
+if [[ "$2" == "-g" || "$2" == "--gpu" ]]; then
+  USE_GPU=true
+  echo "GPU acceleration enabled for video compression."
+fi
 
-        command.append(output_path)
+# Variables
+INPUT_DIR="$1"
+OUTPUT_DIR="$INPUT_DIR/compressed"
 
-        subprocess.run(command, check=True)
-        print(f"Compressed video saved to: {output_path}")
-    except Exception as e:
-        print(f"Failed to compress video {input_path}: {e}")
+# Create output directory
+echo "Creating output directory: $OUTPUT_DIR"
+mkdir -p "$OUTPUT_DIR"
 
+# Stats variables
+video_count=0
+image_count=0
+skipped_count=0
 
-def main(input_dir, use_gpu=False):
-    """Compress all videos and images in the input directory."""
-    compressed_dir = os.path.join(input_dir, "compressed")
-    os.makedirs(compressed_dir, exist_ok=True)
+# Function to preserve file permissions and ownership
+preserve_permissions_and_ownership() {
+  local input_file="$1"
+  local output_file="$2"
 
-    for root, _, files in os.walk(input_dir):
-        for file in files:
-            input_path = os.path.join(root, file)
+  echo "Preserving permissions and ownership for: $output_file"
+  chmod --reference="$input_file" "$output_file"
+  chown --reference="$input_file" "$output_file"
+}
 
-            if "compressed" in input_path:
-                continue  # Skip files in the "compressed" folder
+# Function to compress videos
+compress_video() {
+  local input_file="$1"
+  local output_file="$2"
 
-            if file.lower().endswith((".jpg", ".jpeg", ".png")):
-                # Compress and resize image
-                output_path = os.path.join(compressed_dir, f"compressed_{file}")
-                compress_and_resize_image(input_path, output_path)
+  echo "Running ffmpeg on video: $input_file"
+  if [ "$USE_GPU" = true ]; then
+    # ffmpeg -i "$input_file" -vcodec h264_nvenc -crf 28 -preset fast -acodec aac "$output_file" -y
+    prime-run ffmpeg -i "$input_file" -vcodec h264_nvenc -acodec aac "$output_file" -y
+  else
+    ffmpeg -i "$input_file" -vcodec libx264 -crf 28 -preset fast -acodec aac "$output_file" -y
+  fi
 
-            elif file.lower().endswith((".mp4", ".mov", ".avi", ".mkv")):
-                # Compress video with optional GPU acceleration
-                output_path = os.path.join(compressed_dir, f"compressed_{file}")
-                compress_video(input_path, output_path, use_gpu)
+  echo "Copying metadata from $input_file to $output_file"
+  exiftool -overwrite_original -TagsFromFile "$input_file" "$output_file"
 
+  preserve_permissions_and_ownership "$input_file" "$output_file"
 
-if __name__ == "__main__":
-    # Set up argument parser with short flags and help options
-    parser = argparse.ArgumentParser(
-        description="Compress and resize images and videos with optional GPU acceleration."
-    )
-    parser.add_argument(
-        "input_dir", help="Directory containing media files to compress.", type=str
-    )
-    parser.add_argument(
-        "-g",
-        "--use_gpu",
-        action="store_true",
-        help="Enable GPU acceleration for video compression (use NVENC for NVIDIA GPUs).",
-    )
+  echo "Video compression complete: $output_file"
+  ((video_count++))
+}
 
-    # Parse arguments
-    args = parser.parse_args()
+# Function to compress images
+compress_image() {
+  local input_file="$1"
+  local output_file="$2"
 
-    # Check if input directory is valid
-    if os.path.isdir(args.input_dir):
-        main(args.input_dir, args.use_gpu)
-    else:
-        print(f"Invalid directory path: {args.input_dir}")
+  echo "Running ImageMagick on image: $input_file"
+  magick "$input_file" -resize "1920x1080>" -quality 100 "$output_file"
+  # magick "$input_file" -resize "1920x1080>" -quality 85 "$output_file"
+  # magick "$input_file" -resize "2160x1440>" -quality 100 "$output_file"
+
+  echo "Copying metadata from $input_file to $output_file"
+  exiftool -overwrite_original -TagsFromFile "$input_file" "$output_file"
+
+  preserve_permissions_and_ownership "$input_file" "$output_file"
+
+  echo "Image compression and resizing complete: $output_file"
+  ((image_count++))
+}
+
+# Compress media
+echo "Finding media files in: $INPUT_DIR"
+find "$INPUT_DIR" \( -iname '*.jpg' -o -iname '*.jpeg' -o -iname '*.png' -o -iname '*.mp4' -o -iname '*.mov' \) ! -path "$OUTPUT_DIR/*" -print | while read -r file; do
+  echo "Processing file: $file"
+  # Get relative path
+  relative_path="${file#"$INPUT_DIR"/}"
+
+  # Define output file path
+  output_file="$OUTPUT_DIR/$relative_path"
+
+  # Check if output file already exists, skip if it does
+  if [ -e "$output_file" ]; then
+    echo "Output file already exists: $output_file. Skipping..."
+    ((skipped_count++))
+    continue
+  fi
+
+  # Ensure directory structure exists
+  echo "Ensuring directory structure for: $output_file"
+  mkdir -p "$(dirname "$output_file")"
+
+  if [[ "$file" =~ \.(mp4|MP4|mov|MOV)$ ]]; then
+    echo "Compressing video: $file"
+    compress_video "$file" "$output_file"
+  elif [[ "$file" =~ \.(jpg|JPG|jpeg|JPEG|png|PNG)$ ]]; then
+    echo "Compressing image: $file"
+    compress_image "$file" "$output_file"
+  else
+    echo "Skipping unsupported file: $file"
+    ((skipped_count++))
+  fi
+
+done
+
+# Print stats
+echo "Compression complete. Compressed files are saved in: $OUTPUT_DIR"
+
+echo "Test"
+echo "Summary:"
+echo "  Videos compressed: $video_count"
+echo "  Images compressed: $image_count"
+echo "  Files skipped: $skipped_count"
