@@ -1031,6 +1031,7 @@ libxaw 1.0.16-1
 libxcb 1.17.0-1
 libxcomposite 0.4.6-2
 libxcrypt 4.4.36-2
+libxcrypt-compat 4.4.36-2
 libxcursor 1.2.3-1
 libxcvt 0.1.2-2
 libxdamage 1.1.6-2
