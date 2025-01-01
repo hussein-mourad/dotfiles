@@ -123,6 +123,7 @@ return {
   -- { import = "astrocommunity.code-runner.compiler-nvim" },
 
   { import = "astrocommunity.programming-language-support.rest-nvim" },
+  { import = "astrocommunity.programming-language-support.csv-vim" },
 
   -- { import = "astrocommunity.game.leetcode-nvim" },
   --
