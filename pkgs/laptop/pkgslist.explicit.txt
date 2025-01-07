@@ -533,7 +533,7 @@ vim 9.1.0866-1
 virt-manager 4.1.0-3
 virt-viewer 11.0-3
 virtualbox 7.1.4-2
-visual-studio-code-bin 1.96.0-1
+visual-studio-code-bin 1.96.2-1
 vit 2.3.2-1
 vlc 3.0.21-9
 vnstat 2.12-3

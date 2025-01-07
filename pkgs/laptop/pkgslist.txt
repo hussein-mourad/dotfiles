@@ -2385,7 +2385,7 @@ virt-manager 4.1.0-3
 virt-viewer 11.0-3
 virtiofsd 1.13.0-1
 virtualbox 7.1.4-2
-visual-studio-code-bin 1.96.0-1
+visual-studio-code-bin 1.96.2-1
 vit 2.3.2-1
 vlc 3.0.21-9
 vmaf 3.0.0-1
