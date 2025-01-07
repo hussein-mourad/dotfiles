@@ -83,7 +83,7 @@ dhcpcd 10.1.0-1
 diffutils 3.10-1
 digikam 8.5.0-1
 direnv 2.35.0-1
-discord 0.0.77-1
+discord 0.0.78-1
 dive 0.12.0-1
 dmg2img 1.6.7-5
 dmidecode 3.6-1
