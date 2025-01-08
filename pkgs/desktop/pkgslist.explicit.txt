@@ -55,6 +55,7 @@ device-mapper 2.03.28-1
 dfc 3.1.1-4
 dhclient 4.4.3.P1-3
 dhcpcd 10.1.0-1
+diff-so-fancy 1.4.4-2
 diffutils 3.10-1
 direnv 2.35.0-1
 dmidecode 3.6-1
