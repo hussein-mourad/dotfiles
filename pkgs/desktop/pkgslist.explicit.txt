@@ -191,6 +191,7 @@ manjaro-zsh-config 0.26-1
 mariadb-clients 11.6.2-2
 matcha-gtk-theme 20240501-1
 mdadm 4.3-2
+meld 3.22.2-3
 memtest86+ 7.00-1
 memtest86+-efi 7.00-1
 mesa-utils 9.0.0-5
