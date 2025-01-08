@@ -318,6 +318,7 @@ texinfo 7.1.1-1
 thunar 4.18.11-3
 tidy 5.8.0-3
 tig 2.5.10-1
+tk 8.6.15-1
 tlrc-bin 1.9.3-1
 tmux 3.5_a-1
 translate-shell 0.9.7.1-2
