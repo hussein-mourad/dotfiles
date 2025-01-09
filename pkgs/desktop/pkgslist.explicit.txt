@@ -43,6 +43,7 @@ cdrtools 3.02a09-6
 cheat-bin 4.4.2-1
 chromium 131.0.6778.85-1
 clipit 1:1.4.5+21+ge5fa64c-2
+cloc 2.02-1
 cmatrix 2.0-3
 coreutils 9.5-2
 cpupower 6.10-2
