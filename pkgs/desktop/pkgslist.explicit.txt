@@ -319,6 +319,7 @@ terminus-font 4.49.1-7
 terraform 1.10.0-1
 texinfo 7.1.1-1
 thunar 4.18.11-3
+thunderbird 128.5.2-0.1
 tidy 5.8.0-3
 tig 2.5.10-1
 tk 8.6.15-1

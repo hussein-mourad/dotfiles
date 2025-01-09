@@ -71,6 +71,7 @@ bluez-utils 5.79-1
 bmenu 0.26-1
 boost-libs 1.86.0-3
 botan 3.6.1-1
+botan2 2.19.5-1
 bottom 0.10.2-1
 box2d 3.0.0-1
 breeze-icons 6.8.0-1
@@ -1731,6 +1732,7 @@ tevent 1:0.16.1-3
 texinfo 7.1.1-1
 thin-provisioning-tools 1.1.0-1
 thunar 4.18.11-3
+thunderbird 128.5.2-0.1
 tidy 5.8.0-3
 tig 2.5.10-1
 tinysparql 3.8.1-1
