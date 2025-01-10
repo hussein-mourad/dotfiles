@@ -157,6 +157,7 @@ diff-so-fancy 1.4.4-2
 diffutils 3.10-1
 ding-libs 0.6.2-2
 direnv 2.35.0-1
+discord 0.0.79-1
 dmenu-manjaro 5.0-2
 dmidecode 3.6-1
 dmraid 1.0.0.rc16.3-15
