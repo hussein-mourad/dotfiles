@@ -214,6 +214,7 @@ nano-syntax-highlighting 2022.11.02.r102.gbb94603-1
 nb 7.14.0-1
 ncdu 2.7-1
 ndpi 4.8-1
+neomutt 20241212-1
 neovim 0.10.2-2
 netctl 1.29-2
 netperf 2.7.0-6
