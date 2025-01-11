@@ -298,7 +298,6 @@ sc-im 0.8.4-1
 screen 5.0.0-1
 screenfetch 3.9.1-4
 screenkey 1.5-4
-sesh-bin 2.7.0-1
 simple-scan 46.0-2
 smartmontools 7.4-2
 snapd 2.66.1-1
