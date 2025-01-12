@@ -299,6 +299,7 @@ screen 5.0.0-1
 screenfetch 3.9.1-4
 screenkey 1.5-4
 simple-scan 46.0-2
+simplescreenrecorder 0.4.4-3
 smartmontools 7.4-2
 snapd 2.66.1-1
 sof-firmware 2024.09.1-1
