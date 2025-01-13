@@ -206,6 +206,8 @@ fftw 3.3.10-7
 file 5.45-1
 filesystem 2024.11.25-2
 findutils 4.10.0-2
+firefox 134.0-1
+firefox-developer-edition 134.0b9-1
 flac 1.4.3-2
 flameshot 12.1.0-5
 flex 2.6.4-5
