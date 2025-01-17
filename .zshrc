@@ -161,6 +161,8 @@ eval "$(direnv hook zsh)"
 # eval "$(atuin init zsh --disable-up-arrow)"
 eval "$(atuin init zsh)"
 
+eval "$(uv generate-shell-completion zsh)"
+
 . /opt/asdf-vm/asdf.sh
 
 # ---------- PATH & PROGRAM SETTINGS ----------
