@@ -405,6 +405,6 @@ yq 3.4.3-1
 yt-dlp 2024.11.18-1
 zathura 0.5.8-1
 zathura-pdf-mupdf 0.4.4-5
-zen-browser-bin 1.0.1.a.22-1
+zen-browser-bin 1.7b-1
 zensu 0.3-7
 zoxide 0.9.6-1
