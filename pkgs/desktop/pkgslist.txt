@@ -1668,6 +1668,7 @@ rust 1:1.82.0-2
 rxvt-unicode 9.31-6
 rxvt-unicode-terminfo 9.31-6
 s-nail 14.9.24-2
+samba 2:4.21.2-1
 sane 1.3.1-1
 sane-airscan 0.99.30-1
 sassc 3.6.2-5

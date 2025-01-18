@@ -293,6 +293,7 @@ ripgrep 14.1.1-1
 rofi 1.7.5-3
 rsync 3.3.0-2
 s-nail 14.9.24-2
+samba 2:4.21.2-1
 sane-airscan 0.99.30-1
 sbxkb 0.7.6-7
 sc 7.16-8
