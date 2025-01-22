@@ -364,6 +364,7 @@ vulkan-intel 1:24.2.7-1
 vulkan-radeon 1:24.2.7-1
 w3m 0.5.3.git20230713_1-1
 wallpapers-juhraya 1.1-3
+web-ext 8.3.0-1
 wget 1.25.0-1
 which 2.21-6
 whois 5.5.23-1
