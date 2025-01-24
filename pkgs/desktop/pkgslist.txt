@@ -1396,7 +1396,7 @@ pkcs11-helper 1.30.0-1
 pkgconf 2.1.1-1
 plocate 1.1.23-1
 pngcrush 1.8.13-3
-pnpm 9.12.3-1
+pnpm 9.14.4-1
 polkit 125-1
 polkit-gnome 0.105-11
 polkit-qt5 0.200.0-1

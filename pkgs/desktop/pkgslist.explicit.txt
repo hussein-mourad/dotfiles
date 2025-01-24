@@ -264,7 +264,7 @@ pipewire-jack 1:1.2.7-1
 pipewire-pulse 1:1.2.7-1
 pkgconf 2.1.1-1
 plocate 1.1.23-1
-pnpm 9.12.3-1
+pnpm 9.14.4-1
 polkit-gnome 0.105-11
 poppler-data 0.4.12-2
 powertop 2.15-2
