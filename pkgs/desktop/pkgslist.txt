@@ -1845,6 +1845,7 @@ vulkan-headers 1:1.3.295-1
 vulkan-icd-loader 1.3.295-1
 vulkan-intel 1:24.2.7-1
 vulkan-radeon 1:24.2.7-1
+vulkan-tools 1.4.303-2
 w3m 0.5.3.git20230713_1-1
 wallpapers-juhraya 1.1-3
 wavpack 5.7.0-1
@@ -1942,6 +1943,7 @@ yt-dlp 2024.11.18-1
 zathura 0.5.8-1
 zathura-pdf-mupdf 0.4.4-5
 zbar 0.23.93-3
+zed 0.165.4-2
 zen-browser-bin 1.7b-1
 zensu 0.3-7
 zeromq 4.3.5-2
