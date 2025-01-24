@@ -376,6 +376,7 @@ xarchiver 0.5.4.23-1
 xautolock 2.2-7
 xcursor-maia 20160417-2
 xdg-desktop-portal 1.18.4-2
+xdg-desktop-portal-gtk 1.15.1-2
 xdg-user-dirs 0.18-2
 xdg-utils 1.2.1-1
 xdotool 3.20211022.1-2
