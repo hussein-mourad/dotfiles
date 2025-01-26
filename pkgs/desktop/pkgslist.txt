@@ -607,8 +607,11 @@ iso-codes 4.17.0-1
 iw 6.9-1
 jansson 2.14-4
 jasper 4.2.4-2
+java-environment-common 3-5
+java-runtime-common 3-5
 jbig2dec 0.20-1
 jbigkit 2.1-8
+jdk-openjdk 23.0.1.u0-1
 jemalloc 1:5.3.0-4
 jfsutils 1.1.15-9
 jpegoptim 1.5.5-3
