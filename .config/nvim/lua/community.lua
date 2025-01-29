@@ -70,9 +70,11 @@ return {
   { import = "astrocommunity.editing-support.suda-vim" }, -- sudo support
   { import = "astrocommunity.editing-support.text-case-nvim" }, -- sudo support
   { import = "astrocommunity.editing-support.nvim-treesitter-context" }, -- sticks current function signature at the top of the page
+  { import = "astrocommunity.editing-support.nvim-regexplainer" }, -- explain regex
 
   -- motion
   { import = "astrocommunity.motion.mini-surround" },
+  { import = "astrocommunity.motion.marks-nvim" },
 
   -- scrolling --
   -- Smooth scrolling for window movement commands (mappings optional): <C-u>, <C-d>, <C-b>, <C-f>, <C-y>, <C-e>, zt, zz, zb.
@@ -95,6 +97,9 @@ return {
   { import = "astrocommunity.completion.cmp-git" },
   { import = "astrocommunity.completion.cmp-nerdfont" },
   { import = "astrocommunity.completion.cmp-spell" },
+  -- { import = "astrocommunity.completion.copilot-lua" },
+  -- { import = "astrocommunity.completion.copilot-cmp" },
+  -- { import = "astrocommunity.completion.copilot-lua-cmp" },
 
   -- utility
   { import = "astrocommunity.utility.nvim-toggler" },
@@ -122,7 +127,7 @@ return {
   { import = "astrocommunity.code-runner.overseer-nvim" },
   -- { import = "astrocommunity.code-runner.compiler-nvim" },
 
-  { import = "astrocommunity.programming-language-support.rest-nvim" },
+  -- { import = "astrocommunity.programming-language-support.rest-nvim" },
   { import = "astrocommunity.programming-language-support.csv-vim" },
 
   -- { import = "astrocommunity.game.leetcode-nvim" },
