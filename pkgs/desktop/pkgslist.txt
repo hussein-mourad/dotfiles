@@ -1840,6 +1840,7 @@ virtiofsd 1.13.0-1
 visual-studio-code-bin 1.95.3-1
 vlc 3.0.21-9
 vmaf 3.0.0-1
+vnstat 2.12-3
 volume_key 0.3.12-9
 volumeicon 0.5.1-6
 vpnc 1:0.5.3.r539.r239-1
