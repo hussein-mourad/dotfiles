@@ -1710,6 +1710,7 @@ smartmontools 7.4-2
 smbclient 2:4.21.2-1
 snapd 2.66.1-1
 snappy 1.2.1-2
+sniffnet 1.3.1-1
 sof-firmware 2024.09.1-1
 solid 6.8.0-1
 sonnet 6.8.0-1
@@ -1958,6 +1959,7 @@ zathura-pdf-mupdf 0.4.4-5
 zbar 0.23.93-3
 zed 0.165.4-2
 zen-browser-bin 1.7b-1
+zenity 4.0.3-1
 zensu 0.3-7
 zeromq 4.3.5-2
 zig 0.13.0-1
