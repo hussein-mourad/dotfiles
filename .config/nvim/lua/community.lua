@@ -71,6 +71,7 @@ return {
   { import = "astrocommunity.editing-support.text-case-nvim" }, -- sudo support
   { import = "astrocommunity.editing-support.nvim-treesitter-context" }, -- sticks current function signature at the top of the page
   { import = "astrocommunity.editing-support.nvim-regexplainer" }, -- explain regex
+  -- { import = "astrocommunity.editing-support.copilotchat-nvim" }, -- copilot chat
 
   -- motion
   { import = "astrocommunity.motion.mini-surround" },
