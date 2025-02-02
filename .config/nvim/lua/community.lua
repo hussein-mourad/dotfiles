@@ -98,8 +98,9 @@ return {
   { import = "astrocommunity.completion.cmp-nerdfont" },
   { import = "astrocommunity.completion.cmp-spell" },
   -- { import = "astrocommunity.completion.copilot-lua" },
-  -- { import = "astrocommunity.completion.copilot-cmp" },
+  -- { import = "astrocommunity.completion.copilot-cmp" }, -- copilot
   -- { import = "astrocommunity.completion.copilot-lua-cmp" },
+  { import = "astrocommunity.completion.supermaven-nvim" },
 
   -- utility
   { import = "astrocommunity.utility.nvim-toggler" },
