@@ -31,7 +31,7 @@ return {
   -- { import = "astrocommunity.pack.laravel" },
   { import = "astrocommunity.pack.prisma" },
   { import = "astrocommunity.pack.templ" },
-  { import = "astrocommunity.pack.vue" },
+  -- { import = "astrocommunity.pack.vue" },
   -- { import = "astrocommunity.pack.sql" },
 
   -- devops
@@ -53,8 +53,8 @@ return {
   { import = "astrocommunity.markdown-and-latex.glow-nvim" },
   { import = "astrocommunity.markdown-and-latex.vimtex" },
 
-  { import = "astrocommunity.editing-support.zen-mode-nvim" },
-  { import = "astrocommunity.editing-support.true-zen-nvim" },
+  -- { import = "astrocommunity.editing-support.zen-mode-nvim" },
+  -- { import = "astrocommunity.editing-support.true-zen-nvim" },
   { import = "astrocommunity.editing-support.todo-comments-nvim" },
   { import = "astrocommunity.editing-support.undotree" },
   { import = "astrocommunity.editing-support.telescope-undo-nvim" },
