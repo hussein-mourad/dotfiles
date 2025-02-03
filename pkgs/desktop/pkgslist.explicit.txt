@@ -93,6 +93,7 @@ fx 35.0.0-1
 gcc 14.2.1+r134+gab884fffe3fc-1
 gcolor3 2.4.0-8
 gdu 5.29.0-1
+ghostty-git 1.1.0.r31.gf0d2760-1
 gimp 2.10.38-5
 git 2.47.1-1
 git-delta 0.18.2-1

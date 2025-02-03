@@ -249,6 +249,7 @@ geoip-database 20241116-1
 gettext 0.22.5-2
 ghc-libs 9.2.8-1
 ghostscript 10.04.0-1
+ghostty-git 1.1.0.r31.gf0d2760-1
 giflib 5.2.2-1
 gimp 2.10.38-5
 girara 0.4.4-1
