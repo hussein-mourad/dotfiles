@@ -1,6 +1,7 @@
 accountsservice 23.13.9-2
 acpi 1.7-4
 acpid 2.0.34-2
+alarm-clock-applet 1:0.4.1-4
 alsa-firmware 1.2.4-4
 alsa-plugins 1:1.2.12-4
 alsa-tools 1.2.11-1

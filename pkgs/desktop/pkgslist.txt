@@ -12,6 +12,7 @@ advancecomp 2.6-2
 adwaita-cursors 47.0-1
 adwaita-icon-theme 47.0-1
 adwaita-icon-theme-legacy 46.2-3
+alarm-clock-applet 1:0.4.1-4
 alsa-card-profiles 1:1.2.7-1
 alsa-firmware 1.2.4-4
 alsa-lib 1.2.13-1
