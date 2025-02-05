@@ -46,6 +46,7 @@ cheat-bin 4.4.2-1
 chromium 132.0.6834.159-1
 clipit 1:1.4.5+21+ge5fa64c-2
 cloc 2.02-1
+clock-tui 0.5.0-2
 cmatrix 2.0-3
 coreutils 9.5-2
 cpupower 6.10-2
@@ -102,6 +103,7 @@ git-lfs 3.5.1-1
 gitflow-cjs 2.2.1-1
 github-cli 2.62.0-1
 glow 2.0.0-1
+gnome-clocks 47.0-1
 gnome-keyring 1:46.2-1
 go 2:1.23.3-1
 google-chrome 132.0.6834.159-1

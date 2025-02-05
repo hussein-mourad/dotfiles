@@ -112,6 +112,7 @@ ckbcomp 1.227-1
 clang 18.1.8-4
 clipit 1:1.4.5+21+ge5fa64c-2
 cloc 2.02-1
+clock-tui 0.5.0-2
 clucene 2.3.3.4-15
 clutter 1.26.4-3
 clutter-gtk 1.8.4-4
@@ -244,6 +245,9 @@ gdk-pixbuf-xlib 2.40.2-3
 gdk-pixbuf2 2.42.12-2
 gdu 5.29.0-1
 gegl 0.4.50-3
+geoclue 2.7.2-1
+geocode-glib-2 3.26.4-4
+geocode-glib-common 3.26.4-4
 geoip 1.6.12-3
 geoip-database 20241116-1
 gettext 0.22.5-2
@@ -271,6 +275,9 @@ glu 9.0.3-2
 glusterfs 1:11.1-2
 gmime3 3.2.15-1
 gmp 6.3.0-2
+gnome-clocks 47.0-1
+gnome-desktop-4 1:44.1-1
+gnome-desktop-common 1:44.1-1
 gnome-keyring 1:46.2-1
 gnupg 2.4.6-1
 gnutls 3.8.8-1
@@ -848,6 +855,7 @@ libgpod 0.8.3-16
 libgtop 2.41.3-2
 libgudev 238-1
 libgusb 0.4.9-1
+libgweather-4 4.4.4-1
 libhandy 1.8.3-2
 libheif 1.19.5-1
 libhubbub 0.3.8-1
