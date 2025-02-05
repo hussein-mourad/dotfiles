@@ -603,7 +603,7 @@ zaread-git r120.c2d45e1-1
 zathura 0.5.8-1
 zathura-pdf-mupdf 0.4.4-6
 zeal 0.7.2-1
-zen-browser-bin 1.0.2.b.5-1
+zen-browser-bin 1.7.4b-1
 zensu 0.3-7
 zip 3.0-11
 zk 0.14.1-1

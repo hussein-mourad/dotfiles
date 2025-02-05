@@ -2523,7 +2523,7 @@ zathura 0.5.8-1
 zathura-pdf-mupdf 0.4.4-6
 zbar 0.23.93-3
 zeal 0.7.2-1
-zen-browser-bin 1.0.2.b.5-1
+zen-browser-bin 1.7.4b-1
 zenity 4.0.3-1
 zensu 0.3-7
 zeromq 4.3.5-2
