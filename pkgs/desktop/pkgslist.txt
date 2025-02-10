@@ -1200,6 +1200,7 @@ modemmanager 1.22.0-1
 modest 0.0.6.d021b90-3
 mold 2.34.1-1
 mongo-c-driver 1.29.0-1
+mongosh-bin 2.3.9-1
 morc_menu 1.0+3+g2d89cb6-1
 mousepad 0.6.3-2
 mpdecimal 4.0.0-2
