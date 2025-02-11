@@ -13,7 +13,7 @@ arandr 0.1.11-3
 arch-wiki-docs 20241202-1
 arduino-cli 1.1.1-1
 artwork-i3 20190912-2
-asdf-vm 0.14.1-1
+asdf-vm 0.16.2-1
 atomicparsley 20240608.083822.1ed9031-1
 atools 20.2.2-4
 atuin 18.3.0-1
@@ -37,7 +37,7 @@ bmenu 0.26-1
 bottom 0.10.2-1
 brn-git r31.454e213-1
 broot 1.44.2-1
-bruno-bin 1.35.0-1
+bruno-bin 1.38.1-1
 btrfs-progs 6.11-1
 bzip2 1.0.8-6
 cantarell-fonts 1:0.303.1-2
@@ -253,6 +253,7 @@ obs-studio 30.2.3-1
 openresolv 3.13.2-2
 openssh 9.9p1-2
 os-prober 1.81-1
+otree 0.3.1-1
 p7zip 1:17.05-2
 pa-applet-git r19.3b4f8b3-8
 packer 1.11.2-1

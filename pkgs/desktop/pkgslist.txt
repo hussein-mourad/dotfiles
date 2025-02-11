@@ -37,7 +37,7 @@ arduino-cli 1.1.1-1
 argon2 20190702-6
 aribb24 1.0.3-4
 artwork-i3 20190912-2
-asdf-vm 0.14.1-1
+asdf-vm 0.16.2-1
 at-spi2-core 2.54.0-2
 atkmm 2.28.4-1
 atomicparsley 20240608.083822.1ed9031-1
@@ -83,7 +83,7 @@ brltty 6.7-1
 brn-git r31.454e213-1
 broot 1.44.2-1
 brotli 1.1.0-2
-bruno-bin 1.35.0-1
+bruno-bin 1.38.1-1
 btop 1.4.0-4
 btrfs-progs 6.11-1
 bubblewrap 0.11.0-1
@@ -1288,6 +1288,7 @@ opusfile 0.12-4
 orc 0.4.40-1
 os-prober 1.81-1
 osinfo-db 20240701-1
+otree 0.3.1-1
 p11-kit 0.25.5-1
 p7zip 1:17.05-2
 pa-applet-git r19.3b4f8b3-8
