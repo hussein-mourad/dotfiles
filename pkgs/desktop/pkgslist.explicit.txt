@@ -253,7 +253,6 @@ obs-studio 30.2.3-1
 openresolv 3.13.2-2
 openssh 9.9p1-2
 os-prober 1.81-1
-otree 0.3.0-1
 p7zip 1:17.05-2
 pa-applet-git r19.3b4f8b3-8
 packer 1.11.2-1

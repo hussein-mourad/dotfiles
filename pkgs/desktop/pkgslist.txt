@@ -1288,7 +1288,6 @@ opusfile 0.12-4
 orc 0.4.40-1
 os-prober 1.81-1
 osinfo-db 20240701-1
-otree 0.3.0-1
 p11-kit 0.25.5-1
 p7zip 1:17.05-2
 pa-applet-git r19.3b4f8b3-8
