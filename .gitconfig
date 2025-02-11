@@ -1,6 +1,7 @@
 [user]
 	email = 38833034+Hussein-Mourad@users.noreply.github.com
 	name = hussein-mourad
+	signingkey = ~/.ssh/id_ed25519_git_signkey.pub
 
 [credential "https://github.com"]
 	helper = 
@@ -45,3 +46,10 @@
 	required = true
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
+
+[gpg]
+	format = ssh
+[commit]
+	gpgSign = true
+[tag]
+	gpgSign = true
