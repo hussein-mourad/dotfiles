@@ -202,3 +202,4 @@ alias dcls="docker compose ls"
 alias dcstats="docker compose stats"
 alias zen="zen-browser"
 alias zed="zeditor"
+alias bw_unlock='export BW_SESSION=$(bw unlock --raw "$(gpg -d ~/.pass.gpg 2&>/dev/null)")'
