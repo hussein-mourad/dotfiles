@@ -4,7 +4,7 @@
 
 (defcfg
   process-unmapped-keys yes
-  linux-x11-repeat-delay-rate 300,40
+  linux-x11-repeat-delay-rate 250,40
 )
 
 (defsrc
