@@ -182,3 +182,22 @@ typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
 
 # autoload -U +X bashcompinit && bashcompinit
 # complete -o nospace -C /usr/bin/terraform terraform
+#
+
+# [ -f /opt/miniconda3/etc/profile.d/conda.sh ] && source /opt/miniconda3/etc/profile.d/conda.sh
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/hussein/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/hussein/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/hussein/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/hussein/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
