@@ -218,7 +218,7 @@ mongosh-bin 2.3.9-1
 morc_menu 1.0+3+g2d89cb6-1
 mousepad 0.6.3-2
 mpv 1:0.39.0-3
-mupdf 1.24.11-1
+mupdf 1.25.2-1
 mupdf-tools 1.25.2-1
 nano 8.2-1
 nano-syntax-highlighting 2022.11.02.r102.gbb94603-1
@@ -419,7 +419,7 @@ yazi 0.3.3-1
 yq 3.4.3-1
 yt-dlp 2024.11.18-1
 zathura 0.5.8-1
-zathura-pdf-mupdf 0.4.4-5
+zathura-pdf-mupdf 0.4.4-10
 zed 0.165.4-2
 zen-browser-bin 1.7.6b-1
 zensu 0.3-7
