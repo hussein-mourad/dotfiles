@@ -214,6 +214,7 @@ mkinitcpio-openswap 0.1.0-4
 mobile-broadband-provider-info 20240407-1
 moc 1:2.5.2-8
 modemmanager 1.22.0-1
+mongodb-compass 1.45.3-1
 mongosh-bin 2.3.9-1
 morc_menu 1.0+3+g2d89cb6-1
 mousepad 0.6.3-2
