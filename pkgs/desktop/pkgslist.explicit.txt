@@ -223,6 +223,7 @@ mupdf 1.25.2-1
 mupdf-tools 1.25.2-1
 nano 8.2-1
 nano-syntax-highlighting 2022.11.02.r102.gbb94603-1
+nautilus 47.2-1
 nb 7.14.0-1
 ncdu 2.7-1
 ndpi 4.12-1

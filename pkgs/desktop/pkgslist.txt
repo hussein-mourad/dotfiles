@@ -192,6 +192,7 @@ electron32 32.2.5-1
 elinks 0.17.1.1-1
 enchant 2.8.2-1
 ethtool 1:6.9-1
+exempi 2.6.5-1
 exfatprogs 1.2.6-1
 exiv2 0.28.3-1
 exo 4.18.0-4
@@ -276,6 +277,7 @@ glu 9.0.3-2
 glusterfs 1:11.1-2
 gmime3 3.2.15-1
 gmp 6.3.0-2
+gnome-autoar 0.4.5-1
 gnome-clocks 47.0-1
 gnome-desktop-4 1:44.1-1
 gnome-desktop-common 1:44.1-1
@@ -799,6 +801,7 @@ libcmis 0.6.2-2
 libcolord 1.4.7-2
 libconfig 1.7.3-3
 libcss 0.9.2-1
+libcue 2.3.0-1
 libcups 2:2.4.11-1
 libcupsfilters 2.1.0-1
 libdaemon 0.14-6
@@ -854,10 +857,12 @@ libgovirt 2:0.3.9-2
 libgpg-error 1.51-1
 libgphoto2 2.5.31-3
 libgpod 0.8.3-16
+libgsf 1.14.53-1
 libgtop 2.41.3-2
 libgudev 238-1
 libgusb 0.4.9-1
 libgweather-4 4.4.4-1
+libgxps 0.3.2-5
 libhandy 1.8.3-2
 libheif 1.19.5-1
 libhubbub 0.3.8-1
@@ -875,6 +880,7 @@ libimobiledevice-glue 1.3.1-1
 libinih 58-1
 libinput 1.27.0-1
 libinstpatch 1.1.6-3
+libiptcdata 1.0.5-4
 libiscsi 1.20.0-2
 libisl 0.27-1
 libisoburn 1.5.6-1
@@ -918,6 +924,7 @@ libmupdf 1.25.2-1
 libmwaw 0.3.22-3
 libmypaint 1.6.1-2
 libmysofa 1.3.3-1
+libnautilus-extension 47.2-1
 libnbd 1.20.3-1
 libndp 1.9-1
 libnet 2:1.3-1
@@ -962,6 +969,7 @@ libplist 2.6.0-1
 libpng 1.6.44-1
 libportal 0.8.1-1
 libportal-gtk3 0.8.1-1
+libportal-gtk4 0.9.0-1
 libppd 2.1.0-1
 libproxy 0.5.9-1
 libpsl 0.21.5-2
@@ -1119,6 +1127,7 @@ llvm 18.1.8-4
 llvm-libs 18.1.8-4
 lm_sensors 1:3.6.0.r41.g31d1f125-3
 lmdb 0.9.33-1
+localsearch 3.8.2-1
 localsend-bin 1.16.1-1
 logrotate 3.22.0-1
 lpsolve 5.5.2.11-3
@@ -1217,6 +1226,7 @@ mupdf-tools 1.25.2-1
 mypaint-brushes1 1.3.1-2
 nano 8.2-1
 nano-syntax-highlighting 2022.11.02.r102.gbb94603-1
+nautilus 47.2-1
 nb 7.14.0-1
 ncdu 2.7-1
 ncurses 6.5-3
@@ -1795,6 +1805,7 @@ tinyxml2 10.0.0-1
 tk 8.6.15-1
 tlrc-bin 1.10.0-1
 tmux 3.5_a-1
+totem-pl-parser 3.26.6+r30+g51b8439-1
 tpm2-tss 4.1.3-1
 traceroute 2.1.6-1
 translate-shell 0.9.7.1-2
@@ -1924,6 +1935,7 @@ xdg-dbus-proxy 0.1.6-1
 xdg-desktop-portal 1.18.4-2
 xdg-desktop-portal-gtk 1.15.1-2
 xdg-user-dirs 0.18-2
+xdg-user-dirs-gtk 0.14-1
 xdg-utils 1.2.1-1
 xdotool 3.20211022.1-2
 xf86-input-elographics 1.4.4-1
