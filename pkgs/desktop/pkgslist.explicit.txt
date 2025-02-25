@@ -417,7 +417,7 @@ xorg-xprop 1.2.8-1
 xterm 395-1
 yarn 1.22.22-2
 yay 12.4.2-1
-yazi 0.3.3-1
+yazi 0.4.2-2
 yq 3.4.3-1
 yt-dlp 2024.11.18-1
 zathura 0.5.8-1
