@@ -1,6 +1,7 @@
 [user]
 	email = 38833034+Hussein-Mourad@users.noreply.github.com
-	name = hussein-mourad
+	; name = hussein-mourad
+	name = Hussein Mourad
 	signingkey = ~/.ssh/id_ed25519_git_signkey.pub
 
 [credential "https://github.com"]
