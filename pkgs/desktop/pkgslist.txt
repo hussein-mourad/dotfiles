@@ -887,6 +887,7 @@ libisoburn 1.5.6-1
 libisofs 1.5.6-1
 libixion 0.19.0-3
 libjpeg-turbo 3.0.4-1
+libjpeg6-turbo 1.5.3-2
 libjuice 1.5.2-1
 libjxl 0.11.1-1
 libkate 0.4.1-10
@@ -1291,6 +1292,7 @@ openpmix 5.0.4-1
 openresolv 3.13.2-2
 openssh 9.9p1-2
 openssl 3.4.0-1
+openssl-1.1 1.1.1.w-2
 openucx 1.17.0-3
 openvpn 2.6.12-1
 optipng 0.7.8-1
@@ -1906,6 +1908,7 @@ wildmidi 0.4.6-1
 wireless-regdb 2024.10.07-1
 wireless_tools 30.pre9-4
 wireplumber 0.5.7-1
+wkhtmltopdf-static 0.12.6.1_r3-1
 wmutils 1:1.7-1
 woff2 1.0.2-5
 wolfssl 5.7.4-1
