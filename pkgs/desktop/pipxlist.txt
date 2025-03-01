@@ -1,5 +1,0 @@
-csvkit 2.0.1
-organize-tool 3.2.5
-pipenv 2024.1.0
-rendercv 1.14
-tabview 1.4.4
