@@ -255,7 +255,6 @@ geoip-database 20241116-1
 gettext 0.22.5-2
 ghc-libs 9.2.8-1
 ghostscript 10.04.0-1
-ghostty-git 1.1.0.r31.gf0d2760-1
 giflib 5.2.2-1
 gimp 2.10.38-5
 girara 0.4.4-1
@@ -1992,7 +1991,7 @@ zathura 0.5.8-1
 zathura-pdf-mupdf 0.4.4-10
 zbar 0.23.93-3
 zed 0.165.4-2
-zen-browser-bin 1.7.3b-1
+zen-browser-bin 1.8.2b-1
 zenity 4.0.3-1
 zensu 0.3-7
 zeromq 4.3.5-2
