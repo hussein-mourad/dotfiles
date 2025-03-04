@@ -1892,7 +1892,7 @@ virt-install 5.0.0-1
 virt-manager 5.0.0-1
 virt-viewer 11.0-3
 virtiofsd 1.13.0-1
-visual-studio-code-bin 1.97.0-1
+visual-studio-code-bin 1.97.2-2
 vlc 3.0.21-12
 vmaf 3.0.0-1
 vnstat 2.12-3

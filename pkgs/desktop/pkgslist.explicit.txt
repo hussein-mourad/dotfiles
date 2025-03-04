@@ -371,7 +371,7 @@ viewnior 1.8-6
 vim 9.1.1065-1
 virt-manager 5.0.0-1
 virt-viewer 11.0-3
-visual-studio-code-bin 1.97.0-1
+visual-studio-code-bin 1.97.2-2
 vlc 3.0.21-12
 vnstat 2.12-3
 volumeicon 0.5.1-7
