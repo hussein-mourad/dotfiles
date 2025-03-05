@@ -268,6 +268,7 @@ git-filter-repo 2.47.0-2
 git-lfs 3.6.0-1
 gitflow-cjs 2.2.1-1
 github-cli 2.66.1-1
+glances 4.3.0.8-2
 glib-networking 1:2.80.1-1
 glib-perl 1.329.4-2
 glib2 2.82.4-2
@@ -1529,6 +1530,7 @@ python-multidict 6.0.5-4
 python-mutagen 1.47.0-3
 python-npyscreen 4.10.5-10
 python-ordered-set 4.1.0-7
+python-orjson 3.10.15-1
 python-packaging 24.2-3
 python-paramiko 3.5.0-1
 python-pendulum 3.0.0-3

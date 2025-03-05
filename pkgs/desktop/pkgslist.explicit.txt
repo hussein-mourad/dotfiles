@@ -102,6 +102,7 @@ git-filter-repo 2.47.0-2
 git-lfs 3.6.0-1
 gitflow-cjs 2.2.1-1
 github-cli 2.66.1-1
+glances 4.3.0.8-2
 glow 2.0.0-1
 gnome-clocks 47.0-1
 gnome-keyring 1:46.2-1
