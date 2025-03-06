@@ -300,6 +300,7 @@ gpgme 1.24.2-1
 gping 1.18.0-2
 gpm 1.20.7.r38.ge82d1a6-6
 gptfdisk 1.0.10-1
+grafana 11.5.2-1
 graphene 1.10.8-2
 graphicsmagick 1.3.45-3
 graphite 1:1.3.14-4
@@ -1470,6 +1471,8 @@ pptpclient 1.10.0-3
 prayer-times 0.3.1-1
 procps-ng 4.0.5-2
 procs 0.14.9-1
+prometheus 3.2.0-1
+prometheus-node-exporter 1.8.2-2
 protobuf 29.2-1
 prrte 3.0.8-1
 psmisc 23.7-1
