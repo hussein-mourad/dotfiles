@@ -1295,6 +1295,7 @@ nvm 0.40.1-1
 nvme-cli 2.11-1
 oath-toolkit 2.6.12-1
 obs-studio 31.0.1-2
+obsidian 1.8.7-1
 ocl-icd 2.3.2-2
 onetbb 2022.0.0-2
 oniguruma 6.9.10-1
