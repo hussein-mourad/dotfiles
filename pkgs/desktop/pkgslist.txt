@@ -1705,6 +1705,7 @@ rav1e 0.7.1-1
 rclone 1.69.1-1
 re2 1:20240702-2
 readline 8.2.013-1
+redisinsight-bin 2.66.0-1
 redland 1:1.0.17-9
 redshift 1.12-14
 redshift-qt 0.6-2
