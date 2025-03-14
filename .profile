@@ -39,7 +39,7 @@ fi
 
 #setxkbmap -model pc105
 #setxkbmap -layout us,ara -variant ,digits
-timedatectl set-local-rtc 1
+#timedatectl set-local-rtc 1
 
 PATH="$PATH:$HOME/go/bin"
 PATH="$PATH:$HOME/.screenlayout"
