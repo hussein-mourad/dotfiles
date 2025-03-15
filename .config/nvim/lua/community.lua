@@ -15,28 +15,28 @@ return {
   -- langs
   { import = "astrocommunity.pack.bash" },
   { import = "astrocommunity.pack.docker" },
-  { import = "astrocommunity.pack.cpp" },
+  -- { import = "astrocommunity.pack.cpp" },
   { import = "astrocommunity.pack.python" },
   -- { import = "astrocommunity.pack.python-ruff" },
-  { import = "astrocommunity.pack.go" },
+  -- { import = "astrocommunity.pack.go" },
   { import = "astrocommunity.pack.lua" },
-  { import = "astrocommunity.pack.rust" },
+  -- { import = "astrocommunity.pack.rust" },
 
   -- web dev
   { import = "astrocommunity.pack.html-css" },
   { import = "astrocommunity.pack.typescript-all-in-one" },
   { import = "astrocommunity.pack.tailwindcss" },
-  { import = "astrocommunity.pack.php" },
-  { import = "astrocommunity.pack.blade" },
+  -- { import = "astrocommunity.pack.php" },
+  -- { import = "astrocommunity.pack.blade" },
   -- { import = "astrocommunity.pack.laravel" },
-  { import = "astrocommunity.pack.prisma" },
-  { import = "astrocommunity.pack.templ" },
+  -- { import = "astrocommunity.pack.prisma" },
+  -- { import = "astrocommunity.pack.templ" },
   -- { import = "astrocommunity.pack.vue" },
   -- { import = "astrocommunity.pack.sql" },
 
   -- devops
-  { import = "astrocommunity.pack.terraform" },
-  { import = "astrocommunity.pack.ansible" },
+  -- { import = "astrocommunity.pack.terraform" },
+  -- { import = "astrocommunity.pack.ansible" },
 
   -- config files
   { import = "astrocommunity.pack.json" },
