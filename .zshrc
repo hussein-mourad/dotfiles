@@ -129,14 +129,20 @@ export FZF_DEFAULT_OPTS=" \
 # [ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
 
 # Define a function to activate venv if present
-# venv_auto_activate() {
-#     if [[ -d "venv" ]]; then
-#         # Check if already activated to avoid redundant activation
-#         if [[ -z "${VIRTUAL_ENV}" ]]; then
-#             source venv/bin/activate
-#         fi
-#     fi
-# }
+venv_auto_activate() {
+  local venv_dirs=("venv" ".venv" "env" ".env")  # Add more names if needed
+
+  # Deactivate the current virtual environment if active
+  command -v deactivate &>/dev/null && deactivate
+
+  for dir in "${venv_dirs[@]}"; do
+    # Check if already activated to avoid redundant activation
+    if [[ -d "$dir" && -z "${VIRTUAL_ENV}" ]]; then
+      source "$dir/bin/activate"
+      break  # Exit loop after activating the first found environment
+    fi
+  done
+}
 
 # Hook function to activate venv_auto_activate when changing directories
 # chpwd_functions+=venv_auto_activate
@@ -152,7 +158,7 @@ eval "$(zoxide init zsh)"
 
 # eval "$(_PIPENV_COMPLETE=zsh_source pipenv)"
 
-# venv_auto_activate
+venv_auto_activate
 
 # eval "$(uv generate-shell-completion zsh)"
 eval "$(direnv hook zsh)"
@@ -162,7 +168,7 @@ eval "$(atuin init zsh)"
 
 eval "$(uv generate-shell-completion zsh)"
 
-. /opt/asdf-vm/asdf.sh
+# . /opt/asdf-vm/asdf.sh
 
 # ---------- PATH & PROGRAM SETTINGS ----------
 # pnpm
@@ -199,5 +205,13 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
+
+# Hook into directory change events
+if [[ -n "$ZSH_VERSION" ]]; then
+    autoload -Uz add-zsh-hook
+    add-zsh-hook chpwd venv_auto_activate
+elif [[ -n "$BASH_VERSION" ]]; then
+    export PROMPT_COMMAND="venv_auto_activate; $PROMPT_COMMAND"
+fi
 
 eval "$(starship init zsh)"
