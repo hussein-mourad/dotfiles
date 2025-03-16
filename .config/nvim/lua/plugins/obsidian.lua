@@ -1,4 +1,4 @@
-if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
+-- if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
 return {
   "epwalsh/obsidian.nvim",
   -- the obsidian vault in this default config  ~/obsidian-vault
@@ -30,7 +30,7 @@ return {
     },
   },
   opts = {
-    dir = "/mnt/d/data/documents/notes/", -- specify the vault location. no need to call 'vim.fn.expand' here
+    dir = "~/Documents/notes/", -- specify the vault location. no need to call 'vim.fn.expand' here
     use_advanced_uri = true,
     finder = "telescope.nvim",
 
