@@ -1,53 +1,76 @@
 #!/bin/bash
 
-# Ensure ffmpeg and imagemagick are installed
-if ! command -v ffmpeg &>/dev/null; then
-  echo "Error: ffmpeg is not installed." >&2
-  exit 1
-fi
-
-if ! command -v magick &>/dev/null; then
-  echo "Error: ImageMagick is not installed." >&2
-  exit 1
-fi
-
-if ! command -v exiftool &>/dev/null; then
-  echo "Error: exiftool is not installed." >&2
-  exit 1
-fi
-
-if [[ ! -d "$1" ]]; then
-  echo "Error: $1 is not a directory"
-  exit 1
-fi
-
 SCRIPT_NAME=$(basename "$0")
+IMAGE_QUALITY=85
+IMAGE_MAX_RESOLUTION="1920x1080>"
+VIDEO_CRF=28
+VIDEO_PRESET=fast
+VIDEO_ENCODING=libx264
+VIDEO_GPU_ENCODING=h264_nvenc
+AUDIO_ENCODING=aac
 
-# Check for input directory
-if [ -z "$1" ]; then
-  echo "Usage: $SCRIPT_NAME [-g|--gpu] <directory>" >&2
+# Stats variables
+TOTAL_VIDEOS=0
+TOTAL_IMAGES=0
+COMPRESSED_VIDEOS=0
+COMPRESSED_IMAGES=0
+SKIPPED_VIDEOS=0
+SKIPPED_IMAGES=0
+
+usage() {
+  echo "Usage: $SCRIPT_NAME -i <input_directory> -o <output_directory> [-g]"
+  echo "  -i  Directory containing media files to compress."
+  echo "  -o  Directory to save compressed files (will be created if it doesn't exist)."
+  echo "  -g  Use GPU for compression (if available)."
+  exit 1
+}
+
+# Function to check if a command is installed
+ensure_command() {
+  if ! command -v "$1" >/dev/null 2>&1; then
+    echo "Error: '$1' is not installed." >&2
+    exit 1
+  fi
+}
+
+ensure_command "ffmpeg"
+ensure_command "magick"
+ensure_command "exiftool"
+ensure_command "identify"
+
+# Parse command-line arguments
+USE_GPU=false
+while getopts ":i:o:g" opt; do
+  case $opt in
+  i) INPUT_DIR="$OPTARG" ;;
+  o) OUTPUT_DIR="$OPTARG" ;;
+  g) USE_GPU=true ;;
+  *) usage ;;
+  esac
+done
+
+# Validate arguments
+if [ -z "$INPUT_DIR" ] || [ -z "$OUTPUT_DIR" ]; then
+  usage
+fi
+
+if [[ ! -d "$INPUT_DIR" ]]; then
+  echo "Error: $INPUT_DIR is not a directory"
   exit 1
 fi
 
-# Parse GPU option
-USE_GPU=false
-if [[ "$2" == "-g" || "$2" == "--gpu" ]]; then
-  USE_GPU=true
+if [[ ! -d "$OUTPUT_DIR" ]]; then
+  echo "Creating output directory: $OUTPUT_DIR"
+  mkdir -p "$OUTPUT_DIR"
+fi
+
+if [[ "$USE_GPU" == "true" ]]; then
   echo "GPU acceleration enabled for video compression."
 fi
 
-# Variables
-INPUT_DIR="$1"
-OUTPUT_DIR="$INPUT_DIR/compressed"
-
-# Create output directory
-echo "Creating output directory: $OUTPUT_DIR"
-mkdir -p "$OUTPUT_DIR"
-
-# Stats variables
-video_count=0
-image_count=0
-skipped_count=0
+# Remove extra slash at the end of the path
+INPUT_DIR="${INPUT_DIR%/}"
+OUTPUT_DIR="${OUTPUT_DIR%/}"
 
 # Function to preserve file permissions and ownership
 preserve_permissions_and_ownership() {
@@ -55,8 +78,38 @@ preserve_permissions_and_ownership() {
   local output_file="$2"
 
   echo "Preserving permissions and ownership for: $output_file"
-  chmod --reference="$input_file" "$output_file"
-  chown --reference="$input_file" "$output_file"
+  chmod --reference="$input_file" "$output_file" || {
+    echo "Failed to preserve permissions"
+    return 1
+  }
+  chown --reference="$input_file" "$output_file" || {
+    echo "Failed to preserve ownership"
+    return 1
+  }
+}
+
+# Function to validate files
+validate_file() {
+  local input_file="$1"
+  local output_file="$2"
+  case "$input_file" in
+  *.jpg | *.jpeg | *.png | *.webp | *.bmp | *.tiff)
+    identify "$output_file" &>/dev/null
+    ;;
+  *.mp4 | *.mkv | *.avi)
+    ffmpeg -v error -i "$output_file" -f null - &>/dev/null
+    ;;
+  *.mp3 | *.wav | *.flac)
+    ffmpeg -v error -i "$output_file" -f null - &>/dev/null
+    ;;
+  *.pdf)
+    gs -dNOPAUSE -dBATCH -sDEVICE=nullpage "$output_file" &>/dev/null
+    ;;
+  *)
+    return 1
+    ;;
+  esac
+  return $?
 }
 
 # Function to compress videos
@@ -66,21 +119,33 @@ compress_video() {
 
   echo "Running ffmpeg on video: $input_file"
   if [ "$USE_GPU" = true ]; then
-    prime-run ffmpeg -i "$input_file" -vcodec h264_nvenc -crf 28 -preset fast -acodec aac "$output_file" -y
-    # prime-run ffmpeg -i "$input_file" -vcodec h264_nvenc -acodec aac "$output_file" -y
+    prime-run ffmpeg \
+      -stats \
+      -hide_banner \
+      -loglevel error \
+      -i "$input_file" \
+      -vcodec $VIDEO_GPU_ENCODING \
+      -crf $VIDEO_CRF \
+      -preset $VIDEO_PRESET \
+      -acodec $AUDIO_ENCODING \
+      "$output_file" -y || return 1
   else
-    # ffmpeg -i "$input_file" -vcodec libx264 -acodec aac "$output_file" -y
-    # ffmpeg -i "$input_file" "$output_file" -y
-    ffmpeg -i "$input_file" -vcodec libx264 -crf 28 -preset fast -acodec aac "$output_file" -y
+    ffmpeg \
+      -stats \
+      -hide_banner \
+      -loglevel error \
+      -i "$input_file" \
+      -vcodec $VIDEO_ENCODING \
+      -crf $VIDEO_CRF \
+      -preset $VIDEO_PRESET \
+      -acodec $AUDIO_ENCODING \
+      "$output_file" -y || return 1
   fi
 
-  echo "Copying metadata from $input_file to $output_file"
-  exiftool -overwrite_original -TagsFromFile "$input_file" "$output_file"
-
-  preserve_permissions_and_ownership "$input_file" "$output_file"
-
   echo "Video compression complete: $output_file"
-  ((video_count++))
+  ((COMPRESSED_VIDEOS++))
+
+  return 0
 }
 
 # Function to compress images
@@ -89,22 +154,23 @@ compress_image() {
   local output_file="$2"
 
   echo "Running ImageMagick on image: $input_file"
-  magick "$input_file" -resize "1920x1080>" -quality 90 "$output_file"
-  # magick "$input_file" -resize "2160x1440>" -quality 90 "$output_file"
-
-  echo "Copying metadata from $input_file to $output_file"
-  exiftool -overwrite_original -TagsFromFile "$input_file" "$output_file"
-
-  preserve_permissions_and_ownership "$input_file" "$output_file"
+  magick \
+    "$input_file" \
+    -resize $IMAGE_MAX_RESOLUTION \
+    -quality $IMAGE_QUALITY \
+    "$output_file" || return 1
 
   echo "Image compression and resizing complete: $output_file"
-  ((image_count++))
+  ((COMPRESSED_IMAGES++))
+  return 1
 }
 
 # Compress media
 echo "Finding media files in: $INPUT_DIR"
-while IFS= read -r file; do
+while IFS= read -r -d '' file; do
   echo "Processing file: $file"
+  continue
+
   # Get relative path
   relative_path="${file#"$INPUT_DIR"/}"
 
@@ -124,14 +190,24 @@ while IFS= read -r file; do
 
   if [[ "$file" =~ \.(mp4|MP4|mov|MOV|avi|AVI)$ ]]; then
     echo "Compressing video: $file"
+    ((TOTAL_VIDEOS++))
     compress_video "$file" "$output_file"
+
   elif [[ "$file" =~ \.(jpg|JPG|jpeg|JPEG|png|PNG)$ ]]; then
+    ((TOTAL_IMAGES++))
     echo "Compressing image: $file"
     compress_image "$file" "$output_file"
   else
     echo "Skipping unsupported file: $file"
     ((skipped_count++))
   fi
+  echo "Copying metadata from $input_file to $output_file"
+  exiftool \
+    -overwrite_original \
+    -TagsFromFile \
+    "$input_file" "$output_file"
+
+  preserve_permissions_and_ownership "$input_file" "$output_file"
 
 done < <(find "$INPUT_DIR" -maxdepth 1 \( -iname '*.jpg' -o -iname '*.jpeg' -o -iname '*.png' -o -iname '*.mp4' -o -iname '*.mov' -o -iname '*.avi' \) ! -path "$OUTPUT_DIR/*" -print)
 
@@ -140,6 +216,6 @@ echo "Compression complete. Compressed files are saved in: $OUTPUT_DIR"
 
 echo "Test"
 echo "Summary:"
-echo "  Videos compressed: $video_count"
-echo "  Images compressed: $image_count"
-echo "  Files skipped: $skipped_count"
+echo "  Videos compressed: $COMPRESSED_VIDEOS"
+echo "  Images compressed: $COMPRESSED_IMAGES"
+echo "  Files skipped: $SKIPPED_VIDEOS"
