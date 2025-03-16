@@ -1,3 +1,4 @@
+-- if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
 return {
   "3rd/image.nvim",
   event = "VeryLazy",
@@ -29,13 +30,27 @@ return {
     integrations = {
       markdown = {
         enabled = true,
-        clear_in_insert_mode = false,
+        clear_in_insert_mode = true,
         download_remote_images = true,
         only_render_image_at_cursor = true,
         filetypes = { "markdown", "vimwiki" }, -- markdown extensions (ie. quarto) can go here
       },
-      neorg = {
+      typst = {
         enabled = true,
+        clear_in_insert_mode = true,
+        download_remote_images = true,
+        only_render_image_at_cursor = true,
+        filetypes = { "typst" },
+      },
+      html = {
+        enabled = true,
+        clear_in_insert_mode = true,
+        download_remote_images = true,
+        only_render_image_at_cursor = true,
+        filetypes = { "html" },
+      },
+      neorg = {
+        enabled = false,
         clear_in_insert_mode = false,
         download_remote_images = true,
         only_render_image_at_cursor = false,
