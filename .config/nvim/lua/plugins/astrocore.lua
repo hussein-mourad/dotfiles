@@ -35,6 +35,7 @@ return {
         colorcolumn = "80",
         scrolloff = 2,
         linebreak = true,
+        clipboard = "unnamedplus",
         -- columns = 80,
         -- undodir = os.getenv "HOME" .. "/.nvim/undodir",
         -- textwidth = 0,
