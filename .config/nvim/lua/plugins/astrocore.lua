@@ -64,8 +64,8 @@ return {
         -- second key is the lefthand side of the map
 
         -- navigate buffer tabs with `H` and `L`
-        -- L = { function() require("astrocore.buffer").nav(vim.v.count1) end, desc = "Next buffer" },
-        -- H = { function() require("astrocore.buffer").nav(-vim.v.count1) end, desc = "Previous buffer" },
+        L = { function() require("astrocore.buffer").nav(vim.v.count1) end, desc = "Next buffer" },
+        H = { function() require("astrocore.buffer").nav(-vim.v.count1) end, desc = "Previous buffer" },
 
         -- mappings seen under group name "Buffer"
         ["<Leader>bD"] = {
@@ -89,6 +89,7 @@ return {
         ["="] = { "<C-a>", desc = "Increment" },
         ["-"] = { "<C-x>", desc = "Decrement" },
 
+        ["<leader><leader>"] = { "<cmd>Telescope buffers<cr>", desc = "Find buffers" },
         ["<leader>ga"] = { "<cmd>AerialToggle<cr>", desc = "Toggle code outline" },
         ["!"] = {
           function()
