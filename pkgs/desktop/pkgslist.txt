@@ -291,6 +291,7 @@ gnulib-l10n 20241231-1
 gnupg 2.4.7-1
 gnutls 3.8.9-1
 go 2:1.24.0-1
+go-task 3.41.0-1
 gobject-introspection-runtime 1.82.0-3
 goocanvas 3.0.0-7
 google-chrome 134.0.6998.35-1

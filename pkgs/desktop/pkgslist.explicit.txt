@@ -107,6 +107,7 @@ glow 2.1.0-1
 gnome-clocks 47.0-1
 gnome-keyring 1:46.2-1
 go 2:1.24.0-1
+go-task 3.41.0-1
 google-chrome 134.0.6998.35-1
 gparted 1.7.0-1
 gping 1.18.0-2
