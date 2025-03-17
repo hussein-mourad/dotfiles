@@ -1,4 +1,5 @@
 #!/bin/bash
+
 function yy() {
   local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
   yazi "$@" --cwd-file="$tmp"
@@ -84,6 +85,31 @@ function bw() {
     export BW_SESSION=$(command bw unlock --raw "$(gpg -d ~/.pass.gpg 2 &>/dev/null)")
   fi
   command bw "$@"
+}
+
+# Nvim switcher: switch between nvim configs
+function nvims() {
+  # Initialize items array with "default"
+  items=("default")
+
+  # Read the output of find into an array safely
+  while IFS= read -r dir; do
+    items+=("$dir")
+  done < <(find ~/.config/ -maxdepth 1 \( -type d -o -type l \) -name "nvim*" -printf "%f\n" | sort)
+
+  # Use fzf to select a config
+  config=$(printf "%s\n" "${items[@]}" | fzf --prompt=" Neovim Config  " --height=~50% --layout=reverse --border --exit-0)
+
+  # If nothing is selected, exit
+  if [[ -z $config ]]; then
+    echo "Nothing selected"
+    return 0
+  elif [[ $config == "default" ]]; then
+    config=""
+  fi
+
+  # Launch nvim with the selected config
+  NVIM_APPNAME=$config command nvim "$@"
 }
 
 function colors() {
