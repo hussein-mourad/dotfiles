@@ -1786,6 +1786,7 @@ startup-notification 0.12-8
 stfl 0.24-6
 stoken 0.92-4
 stow 2.4.1-1
+strace 6.13-1
 subversion 1.14.5-1
 sudo 1.9.16.p2-2
 suil 0.10.20-1
