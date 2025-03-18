@@ -124,6 +124,7 @@ gstreamer 1.24.12-3
 gthumb 3.12.7-1
 gtksourceview-pkgbuild 5-3
 gufw 24.04-3
+gum 0.15.2-1
 gvfs 1.56.1-3
 gvfs-afc 1.56.1-3
 gvfs-gphoto2 1.56.1-3
@@ -319,6 +320,7 @@ sc-im 0.8.4-1
 screen 5.0.0-2
 screenfetch 3.9.9-1
 screenkey 1.5-5
+sesh-bin 2.13.0-1
 simple-scan 46.0-2
 simplescreenrecorder 0.4.4-3
 smartmontools 7.4-2
