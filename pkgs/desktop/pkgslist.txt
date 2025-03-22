@@ -38,7 +38,7 @@ arduino-cli 1.1.1-1
 argon2 20190702-6
 aribb24 1.0.3-4
 artwork-i3 20190912-2
-asdf-vm 0.16.3-1
+asdf-vm 0.16.5-1
 at-spi2-core 2.54.1-1
 atkmm 2.28.4-1
 atomicparsley 20240608.083822.1ed9031-1

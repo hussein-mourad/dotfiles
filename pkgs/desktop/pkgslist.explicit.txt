@@ -14,7 +14,7 @@ arandr 0.1.11-4
 arch-wiki-docs 20250202-1
 arduino-cli 1.1.1-1
 artwork-i3 20190912-2
-asdf-vm 0.16.3-1
+asdf-vm 0.16.5-1
 atomicparsley 20240608.083822.1ed9031-1
 atools 20.2.2-4
 atuin 18.4.0-2
