@@ -647,6 +647,8 @@ json-glib 1.10.6-1
 jsoncpp 1.9.6-3
 judy 1.0.5-8
 just 1.39.0-1
+jwt-cli 6.2.0-1
+jwt-ui 1.3.0-1
 k6 0.57.0-1
 kanata 1.8.0-2
 karchive 6.11.0-1
