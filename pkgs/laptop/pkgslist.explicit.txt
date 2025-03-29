@@ -437,7 +437,7 @@ screenfetch 3.9.9-1
 screenkey 1.5-5
 sd 1.0.0-1
 sddm 0.21.0-6
-sesh-bin 2.7.0-1
+sesh-bin 2.13.0-1
 simple-scan 46.0-2
 simplescreenrecorder 0.4.4-3
 sl 5.05-5
@@ -603,7 +603,7 @@ zaread-git r120.c2d45e1-1
 zathura 0.5.11-1
 zathura-pdf-mupdf 0.4.4-12
 zeal 0.7.2-1
-zen-browser-bin 1.9.1b-1
+zen-browser-bin 1.10.3b-1
 zensu 0.3-7
 zip 3.0-11
 zk 0.14.1-1
