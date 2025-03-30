@@ -301,6 +301,8 @@ minikube 1.34.0-2
 mkinitcpio-openswap 0.1.0-4
 mobile-broadband-provider-info 20240407-1
 modemmanager 1.22.0-1
+mongodb-compass 1.45.4-1
+mongosh-bin 2.4.2-1
 morc_menu 1.0+3+g2d89cb6-1
 most 5.2.0-2
 mousepad 0.6.3-2
