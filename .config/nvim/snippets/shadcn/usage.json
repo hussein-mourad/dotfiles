@@ -1,0 +1,1485 @@
+{
+  "Accordion": {
+    "prefix": [
+      "cnx-accordion",
+      "shadcn-x-accordion"
+    ],
+    "body": [
+      "<Accordion type=\"single\" collapsible>",
+      "  <AccordionItem value=\"item-1\">",
+      "    <AccordionTrigger>Is it accessible?</AccordionTrigger>",
+      "    <AccordionContent>",
+      "      Yes. It adheres to the WAI-ARIA design pattern.",
+      "    </AccordionContent>",
+      "  </AccordionItem>",
+      "</Accordion>"
+    ],
+    "description": "https://ui.shadcn.com/docs/components/accordion"
+  },
+  "Alert Destructive": {
+    "prefix": [
+      "cnx-alert-destructive",
+      "shadcn-x-alert-destructive"
+    ],
+    "body": [
+      "<Alert variant=\"destructive\">",
+      "  <AlertTitle>Error</AlertTitle>",
+      "  <AlertDescription>",
+      "    Your session has expired. Please log in again.",
+      "  </AlertDescription>",
+      "</Alert>"
+    ],
+    "description": "https://ui.shadcn.com/docs/components/alert"
+  },
+  "Alert Dialog": {
+    "prefix": [
+      "cnx-alert-dialog",
+      "shadcn-x-alert-dialog"
+    ],
+    "body": [
+      "<AlertDialog>",
+      "  <AlertDialogTrigger>Open</AlertDialogTrigger>",
+      "  <AlertDialogContent>",
+      "    <AlertDialogHeader>",
+      "      <AlertDialogTitle>Are you absolutely sure?</AlertDialogTitle>",
+      "      <AlertDialogDescription>",
+      "        This action cannot be undone. This will permanently delete your account",
+      "        and remove your data from our servers.",
+      "      </AlertDialogDescription>",
+      "    </AlertDialogHeader>",
+      "    <AlertDialogFooter>",
+      "      <AlertDialogCancel>Cancel</AlertDialogCancel>",
+      "      <AlertDialogAction>Continue</AlertDialogAction>",
+      "    </AlertDialogFooter>",
+      "  </AlertDialogContent>",
+      "</AlertDialog>"
+    ],
+    "description": "https://ui.shadcn.com/docs/components/alert-dialog"
+  },
+  "Alert": {
+    "prefix": [
+      "cnx-alert",
+      "shadcn-x-alert"
+    ],
+    "body": [
+      "<Alert>",
+      "  <AlertTitle>Heads up!</AlertTitle>",
+      "  <AlertDescription>",
+      "    You can add components to your app using the cli.",
+      "  </AlertDescription>",
+      "</Alert>"
+    ],
+    "description": "https://ui.shadcn.com/docs/components/alert"
+  },
+  "Aspect Ratio": {
+    "prefix": [
+      "cnx-aspect-ratio",
+      "shadcn-x-aspect-ratio"
+    ],
+    "body": [
+      "<div className=\"w-[450px]\">",
+      "  <AspectRatio ratio={16 / 9}>",
+      "    <Image src=\"...\" alt=\"Image\" className=\"rounded-md object-cover\" />",
+      "  </AspectRatio>",
+      "</div>"
+    ],
+    "description": "https://ui.shadcn.com/docs/components/aspect-ratio"
+  },
+  "Avatar": {
+    "prefix": [
+      "cnx-avatar",
+      "shadcn-x-avatar"
+    ],
+    "body": [
+      "<Avatar>",
+      "  <AvatarImage src=\"https://github.com/shadcn.png\" />",
+      "  <AvatarFallback>CN</AvatarFallback>",
+      "</Avatar>"
+    ],
+    "description": "https://ui.shadcn.com/docs/components/avatar"
+  },
+  "Badge Destructive": {
+    "prefix": [
+      "cnx-badge-destructive",
+      "shadcn-x-badge-destructive"
+    ],
+    "body": [
+      "<Badge variant=\"destructive\">Destructive</Badge>"
+    ],
+    "description": "https://ui.shadcn.com/docs/components/badge"
+  },
+  "Badge Outline": {
+    "prefix": [
+      "cnx-badge-outline",
+      "shadcn-x-badge-outline"
+    ],
+    "body": [
+      "<Badge variant=\"outline\">Outline</Badge>"
+    ],
+    "description": "https://ui.shadcn.com/docs/components/badge"
+  },
+  "Badge Secondary": {
+    "prefix": [
+      "cnx-badge-secondary",
+      "shadcn-x-badge-secondary"
+    ],
+    "body": [
+      "<Badge variant=\"secondary\">Secondary</Badge>"
+    ],
+    "description": "https://ui.shadcn.com/docs/components/badge"
+  },
+  "Badge": {
+    "prefix": [
+      "cnx-badge",
+      "shadcn-x-badge"
+    ],
+    "body": [
+      "<Badge>Badge</Badge>"
+    ],
+    "description": "https://ui.shadcn.com/docs/components/badge"
+  },
+  "Breadcrumb Collapsed": {
+    "prefix": [
+      "cnx-breadcrumb-collapsed",
+      "shadcn-x-breadcrumb-collapsed"
+    ],
+    "body": [
+      "<Breadcrumb>",
+      "  <BreadcrumbList>",
+      "    <BreadcrumbItem>",
+      "      <BreadcrumbLink asChild>",
+      "        <Link href=\"/\">Home</Link>",
+      "      </BreadcrumbLink>",
+      "    </BreadcrumbItem>",
+      "    <BreadcrumbSeparator />",
+      "    <BreadcrumbItem>",
+      "      <BreadcrumbEllipsis />",
+      "    </BreadcrumbItem>",
+      "    <BreadcrumbSeparator />",
+      "    <BreadcrumbItem>",
+      "      <BreadcrumbLink asChild>",
+      "        <Link href=\"/docs/components\">Components</Link>",
+      "      </BreadcrumbLink>",
+      "    </BreadcrumbItem>",
+      "    <BreadcrumbSeparator />",
+      "    <BreadcrumbItem>",
+      "      <BreadcrumbPage>Breadcrumb</BreadcrumbPage>",
+      "    </BreadcrumbItem>",
+      "  </BreadcrumbList>",
+      "</Breadcrumb>"
+    ],
+    "description": "https://ui.shadcn.com/docs/components/breadcrumb"
+  },
+  "Breadcrumb Dropdown": {
+    "prefix": [
+      "cnx-breadcrumb-dropdown",
+      "shadcn-x-breadcrumb-dropdown"
+    ],
+    "body": [
+      "<Breadcrumb>",
+      "  <BreadcrumbList>",
+      "    <BreadcrumbItem>",
+      "      <BreadcrumbLink href=\"/\">Home</BreadcrumbLink>",
+      "    </BreadcrumbItem>",
+      "    <BreadcrumbSeparator>",
+      "      <Slash />",
+      "    </BreadcrumbSeparator>",
+      "    <BreadcrumbItem>",
+      "      <DropdownMenu>",
+      "        <DropdownMenuTrigger className=\"flex items-center gap-1\">",
+      "          Components",
+      "          <ChevronDown className=\"h-4 w-4\" />",
+      "        </DropdownMenuTrigger>",
+      "        <DropdownMenuContent align=\"start\">",
+      "          <DropdownMenuItem>Documentation</DropdownMenuItem>",
+      "          <DropdownMenuItem>Themes</DropdownMenuItem>",
+      "          <DropdownMenuItem>GitHub</DropdownMenuItem>",
+      "        </DropdownMenuContent>",
+      "      </DropdownMenu>",
+      "    </BreadcrumbItem>",
+      "    <BreadcrumbSeparator>",
+      "      <Slash />",
+      "    </BreadcrumbSeparator>",
+      "    <BreadcrumbItem>",
+      "      <BreadcrumbPage>Breadcrumb</BreadcrumbPage>",
+      "    </BreadcrumbItem>",
+      "  </BreadcrumbList>",
+      "</Breadcrumb>"
+    ],
+    "description": "https://ui.shadcn.com/docs/components/breadcrumb"
+  },
+  "Breadcrumb": {
+    "prefix": [
+      "cnx-breadcrumb",
+      "shadcn-x-breadcrumb"
+    ],
+    "body": [
+      "<Breadcrumb>",
+      "  <BreadcrumbList>",
+      "    <BreadcrumbItem>",
+      "      <BreadcrumbLink href=\"/\">Home</BreadcrumbLink>",
+      "    </BreadcrumbItem>",
+      "    <BreadcrumbSeparator />",
+      "    <BreadcrumbItem>",
+      "      <BreadcrumbLink href=\"/components\">Components</BreadcrumbLink>",
+      "    </BreadcrumbItem>",
+      "    <BreadcrumbSeparator />",
+      "    <BreadcrumbItem>",
+      "      <BreadcrumbPage>Breadcrumb</BreadcrumbPage>",
+      "    </BreadcrumbItem>",
+      "  </BreadcrumbList>",
+      "</Breadcrumb>"
+    ],
+    "description": "https://ui.shadcn.com/docs/components/breadcrumb"
+  },
+  "Button Destructive": {
+    "prefix": [
+      "cnx-button-destructive",
+      "shadcn-x-button-destructive"
+    ],
+    "body": [
+      "<Button variant=\"destructive\">Destructive</Button>"
+    ],
+    "description": "https://ui.shadcn.com/docs/components/button"
+  },
+  "Button Ghost": {
+    "prefix": [
+      "cnx-button-ghost",
+      "shadcn-x-button-ghost"
+    ],
+    "body": [
+      "<Button variant=\"ghost\">Ghost</Button>"
+    ],
+    "description": "https://ui.shadcn.com/docs/components/button"
+  },
+  "Button Link": {
+    "prefix": [
+      "cnx-button-link",
+      "shadcn-x-button-link"
+    ],
+    "body": [
+      "<Button variant=\"link\">Link</Button>"
+    ],
+    "description": "https://ui.shadcn.com/docs/components/button"
+  },
+  "Button Outline": {
+    "prefix": [
+      "cnx-button-outline",
+      "shadcn-x-button-outline"
+    ],
+    "body": [
+      "<Button variant=\"outline\">Outline</Button>"
+    ],
+    "description": "https://ui.shadcn.com/docs/components/button"
+  },
+  "Button Secondary": {
+    "prefix": [
+      "cnx-button-secondary",
+      "shadcn-x-button-secondary"
+    ],
+    "body": [
+      "<Button variant=\"secondary\">Secondary</Button>"
+    ],
+    "description": "https://ui.shadcn.com/docs/components/button"
+  },
+  "Button": {
+    "prefix": [
+      "cnx-button",
+      "shadcn-x-button"
+    ],
+    "body": [
+      "<Button>Button</Button>"
+    ],
+    "description": "https://ui.shadcn.com/docs/components/button"
+  },
+  "Calendar Formfield": {
+    "prefix": [
+      "cnx-calendar-formfield",
+      "shadcn-x-calendar-formfield"
+    ],
+    "body": [
+      "<FormField",
+      "  control={form.control}",
+      "  name=\"dob\"",
+      "  render={({ field }) => (",
+      "    <FormItem className=\"flex flex-col\">",
+      "      <FormLabel>Date of birth</FormLabel>",
+      "      <Popover>",
+      "        <PopoverTrigger asChild>",
+      "          <FormControl>",
+      "            <Button",
+      "              variant={\"outline\"}",
+      "              className={cn(",
+      "                \"w-[240px] pl-3 text-left font-normal\",",
+      "                !field.value && \"text-muted-foreground\"",
+      "              )}",
+      "            >",
+      "              {field.value ? (",
+      "                format(field.value, \"PPP\")",
+      "              ) : (",
+      "                <span>Pick a date</span>",
+      "              )}",
+      "              <CalendarIcon className=\"ml-auto h-4 w-4 opacity-50\" />",
+      "            </Button>",
+      "          </FormControl>",
+      "        </PopoverTrigger>",
+      "        <PopoverContent className=\"w-auto p-0\" align=\"start\">",
+      "          <Calendar",
+      "            mode=\"single\"",
+      "            selected={field.value}",
+      "            onSelect={field.onChange}",
+      "            disabled={(date) =>",
+      "              date > new Date() || date < new Date(\"1900-01-01\")",
+      "            }",
+      "            initialFocus",
+      "          />",
+      "        </PopoverContent>",
+      "      </Popover>",
+      "      <FormDescription>",
+      "        Your date of birth is used to calculate your age.",
+      "      </FormDescription>",
+      "      <FormMessage />",
+      "    </FormItem>",
+      "  )}",
+      "/>"
+    ],
+    "description": "https://ui.shadcn.com/docs/components/calendar"
+  },
+  "Calendar State": {
+    "prefix": [
+      "cns-calendar",
+      "shadcn-s-calendar"
+    ],
+    "body": [
+      "const [date, setDate] = (React.useState < Date) | (undefined > new Date())"
+    ],
+    "description": "https://ui.shadcn.com/docs/components/calendar"
+  },
+  "Calendar": {
+    "prefix": [
+      "cnx-calendar",
+      "shadcn-x-calendar"
+    ],
+    "body": [
+      "<Calendar",
+      "  mode=\"single\"",
+      "  selected={date}",
+      "  onSelect={setDate}",
+      "  className=\"rounded-md border\"",
+      "/>"
+    ],
+    "description": "https://ui.shadcn.com/docs/components/calendar"
+  },
+  "Card": {
+    "prefix": [
+      "cnx-card",
+      "shadcn-x-card"
+    ],
+    "body": [
+      "<Card>",
+      "  <CardHeader>",
+      "    <CardTitle>Card Title</CardTitle>",
+      "    <CardDescription>Card Description</CardDescription>",
+      "  </CardHeader>",
+      "  <CardContent>",
+      "    <p>Card Content</p>",
+      "  </CardContent>",
+      "  <CardFooter>",
+      "    <p>Card Footer</p>",
+      "  </CardFooter>",
+      "</Card>"
+    ],
+    "description": "https://ui.shadcn.com/docs/components/card"
+  },
+  "Carousel Vertical": {
+    "prefix": [
+      "cnx-carousel-vertical",
+      "shadcn-x-carousel-vertical"
+    ],
+    "body": [
+      "<Carousel orientation=\"vertical\">",
+      "  <CarouselContent>",
+      "    <CarouselItem>...</CarouselItem>",
+      "    <CarouselItem>...</CarouselItem>",
+      "    <CarouselItem>...</CarouselItem>",
+      "  </CarouselContent>",
+      "  <CarouselPrevious />",
+      "  <CarouselNext />",
+      "</Carousel>"
+    ],
+    "description": "https://ui.shadcn.com/docs/components/carousel"
+  },
+  "Carousel": {
+    "prefix": [
+      "cnx-carousel",
+      "shadcn-x-carousel"
+    ],
+    "body": [
+      "<Carousel>",
+      "  <CarouselContent>",
+      "    <CarouselItem>...</CarouselItem>",
+      "    <CarouselItem>...</CarouselItem>",
+      "    <CarouselItem>...</CarouselItem>",
+      "  </CarouselContent>",
+      "  <CarouselPrevious />",
+      "  <CarouselNext />",
+      "</Carousel>"
+    ],
+    "description": "https://ui.shadcn.com/docs/components/carousel"
+  },
+  "Checkbox Disabled": {
+    "prefix": [
+      "cnx-checkbox-disabled",
+      "shadcn-x-checkbox-disabled"
+    ],
+    "body": [
+      "<Checkbox disabled />"
+    ],
+    "description": "https://ui.shadcn.com/docs/components/checkbox"
+  },
+  "Checkbox": {
+    "prefix": [
+      "cnx-checkbox",
+      "shadcn-x-checkbox"
+    ],
+    "body": [
+      "<Checkbox />"
+    ],
+    "description": "https://ui.shadcn.com/docs/components/checkbox"
+  },
+  "Collapsible": {
+    "prefix": [
+      "cnx-collapsible",
+      "shadcn-x-collapsible"
+    ],
+    "body": [
+      "<Collapsible>",
+      "  <CollapsibleTrigger>Can I use this in my project?</CollapsibleTrigger>",
+      "  <CollapsibleContent>",
+      "    Yes. Free to use for personal and commercial projects. No attribution",
+      "    required.",
+      "  </CollapsibleContent>",
+      "</Collapsible>"
+    ],
+    "description": "https://ui.shadcn.com/docs/components/collapsible"
+  },
+  "Combobox Formfield": {
+    "prefix": [
+      "cnx-combobox-formfield",
+      "shadcn-x-combobox-formfield"
+    ],
+    "body": [
+      "<FormField",
+      "  control={form.control}",
+      "  name=\"language\"",
+      "  render={({ field }) => (",
+      "    <FormItem className=\"flex flex-col\">",
+      "      <FormLabel>Language</FormLabel>",
+      "      <Popover>",
+      "        <PopoverTrigger asChild>",
+      "          <FormControl>",
+      "            <Button",
+      "              variant=\"outline\"",
+      "              role=\"combobox\"",
+      "              className={cn(",
+      "                \"w-[200px] justify-between\",",
+      "                !field.value && \"text-muted-foreground\"",
+      "              )}",
+      "            >",
+      "              {field.value",
+      "                ? languages.find((language) => language.value === field.value)",
+      "                    ?.label",
+      "                : \"Select language\"}",
+      "              <ChevronsUpDown className=\"ml-2 h-4 w-4 shrink-0 opacity-50\" />",
+      "            </Button>",
+      "          </FormControl>",
+      "        </PopoverTrigger>",
+      "        <PopoverContent className=\"w-[200px] p-0\">",
+      "          <Command>",
+      "            <CommandInput placeholder=\"Search language...\" />",
+      "            <CommandList>",
+      "              <CommandEmpty>No language found.</CommandEmpty>",
+      "              <CommandGroup>",
+      "                {languages.map((language) => (",
+      "                  <CommandItem",
+      "                    value={language.label}",
+      "                    key={language.value}",
+      "                    onSelect={() => {",
+      "                      form.setValue(\"language\", language.value)",
+      "                    }}",
+      "                  >",
+      "                    <Check",
+      "                      className={cn(",
+      "                        \"mr-2 h-4 w-4\",",
+      "                        language.value === field.value",
+      "                          ? \"opacity-100\"",
+      "                          : \"opacity-0\"",
+      "                      )}",
+      "                    />",
+      "                    {language.label}",
+      "                  </CommandItem>",
+      "                ))}",
+      "              </CommandGroup>",
+      "            </CommandList>",
+      "          </Command>",
+      "        </PopoverContent>",
+      "      </Popover>",
+      "      <FormDescription>",
+      "        This is the language that will be used in the dashboard.",
+      "      </FormDescription>",
+      "      <FormMessage />",
+      "    </FormItem>",
+      "  )}",
+      "/>"
+    ],
+    "description": "https://ui.shadcn.com/docs/components/combobox"
+  },
+  "Combobox State": {
+    "prefix": [
+      "cns-combobox",
+      "shadcn-s-combobox"
+    ],
+    "body": [
+      "const [open, setOpen] = React.useState(false)",
+      "const [value, setValue] = React.useState(\"\")"
+    ],
+    "description": "https://ui.shadcn.com/docs/components/combobox"
+  },
+  "Combobox": {
+    "prefix": [
+      "cnx-combobox",
+      "shadcn-x-combobox"
+    ],
+    "body": [
+      "<Popover open={open} onOpenChange={setOpen}>",
+      "  <PopoverTrigger asChild>",
+      "    <Button",
+      "      variant=\"outline\"",
+      "      role=\"combobox\"",
+      "      aria-expanded={open}",
+      "      className=\"w-[200px] justify-between\"",
+      "    >",
+      "      {value",
+      "        ? frameworks.find((framework) => framework.value === value)?.label",
+      "        : \"Select framework...\"}",
+      "      <ChevronsUpDown className=\"ml-2 h-4 w-4 shrink-0 opacity-50\" />",
+      "    </Button>",
+      "  </PopoverTrigger>",
+      "  <PopoverContent className=\"w-[200px] p-0\">",
+      "    <Command>",
+      "      <CommandInput placeholder=\"Search framework...\" />",
+      "      <CommandList>",
+      "        <CommandEmpty>No framework found.</CommandEmpty>",
+      "        <CommandGroup>",
+      "          {frameworks.map((framework) => (",
+      "            <CommandItem",
+      "              key={framework.value}",
+      "              value={framework.value}",
+      "              onSelect={(currentValue) => {",
+      "                setValue(currentValue === value ? \"\" : currentValue)",
+      "                setOpen(false)",
+      "              }}",
+      "            >",
+      "              <Check",
+      "                className={cn(",
+      "                  \"mr-2 h-4 w-4\",",
+      "                  value === framework.value ? \"opacity-100\" : \"opacity-0\"",
+      "                )}",
+      "              />",
+      "              {framework.label}",
+      "            </CommandItem>",
+      "          ))}",
+      "        </CommandGroup>",
+      "      </CommandList>",
+      "    </Command>",
+      "  </PopoverContent>",
+      "</Popover>"
+    ],
+    "description": "https://ui.shadcn.com/docs/components/combobox"
+  },
+  "Command": {
+    "prefix": [
+      "cnx-command",
+      "shadcn-x-command"
+    ],
+    "body": [
+      "<Command>",
+      "  <CommandInput placeholder=\"Type a command or search...\" />",
+      "  <CommandList>",
+      "    <CommandEmpty>No results found.</CommandEmpty>",
+      "    <CommandGroup heading=\"Suggestions\">",
+      "      <CommandItem>Calendar</CommandItem>",
+      "      <CommandItem>Search Emoji</CommandItem>",
+      "      <CommandItem>Calculator</CommandItem>",
+      "    </CommandGroup>",
+      "    <CommandSeparator />",
+      "    <CommandGroup heading=\"Settings\">",
+      "      <CommandItem>Profile</CommandItem>",
+      "      <CommandItem>Billing</CommandItem>",
+      "      <CommandItem>Settings</CommandItem>",
+      "    </CommandGroup>",
+      "  </CommandList>",
+      "</Command>"
+    ],
+    "description": "https://ui.shadcn.com/docs/components/command"
+  },
+  "Context Menu": {
+    "prefix": [
+      "cnx-context-menu",
+      "shadcn-x-context-menu"
+    ],
+    "body": [
+      "<ContextMenu>",
+      "  <ContextMenuTrigger>Right click</ContextMenuTrigger>",
+      "  <ContextMenuContent>",
+      "    <ContextMenuItem>Profile</ContextMenuItem>",
+      "    <ContextMenuItem>Billing</ContextMenuItem>",
+      "    <ContextMenuItem>Team</ContextMenuItem>",
+      "    <ContextMenuItem>Subscription</ContextMenuItem>",
+      "  </ContextMenuContent>",
+      "</ContextMenu>"
+    ],
+    "description": "https://ui.shadcn.com/docs/components/context-menu"
+  },
+  "Date Picker Formfield": {
+    "prefix": [
+      "cnx-date-picker-formfield",
+      "shadcn-x-date-picker-formfield"
+    ],
+    "body": [
+      "<FormField",
+      "  control={form.control}",
+      "  name=\"dob\"",
+      "  render={({ field }) => (",
+      "    <FormItem className=\"flex flex-col\">",
+      "      <FormLabel>Date of birth</FormLabel>",
+      "      <Popover>",
+      "        <PopoverTrigger asChild>",
+      "          <FormControl>",
+      "            <Button",
+      "              variant={\"outline\"}",
+      "              className={cn(",
+      "                \"w-[240px] pl-3 text-left font-normal\",",
+      "                !field.value && \"text-muted-foreground\"",
+      "              )}",
+      "            >",
+      "              {field.value ? (",
+      "                format(field.value, \"PPP\")",
+      "              ) : (",
+      "                <span>Pick a date</span>",
+      "              )}",
+      "              <CalendarIcon className=\"ml-auto h-4 w-4 opacity-50\" />",
+      "            </Button>",
+      "          </FormControl>",
+      "        </PopoverTrigger>",
+      "        <PopoverContent className=\"w-auto p-0\" align=\"start\">",
+      "          <Calendar",
+      "            mode=\"single\"",
+      "            selected={field.value}",
+      "            onSelect={field.onChange}",
+      "            disabled={(date) =>",
+      "              date > new Date() || date < new Date(\"1900-01-01\")",
+      "            }",
+      "            initialFocus",
+      "          />",
+      "        </PopoverContent>",
+      "      </Popover>",
+      "      <FormDescription>",
+      "        Your date of birth is used to calculate your age.",
+      "      </FormDescription>",
+      "      <FormMessage />",
+      "    </FormItem>",
+      "  )}",
+      "/>"
+    ],
+    "description": "https://ui.shadcn.com/docs/components/date-picker"
+  },
+  "Date Picker Range": {
+    "prefix": [
+      "cnx-date-picker-range",
+      "shadcn-x-date-picker-range"
+    ],
+    "body": [
+      "<div className={cn(\"grid gap-2\", className)}>",
+      "  <Popover>",
+      "    <PopoverTrigger asChild>",
+      "      <Button",
+      "        id=\"date\"",
+      "        variant={\"outline\"}",
+      "        className={cn(",
+      "          \"w-[300px] justify-start text-left font-normal\",",
+      "          !date && \"text-muted-foreground\"",
+      "        )}",
+      "      >",
+      "        <CalendarIcon className=\"mr-2 h-4 w-4\" />",
+      "        {date?.from ? (",
+      "          date.to ? (",
+      "            <>",
+      "              {format(date.from, \"LLL dd, y\")} - {format(date.to, \"LLL dd, y\")}",
+      "            </>",
+      "          ) : (",
+      "            format(date.from, \"LLL dd, y\")",
+      "          )",
+      "        ) : (",
+      "          <span>Pick a date</span>",
+      "        )}",
+      "      </Button>",
+      "    </PopoverTrigger>",
+      "    <PopoverContent className=\"w-auto p-0\" align=\"start\">",
+      "      <Calendar",
+      "        initialFocus",
+      "        mode=\"range\"",
+      "        defaultMonth={date?.from}",
+      "        selected={date}",
+      "        onSelect={setDate}",
+      "        numberOfMonths={2}",
+      "      />",
+      "    </PopoverContent>",
+      "  </Popover>",
+      "</div>"
+    ],
+    "description": "https://ui.shadcn.com/docs/components/date-picker"
+  },
+  "Date Picker State": {
+    "prefix": [
+      "cns-date-picker",
+      "shadcn-s-date-picker"
+    ],
+    "body": [
+      "const [date, setDate] = React.useState<Date>()"
+    ],
+    "description": "https://ui.shadcn.com/docs/components/date-picker"
+  },
+  "Date Picker Zod": {
+    "prefix": [
+      "cnz-date-picker",
+      "shadcn-z-date-picker"
+    ],
+    "body": [
+      "const form = useForm<z.infer<typeof FormSchema>>({",
+      "    resolver: zodResolver(FormSchema),",
+      "});",
+      "",
+      "const FormSchema = z.object({",
+      "  dob: z.date({",
+      "    required_error: \"A date of birth is required.\",",
+      "  }),",
+      "})",
+      "",
+      "function onSubmit(data: z.infer<typeof FormSchema>) {",
+      "  toast({",
+      "    title: \"You submitted the following values:\",",
+      "    description: (",
+      "      <pre className=\"mt-2 w-[340px] rounded-md bg-slate-950 p-4\">",
+      "        <code className=\"text-white\">{JSON.stringify(data, null, 2)}</code>",
+      "      </pre>",
+      "    ),",
+      "  })",
+      "}"
+    ],
+    "description": "https://ui.shadcn.com/docs/components/date-picker"
+  },
+  "Date Picker": {
+    "prefix": [
+      "cnx-date-picker",
+      "shadcn-x-date-picker"
+    ],
+    "body": [
+      "<Popover>",
+      "  <PopoverTrigger asChild>",
+      "    <Button",
+      "      variant={\"outline\"}",
+      "      className={cn(",
+      "        \"w-[280px] justify-start text-left font-normal\",",
+      "        !date && \"text-muted-foreground\"",
+      "      )}",
+      "    >",
+      "      <CalendarIcon className=\"mr-2 h-4 w-4\" />",
+      "      {date ? format(date, \"PPP\") : <span>Pick a date</span>}",
+      "    </Button>",
+      "  </PopoverTrigger>",
+      "  <PopoverContent className=\"w-auto p-0\">",
+      "    <Calendar mode=\"single\" selected={date} onSelect={setDate} initialFocus />",
+      "  </PopoverContent>",
+      "</Popover>"
+    ],
+    "description": "https://ui.shadcn.com/docs/components/date-picker"
+  },
+  "Dialog": {
+    "prefix": [
+      "cnx-dialog",
+      "shadcn-x-dialog"
+    ],
+    "body": [
+      "<Dialog>",
+      "  <DialogTrigger>Open</DialogTrigger>",
+      "  <DialogContent>",
+      "    <DialogHeader>",
+      "      <DialogTitle>Are you absolutely sure?</DialogTitle>",
+      "      <DialogDescription>",
+      "        This action cannot be undone. This will permanently delete your account",
+      "        and remove your data from our servers.",
+      "      </DialogDescription>",
+      "    </DialogHeader>",
+      "  </DialogContent>",
+      "</Dialog>"
+    ],
+    "description": "https://ui.shadcn.com/docs/components/dialog"
+  },
+  "Drawer": {
+    "prefix": [
+      "cnx-drawer",
+      "shadcn-x-drawer"
+    ],
+    "body": [
+      "<Drawer>",
+      "  <DrawerTrigger>Open</DrawerTrigger>",
+      "  <DrawerContent>",
+      "    <DrawerHeader>",
+      "      <DrawerTitle>Are you absolutely sure?</DrawerTitle>",
+      "      <DrawerDescription>This action cannot be undone.</DrawerDescription>",
+      "    </DrawerHeader>",
+      "    <DrawerFooter>",
+      "      <Button>Submit</Button>",
+      "      <DrawerClose>",
+      "        <Button variant=\"outline\">Cancel</Button>",
+      "      </DrawerClose>",
+      "    </DrawerFooter>",
+      "  </DrawerContent>",
+      "</Drawer>"
+    ],
+    "description": "https://ui.shadcn.com/docs/components/drawer"
+  },
+  "Dropdown Menu": {
+    "prefix": [
+      "cnx-dropdown-menu",
+      "shadcn-x-dropdown-menu"
+    ],
+    "body": [
+      "<DropdownMenu>",
+      "  <DropdownMenuTrigger>Open</DropdownMenuTrigger>",
+      "  <DropdownMenuContent>",
+      "    <DropdownMenuLabel>My Account</DropdownMenuLabel>",
+      "    <DropdownMenuSeparator />",
+      "    <DropdownMenuItem>Profile</DropdownMenuItem>",
+      "    <DropdownMenuItem>Billing</DropdownMenuItem>",
+      "    <DropdownMenuItem>Team</DropdownMenuItem>",
+      "    <DropdownMenuItem>Subscription</DropdownMenuItem>",
+      "  </DropdownMenuContent>",
+      "</DropdownMenu>"
+    ],
+    "description": "https://ui.shadcn.com/docs/components/dropdown-menu"
+  },
+  "Form Formfield": {
+    "prefix": [
+      "cnx-form-formfield",
+      "shadcn-x-form-formfield"
+    ],
+    "body": [
+      "<FormField",
+      "  control={form.control}",
+      "  name=\"\"",
+      "  render={({ field }) => (",
+      "    <FormItem>",
+      "      <FormLabel></FormLabel>",
+      "      <FormControl>",
+      "        <Input placeholder=\"shadcn\" {...field} />",
+      "      </FormControl>",
+      "      <FormDescription>desc.</FormDescription>",
+      "      <FormMessage />",
+      "    </FormItem>",
+      "  )}",
+      "/>"
+    ],
+    "description": "https://ui.shadcn.com/docs/components/form"
+  },
+  "Hover Card": {
+    "prefix": [
+      "cnx-hover-card",
+      "shadcn-x-hover-card"
+    ],
+    "body": [
+      "<HoverCard>",
+      "  <HoverCardTrigger>Hover</HoverCardTrigger>",
+      "  <HoverCardContent>",
+      "    The React Framework – created and maintained by @vercel.",
+      "  </HoverCardContent>",
+      "</HoverCard>"
+    ],
+    "description": "https://ui.shadcn.com/docs/components/hover-card"
+  },
+  "Input Disabled": {
+    "prefix": [
+      "cnx-input-disabled",
+      "shadcn-x-input-disabled"
+    ],
+    "body": [
+      "<Input disabled />"
+    ],
+    "description": "https://ui.shadcn.com/docs/components/input"
+  },
+  "Input File": {
+    "prefix": [
+      "cnx-input-file",
+      "shadcn-x-input-file"
+    ],
+    "body": [
+      "<Input type=\"file\" />"
+    ],
+    "description": "https://ui.shadcn.com/docs/components/input"
+  },
+  "Input Otp Formfield": {
+    "prefix": [
+      "cnx-input-otp-formfield",
+      "shadcn-x-input-otp-formfield"
+    ],
+    "body": [
+      "<FormField",
+      "  control={form.control}",
+      "  name=\"pin\"",
+      "  render={({ field }) => (",
+      "    <FormItem>",
+      "      <FormLabel>One-Time Password</FormLabel>",
+      "      <FormControl>",
+      "        <InputOTP maxLength={6} {...field}>",
+      "          <InputOTPGroup>",
+      "            <InputOTPSlot index={0} />",
+      "            <InputOTPSlot index={1} />",
+      "            <InputOTPSlot index={2} />",
+      "            <InputOTPSlot index={3} />",
+      "            <InputOTPSlot index={4} />",
+      "            <InputOTPSlot index={5} />",
+      "          </InputOTPGroup>",
+      "        </InputOTP>",
+      "      </FormControl>",
+      "      <FormDescription>",
+      "        Please enter the one-time password sent to your phone.",
+      "      </FormDescription>",
+      "      <FormMessage />",
+      "    </FormItem>",
+      "  )}",
+      "/>"
+    ],
+    "description": "https://ui.shadcn.com/docs/components/input-otp"
+  },
+  "Input Otp Separated": {
+    "prefix": [
+      "cnx-input-otp-separated",
+      "shadcn-x-input-otp-separated"
+    ],
+    "body": [
+      "<InputOTP maxLength={6}>",
+      "  <InputOTPGroup>",
+      "    <InputOTPSlot index={0} />",
+      "    <InputOTPSlot index={1} />",
+      "    <InputOTPSlot index={2} />",
+      "  </InputOTPGroup>",
+      "  <InputOTPSeparator />",
+      "  <InputOTPGroup>",
+      "    <InputOTPSlot index={3} />",
+      "    <InputOTPSlot index={4} />",
+      "    <InputOTPSlot index={5} />",
+      "  </InputOTPGroup>",
+      "</InputOTP>"
+    ],
+    "description": "https://ui.shadcn.com/docs/components/input-otp"
+  },
+  "Input Otp": {
+    "prefix": [
+      "cnx-input-otp",
+      "shadcn-x-input-otp"
+    ],
+    "body": [
+      "<InputOTP maxLength={6} pattern={REGEXP_ONLY_DIGITS_AND_CHARS}>",
+      "  <InputOTPGroup>",
+      "    <InputOTPSlot index={0} />",
+      "    <InputOTPSlot index={1} />",
+      "    <InputOTPSlot index={2} />",
+      "    <InputOTPSlot index={3} />",
+      "    <InputOTPSlot index={4} />",
+      "    <InputOTPSlot index={5} />",
+      "  </InputOTPGroup>",
+      "</InputOTP>"
+    ],
+    "description": "https://ui.shadcn.com/docs/components/input-otp"
+  },
+  "Input": {
+    "prefix": [
+      "cnx-input",
+      "shadcn-x-input"
+    ],
+    "body": [
+      "<Input />"
+    ],
+    "description": "https://ui.shadcn.com/docs/components/input"
+  },
+  "Label": {
+    "prefix": [
+      "cnx-label",
+      "shadcn-x-label"
+    ],
+    "body": [
+      "<Label htmlFor=\"email\">Your email address</Label>"
+    ],
+    "description": "https://ui.shadcn.com/docs/components/label"
+  },
+  "Menubar": {
+    "prefix": [
+      "cnx-menubar",
+      "shadcn-x-menubar"
+    ],
+    "body": [
+      "<Menubar>",
+      "  <MenubarMenu>",
+      "    <MenubarTrigger>File</MenubarTrigger>",
+      "    <MenubarContent>",
+      "      <MenubarItem>",
+      "        New Tab <MenubarShortcut>⌘T</MenubarShortcut>",
+      "      </MenubarItem>",
+      "      <MenubarItem>New Window</MenubarItem>",
+      "      <MenubarSeparator />",
+      "      <MenubarItem>Share</MenubarItem>",
+      "      <MenubarSeparator />",
+      "      <MenubarItem>Print</MenubarItem>",
+      "    </MenubarContent>",
+      "  </MenubarMenu>",
+      "</Menubar>"
+    ],
+    "description": "https://ui.shadcn.com/docs/components/menubar"
+  },
+  "Navigation Menu": {
+    "prefix": [
+      "cnx-navigation-menu",
+      "shadcn-x-navigation-menu"
+    ],
+    "body": [
+      "<NavigationMenu>",
+      "  <NavigationMenuList>",
+      "    <NavigationMenuItem>",
+      "      <NavigationMenuTrigger>Item One</NavigationMenuTrigger>",
+      "      <NavigationMenuContent>",
+      "        <NavigationMenuLink>Link</NavigationMenuLink>",
+      "      </NavigationMenuContent>",
+      "    </NavigationMenuItem>",
+      "  </NavigationMenuList>",
+      "</NavigationMenu>"
+    ],
+    "description": "https://ui.shadcn.com/docs/components/navigation-menu"
+  },
+  "Pagination": {
+    "prefix": [
+      "cnx-pagination",
+      "shadcn-x-pagination"
+    ],
+    "body": [
+      "<Pagination>",
+      "  <PaginationContent>",
+      "    <PaginationItem>",
+      "      <PaginationPrevious href=\"#\" />",
+      "    </PaginationItem>",
+      "    <PaginationItem>",
+      "      <PaginationLink href=\"#\">1</PaginationLink>",
+      "    </PaginationItem>",
+      "    <PaginationItem>",
+      "      <PaginationEllipsis />",
+      "    </PaginationItem>",
+      "    <PaginationItem>",
+      "      <PaginationNext href=\"#\" />",
+      "    </PaginationItem>",
+      "  </PaginationContent>",
+      "</Pagination>"
+    ],
+    "description": "https://ui.shadcn.com/docs/components/pagination"
+  },
+  "Popover": {
+    "prefix": [
+      "cnx-popover",
+      "shadcn-x-popover"
+    ],
+    "body": [
+      "<Popover>",
+      "  <PopoverTrigger>Open</PopoverTrigger>",
+      "  <PopoverContent>Place content for the popover here.</PopoverContent>",
+      "</Popover>"
+    ],
+    "description": "https://ui.shadcn.com/docs/components/popover"
+  },
+  "Progress": {
+    "prefix": [
+      "cnx-progress",
+      "shadcn-x-progress"
+    ],
+    "body": [
+      "<Progress value={33} />"
+    ],
+    "description": "https://ui.shadcn.com/docs/components/progress"
+  },
+  "Radio Group": {
+    "prefix": [
+      "cnx-radio-group",
+      "shadcn-x-radio-group"
+    ],
+    "body": [
+      "<RadioGroup defaultValue=\"option-one\">",
+      "  <div className=\"flex items-center space-x-2\">",
+      "    <RadioGroupItem value=\"option-one\" id=\"option-one\" />",
+      "  </div>",
+      "  <div className=\"flex items-center space-x-2\">",
+      "    <RadioGroupItem value=\"option-two\" id=\"option-two\" />",
+      "  </div>",
+      "</RadioGroup>"
+    ],
+    "description": "https://ui.shadcn.com/docs/components/radio-group"
+  },
+  "Resizable Handle": {
+    "prefix": [
+      "cnx-resizable-handle",
+      "shadcn-x-resizable-handle"
+    ],
+    "body": [
+      "<ResizablePanelGroup direction=\"horizontal\">",
+      "  <ResizablePanel>One</ResizablePanel>",
+      "  <ResizableHandle withHandle />",
+      "  <ResizablePanel>Two</ResizablePanel>",
+      "</ResizablePanelGroup>"
+    ],
+    "description": "https://ui.shadcn.com/docs/components/resizable"
+  },
+  "Resizable Vertical Handle": {
+    "prefix": [
+      "cnx-resizable-vertical-handle",
+      "shadcn-x-resizable-vertical-handle"
+    ],
+    "body": [
+      "<ResizablePanelGroup direction=\"vertical\">",
+      "  <ResizablePanel>One</ResizablePanel>",
+      "  <ResizableHandle withHandle />",
+      "  <ResizablePanel>Two</ResizablePanel>",
+      "</ResizablePanelGroup>"
+    ],
+    "description": "https://ui.shadcn.com/docs/components/resizable"
+  },
+  "Resizable Vertical": {
+    "prefix": [
+      "cnx-resizable-vertical",
+      "shadcn-x-resizable-vertical"
+    ],
+    "body": [
+      "<ResizablePanelGroup direction=\"vertical\">",
+      "  <ResizablePanel>One</ResizablePanel>",
+      "  <ResizableHandle />",
+      "  <ResizablePanel>Two</ResizablePanel>",
+      "</ResizablePanelGroup>"
+    ],
+    "description": "https://ui.shadcn.com/docs/components/resizable"
+  },
+  "Resizable": {
+    "prefix": [
+      "cnx-resizable",
+      "shadcn-x-resizable"
+    ],
+    "body": [
+      "<ResizablePanelGroup direction=\"horizontal\">",
+      "  <ResizablePanel>One</ResizablePanel>",
+      "  <ResizableHandle />",
+      "  <ResizablePanel>Two</ResizablePanel>",
+      "</ResizablePanelGroup>"
+    ],
+    "description": "https://ui.shadcn.com/docs/components/resizable"
+  },
+  "Scroll Area": {
+    "prefix": [
+      "cnx-scroll-area",
+      "shadcn-x-scroll-area"
+    ],
+    "body": [
+      "<ScrollArea className=\"h-[200px] w-[350px] rounded-md border p-4\">",
+      "  Jokester began sneaking into the castle in the middle of the night and leaving",
+      "  jokes all over the place: under the king's pillow, in his soup, even in the",
+      "  royal toilet. The king was furious, but he couldn't seem to stop Jokester. And",
+      "  then, one day, the people of the kingdom discovered that the jokes left by",
+      "  Jokester were so funny that they couldn't help but laugh. And once they",
+      "  started laughing, they couldn't stop.",
+      "</ScrollArea>"
+    ],
+    "description": "https://ui.shadcn.com/docs/components/scroll-area"
+  },
+  "Select": {
+    "prefix": [
+      "cnx-select",
+      "shadcn-x-select"
+    ],
+    "body": [
+      "<Select>",
+      "  <SelectTrigger className=\"w-[180px]\">",
+      "    <SelectValue placeholder=\"Theme\" />",
+      "  </SelectTrigger>",
+      "  <SelectContent>",
+      "    <SelectItem value=\"light\">Light</SelectItem>",
+      "    <SelectItem value=\"dark\">Dark</SelectItem>",
+      "    <SelectItem value=\"system\">System</SelectItem>",
+      "  </SelectContent>",
+      "</Select>"
+    ],
+    "description": "https://ui.shadcn.com/docs/components/select"
+  },
+  "Seperator": {
+    "prefix": [
+      "cnx-seperator",
+      "shadcn-x-seperator"
+    ],
+    "body": [
+      "<Separator />"
+    ],
+    "description": "https://ui.shadcn.com/docs/components/seperator"
+  },
+  "Sheet": {
+    "prefix": [
+      "cnx-sheet",
+      "shadcn-x-sheet"
+    ],
+    "body": [
+      "<Sheet>",
+      "  <SheetTrigger>Open</SheetTrigger>",
+      "  <SheetContent>",
+      "    <SheetHeader>",
+      "      <SheetTitle>Are you absolutely sure?</SheetTitle>",
+      "      <SheetDescription>",
+      "        This action cannot be undone. This will permanently delete your account",
+      "        and remove your data from our servers.",
+      "      </SheetDescription>",
+      "    </SheetHeader>",
+      "  </SheetContent>",
+      "</Sheet>"
+    ],
+    "description": "https://ui.shadcn.com/docs/components/sheet"
+  },
+  "Skeleton": {
+    "prefix": [
+      "cnx-skeleton",
+      "shadcn-x-skeleton"
+    ],
+    "body": [
+      "<Skeleton className=\"w-[100px] h-[20px] rounded-full\" />"
+    ],
+    "description": "https://ui.shadcn.com/docs/components/skeleton"
+  },
+  "Slider": {
+    "prefix": [
+      "cnx-slider",
+      "shadcn-x-slider"
+    ],
+    "body": [
+      "<Slider defaultValue={[33]} max={100} step={1} />"
+    ],
+    "description": "https://ui.shadcn.com/docs/components/slider"
+  },
+  "Sonner Toast": {
+    "prefix": [
+      "cnx-sonner-toast",
+      "shadcn-x-sonner-toast"
+    ],
+    "body": [
+      "toast(\"Event has been created.\")"
+    ],
+    "description": "https://ui.shadcn.com/docs/components/sonner-toast"
+  },
+  "Sonner Toaster": {
+    "prefix": [
+      "cnx-sonner-toaster",
+      "shadcn-x-sonner-toaster"
+    ],
+    "body": [
+      "<Toaster />"
+    ],
+    "description": "https://ui.shadcn.com/docs/components/sonner-toaster"
+  },
+  "Switch": {
+    "prefix": [
+      "cnx-switch",
+      "shadcn-x-switch"
+    ],
+    "body": [
+      "<Switch />"
+    ],
+    "description": "https://ui.shadcn.com/docs/components/switch"
+  },
+  "Table": {
+    "prefix": [
+      "cnx-table",
+      "shadcn-x-table"
+    ],
+    "body": [
+      "<Table>",
+      "  <TableCaption>A list of your recent invoices.</TableCaption>",
+      "  <TableHeader>",
+      "    <TableRow>",
+      "      <TableHead className=\"w-[100px]\">Invoice</TableHead>",
+      "      <TableHead>Status</TableHead>",
+      "      <TableHead>Method</TableHead>",
+      "      <TableHead className=\"text-right\">Amount</TableHead>",
+      "    </TableRow>",
+      "  </TableHeader>",
+      "  <TableBody>",
+      "    <TableRow>",
+      "      <TableCell className=\"font-medium\">INV001</TableCell>",
+      "      <TableCell>Paid</TableCell>",
+      "      <TableCell>Credit Card</TableCell>",
+      "      <TableCell className=\"text-right\">$250.00</TableCell>",
+      "    </TableRow>",
+      "  </TableBody>",
+      "</Table>"
+    ],
+    "description": "https://ui.shadcn.com/docs/components/table"
+  },
+  "Tabs": {
+    "prefix": [
+      "cnx-tabs",
+      "shadcn-x-tabs"
+    ],
+    "body": [
+      "<Tabs defaultValue=\"account\" className=\"w-[400px]\">",
+      "  <TabsList>",
+      "    <TabsTrigger value=\"account\">Account</TabsTrigger>",
+      "    <TabsTrigger value=\"password\">Password</TabsTrigger>",
+      "  </TabsList>",
+      "  <TabsContent value=\"account\">Make changes to your account here.</TabsContent>",
+      "  <TabsContent value=\"password\">Change your password here.</TabsContent>",
+      "</Tabs>"
+    ],
+    "description": "https://ui.shadcn.com/docs/components/tabs"
+  },
+  "Textarea Disabled": {
+    "prefix": [
+      "cnx-textarea-disabled",
+      "shadcn-x-textarea-disabled"
+    ],
+    "body": [
+      "<Textarea disabled />"
+    ],
+    "description": "https://ui.shadcn.com/docs/components/textarea"
+  },
+  "Textarea": {
+    "prefix": [
+      "cnx-textarea",
+      "shadcn-x-textarea"
+    ],
+    "body": [
+      "<Textarea />"
+    ],
+    "description": "https://ui.shadcn.com/docs/components/textarea"
+  },
+  "Toast": {
+    "prefix": [
+      "cnx-toast",
+      "shadcn-x-toast"
+    ],
+    "body": [
+      "<Toaster />"
+    ],
+    "description": "https://ui.shadcn.com/docs/components/toast"
+  },
+  "Toggle Disabled": {
+    "prefix": [
+      "cnx-toggle-disabled",
+      "shadcn-x-toggle-disabled"
+    ],
+    "body": [
+      "<Toggle disabled>Toggle</Toggle>"
+    ],
+    "description": "https://ui.shadcn.com/docs/components/toggle"
+  },
+  "Toggle Group Disabled": {
+    "prefix": [
+      "cnx-toggle-group-disabled",
+      "shadcn-x-toggle-group-disabled"
+    ],
+    "body": [
+      "<ToggleGroup type=\"single\" disabled>",
+      "  <ToggleGroupItem value=\"a\">A</ToggleGroupItem>",
+      "  <ToggleGroupItem value=\"b\">B</ToggleGroupItem>",
+      "  <ToggleGroupItem value=\"c\">C</ToggleGroupItem>",
+      "</ToggleGroup>"
+    ],
+    "description": "https://ui.shadcn.com/docs/components/toggle-group"
+  },
+  "Toggle Group Multiple": {
+    "prefix": [
+      "cnx-toggle-group-multiple",
+      "shadcn-x-toggle-group-multiple"
+    ],
+    "body": [
+      "<ToggleGroup type=\"multiple\">",
+      "  <ToggleGroupItem value=\"a\">A</ToggleGroupItem>",
+      "  <ToggleGroupItem value=\"b\">B</ToggleGroupItem>",
+      "  <ToggleGroupItem value=\"c\">C</ToggleGroupItem>",
+      "</ToggleGroup>"
+    ],
+    "description": "https://ui.shadcn.com/docs/components/toggle-group"
+  },
+  "Toggle Group Outline": {
+    "prefix": [
+      "cnx-toggle-group-outline",
+      "shadcn-x-toggle-group-outline"
+    ],
+    "body": [
+      "<ToggleGroup type=\"single\" variant=\"outline\">",
+      "  <ToggleGroupItem value=\"a\">A</ToggleGroupItem>",
+      "  <ToggleGroupItem value=\"b\">B</ToggleGroupItem>",
+      "  <ToggleGroupItem value=\"c\">C</ToggleGroupItem>",
+      "</ToggleGroup>"
+    ],
+    "description": "https://ui.shadcn.com/docs/components/toggle-group"
+  },
+  "Toggle Group": {
+    "prefix": [
+      "cnx-toggle-group",
+      "shadcn-x-toggle-group"
+    ],
+    "body": [
+      "<ToggleGroup type=\"single\">",
+      "  <ToggleGroupItem value=\"a\">A</ToggleGroupItem>",
+      "  <ToggleGroupItem value=\"b\">B</ToggleGroupItem>",
+      "  <ToggleGroupItem value=\"c\">C</ToggleGroupItem>",
+      "</ToggleGroup>"
+    ],
+    "description": "https://ui.shadcn.com/docs/components/toggle-group"
+  },
+  "Toggle Outline": {
+    "prefix": [
+      "cnx-toggle-outline",
+      "shadcn-x-toggle-outline"
+    ],
+    "body": [
+      "<Toggle variant=\"outline\">Toggle</Toggle>"
+    ],
+    "description": "https://ui.shadcn.com/docs/components/toggle"
+  },
+  "Toggle": {
+    "prefix": [
+      "cnx-toggle",
+      "shadcn-x-toggle"
+    ],
+    "body": [
+      "<Toggle>Toggle</Toggle>"
+    ],
+    "description": "https://ui.shadcn.com/docs/components/toggle"
+  },
+  "Tooltip": {
+    "prefix": [
+      "cnx-tooltip",
+      "shadcn-x-tooltip"
+    ],
+    "body": [
+      "<TooltipProvider>",
+      "  <Tooltip>",
+      "    <TooltipTrigger>Hover</TooltipTrigger>",
+      "    <TooltipContent>",
+      "      <p>Add to library</p>",
+      "    </TooltipContent>",
+      "  </Tooltip>",
+      "</TooltipProvider>"
+    ],
+    "description": "https://ui.shadcn.com/docs/components/tooltip"
+  }
+}
