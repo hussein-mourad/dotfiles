@@ -8,13 +8,13 @@ alsa-firmware 1.2.4-4
 alsa-plugins 1:1.2.12-4
 alsa-utils 1.2.13-2
 ansible 11.3.0-1
-apache-tools 2.4.62-2
+apache-tools 2.4.63-1
 apparmor 4.0.3-3
 appimagelauncher 2.2.0-10
 arandr 0.1.11-4
 arch-wiki-docs 20250301-1
 artwork-i3 20190912-2
-asdf-vm 0.14.1-1
+asdf-vm 0.16.7-1
 atac 0.19.0-1
 atomicparsley 20240608.083822.1ed9031-1
 atool 0.39.0-10
@@ -29,7 +29,7 @@ b43-fwcutter 019-6
 base 3-3
 base-devel 1-3
 bat 0.25.0-4
-beekeeper-studio-bin 4.6.8-1
+beekeeper-studio-bin 5.1.5-1
 bind 9.20.7-1
 bison 3.8.2-8
 bitwarden 2025.2.1-1
@@ -42,7 +42,7 @@ borg 1.4.0-3
 bottom 0.10.2-1
 bridge-utils 1.7.1-2
 brn-git r31.454e213-1
-bruno-bin 1.35.0-1
+bruno-bin 2.0.1-1
 btop 1.4.0-5
 btrfs-progs 6.13-1
 bzip2 1.0.8-6
@@ -73,7 +73,7 @@ cryptsetup 2.7.5-2
 csvkit 2.1.0-1
 ctop 0.7.7-3
 curlie 1.8.2-1
-cutecom 0.51.0-4
+cutecom 0.51.0-5
 debugedit 5.1-1
 deluge 1:2.1.1-8
 deno 2.2.1-1
@@ -128,8 +128,8 @@ flac 1.5.0-1
 flameshot 12.1.0-6
 flex 2.6.4-5
 fpp 0.9.5-1
-freeze-bin 0.1.6-1
-fritzing 1.0.4-1
+freeze-bin 0.2.0-1
+fritzing 1.0.4-2
 fx 35.0.0-1
 galculator 2.1.4-10
 garcon 4.20.0-2
@@ -190,7 +190,7 @@ hl 0.30.4-1
 hplip 1:3.24.4-3
 htop 3.4.0-1
 httpie 3.2.4-1
-httpie-desktop-bin 2024.1.2-2
+httpie-desktop-bin 2025.2.0-1
 hub 2.14.2-4
 hugo 0.145.0-1
 i3-help 20180110-2
@@ -233,7 +233,7 @@ kvantum-manjaro 0.13.5+5+g0179d45-4
 lazydocker-bin 0.24.1-1
 lazygit 0.48.0-1
 lazynpm 0.1.4-1
-lazysql 0.2.9-1
+lazysql 0.3.4-1
 less 1:668-1
 lib32-flex 2.6.4-5
 lib32-libva-vdpau-driver 0.7.4-8
@@ -312,7 +312,7 @@ mysql-workbench 8.0.41-1
 nano 8.3-1
 nano-syntax-highlighting 2022.11.02.r102.gbb94603-1
 ncdu 2.7-1
-ndpi 4.8-1
+ndpi 4.12-2
 neofetch 7.1.0-2
 neomutt 20250113-1
 neovim 0.11.0-2
@@ -331,7 +331,7 @@ newsboat 2.39-1
 newsflash 3.3.5-1
 nfs-utils 2.8.2-2
 ngrep 1.47-4
-ngrok 3.18.4-1
+ngrok 3.22.0-1
 nitrogen 1.6.1-6
 nmap 7.95-1
 nnn 5.1-1
@@ -358,7 +358,7 @@ os-prober 1.83-1
 otree 0.3.0-1
 owncloud-client 5.3.2.15463-1
 pa-applet-git r19.3b4f8b3-8
-pacseek 1.8.3-2
+pacseek 1.8.5-1
 pacui 1.14+88+g6f62462-1
 pamac-gtk 11.7.2-3
 pandoc-cli 3.1.12.1-22
@@ -384,7 +384,7 @@ polkit-gnome 0.105-11
 polybar 3.7.2-2
 poppler-data 0.4.12-2
 postgresql 17.2-3
-postman-bin 11.21.0-1
+postman-bin 11.37.1-1
 powertop 2.15-2
 procs 0.14.9-1
 prometheus 3.2.1-1
@@ -431,7 +431,7 @@ rustup 1.28.1-1
 s-nail 14.9.24-2
 s-tui 1.1.6-3
 sad 0.4.32-2
-safeeyes 2.2.2-3
+safeeyes 2.2.3-1
 sane-airscan 0.99.33-1
 sbxkb 0.7.6-7
 scrcpy 3.1-1
@@ -460,7 +460,7 @@ starship 1.22.1-1
 stow 2.4.1-1
 subversion 1.14.5-1
 sudo 1.9.16.p2-2
-superproductivity-bin 11.0.0-1
+superproductivity-bin 12.0.1-1
 swtpm 0.10.0-3
 sxiv 26-2
 syncthing 1.29.3-1
@@ -494,7 +494,7 @@ tidy 5.8.0-3
 timew 1.7.1-1
 tiv 2015-4
 tk 8.6.16-1
-tlrc-bin 1.9.3-1
+tlrc-bin 1.11.0-1
 tmux 3.5_a-1
 todoman 4.5.0-2
 traceroute 2.1.6-1
