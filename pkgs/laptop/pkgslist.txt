@@ -1677,6 +1677,7 @@ pulseaudio-bluetooth 17.0+r43+g3e2bb8a1e-1
 pulseaudio-ctl 1.70-2
 pycharm-community-edition 2024.3.5-1
 pyenv 1:2.5.4-1
+pyright 1.1.398-1
 pyside6 6.8.2.1-1
 python 3.13.2-1
 python-agate 1.13.0-1
@@ -2442,6 +2443,7 @@ vulkan-headers 1:1.4.309.0-1
 vulkan-icd-loader 1.4.309.0-1
 vulkan-intel 1:25.0.2-2
 vulkan-radeon 1:25.0.2-2
+vulkan-tools 1.4.309.0-1
 w3m 0.5.3.git20230713_1-1
 wallpapers-juhraya 1.1-3
 wavpack 5.8.1-1
@@ -2565,6 +2567,7 @@ zathura 0.5.11-1
 zathura-pdf-mupdf 0.4.4-13
 zbar 0.23.93-4
 zeal 0.7.2-1
+zed 0.179.2-1
 zen-browser-bin 1.10.3b-1
 zenity 4.1.90-1
 zensu 0.3-7
