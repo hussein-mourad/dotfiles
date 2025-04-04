@@ -123,6 +123,7 @@ return {
         ["<leader>Mc"] = { "<cmd>PeekClose<cr>", desc = "Peek Close Preview" },
         ["<M-t>"] = { "<cmd>ToggleTerm size=12 direction=horizontal<cr>", desc = "Toggle horizontal terminal" },
         ["<C-b>"] = { "<cmd>OverseerRun<cr>", desc = "Run command" },
+        ["<leader>uZ"] = { "<cmd>ZenMode<cr>", desc = "Toggle Zen Mode" },
       },
       t = {
         ["<M-t>"] = { "<cmd>ToggleTerm<cr>", desc = "Toggle horizontal terminal" },
