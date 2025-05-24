@@ -369,6 +369,7 @@ patch 2.7.6-10
 patchutils 0.4.2-3
 pavucontrol 1:6.1-1
 pcmanfm 1.4.0-1
+pdftk 3.3.3-4
 perl 5.40.1-2
 perl-anyevent-i3 0.19-1
 perl-file-mimeinfo 0.35-2
