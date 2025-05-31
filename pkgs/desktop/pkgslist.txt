@@ -85,7 +85,7 @@ brltty 6.7-5
 brn-git r31.454e213-1
 broot 1.46.4-1
 brotli 1.1.0-3
-bruno-bin 2.0.1-1
+bruno-bin 2.3.0-1
 btop 1.4.3-2
 btrfs-progs 6.14-1
 bubblewrap 0.11.0-1
@@ -295,7 +295,7 @@ go 2:1.24.3-1
 go-task 3.43.3-1
 gobject-introspection-runtime 1.84.0-1
 goocanvas 3.0.0-7
-google-chrome 134.0.6998.165-1
+google-chrome 137.0.7151.55-1
 gparted 1.7.0-1
 gperf 3.1-5
 gperftools 2.16-1
