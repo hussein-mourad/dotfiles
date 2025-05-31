@@ -192,8 +192,6 @@ edk2-ovmf 202411-1
 efibootmgr 18-3
 efivar 39-1
 electron31 31.7.7-3
-electron32 32.3.1-3
-electron33 33.4.3-1
 electron34 34.3.2-1
 elinks 0.18.0-1
 enchant 2.8.2-2
