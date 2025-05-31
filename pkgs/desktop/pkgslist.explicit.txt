@@ -46,7 +46,7 @@ cheat-bin 4.4.2-1
 chromium 137.0.7151.55-1
 clipit 1:1.4.5+25+gf35db54-1
 cloc 2.04-1
-clock-tui 0.5.0-2
+clock-tui 0.6.0-1
 cmatrix 2.0-3
 coreutils 9.7-1
 cpupower 6.14-1

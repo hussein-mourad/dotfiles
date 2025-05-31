@@ -116,7 +116,7 @@ clang 19.1.7-2
 clang18 18.1.8-2
 clipit 1:1.4.5+25+gf35db54-1
 cloc 2.04-1
-clock-tui 0.5.0-2
+clock-tui 0.6.0-1
 clucene 2.3.3.4-16
 clutter 1.26.4-3
 clutter-gtk 1.8.4-4
