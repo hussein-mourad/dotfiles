@@ -14,7 +14,7 @@ arandr 0.1.11-4
 arch-wiki-docs 20250402-1
 arduino-cli 1.1.1-1
 artwork-i3 20190912-2
-asdf-vm 0.16.7-1
+asdf-vm 0.17.0-1
 atomicparsley 20240608.083822.1ed9031-1
 atools 20.2.2-4
 atuin 18.6.1-1
@@ -382,7 +382,7 @@ viewnior 1.8-6
 vim 9.1.1376-1
 virt-manager 5.0.0-1
 virt-viewer 11.0-4
-visual-studio-code-bin 1.98.2-1
+visual-studio-code-bin 1.100.2-1
 vlc 3.0.21-19
 vnstat 2.13-1
 volumeicon 0.5.1-7
