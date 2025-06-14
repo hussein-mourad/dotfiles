@@ -49,6 +49,7 @@ cloc 2.04-1
 clock-tui 0.6.0-1
 cmatrix 2.0-3
 coreutils 9.7-1
+cowsay 3.8.4-1
 cpupower 6.14-1
 cronie 1.7.2-1
 cryptsetup 2.7.5-2
@@ -437,6 +438,6 @@ yt-dlp 2025.04.30-1
 zathura 0.5.11-1
 zathura-pdf-mupdf 0.4.4-14
 zed 0.186.9-1
-zen-browser-bin 1.12.10b-2
+zen-browser-bin 1.13b-1
 zensu 0.3-7
 zoxide 0.9.7-1
