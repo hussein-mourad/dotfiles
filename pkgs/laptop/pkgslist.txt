@@ -2364,7 +2364,7 @@ tinysparql 3.9.2-2
 tinyxml2 11.0.0-1
 tiv 2015-4
 tk 8.6.16-1
-tlrc-bin 1.11.0-1
+tlrc-bin 1.11.1-1
 tmux 3.5_a-1
 todoman 4.5.0-2
 totem-pl-parser 3.26.6+r30+g51b8439-2

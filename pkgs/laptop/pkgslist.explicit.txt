@@ -497,7 +497,7 @@ tidy 5.8.0-3
 timew 1.8.0-1
 tiv 2015-4
 tk 8.6.16-1
-tlrc-bin 1.11.0-1
+tlrc-bin 1.11.1-1
 tmux 3.5_a-1
 todoman 4.5.0-2
 traceroute 2.1.6-1
