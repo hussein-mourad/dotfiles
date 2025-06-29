@@ -399,6 +399,7 @@ wget 1.25.0-2
 which 2.23-1
 whois 5.5.23-1
 wikiman 2.14.1-1
+wine 10.9-1
 wireless-regdb 2025.02.20-1
 wireplumber 0.5.8-1
 wkhtmltopdf-static 0.12.6.1_r3-1

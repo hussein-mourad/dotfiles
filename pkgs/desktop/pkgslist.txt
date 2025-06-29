@@ -1966,6 +1966,7 @@ which 2.23-1
 whois 5.5.23-1
 wikiman 2.14.1-1
 wildmidi 0.4.6-1
+wine 10.9-1
 wireless-regdb 2025.02.20-1
 wireless_tools 30.pre9-4
 wireplumber 0.5.8-1
