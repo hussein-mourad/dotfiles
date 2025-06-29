@@ -95,6 +95,7 @@ c-ares 1.34.5-1
 ca-certificates 20240618-1
 ca-certificates-mozilla 3.111-1
 ca-certificates-utils 20240618-1
+cabextract 1.11-2
 cairo 1.18.4-1
 cairo-perl 1.109-5
 cairomm 1.14.5-1
@@ -1967,6 +1968,7 @@ whois 5.5.23-1
 wikiman 2.14.1-1
 wildmidi 0.4.6-1
 wine 10.9-1
+winetricks 20250102-1
 wireless-regdb 2025.02.20-1
 wireless_tools 30.pre9-4
 wireplumber 0.5.8-1
