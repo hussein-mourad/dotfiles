@@ -439,6 +439,6 @@ yt-dlp 2025.04.30-1
 zathura 0.5.11-1
 zathura-pdf-mupdf 0.4.4-14
 zed 0.186.9-1
-zen-browser-bin 1.13b-1
+zen-browser-bin 1.13.2b-3
 zensu 0.3-7
 zoxide 0.9.7-1
