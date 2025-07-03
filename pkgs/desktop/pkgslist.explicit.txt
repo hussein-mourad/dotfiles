@@ -145,6 +145,7 @@ httpie-desktop-bin 2025.2.0-1
 i3lock-color 2.13.c.5-3
 iftop 1.0pre4-6
 inetutils 2.6-1
+inkscape 1.4.2-3
 intel-ucode 20250512-1
 inxi 3.3.38.1-1
 iperf 2.2.1-1
