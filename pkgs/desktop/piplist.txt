@@ -1,7 +1,7 @@
 Package                Version
 ---------------------- -----------
 annotated-types        0.7.0
-apparmor               4.1.0
+apparmor               4.1.1
 appdirs                1.4.4
 application-utility    1.4.0
 arandr                 0.1.11
@@ -38,7 +38,7 @@ filelock               3.18.0
 GeoIP                  1.3.2
 git-filter-repo        2.47.0
 Glances                4.3.1
-gufw                   24.4.0
+gufw                   26.4.0
 hatch-vcs              0.4.0
 hatchling              1.27.0
 httpie                 3.2.4
@@ -58,13 +58,13 @@ jeepney                0.9.0
 keyring                25.6.0
 legacy-cgi             2.6.3
 lensfun                0.3.4
-LibAppArmor            4.1.0
+LibAppArmor            4.1.1
 libfdt                 1.7.2
 libtorrent             2.0.11
-libvirt-python         11.3.0
-lit                    19.1.7.dev0
+libvirt-python         11.4.0
+lit                    20.1.0.dev0
 lockfile               0.12.2
-louis                  3.33.0
+louis                  3.34.0
 lxml                   5.4.0
 Mako                   1.3.10.dev0
 markdown-it-py         3.0.0
@@ -81,7 +81,7 @@ numpy                  2.3.0
 ordered-set            4.1.0
 orjson                 3.10.18
 packaging              25.0
-pacman_mirrors         4.27
+pacman_mirrors         5.0
 paramiko               3.5.0
 pathspec               0.12.1
 pendulum               3.0.0
@@ -122,7 +122,7 @@ PyYAML                 6.0.2
 ranger-fm              1.9.4
 rencode                1.0.6
 reportlab              4.2.2
-requests               2.32.3
+requests               2.32.4
 requests-toolbelt      1.0.0
 rich                   14.0.0
 rrdtool                0.1.10
