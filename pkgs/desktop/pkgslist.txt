@@ -646,6 +646,7 @@ i3exit 20201126-2
 i3lock-color 2.13.c.5-3
 i3status-manjaro 2.13-3
 iana-etc 20250502-1
+icoutils 0.32.3-3
 icu 76.1-1
 iftop 1.0pre4-6
 ijs 0.35-6
@@ -1652,6 +1653,7 @@ python-more-itertools 10.7.0-1
 python-msgpack 1.0.5-3
 python-multidict 6.4.4-1
 python-mutagen 1.47.0-3
+python-natsort 8.4.0-3
 python-npyscreen 4.10.5-10
 python-numpy 2.3.0-2
 python-ordered-set 4.1.0-7
@@ -1722,6 +1724,7 @@ python-validate-pyproject 0.24.1-1
 python-wcwidth 0.2.13-3
 python-webencodings 0.5.1-12
 python-wheel 0.45.1-1
+python-wxpython 1:4.2.3-1
 python-xapp 2.4.2-2
 python-xmltodict 0.14.2-1
 python-yaml 6.0.2-2

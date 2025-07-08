@@ -74,6 +74,7 @@ more-itertools         10.7.0
 msgpack                1.0.5
 multidict              6.4.4
 mutagen                1.47.0
+natsort                8.4.0
 netsnmp-python         1.0a1
 nftables               0.1
 npyscreen              4.10.5
@@ -166,6 +167,7 @@ validate-pyproject     0.24.1
 wcwidth                0.2.13
 webencodings           0.5.1
 wheel                  0.45.1
+wxPython               4.2.3
 xmltodict              0.14.2
 yq                     3.4.3
 yt-dlp                 2025.6.9
