@@ -292,7 +292,6 @@ pkgconf 2.4.3-1
 plocate 1.1.23-1
 polkit-gnome 0.105-11
 poppler-data 0.4.12-2
-portmaster-stub 1.0.13-1
 powertop 2.15-2
 prayer-times 0.3.1-1
 procs 0.14.10-1
