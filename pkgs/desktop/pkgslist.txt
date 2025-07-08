@@ -1214,6 +1214,7 @@ m4 1.4.20-1
 maia-console 1.2-7
 mailcap 2.1.54-2
 make 4.4.1-2
+mako 1.10.0-1
 man-db 2.13.1-1
 man-pages 6.14-1
 manjaro-alsa 20221002-1
@@ -2049,7 +2050,7 @@ xclip 0.13-6
 xcursor-breeze 5.27.11-1
 xcursor-maia 20160417-3
 xdg-dbus-proxy 0.1.6-1
-xdg-desktop-portal 1.20.1-1
+xdg-desktop-portal 1.20.3-1
 xdg-desktop-portal-gtk 1.15.3-1
 xdg-desktop-portal-hyprland 1.3.9-9
 xdg-user-dirs 0.18-2
