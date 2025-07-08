@@ -44,7 +44,6 @@ cantarell-fonts 1:0.303.1-2
 cdrtools 3.02a09-6
 cheat-bin 4.4.2-1
 chromium 138.0.7204.92-1
-clang19 19.1.7-1
 clipit 1:1.4.5+25+gf35db54-1
 cloc 2.04-1
 clock-tui 0.6.0-1
@@ -458,4 +457,4 @@ zathura-pdf-mupdf 0.4.4-17
 zed 0.191.6-1
 zen-browser-bin 1.14.1b-1
 zensu 0.3-7
-zoxide 0.9.7-1
+zoxide 0.9.8-2
