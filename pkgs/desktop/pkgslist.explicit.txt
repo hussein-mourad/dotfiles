@@ -163,6 +163,7 @@ k6 0.57.0-1
 kanata 1.8.1-1
 keepassxc 2.7.10-2
 kitty 0.42.1-1
+konsole 25.04.2-1
 kvantum-manjaro 0.13.5+5+g0179d45-4
 lazydocker-bin 0.24.1-1
 lazygit 0.50.0-1
