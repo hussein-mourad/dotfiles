@@ -98,7 +98,6 @@ c-ares 1.34.5-1
 ca-certificates 20240618-1
 ca-certificates-mozilla 3.112-1
 ca-certificates-utils 20240618-1
-cabextract 1.11-2
 cairo 1.18.4-1
 cairo-perl 1.109-5
 cairomm 1.14.5-1
@@ -646,7 +645,6 @@ i3exit 20201126-2
 i3lock-color 2.13.c.5-3
 i3status-manjaro 2.13-3
 iana-etc 20250502-1
-icoutils 0.32.3-3
 icu 76.1-1
 iftop 1.0pre4-6
 ijs 0.35-6
@@ -1612,7 +1610,6 @@ plasma5support 6.3.5-2
 plasma6-themes-breath 24.0.0-4
 plasma6-themes-breath-migration 24.0.0-4
 playerctl 2.4.1-4
-playonlinux 4.4.r47.g10f7853-2
 plocate 1.1.23-1
 pngcrush 1.8.13-4
 polkit 126-2
@@ -1707,7 +1704,6 @@ python-more-itertools 10.7.0-1
 python-msgpack 1.0.5-3
 python-multidict 6.4.4-1
 python-mutagen 1.47.0-3
-python-natsort 8.4.0-3
 python-npyscreen 4.10.5-10
 python-numpy 2.3.0-2
 python-ordered-set 4.1.0-7
@@ -1719,7 +1715,6 @@ python-pendulum 3.0.0-5
 python-pgspecial 2.1.2-2
 python-pillow 11.2.1-1
 python-pip 25.1.1-1
-python-pipe 2.2-1
 python-pipx 1.7.1-2
 python-platformdirs 4.3.6-2
 python-pluggy 1.6.0-1
@@ -1729,7 +1724,6 @@ python-psutil 7.0.0-1
 python-psycopg 3.2.9-1
 python-pyasn1 0.6.0-2
 python-pyasn1-modules 0.4.0-2
-python-pyasyncore 1.0.4-3
 python-pycparser 2.22-3
 python-pycups 2.0.4-3
 python-pydantic 2.11.7-1
@@ -1780,7 +1774,6 @@ python-validate-pyproject 0.24.1-1
 python-wcwidth 0.2.13-3
 python-webencodings 0.5.1-12
 python-wheel 0.45.1-1
-python-wxpython 1:4.2.3-1
 python-xapp 2.4.2-2
 python-xmltodict 0.14.2-1
 python-yaml 6.0.2-2
@@ -2153,10 +2146,6 @@ which 2.23-1
 whois 5.6.1-1
 wikiman 2.14.1-1
 wildmidi 0.4.6-1
-wine 10.9-1
-wine-gecko 2.47.4-2
-wine-mono 10.0.0-1
-winetricks 20250102-1
 wireless-regdb 2025.02.20-1
 wireless_tools 30.pre9-4
 wireplumber 0.5.10-1
@@ -2192,6 +2181,7 @@ xcursor-breeze 5.27.11-1
 xcursor-maia 20160417-3
 xdg-dbus-proxy 0.1.6-1
 xdg-desktop-portal 1.20.3-1
+xdg-desktop-portal-gnome 48.0-1
 xdg-desktop-portal-gtk 1.15.3-1
 xdg-desktop-portal-hyprland 1.3.9-9
 xdg-desktop-portal-kde 6.3.5-1

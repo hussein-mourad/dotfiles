@@ -74,7 +74,6 @@ more-itertools         10.7.0
 msgpack                1.0.5
 multidict              6.4.4
 mutagen                1.47.0
-natsort                8.4.0
 netsnmp-python         1.0a1
 nftables               0.1
 npyscreen              4.10.5
@@ -90,7 +89,6 @@ pgcli                  4.3.0
 pgspecial              2.1.2
 pillow                 11.2.1
 pip                    25.1.1
-pipe                   2.2
 pipx                   1.7.1
 platformdirs           4.3.6
 pluggy                 1.6.0
@@ -101,7 +99,6 @@ psycopg                3.2.9
 psycopg-c              3.2.9
 pyasn1                 0.6.0
 pyasn1_modules         0.4.0
-pyasyncore             1.0.4
 pycairo                1.28.0
 pycparser              2.22
 pycups                 2.0.4
@@ -169,7 +166,6 @@ validate-pyproject     0.24.1
 wcwidth                0.2.13
 webencodings           0.5.1
 wheel                  0.45.1
-wxPython               4.2.3
 xmltodict              0.14.2
 yq                     3.4.3
 yt-dlp                 2025.6.9
