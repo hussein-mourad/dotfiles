@@ -90,6 +90,7 @@ pgcli                  4.3.0
 pgspecial              2.1.2
 pillow                 11.2.1
 pip                    25.1.1
+pipe                   2.2
 pipx                   1.7.1
 platformdirs           4.3.6
 pluggy                 1.6.0
@@ -100,6 +101,7 @@ psycopg                3.2.9
 psycopg-c              3.2.9
 pyasn1                 0.6.0
 pyasn1_modules         0.4.0
+pyasyncore             1.0.4
 pycairo                1.28.0
 pycparser              2.22
 pycups                 2.0.4

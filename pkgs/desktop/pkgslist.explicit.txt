@@ -289,6 +289,7 @@ pipewire-alsa 1:1.4.5-1
 pipewire-jack 1:1.4.5-1
 pipewire-pulse 1:1.4.5-1
 pkgconf 2.4.3-1
+playonlinux 4.4.r47.g10f7853-2
 plocate 1.1.23-1
 polkit-gnome 0.105-11
 poppler-data 0.4.12-2
@@ -304,6 +305,7 @@ python-keyring 25.6.0-1
 python-mutagen 1.47.0-3
 python-pip 25.1.1-1
 python-pipx 1.7.1-2
+python-pyasyncore 1.0.4-3
 python-pyqt5 5.15.11-2
 python-reportlab 4.2.2-5
 python-sshtunnel 0.4.0-8
@@ -411,6 +413,8 @@ which 2.23-1
 whois 5.6.1-1
 wikiman 2.14.1-1
 wine 10.9-1
+wine-gecko 2.47.4-2
+wine-mono 10.0.0-1
 winetricks 20250102-1
 wireless-regdb 2025.02.20-1
 wireplumber 0.5.10-1
