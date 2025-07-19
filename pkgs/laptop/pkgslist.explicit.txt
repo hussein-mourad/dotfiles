@@ -259,6 +259,7 @@ linux-nvidia-meta 6.15-1
 linux66 6.6.98-1
 linux66-headers 6.6.98-1
 linux66-nvidia 575.64.03-4
+localsend-bin 1.17.0-1
 logrotate 3.22.0-1
 lolcat 100.0.1-5
 lsd 1.1.5-1
