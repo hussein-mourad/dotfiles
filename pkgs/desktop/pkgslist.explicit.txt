@@ -383,7 +383,6 @@ ttf-liberation 2.1.5-2
 ttf-nerd-fonts-symbols 3.4.0-1
 ttf-nerd-fonts-symbols-mono 3.4.0-1
 typst 1:0.13.1-1
-unicode 2.9-4
 update-grub 2:2.12.r292.g73d1c959-1
 upower 1.90.9-1
 urlview 1.d-1
