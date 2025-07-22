@@ -365,6 +365,7 @@ gtksourceview3 1:3.24.11+r30+gd880929f-1
 gtksourceview4 4.8.4-2
 gtksourceview5 5.16.0-2
 gts 0.7.6.121130-3
+gucharmap 15.1.5-1
 gufw 26.04-1
 guile 3.0.10-1
 gulp 5.0.0-1

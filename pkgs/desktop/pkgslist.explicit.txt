@@ -126,6 +126,7 @@ gst-plugins-ugly 1.26.2-2
 gstreamer 1.26.2-2
 gthumb 3.12.7-1
 gtksourceview-pkgbuild 5-3
+gucharmap 15.1.5-1
 gufw 26.04-1
 gum 0.16.1-1
 gvfs 1.57.2-4
