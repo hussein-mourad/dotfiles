@@ -233,6 +233,7 @@ mongosh-bin 2.4.2-1
 morc_menu 1.0+3+g2d89cb6-1
 mousepad 0.6.5-1
 mpv 1:0.40.0-3
+msedit 1.2.0-2
 mupdf 1.26.2-1
 mupdf-tools 1.26.2-1
 nano 8.5-1
