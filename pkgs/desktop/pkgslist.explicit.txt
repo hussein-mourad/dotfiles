@@ -320,6 +320,7 @@ reiserfsprogs 3.6.27-5
 restic 0.18.0-1
 ripgrep 14.1.1-1
 rofi 1.7.9.1-1
+rofi-emoji 4.1.0-2
 rsync 3.4.1-2
 s-nail 14.9.25-1
 samba 2:4.22.2-1

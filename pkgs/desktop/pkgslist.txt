@@ -1912,6 +1912,7 @@ ripgrep 14.1.1-1
 ripgrep-all 0.10.9-1
 rnnoise 1:0.2-1
 rofi 1.7.9.1-1
+rofi-emoji 4.1.0-2
 rpcbind 1.2.7-2
 rrdtool 1.9.0-6
 rsync 3.4.1-2
