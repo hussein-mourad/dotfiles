@@ -236,6 +236,7 @@ mpv 1:0.40.0-3
 msedit 1.2.0-2
 mupdf 1.26.2-1
 mupdf-tools 1.26.2-1
+mysql-workbench 8.0.42-4
 nano 8.5-1
 nano-syntax-highlighting 2022.11.02.r102.gbb94603-1
 naps2 8.2.0-1
@@ -344,6 +345,7 @@ sniffnet 1.3.2-1
 sof-firmware 2025.05-1
 spectre-meltdown-checker 0.46+20+g9b7b09a-1
 speedtest-cli 2.1.3-9
+sql-workbench 132-1
 sqlitebrowser 3.13.1-1
 starship 1.23.0-1
 stow 2.4.1-1
