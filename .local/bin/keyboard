@@ -2,15 +2,19 @@
 
 # Reset options
 setxkbmap -option
+# Query current layout: setxkbmap -query
 # setxkbmap options in /usr/share/X11/xkb/rules/base.lst
+# List all groups: localectl list-x11-keymap-options | grep grp:
+
 # Change key repeat rate
 # Default: xset r rate 500 30
 # xset r rate 200 30
 # For console use: sudo kbdrate -d 300 -r 30
+
 # Configure keyboard
 setxkbmap -model pc105
 # Set Arabic Language
-setxkbmap -layout us,ara -variant ,digits -option grp:alt_space_toggle
+setxkbmap -layout us,ara -variant ,digits -option grp:alt_space_toggle,alt_shift_toggle
 setxkbmap -option shift:both_capslock_cancel
 #setxkbmap -option caps:escape
 # setxkbmap -option caps:super
