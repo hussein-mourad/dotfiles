@@ -169,6 +169,6 @@ webencodings           0.5.1
 wheel                  0.45.1
 xmltodict              0.14.2
 yq                     3.4.3
-yt-dlp                 2025.6.9
+yt-dlp                 2025.6.30
 zope.interface         7.2
 zstandard              0.23.0
