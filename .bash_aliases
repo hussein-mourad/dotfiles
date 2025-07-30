@@ -24,6 +24,7 @@ alias c='clear'
 alias v="nvim"
 alias vi="nvim"
 alias nvd="NVIM_APPNAME=nvim-default command nvim"
+alias nvim-kickstart="NVIM_APPNAME=nvim-kickstart command nvim"
 # alias nvim="NVIM_APPNAME=nvim-astro command nvim"
 # alias nvimv4="NVIM_APPNAME=astronvim-v4 command nvim"
 
@@ -185,7 +186,7 @@ alias curl="noglob curl"
 alias yt="noglob yt"
 alias sl="sl -e" # enable escaping by ctrl+c
 alias ra="ranger"
-# alias virsh="sudo virsh"
+alias virsh="sudo virsh"
 alias pn="pnpm"
 alias clip="xclip -sel clip"
 alias ldo='lazydocker'
@@ -203,3 +204,5 @@ alias dcstats="docker compose stats"
 alias zen="zen-browser"
 alias zed="zeditor"
 alias bw_unlock='export BW_SESSION=$(bw unlock --raw "$(gpg -d ~/.pass.gpg 2&>/dev/null)")'
+alias t="go-task"
+alias sshc="vi ~/.ssh/config"
