@@ -191,8 +191,8 @@ localsend-bin 1.17.0-1
 logrotate 3.22.0-1
 lsd 1.1.5-1
 lua51 5.1.5-13
-luarocks 3.12.1-1
-lvm2 2.03.32-1
+luarocks 3.12.2-1
+lvm2 2.03.33-1
 lxappearance 0.6.4-1
 lxc 1:6.0.4-2
 lxd 6.4-1
@@ -211,8 +211,8 @@ manjaro-hotfixes 2018.08-6
 manjaro-i3-settings 1:20230912-1
 manjaro-printer 20240827-1
 manjaro-ranger-settings 20240626-1
-manjaro-release 25.0.4-1
-manjaro-settings-manager-notifier 0.5.8-5
+manjaro-release 25.0.6-1
+manjaro-settings-manager-notifier 0.5.8-6
 manjaro-system 20230401-1
 manjaro-zsh-config 0.26-2
 mariadb-clients 11.8.2-1
@@ -222,8 +222,9 @@ meld 3.22.3-1
 memtest86+ 7.20-2
 memtest86+-efi 7.20-2
 mesa-utils 9.0.0-7
-mhwd 0.6.6-4
+mhwd 0.6.6-5
 mhwd-db 20250113-1
+mingw-w64-gcc 15.1.0-2
 minicom 2.10-1
 mkinitcpio-openswap 0.1.0-4
 mobile-broadband-provider-info 20240407-1

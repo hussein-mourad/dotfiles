@@ -61,7 +61,7 @@ lensfun                0.3.4
 LibAppArmor            4.1.1
 libfdt                 1.7.2
 libtorrent             2.0.11
-libvirt-python         11.4.0
+libvirt-python         11.5.0
 lit                    20.1.0.dev0
 lockfile               0.12.2
 louis                  3.34.0
