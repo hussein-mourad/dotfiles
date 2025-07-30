@@ -233,6 +233,7 @@ filesystem 2025.05.03-1
 findutils 4.10.0-2
 firefox 140.0-1
 firefox-developer-edition 140.0b9-1
+firefoxpwa 2.14.1-1
 flac 1.5.0-1
 flameshot 12.1.0-6
 flex 2.6.4-5
