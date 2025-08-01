@@ -2305,7 +2305,7 @@ zathura 0.5.12-1
 zathura-pdf-mupdf 0.4.4-19
 zbar 0.23.93-4
 zed 0.195.4-1
-zen-browser-bin 1.14.5b-1
+zen-browser-bin 1.14.9b-2
 zenity 4.1.90-1
 zensu 0.3-7
 zeromq 4.3.5-2
