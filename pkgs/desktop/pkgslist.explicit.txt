@@ -275,6 +275,7 @@ nvme-cli 2.14-1
 obs-studio 31.0.4-1
 obsidian 1.8.10-1
 openresolv 3.17.0-1
+openshot 3.3.0-2
 openssh 10.0p1-3
 os-prober 1.83-1
 otree 0.4.0-1

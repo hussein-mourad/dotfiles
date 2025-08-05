@@ -1111,6 +1111,8 @@ libodfgen 0.1.8-4
 libogg 1.3.6-1
 libomxil-bellagio 0.9.3-5
 libopenmpt 0.8.1-1
+libopenshot 0.4.0-10
+libopenshot-audio 0.4.0-1
 liborcus 0.20.1-1
 libosinfo 1.12.0-2
 libp11-kit 0.25.5-1
@@ -1488,6 +1490,7 @@ openjpeg2 2.5.3-1
 openmpi 5.0.8-1
 openpmix 5.0.8-1
 openresolv 3.17.0-1
+openshot 3.3.0-2
 openssh 10.0p1-3
 openssl 3.5.1-1
 openssl-1.1 1.1.1.w-2
@@ -1768,9 +1771,11 @@ python-pyparsing 3.2.3-1
 python-pyproject-hooks 1.2.0-3
 python-pyqt5 5.15.11-2
 python-pyqt5-sip 12.17.0-1
+python-pyqt5-webengine 5.15.7-2
 python-pyserial 3.5-7
 python-pysocks 1.7.1-10
 python-pyxdg 0.28-4
+python-pyzmq 26.2.0-1
 python-rencode 1.0.8-2
 python-reportlab 4.2.2-5
 python-requests 2.32.4-1
@@ -1904,10 +1909,14 @@ qrencode 4.1.1-4
 qscintilla-qt5 2.14.1-4
 qt5-base 5.15.17+kde+r123-1
 qt5-declarative 5.15.17+kde+r21-1
+qt5-location 5.15.17+kde+r7-1
+qt5-multimedia 5.15.17+kde+r2-1
 qt5-svg 5.15.17+kde+r5-1
 qt5-tools 5.15.17+kde+r3-2
 qt5-translations 5.15.17-1
 qt5-wayland 5.15.17+kde+r57-1
+qt5-webchannel 5.15.17+kde+r3-1
+qt5-webengine 5.15.19-2
 qt5-x11extras 5.15.17-1
 qt5ct 1.9-1
 qt6-5compat 6.9.1-1

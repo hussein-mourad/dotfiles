@@ -79,6 +79,7 @@ netsnmp-python         1.0a1
 nftables               0.1
 npyscreen              4.10.5
 numpy                  2.3.1
+openshot-qt            3.3.0
 ordered-set            4.1.0
 orjson                 3.11.0
 packaging              25.0
@@ -113,6 +114,7 @@ pyparsing              3.2.3
 pyproject_hooks        1.2.0
 PyQt5                  5.15.11
 PyQt5_sip              12.17.0
+PyQtWebEngine          5.15.7
 pyserial               3.5
 PySide6                6.9.1
 PySocks                1.7.1
@@ -120,6 +122,7 @@ python-dateutil        2.9.0
 python-distutils-extra 2.39
 pyxdg                  0.28
 PyYAML                 6.0.2
+pyzmq                  26.2.0
 ranger-fm              1.9.4
 rencode                1.0.8
 reportlab              4.2.2
