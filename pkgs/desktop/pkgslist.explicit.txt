@@ -9,6 +9,7 @@ alsa-tools 1.2.14-1
 alsa-utils 1.2.14-1
 android-apktool-bin 2.11.1-1
 android-studio 2025.1.2.11-1
+android-tools 35.0.2-17
 apache-tools 2.4.63-1
 apparmor 4.1.1-3
 arandr 0.1.11-4
@@ -333,6 +334,7 @@ sane-airscan 0.99.35-1
 sbxkb 0.7.6-7
 sc 7.16-8
 sc-im 0.8.4-1
+scrcpy 3.3.1-1
 screen 5.0.1-3
 screenfetch 3.9.9-1
 screenkey 1.5-5
