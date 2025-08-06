@@ -215,3 +215,5 @@ elif [[ -n "$BASH_VERSION" ]]; then
 fi
 
 eval "$(starship init zsh)"
+# Android SDK
+export ANDROID_HOME=$HOME/Android/Sdk
