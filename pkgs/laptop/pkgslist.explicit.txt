@@ -7,6 +7,7 @@ alacritty 0.15.1-1
 alsa-firmware 1.2.4-4
 alsa-plugins 1:1.2.12-4
 alsa-utils 1.2.14-1
+android-studio 2025.1.2.11-1
 ansible 11.7.0-1
 apache-tools 2.4.63-1
 apparmor 4.1.1-1

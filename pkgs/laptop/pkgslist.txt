@@ -24,6 +24,7 @@ alsa-plugins 1:1.2.12-4
 alsa-topology-conf 1.2.5.1-4
 alsa-ucm-conf 1.2.14-2
 alsa-utils 1.2.14-1
+android-studio 2025.1.2.11-1
 android-tools 35.0.2-17
 android-udev 20250525-1
 ansible 11.7.0-1
