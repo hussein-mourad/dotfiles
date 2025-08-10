@@ -223,6 +223,7 @@ k9s 0.50.7-1
 kakoune 2024.05.18-3
 kanata 1.7.0-1
 kcolorchooser 25.04.3-1
+kdenlive 25.04.3-1
 keepassxc 2.7.10-3
 kitty 0.42.1-1
 ko 0.18.0-1
@@ -253,6 +254,7 @@ libva-vdpau-driver 0.7.4-7
 libxnvctrl 575.64-1
 lightdm-settings 2.0.7-1
 lightdm-slick-greeter 2.0.9-1
+lightworks 2025.1.152194-1
 linux-headers-meta 6.15-1
 linux-lts-nvidia-meta 5.4-1
 linux-meta 6.15-1
