@@ -31,4 +31,5 @@ install.sh
 .pipxlist.txt
 python-packages.txt
 .stowrc
+.firefox-userChrome.css
 Makefile
