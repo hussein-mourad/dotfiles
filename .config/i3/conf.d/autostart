@@ -7,7 +7,7 @@ exec --no-startup-id xautolock -time 10 -locker $HOME/.local/bin/lockscreen
 exec --no-startup-id syncthing --no-browser
 exec --no-startup-id prayer-times
 
-# exec --no-startup-id zen-browser
+# exec --no-startup-id firefox 
 
 # exec --no-startup-id tmux start-server
 # exec --no-startup-id $HOME/.tmux/plugins/tmux-resurrect/scripts/restore.sh
@@ -27,7 +27,7 @@ exec_always --no-startup-id $HOME/.local/bin/keyboard
 # exec --no-startup-id gxkb
 exec_always --no-startup-id $HOME/.local/bin/applets
 exec --no-startup-id flameshot
-exec --no-startup-id megasync
+# exec --no-startup-id megasync
 exec --no-startup-id libinput-gestures-setup start
 # exec --no-startup-id clipit
 
