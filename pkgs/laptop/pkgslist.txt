@@ -277,7 +277,7 @@ fftw 3.3.10-7
 file 5.46-4
 filesystem 2025.05.03-1
 findutils 4.10.0-3
-firefox 140.0.4-1
+firefox 141.0-1
 firefox-pwa-bin 2.13.1-1
 fish 4.0.2-1
 flac 1.5.0-1
