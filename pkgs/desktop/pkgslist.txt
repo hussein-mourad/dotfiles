@@ -202,6 +202,7 @@ duktape 2.7.0-7
 dunst 1.12.2-1
 dust 1.2.2-1
 e2fsprogs 1.47.3-1
+earlyoom 1.8.2-1
 ecryptfs-utils 111-9
 editorconfig-core-c 0.12.9-1
 edk2-aarch64 202411-1
@@ -2329,6 +2330,7 @@ zix 0.6.2-1
 zlib 1:1.3.1-2
 zlib-ng 2.2.4-1
 zoxide 0.9.8-2
+zram-generator 1.2.1-1
 zsh 5.9-5
 zsh-autosuggestions 0.7.1-1
 zsh-completions 0.35.0-2
