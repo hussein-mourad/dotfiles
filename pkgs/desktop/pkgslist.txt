@@ -2044,6 +2044,7 @@ stfl 0.24-6
 stoken 0.92-5
 stow 2.4.1-1
 strace 6.15-1
+stress 1.0.7-3
 subversion 1.14.5-4
 sudo 1.9.17.p1-1
 suil 0.10.20-1
