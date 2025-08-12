@@ -28,8 +28,6 @@ alsa-utils 1.2.14-1
 android-studio 2025.1.2.11-1
 android-tools 35.0.2-17
 android-udev 20250525-1
-ansible 11.7.0-1
-ansible-core 2.18.6-2
 antlr4-runtime 4.13.2-1
 aom 3.12.1-1
 apache-tools 2.4.63-1
@@ -73,7 +71,6 @@ bash 5.3.0-1
 bash-completion 2.16.0-1
 bat 0.25.0-4
 bc 1.08.2-1
-bcg729 1.1.1-2
 bcprov 1.80-1
 beekeeper-studio-bin 5.1.5-1
 bind 9.20.10-1
@@ -265,7 +262,6 @@ f2fs-tools 1.16.0-3
 faac 1.31.1-1
 faad2 2.11.2-1
 fakeroot 1.37.1.2-1
-fast 0.0.4-1
 fd 10.2.0-1
 fdupes 1:2.4.0-2
 feh 3.10.3-1
@@ -1277,7 +1273,6 @@ libvirt 1:11.5.0-1
 libvirt-glib 5.0.0-3
 libvirt-python 1:11.5.0-1
 libvisio 0.1.8-3
-libvlc 3.0.21-26
 libvorbis 1.3.7-4
 libvpl 2.15.0-1
 libvpx 1.15.0-1
@@ -1401,7 +1396,6 @@ lua-lpeg 1.1.0-3
 lua51 5.1.5-13
 lua51-lpeg 1.1.0-3
 lua52 5.2.4-8
-lua53 5.3.6-4
 luajit 2.1.1748459687-1
 luarocks 3.12.2-1
 luit 20240910-1
@@ -1740,7 +1734,6 @@ python-attrs 25.3.0-1
 python-autocommand 2.2.2-7
 python-automat 22.10.0-7
 python-babel 2.17.0-1
-python-bcrypt 4.3.0-1
 python-beautifulsoup4 4.13.3-1
 python-bleach 6.2.0-2
 python-brotli 1.1.0-3
@@ -1883,7 +1876,6 @@ python-ordered-set 4.1.0-7
 python-overrides 7.7.0-3
 python-packaging 25.0-1
 python-pandocfilters 1.5.1-3
-python-paramiko 3.5.1-1
 python-parsedatetime 2.6-10
 python-parsimonious 0.10.0-1
 python-parso 1:0.8.4-3
@@ -1925,7 +1917,6 @@ python-pygments 2.19.2-1
 python-pyicu 2.14-1
 python-pyinotify 0.9.6-15
 python-pykakasi 2.3.0-2
-python-pynacl 1.5.0-3
 python-pyopenssl 25.1.0-1
 python-pyparsing 3.2.3-1
 python-pyppmd 1.2.0-1
@@ -1957,7 +1948,6 @@ python-rencode 1.0.8-2
 python-requests 2.32.4-1
 python-requests-oauthlib 1.3.1-5
 python-requests-toolbelt 1.0.0-3
-python-resolvelib 1.2.0-1
 python-restructuredtext_lint 1.4.0-4
 python-rich 14.0.0-1
 python-roman-numerals-py 3.1.0-1
@@ -2343,7 +2333,6 @@ subversion 1.14.5-3
 sudo 1.9.17.p1-1
 suitesparse 7.10.3-1
 supermin 5.3.5-1
-superproductivity-bin 12.0.1-1
 svt-av1 3.0.2-1
 svt-hevc 1.5.1-3
 swtpm 0.10.1-1
@@ -2495,35 +2484,6 @@ virt-viewer 11.0-4
 virtiofsd 1.13.2-1
 visual-studio-code-bin 1.100.2-1
 vit 2.3.3-1
-vlc 3.0.21-26
-vlc-cli 3.0.21-26
-vlc-gui-qt 3.0.21-26
-vlc-plugin-a52dec 3.0.21-26
-vlc-plugin-alsa 3.0.21-26
-vlc-plugin-dav1d 3.0.21-26
-vlc-plugin-dbus 3.0.21-26
-vlc-plugin-dbus-screensaver 3.0.21-26
-vlc-plugin-faad2 3.0.21-26
-vlc-plugin-flac 3.0.21-26
-vlc-plugin-gnutls 3.0.21-26
-vlc-plugin-inflate 3.0.21-26
-vlc-plugin-journal 3.0.21-26
-vlc-plugin-jpeg 3.0.21-26
-vlc-plugin-lua 3.0.21-26
-vlc-plugin-mpg123 3.0.21-26
-vlc-plugin-opus 3.0.21-26
-vlc-plugin-png 3.0.21-26
-vlc-plugin-pulse 3.0.21-26
-vlc-plugin-shout 3.0.21-26
-vlc-plugin-speex 3.0.21-26
-vlc-plugin-tag 3.0.21-26
-vlc-plugin-theora 3.0.21-26
-vlc-plugin-twolame 3.0.21-26
-vlc-plugin-vorbis 3.0.21-26
-vlc-plugin-vpx 3.0.21-26
-vlc-plugin-xml 3.0.21-26
-vlc-plugins-base 3.0.21-26
-vlc-plugins-video-output 3.0.21-26
 vmaf 3.0.0-1
 vnstat 2.13-1
 volume_key 0.3.12-11
@@ -2536,7 +2496,6 @@ vulkan-headers 1:1.4.313.0-1
 vulkan-icd-loader 1.4.313.0-1
 vulkan-intel 1:25.1.5-1
 vulkan-radeon 1:25.1.5-1
-vulkan-tools 1.4.313.0-1
 w3m 0.5.3.git20230713_1-1
 wallpapers-juhraya 1.1-3
 wavpack 5.8.1-1
@@ -2556,8 +2515,6 @@ wikiman 2.14.1-1
 wildmidi 0.4.6-1
 wireless-regdb 2025.07.10-1
 wireless_tools 30.pre9-4
-wireshark-cli 4.4.7-1
-wireshark-qt 4.4.7-1
 wmutils 1:1.7-1
 woff2 1.0.2-6
 wolfssl 5.8.0-1
@@ -2661,7 +2618,6 @@ zathura 0.5.12-1
 zathura-pdf-mupdf 0.4.4-19
 zbar 0.23.93-4
 zeal 0.7.2-1
-zed 0.194.3-1
 zen-browser-bin 1.14.11b-1
 zenity 4.1.90-1
 zensu 0.3-7

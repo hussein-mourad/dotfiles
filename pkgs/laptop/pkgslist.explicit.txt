@@ -8,7 +8,6 @@ alsa-firmware 1.2.4-4
 alsa-plugins 1:1.2.12-4
 alsa-utils 1.2.14-1
 android-studio 2025.1.2.11-1
-ansible 11.7.0-1
 apache-tools 2.4.63-1
 apparmor 4.1.1-1
 appimagelauncher 2.2.0-10
@@ -116,7 +115,6 @@ evolution 3.56.2-1
 exfatprogs 1.2.9-1
 expac 10-11
 f2fs-tools 1.16.0-3
-fast 0.0.4-1
 fd 10.2.0-1
 fdupes 1:2.4.0-2
 feh 3.10.3-1
@@ -467,7 +465,6 @@ starship 1.23.0-1
 stow 2.4.1-1
 subversion 1.14.5-3
 sudo 1.9.17.p1-1
-superproductivity-bin 12.0.1-1
 swtpm 0.10.1-1
 sxiv 26-2
 syncthing 1.30.0-1
@@ -546,7 +543,6 @@ virt-manager 5.0.0-1
 virt-viewer 11.0-4
 visual-studio-code-bin 1.100.2-1
 vit 2.3.3-1
-vlc 3.0.21-26
 vnstat 2.13-1
 volumeicon 0.5.1-7
 vulkan-intel 1:25.1.5-1
@@ -559,7 +555,6 @@ which 2.23-1
 whois 5.6.1-1
 wikiman 2.14.1-1
 wireless-regdb 2025.07.10-1
-wireshark-qt 4.4.7-1
 wmutils 1:1.7-1
 wpa_supplicant 2:2.11-3
 xarchiver 0.5.4.25-1
@@ -613,7 +608,6 @@ zaread-git r120.c2d45e1-1
 zathura 0.5.12-1
 zathura-pdf-mupdf 0.4.4-19
 zeal 0.7.2-1
-zed 0.194.3-1
 zen-browser-bin 1.14.11b-1
 zensu 0.3-7
 zip 3.0-11
