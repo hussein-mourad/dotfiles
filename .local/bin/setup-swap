@@ -1,0 +1,74 @@
+
+#!/usr/bin/env bash
+set -e
+
+echo "This script is for learning purposes only. Do not run it on your system."
+exit 1;
+
+echo "=== Memory Protection Setup for Manjaro ==="
+
+### 1️⃣ Create 16GB SSD swap file
+echo "-> Creating 16GB swap file..."
+sudo fallocate -l 16G /swapfile          # Allocate 16GB file
+sudo chmod 600 /swapfile                 # Secure permissions
+sudo mkswap /swapfile                     # Format as swap
+sudo swapon /swapfile                     # Enable immediately
+if ! grep -q "/swapfile" /etc/fstab; then
+    echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab
+fi
+
+### 2️⃣ Install ZRAM support
+echo "-> Installing zram-generator..."
+sudo pacman -S --noconfirm zram-generator
+
+echo "-> Configuring ZRAM (50% of RAM, priority 100)..."
+sudo tee /etc/systemd/zram-generator.conf >/dev/null <<'EOF'
+[zram0]
+zram-size = ram / 2
+compression-algorithm = zstd
+swap-priority = 100
+EOF
+
+### Enable ZRAM now
+sudo systemctl daemon-reload
+sudo systemctl start /dev/zram0
+sudo systemctl enable /dev/zram0
+
+### 3️⃣ Set swappiness
+echo "-> Setting vm.swappiness to 60..."
+echo 'vm.swappiness=60' | sudo tee /etc/sysctl.d/99-swappiness.conf
+sudo sysctl --system >/dev/null
+
+### 4️⃣ Install & configure earlyoom
+echo "-> Installing and enabling earlyoom..."
+sudo pacman -S --noconfirm earlyoom
+
+# Configure: trigger if RAM <15% and swap <15%, log actions
+sudo systemctl edit earlyoom --full --force <<'EOF'
+[Unit]
+Description=Early OOM Daemon
+After=multi-user.target
+
+[Service]
+ExecStart=
+ExecStart=/usr/bin/earlyoom -m 15 -s 15 -p
+
+[Install]
+WantedBy=multi-user.target
+EOF
+
+sudo systemctl daemon-reexec
+sudo systemctl enable --now earlyoom
+
+### 5️⃣ Show final status
+echo
+echo "=== Final swap & ZRAM status ==="
+swapon --show
+echo
+echo "=== Swappiness ==="
+cat /proc/sys/vm/swappiness
+echo
+echo "=== earlyoom status ==="
+systemctl status earlyoom --no-pager --lines=5
+echo
+echo "✅ Setup complete! Your system should now handle full RAM without freezing."
