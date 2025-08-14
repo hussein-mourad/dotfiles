@@ -102,6 +102,7 @@ return {
   -- { import = "astrocommunity.completion.copilot-cmp" }, -- copilot
   -- { import = "astrocommunity.completion.copilot-lua-cmp" },
   { import = "astrocommunity.completion.supermaven-nvim" },
+  -- { import = "astrocommunity.completion.fittencode-nvim" },
 
   -- quickfix menu
   { import = "astrocommunity.quickfix.nvim-bqf" },
