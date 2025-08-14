@@ -25,6 +25,7 @@ alias v="nvim"
 alias vi="nvim"
 alias nvd="NVIM_APPNAME=nvim-default command nvim"
 alias nvim-kickstart="NVIM_APPNAME=nvim-kickstart command nvim"
+alias nvimv5="NVIM_APPNAME=nvim-astro-v5 command nvim"
 # alias nvim="NVIM_APPNAME=nvim-astro command nvim"
 # alias nvimv4="NVIM_APPNAME=astronvim-v4 command nvim"
 
