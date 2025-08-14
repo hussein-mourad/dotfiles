@@ -48,7 +48,7 @@ PATH="$PATH:$HOME/.config/composer/vendor/bin"
 PATH="$PATH:/mnt/d/data/apps"
 # PATH="$PATH:$HOME/.local/share/gem/ruby/3.0.0/bin"
 
-export BROWSER=/usr/bin/zen-browser
+export BROWSER=/usr/bin/firefox
 # export TERM=rxvt-unicode-256color
 # export TERMINAL=urxvt
 #export TERM=xfce4-terminal
