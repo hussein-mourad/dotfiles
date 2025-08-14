@@ -182,6 +182,16 @@ alias gopher="browser ~/Pictures/gopher-dance.gif"
 # functions
 alias homelab-battery="ssh homelab upower -i /org/freedesktop/UPower/devices/battery_BAT1"
 
+# Systemctl shortcuts
+alias sc='sudo systemctl'
+alias scstart='sudo systemctl start'
+alias scstop='sudo systemctl stop'
+alias screstart='sudo systemctl restart'
+alias scstatus='sudo systemctl status'
+alias scenable='sudo systemctl enable'
+alias scdisable='sudo systemctl disable'
+alias sclog='sudo journalctl -u'
+
 alias curl="noglob curl"
 alias yt="noglob yt"
 alias sl="sl -e" # enable escaping by ctrl+c
