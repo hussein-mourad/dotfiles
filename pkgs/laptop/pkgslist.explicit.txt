@@ -292,6 +292,7 @@ manjaro-release 25.0.7-1
 manjaro-settings-manager-notifier 0.5.8-6
 manjaro-system 20230401-1
 manjaro-zsh-config 0.26-2
+mari0 1.6.2-6
 mdadm 4.4-1
 megacmd 2.1.1-1
 megasync 5.15.0-1

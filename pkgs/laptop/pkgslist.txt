@@ -1387,6 +1387,7 @@ lmdb 0.9.33-1
 localsend-bin 1.17.0-1
 logrotate 3.22.0-1
 lolcat 100.0.1-5
+love 11.5-2
 lpsolve 5.5.2.11-3
 lrzip 0.651-3
 lsb-release 2.0.r55.a25a4fc-1
@@ -1435,6 +1436,7 @@ manjaro-settings-manager 0.5.8-6
 manjaro-settings-manager-notifier 0.5.8-6
 manjaro-system 20230401-1
 manjaro-zsh-config 0.26-2
+mari0 1.6.2-6
 mariadb-libs 11.8.2-1
 mathjax 3.2.2-2
 mbedtls 3.6.4-1
