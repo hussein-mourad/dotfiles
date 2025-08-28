@@ -276,7 +276,7 @@ file 5.46-5
 filesystem 2025.05.03-1
 findutils 4.10.0-3
 firefox 141.0.3-1
-firefox-pwa-bin 2.13.1-1
+firefoxpwa 2.15.0-1
 fish 4.0.2-1
 flac 1.5.0-1
 flameshot 13.0.1-1
