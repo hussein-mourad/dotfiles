@@ -541,7 +541,6 @@ viewnior 1.8-6
 vim 9.1.1552-1
 virt-manager 5.0.0-1
 virt-viewer 11.0-4
-virtualbox 7.1.12-1
 visual-studio-code-bin 1.100.2-1
 vit 2.3.3-1
 vnstat 2.13-1
