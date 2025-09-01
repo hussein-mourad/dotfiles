@@ -2325,6 +2325,7 @@ squashfs-tools 4.7-1
 squashfuse 0.6.1-1
 sratom 0.6.18-1
 srt 1.5.4-1
+sshfs 3.7.3-3
 sshpass 1.10-2
 sshs 4.7.2-1
 sssd 2.11.1-1
