@@ -446,7 +446,7 @@ screenfetch 3.9.9-1
 screenkey 1.5-6
 sd 1.0.0-1
 sddm 0.21.0-6
-sesh-bin 2.13.0-1
+sesh-bin 2.17.1-1
 simple-scan 48.1-1
 simplescreenrecorder 0.4.4-3
 sl 5.05-5
@@ -542,7 +542,7 @@ viewnior 1.8-6
 vim 9.1.1552-1
 virt-manager 5.0.0-1
 virt-viewer 11.0-4
-visual-studio-code-bin 1.100.2-1
+visual-studio-code-bin 1.103.2-1
 vit 2.3.3-1
 vnstat 2.13-1
 volumeicon 0.5.1-7
