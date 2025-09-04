@@ -114,6 +114,7 @@ evince 48.1-1
 evolution 3.56.2-2
 exfatprogs 1.2.9-1
 expac 10-11
+expo-orbit-bin 2.0.2-1
 f2fs-tools 1.16.0-3
 fd 10.2.0-1
 fdupes 1:2.4.0-2
