@@ -2187,6 +2187,7 @@ redland 1:1.0.17-9
 redshift 1.12-14
 reiserfsprogs 3.6.27-5
 restic 0.18.0-1
+resvg 0.45.1-2
 rhash 1.4.4-1
 rhythmbox 3.4.8-4
 ripgrep 14.1.1-1

@@ -425,6 +425,7 @@ rdfind 1.7.0-1
 redshift 1.12-14
 reiserfsprogs 3.6.27-5
 restic 0.18.0-1
+resvg 0.45.1-2
 rhythmbox 3.4.8-4
 ripgrep 14.1.1-1
 rmlint 2.10.2-2
