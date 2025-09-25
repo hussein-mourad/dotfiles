@@ -359,6 +359,7 @@ glusterfs 1:11.1-5
 gmime3 3.2.15-2
 gmp 6.3.0-2
 gnome-autoar 0.4.5-1
+gnome-calculator 48.1-2
 gnome-clocks 48.0-1
 gnome-desktop 1:44.3-1
 gnome-desktop-4 1:44.3-1
