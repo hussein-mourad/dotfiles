@@ -1683,6 +1683,7 @@ perl-xml-writer 0.900-5
 phodav 3.0-4
 php 8.4.12-1
 php-fpm 8.4.12-1
+php-gd 8.4.12-1
 php-sqlite 8.4.12-1
 picom 12.5-3
 pigz 2.8-2
