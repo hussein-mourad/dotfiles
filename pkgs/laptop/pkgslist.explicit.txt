@@ -318,6 +318,7 @@ mupdf 1.26.5-1
 mysql-workbench 8.0.43-1
 nano 8.6-1
 nano-syntax-highlighting 2022.11.02.r102.gbb94603-1
+nautilus 48.4.1-1
 ncdu 2.8.2-3
 ndpi 4.12-2
 neofetch 7.1.0-2
