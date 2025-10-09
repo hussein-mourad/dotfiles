@@ -82,7 +82,7 @@ function gi() { curl -sLw "\n" https://www.toptal.com/developers/gitignore/api/$
 function bw() {
   # If variable is not set
   if [[ ! -v BW_SESSION ]]; then
-    export BW_SESSION=$(command bw unlock --raw "$(gpg -d ~/.pass.gpg 2 &>/dev/null)")
+    export BW_SESSION=$(command bw unlock --raw "$(gpg -d ~/.pass.gpg 2>/dev/null)")
   fi
   command bw "$@"
 }
