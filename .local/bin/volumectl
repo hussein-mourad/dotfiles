@@ -1,40 +1,59 @@
 #!/usr/bin/env bash
-
-# A small helper for volume control with notifications
+# Volume control script using native notify-send progress bar
 # Usage: volumectl up|down|toggle
 
 SINK="@DEFAULT_SINK@"
 NOTIFY_ID=9999 # Replaces old notifications
+NOTIFY_TIMEOUT=1000
 
+# --- helpers ---
 get_volume() {
-  pactl get-sink-volume "$SINK" | awk 'NR==1 {print $5}'
+  pactl get-sink-volume "$SINK" | awk 'NR==1{print $5}' | tr -d '%'
 }
 
 is_muted() {
   pactl get-sink-mute "$SINK" | grep -q "yes"
 }
 
-send_notification() {
+notify() {
   local title="$1"
-  local message="$2"
-  notify-send -r $NOTIFY_ID -t 1000 "$title" "$message"
+  local value="$2" # 0–100, or -1 for mute
+  if command -v dunstify >/dev/null 2>&1; then
+    if ((value >= 0)); then
+      dunstify -r $NOTIFY_ID -t $NOTIFY_TIMEOUT -h int:value:"$value" "$title"
+    else
+      dunstify -r $NOTIFY_ID -t $NOTIFY_TIMEOUT "$title"
+    fi
+  else
+    if ((value >= 0)); then
+      notify-send -r $NOTIFY_ID -t $NOTIFY_TIMEOUT -h int:value:"$value" "$title"
+    else
+      notify-send -r $NOTIFY_ID -t $NOTIFY_TIMEOUT "$title"
+    fi
+  fi
 }
 
+# --- main ---
 case "$1" in
 up)
   pactl set-sink-volume "$SINK" +5%
-  send_notification "🔊 Volume Up" "$(get_volume)"
+  pactl set-sink-mute "$SINK" 0
+  vol=$(get_volume)
+  notify "🔊 Volume" "$vol"
   ;;
 down)
   pactl set-sink-volume "$SINK" -5%
-  send_notification "🔉 Volume Down" "$(get_volume)"
+  pactl set-sink-mute "$SINK" 0
+  vol=$(get_volume)
+  notify "🔉 Volume" "$vol"
   ;;
 toggle)
   pactl set-sink-mute "$SINK" toggle
   if is_muted; then
-    send_notification "🔇 Volume" "Muted"
+    notify "🔇 Muted" -1
   else
-    send_notification "🔊 Volume" "$(get_volume)"
+    vol=$(get_volume)
+    notify "🔊 Volume" "$vol"
   fi
   ;;
 *)
