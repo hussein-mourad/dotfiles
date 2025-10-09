@@ -26,6 +26,7 @@ return {
   { import = "astrocommunity.pack.html-css" },
   { import = "astrocommunity.pack.typescript-all-in-one" },
   { import = "astrocommunity.pack.tailwindcss" },
+  { import = "astrocommunity.pack.prettier" },
   -- { import = "astrocommunity.pack.php" },
   -- { import = "astrocommunity.pack.blade" },
   -- { import = "astrocommunity.pack.laravel" },
@@ -68,10 +69,11 @@ return {
   { import = "astrocommunity.editing-support.conform-nvim" }, -- formatting
   { import = "astrocommunity.editing-support.refactoring-nvim" }, -- formatting
   { import = "astrocommunity.editing-support.suda-vim" }, -- sudo support
-  { import = "astrocommunity.editing-support.text-case-nvim" }, -- sudo support
+  { import = "astrocommunity.editing-support.text-case-nvim" }, -- text case conversion
   { import = "astrocommunity.editing-support.nvim-treesitter-context" }, -- sticks current function signature at the top of the page
   { import = "astrocommunity.editing-support.nvim-regexplainer" }, -- explain regex
   -- { import = "astrocommunity.editing-support.copilotchat-nvim" }, -- copilot chat
+  { import = "astrocommunity.editing-support.nvim-devdocs" }, -- devdocs documentation
 
   -- motion
   { import = "astrocommunity.motion.mini-surround" },
@@ -86,6 +88,7 @@ return {
 
   -- remote-development
   { import = "astrocommunity.remote-development.netman-nvim" },
+  { import = "astrocommunity.remote-development.remote-sshfs-nvim" }, -- remote development with sshfs
 
   -- media
   -- { import = "astrocommunity.media.image-nvim" },
@@ -101,7 +104,8 @@ return {
   -- { import = "astrocommunity.completion.copilot-lua" },
   -- { import = "astrocommunity.completion.copilot-cmp" }, -- copilot
   -- { import = "astrocommunity.completion.copilot-lua-cmp" },
-  { import = "astrocommunity.completion.supermaven-nvim" },
+  -- { import = "astrocommunity.completion.supermaven-nvim" },
+  -- { import = "astrocommunity.completion.avante-nvim" },
   -- { import = "astrocommunity.completion.fittencode-nvim" },
 
   -- quickfix menu
