@@ -1,0 +1,44 @@
+#!/usr/bin/env bash
+
+# A small helper for volume control with notifications
+# Usage: volumectl up|down|toggle
+
+SINK="@DEFAULT_SINK@"
+NOTIFY_ID=9999 # Replaces old notifications
+
+get_volume() {
+  pactl get-sink-volume "$SINK" | awk 'NR==1 {print $5}'
+}
+
+is_muted() {
+  pactl get-sink-mute "$SINK" | grep -q "yes"
+}
+
+send_notification() {
+  local title="$1"
+  local message="$2"
+  notify-send -r $NOTIFY_ID -t 1000 "$title" "$message"
+}
+
+case "$1" in
+up)
+  pactl set-sink-volume "$SINK" +5%
+  send_notification "🔊 Volume Up" "$(get_volume)"
+  ;;
+down)
+  pactl set-sink-volume "$SINK" -5%
+  send_notification "🔉 Volume Down" "$(get_volume)"
+  ;;
+toggle)
+  pactl set-sink-mute "$SINK" toggle
+  if is_muted; then
+    send_notification "🔇 Volume" "Muted"
+  else
+    send_notification "🔊 Volume" "$(get_volume)"
+  fi
+  ;;
+*)
+  echo "Usage: $0 {up|down|toggle}" >&2
+  exit 1
+  ;;
+esac
