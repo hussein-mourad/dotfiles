@@ -273,6 +273,7 @@ expac 10-11
 expat 2.7.2-1
 expo-orbit-bin 2.0.2-1
 extra-cmake-modules 6.18.0-1
+eza 0.23.3-1
 f2fs-tools 1.16.0-3
 faac 1.31.1-1
 faad2 2.11.2-1
