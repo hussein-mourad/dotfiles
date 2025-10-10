@@ -53,7 +53,7 @@ cantarell-fonts 1:0.303.1-2
 catdoc 0.95-6
 cheat 4.4.2-3
 chntpw 140201-5
-chromium 140.0.7339.207-1
+chromium 141.0.7390.54-1
 clipit 1:1.4.5+25+gf35db54-1
 clock-tui 0.5.0-2
 cmatrix 2.0-4
@@ -292,10 +292,10 @@ libxnvctrl 580.82.09-1
 lightdm-settings 2.0.9-1
 lightdm-slick-greeter 2.2.2-1
 lightworks 2025.1.152194-1
-linux-headers-meta 6.15-1
+linux-headers-meta 6.16-1
 linux-lts-nvidia-meta 5.4-1
-linux-meta 6.15-1
-linux-nvidia-meta 6.15-1
+linux-meta 6.16-1
+linux-nvidia-meta 6.16-1
 linux66 6.6.107-1
 linux66-headers 6.6.107-1
 linux66-nvidia 580.82.09-3
@@ -656,7 +656,7 @@ yad 14.1-2
 yay 12.5.0-1
 yazi 25.5.31-2
 yelp 42.3-1
-yt-dlp 2025.09.05-1
+yt-dlp 2025.09.26-1
 ytfzf 2.6.2-2
 zaread-git r120.c2d45e1-1
 zathura 0.5.12-1

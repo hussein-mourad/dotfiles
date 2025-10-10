@@ -361,7 +361,7 @@ xlrd                          2.0.2
 xmltodict                     1.0.2
 xxhash                        3.5.0
 yq                            3.4.3
-yt-dlp                        2025.9.5
+yt-dlp                        2025.9.26
 zeroconf                      0.147.0
 zipp                          3.21.0
 zope.interface                7.2
