@@ -440,6 +440,7 @@ prometheus-node-exporter 1.9.1-2
 pulseaudio 17.0+r43+g3e2bb8a1e-1
 pulseaudio-bluetooth 17.0+r43+g3e2bb8a1e-1
 pulseaudio-ctl 1.70-2
+pulseaudio-equalizer 17.0+r43+g3e2bb8a1e-1
 pyenv 1:2.6.7-1
 pyright 1.1.405-1
 python-httpie-jwt-auth 0.4.0-2
