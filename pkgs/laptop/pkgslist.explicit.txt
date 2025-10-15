@@ -24,7 +24,6 @@ autofs 5.1.9-5
 automake 1.18.1-1
 avahi 1:0.9rc2-1
 b43-fwcutter 019-6
-baobab 48.0-4
 base 3-3
 base-devel 1-3
 bat 0.25.0-4
@@ -53,7 +52,7 @@ cantarell-fonts 1:0.303.1-2
 catdoc 0.95-6
 cheat 4.4.2-3
 chntpw 140201-5
-chromium 141.0.7390.54-1
+chromium 141.0.7390.76-1
 clipit 1:1.4.5+25+gf35db54-1
 clock-tui 0.5.0-2
 cmatrix 2.0-4
@@ -74,7 +73,6 @@ ctop 0.7.7-3
 curlie 1.8.2-1
 cutecom 0.51.0-5
 debugedit 5.2-1
-decibels 48.0-1
 deluge 1:2.2.0-1
 deno 2.5.0-1
 device-mapper 2.03.35-1
@@ -84,7 +82,7 @@ dhcpcd 10.2.4-1
 diffutils 3.12-2
 digikam 8.7.0-3
 direnv 2.37.1-1
-discord 1:0.0.111-1
+discord 1:0.0.112-1
 dive 0.13.1-1
 dmg2img 1.6.7-5
 dmidecode 3.6-1
@@ -110,10 +108,8 @@ efibootmgr 18-3
 electron32-bin 32.3.3-2
 endeavour 43.0-5
 entr 5.7-1
-epiphany 48.5-1
 eslint 9.31.0-1
 ethtool 1:6.15-1
-evince 48.1-1
 evolution 3.56.2-2
 exfatprogs 1.2.9-1
 expac 10-11
@@ -126,7 +122,7 @@ feh 3.11.2-1
 ffmpeg 2:7.1.1-5
 ffmpegthumbnailer 2.2.3-3
 ffnvcodec-headers 13.0.19.0-1
-firefox 143.0.3-1
+firefox 144.0-1
 firefoxpwa 2.16.0-1
 fish 4.0.8-1
 flac 1.5.0-1
@@ -141,7 +137,6 @@ garcon 4.20.0-2
 gcalcli 4.5.1-1
 gcc 15.2.1+r22+gc4e96a094636-1
 gcolor3 2.4.0-9
-gdm 48.0-2
 gdu 5.31.0-1
 geary 1:46.0-6
 gfeeds 2.2.0-5
@@ -154,35 +149,8 @@ github-cli 2.79.0-1
 gitleaks 8.27.2-1
 glmark2 2023.01-2
 glow 2.1.1-1
-gnome-backgrounds 48.2.1-1
-gnome-calculator 48.1-2
-gnome-calendar 48.1-1
-gnome-characters 48.0-1
-gnome-clocks 48.0-1
-gnome-color-manager 3.36.2-1
-gnome-connections 48.0-6
-gnome-console 48.0.1-1
-gnome-contacts 48.0-1
-gnome-control-center 48.4-1
 gnome-disk-utility 46.1-2
-gnome-font-viewer 48.0-1
-gnome-keyring 1:48.0-1
-gnome-logs 45.0-3
-gnome-maps 48.7-1
-gnome-menus 3.36.0-3
-gnome-music 1:48.2-1
 gnome-pomodoro-git r1304.1e48d37-1
-gnome-remote-desktop 48.1-1
-gnome-session 48.0-1
-gnome-settings-daemon 48.1-1
-gnome-shell 1:48.5-1
-gnome-software 48.4-1
-gnome-system-monitor 48.1-1
-gnome-text-editor 48.3-1
-gnome-tour 48.1-1
-gnome-user-docs 48.2-1
-gnome-user-share 48.1-1
-gnome-weather 48.0-2
 gnuplot 6.0.3-1
 go 2:1.25.1-2
 go-task 3.45.4-1
@@ -194,7 +162,6 @@ gpick 0.3-2
 gping 1.20.1-1
 gputest 0.7.0-1
 grafana 12.1.1-1
-grilo-plugins 1:0.3.18-1
 grub 2:2.12.r382.gee789e1a-2
 grub-customizer-git r795.2ecdc4c-1
 grub-theme-manjaro 20.2-16
@@ -209,17 +176,6 @@ gtksourceview-pkgbuild 5-3
 gtop 1.1.5-2
 gufw 26.04-1
 gum 0.17.0-1
-gvfs 1.57.2-4
-gvfs-afc 1.57.2-4
-gvfs-dnssd 1.57.2-4
-gvfs-goa 1.57.2-4
-gvfs-google 1.57.2-4
-gvfs-gphoto2 1.57.2-4
-gvfs-mtp 1.57.2-4
-gvfs-nfs 1.57.2-4
-gvfs-onedrive 1.57.2-4
-gvfs-smb 1.57.2-4
-gvfs-wsdd 1.57.2-4
 gxkb 0.9.6-1
 handbrake 1.10.2-2
 handbrake-cli 1.10.2-2
@@ -302,7 +258,6 @@ linux66-nvidia 580.82.09-3
 localsend-bin 1.17.0-1
 logrotate 3.22.0-1
 lolcat 100.0.1-5
-loupe 48.1-1
 lsd 1.1.5-1
 lshw B.02.20-1
 lua51 5.1.5-13
@@ -316,7 +271,6 @@ m4 1.4.20-1
 maia-console 1.2-7
 maim 5.8.1-2
 make 4.4.1-2
-malcontent 0.13.1-1
 man-db 2.13.1-1
 man-pages 6.15-1
 manjaro-alsa 20221002-1
@@ -328,7 +282,7 @@ manjaro-hotfixes 2024.1-2
 manjaro-i3-settings 1:20230912-1
 manjaro-printer 20240827-1
 manjaro-ranger-settings 20240626-1
-manjaro-release 25.0.9-1
+manjaro-release 25.0.10-1
 manjaro-settings-manager-notifier 0.5.8-6
 manjaro-system 20250814-1
 manjaro-zsh-config 0.26-2
@@ -355,7 +309,6 @@ mupdf 1.26.8-1
 mysql-workbench 8.0.43-1
 nano 8.6-1
 nano-syntax-highlighting 2025.07.01.r0.g256995b-2
-nautilus 48.4.1-1
 ncdu 2.8.2-3
 ndpi 4.12-2
 neofetch 7.1.0-2
@@ -399,7 +352,6 @@ openbsd-netcat 1.229_1-2
 openresolv 3.17.0-1
 openshot 3.3.0-2
 openssh 10.0p1-5
-orca 48.6-1
 os-prober 1.83-1
 otree 0.3.0-1
 owncloud-client 6.0.0.17092-1
@@ -469,7 +421,6 @@ redshift 1.12-14
 reiserfsprogs 3.6.27-5
 restic 0.18.0-1
 resvg 0.45.1-2
-rhythmbox 3.4.8-4
 ripgrep 14.1.1-1
 rmlint 2.10.2-2
 rofi 2.0.0-1
@@ -478,7 +429,6 @@ ruby-build 20250908-1
 rust-kanban 0.10.5-1
 rustlings 6.5.0-1
 rustup 1.28.2-3
-rygel 1:0.44.2-3
 s-nail 14.9.25-1
 s-tui 1.2.0-1
 sad 0.4.32-2
@@ -493,13 +443,11 @@ screenkey 1.5-6
 sd 1.0.0-1
 sddm 0.21.0-6
 sesh-bin 2.17.1-1
-simple-scan 48.1-1
 simplescreenrecorder 0.4.4-3
 sl 5.05-5
 slides 0.9.0-2
 smartmontools 7.5-1
 snapd 2.71-1
-snapshot 48.0.1-1
 sof-firmware 2025.05.1-1
 sops 3.10.2-2
 spectre-meltdown-checker 0.46-1
@@ -514,7 +462,6 @@ starship 1.23.0-1
 stow 2.4.1-1
 subversion 1.14.5-4
 sudo 1.9.17.p1-1
-sushi 46.0-2
 swtpm 0.10.1-1
 sxiv 26-2
 syncthing 2.0.9-1
@@ -530,7 +477,6 @@ task 3.4.1-1
 taskwarrior-tui 0.26.3-1
 tcpdump 4.99.5-1
 tea 0.11.0-1
-tecla 48.0.2-1
 telegram-desktop 6.1.3-1
 termdown 1.18.0-6
 terminus-font 4.49.1-8
@@ -553,7 +499,6 @@ tk 8.6.16-1
 tlrc-bin 1.11.1-1
 tmux 3.5_a-1
 todoman 4.6.0-1
-totem 43.2-2
 traceroute 2.1.6-1
 translate-shell 0.9.7.1-2
 transmission-cli 4.0.6-10
@@ -614,7 +559,6 @@ xautolock 2.2-7
 xcape 1.2-5
 xclip 0.13-6
 xcursor-maia 20160417-3
-xdg-desktop-portal-gnome 48.0-2
 xdg-desktop-portal-gtk 1.15.3-1
 xdg-user-dirs 0.18-2
 xdg-utils 1.2.1-1
@@ -656,7 +600,6 @@ xterm 402-1
 yad 14.1-2
 yay 12.5.0-1
 yazi 25.5.31-2
-yelp 42.3-1
 yt-dlp 2025.09.26-1
 ytfzf 2.6.2-2
 zaread-git r120.c2d45e1-1
