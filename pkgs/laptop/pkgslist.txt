@@ -139,6 +139,7 @@ cmark 0.31.1-1
 cmatrix 2.0-4
 cmus 2.12.0-3
 colord 1.4.8-1
+colord-sane 1.4.8-1
 colorpicker 1.0.f5d441a-2
 compiler-rt 20.1.8-1
 composer 2.8.11-1
@@ -359,6 +360,7 @@ gnome-autoar 0.4.5-1
 gnome-desktop 1:44.4-1
 gnome-desktop-common 1:44.4-1
 gnome-disk-utility 46.1-2
+gnome-keyring 1:48.0-1
 gnome-online-accounts 3.54.5-1
 gnome-pomodoro-git r1304.1e48d37-1
 gnome-themes-extra 3.28+r6+g45b1d457-2
@@ -2292,6 +2294,7 @@ signon-plugin-oauth2 0.25-3
 signon-ui 0.17+20231016-3
 signond 8.61-3
 simdjson 1:4.0.3-1
+simple-scan 48.1-1
 simplescreenrecorder 0.4.4-3
 sl 5.05-5
 slang 2.3.3-4

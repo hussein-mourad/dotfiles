@@ -150,6 +150,7 @@ gitleaks 8.27.2-1
 glmark2 2023.01-2
 glow 2.1.1-1
 gnome-disk-utility 46.1-2
+gnome-keyring 1:48.0-1
 gnome-pomodoro-git r1304.1e48d37-1
 gnuplot 6.0.3-1
 go 2:1.25.1-2
@@ -443,6 +444,7 @@ screenkey 1.5-6
 sd 1.0.0-1
 sddm 0.21.0-6
 sesh-bin 2.17.1-1
+simple-scan 48.1-1
 simplescreenrecorder 0.4.4-3
 sl 5.05-5
 slides 0.9.0-2
