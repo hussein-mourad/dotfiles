@@ -112,6 +112,14 @@ function nvims() {
   NVIM_APPNAME=$config command nvim "$@"
 }
 
+function docker-homelab() {
+  local oldctx
+  oldctx=$(docker context show)
+  docker context use homelab >/dev/null
+  docker "$@"
+  docker context use "$oldctx" >/dev/null
+}
+
 function colors() {
   local fgc bgc vals seq0
 
