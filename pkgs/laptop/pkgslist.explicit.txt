@@ -73,6 +73,7 @@ csvkit 2.1.0-1
 ctop 0.7.7-3
 curlie 1.8.2-1
 cutecom 0.51.0-5
+dbeaver 25.2.0-1
 debugedit 5.2-1
 deluge 1:2.2.0-1
 deno 2.5.0-1
@@ -374,6 +375,7 @@ pdftk 3.3.3-4
 perl 5.42.0-1
 perl-anyevent-i3 0.19-2
 perl-file-mimeinfo 0.35-3
+pgmodeler 3:1.2.2-1
 php 8.4.12-1
 php-fpm 8.4.12-1
 php-gd 8.4.12-1
