@@ -111,6 +111,7 @@ cairo 1.18.4-1
 cairomm 1.14.5-1
 cairomm-1.16 1.18.0-1
 calc 2.15.1.1-1
+calcure 3.2.1-1
 calcurse 4.8.2-1
 calibre 8.7.0-2
 cantarell-fonts 1:0.303.1-2
@@ -812,6 +813,7 @@ kglobalaccel 6.18.0-1
 kglobalaccel5 5.116.0-1
 kguiaddons 6.18.0-1
 kguiaddons5 5.116.0-1
+khal 0.13.0-1
 ki18n 6.18.0-1
 ki18n5 5.116.0-1
 kiconthemes 6.18.0-1
@@ -1765,7 +1767,9 @@ python-click 8.2.1-1
 python-click-log 0.4.0-5
 python-colorama 0.4.6-5
 python-comm 0.2.3-1
+python-configobj 5.0.9-5
 python-constantly 23.10.4-2
+python-convertdate 2.4.0-1
 python-coverage 7.10.6-1
 python-crashtest 0.4.1-4
 python-cryptography 45.0.7-1
@@ -1803,8 +1807,11 @@ python-google-auth-oauthlib 1.2.2-1
 python-googleapis-common-protos 1.70.0-1
 python-greenlet 3.2.4-1
 python-h11 0.16.0-1
+python-hatch-fancy-pypi-readme 25.1.0-1
 python-hatch-vcs 0.5.0-1
 python-hatchling 1.27.0-1
+python-hijridate 2.5.0-2
+python-holidays 0.70-1
 python-html2text 2025.4.15-1
 python-html5-parser 0.4.12-4
 python-html5lib 1.1-15
@@ -1830,11 +1837,13 @@ python-ipykernel 6.30.1-1
 python-ipython-pygments-lexers 1.1.1-1
 python-isodate 0.7.2-2
 python-jaconv 0.4.0-1
+python-jalali-core 1.0.0-1
 python-jaraco.classes 3.4.0-2
 python-jaraco.collections 5.1.0-1
 python-jaraco.context 6.0.1-1
 python-jaraco.functools 4.1.0-1
 python-jaraco.text 4.0.0-2
+python-jdatetime 5.2.0-2
 python-jedi 0.19.2-1
 python-jeepney 0.9.0-1
 python-jellyfin-apiclient 1.11.0-1
@@ -1848,6 +1857,8 @@ python-jupyter-core 5.8.1-1
 python-jupyter-events 0.12.0-1
 python-jupyterlab-server 2.27.3-3
 python-keyring 25.6.0-1
+python-kitchen 1.2.6-5
+python-korean_lunar_calendar 0.3.1-1
 python-lark-parser 1.2.2-3
 python-leather 0.4.0-5
 python-legacy-cgi 2.6.3-2
@@ -1878,6 +1889,7 @@ python-nest-asyncio 1.6.0-4
 python-netifaces 0.11.0-7
 python-nose 1.3.7-18
 python-npyscreen 4.10.5-10
+python-nspektr 0.5.1-1
 python-numpy 2.3.3-1
 python-oauth2client 4.1.3-11
 python-oauthlib 3.3.1-1
@@ -1998,6 +2010,7 @@ python-stack-data 0.6.3-4
 python-standard-cgi 3.13.0-3
 python-systemd 235-4
 python-tasklib 2.5.1-4
+python-taskw 2.0.0-2
 python-text-unidecode 1.3-12
 python-texttable 1.7.0-3
 python-tinycss2 1.4.0-2

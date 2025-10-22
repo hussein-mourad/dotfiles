@@ -46,6 +46,7 @@ btrfs-progs 6.16.1-1
 bzip2 1.0.8-6
 cadaver 0.26-1
 calc 2.15.1.1-1
+calcure 3.2.1-1
 calcurse 4.8.2-1
 calibre 8.7.0-2
 cantarell-fonts 1:0.303.1-2
@@ -219,6 +220,7 @@ kanata 1.7.0-1
 kcolorchooser 25.08.1-1
 kdenlive 25.08.1-1
 keepassxc 2.7.10-4
+khal 0.13.0-1
 kitty 0.42.2-1
 ko 0.18.0-1
 kompose 1.37.0-1
