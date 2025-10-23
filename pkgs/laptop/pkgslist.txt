@@ -97,7 +97,7 @@ bridge-utils 1.7.1-2
 brltty 6.7-5
 brn-git r31.454e213-1
 brotli 1.1.0-3
-bruno-bin 2.0.1-1
+bruno-bin 2.13.1-1
 btop 1.4.5-1
 btrfs-progs 6.16.1-1
 bubblewrap 0.11.0-1
