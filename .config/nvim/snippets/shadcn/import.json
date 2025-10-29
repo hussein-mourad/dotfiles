@@ -79,7 +79,8 @@
       "  ButtonGroupSeparator,",
       "  ButtonGroupText,",
       "} from \"@/components/ui/button-group\""
-    ]
+    ],
+    "description": "https://ui.shadcn.com/docs/components/button-group"
   },
   "Button": {
     "prefix": ["cni-button", "shadcn-i-button"],
@@ -181,6 +182,11 @@
       "} from \"@/components/ui/context-menu\""
     ],
     "description": "https://ui.shadcn.com/docs/components/context-menu"
+  },
+  "Controller": {
+    "prefix": ["cni-controller", "shadcn-i-controller"],
+    "body": ["import { Controller } from \"react-hook-form\""],
+    "description": "https://ui.shadcn.com/docs/components/controller"
   },
   "Date Picker": {
     "prefix": ["cni-date-picker", "shadcn-i-date-picker"],
