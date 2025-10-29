@@ -1,0 +1,55 @@
+[default_session]
+startup_command = "nvim -c ':Telescope find_files'"
+preview_command = "lsd --all --git --icons --color=always {}"
+
+[[session]]
+name = "dotfiles"
+path = "~/dotfiles"
+startup_command = "nvim -c ':Telescope find_files hidden=true'"
+windows = ['lazygit']
+
+[[session]]
+name = "astrocommunity"
+path = "~/repos/astrocommunity/lua/astrocommunity"
+startup_command = "nvim -c ':Telescope find_files'"
+windows = ['lazygit']
+
+[[session]]
+name = "nvim config"
+path = "~/.config/nvim"
+startup_command = "nvim -c ':Telescope find_files'"
+windows = ['lazygit']
+
+[[session]]
+name = "afrad"
+path = "~/projects/afrad/apps"
+startup_command = "nvim -c ':Telescope find_files'"
+# windows = ['dev/api', 'dev/web', 'lazygit']
+
+[[session]]
+name = "afrad api"
+path = "~/projects/afrad/apps/api"
+startup_command = "nvim -c ':Telescope find_files'"
+windows = ['dev', 'lazygit']
+
+[[session]]
+name = "afrad web"
+path = "~/projects/afrad/apps/web"
+startup_command = "nvim -c ':Telescope find_files'"
+windows = ['dev', 'lazygit']
+
+[[window]]
+name = "dev/api"
+startup_script = "cd api && nr dev"
+
+[[window]]
+name = "dev/web"
+startup_script = "cd web && nr dev"
+
+[[window]]
+name = "dev"
+startup_script = "nr dev"
+
+[[window]]
+name = "lazygit"
+startup_script = "lazygit"
