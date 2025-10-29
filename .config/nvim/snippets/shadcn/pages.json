@@ -1,9 +1,6 @@
 {
   "Form Page": {
-    "prefix": [
-      "shadcn-page-form",
-      "cnp-form"
-    ],
+    "prefix": ["shadcn-page-form", "cnp-form"],
     "body": [
       "import { zodResolver } from \"@hookform/resolvers/zod\"",
       "import { useForm } from \"react-hook-form\"",
