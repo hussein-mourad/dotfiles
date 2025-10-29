@@ -185,6 +185,16 @@
     ],
     "description": "https://ui.shadcn.com/docs/components/breadcrumb"
   },
+  "Button Group": {
+    "prefix": ["cnx-button-group", "shadcn-x-button-group"],
+    "body": [
+      "<ButtonGroup>",
+      "  <Button>Button 1</Button>",
+      "  <Button>Button 2</Button>",
+      "</ButtonGroup>"
+    ],
+    "description": "https://ui.shadcn.com/docs/components/button-group"
+  },
   "Button Destructive": {
     "prefix": ["cnx-button-destructive", "shadcn-x-button-destructive"],
     "body": ["<Button variant=\"destructive\">Destructive</Button>"],
@@ -721,6 +731,62 @@
     ],
     "description": "https://ui.shadcn.com/docs/components/dropdown-menu"
   },
+  "Empty": {
+    "prefix": ["cnx-empty", "shadcn-x-empty"],
+    "body": [
+      "<Empty>",
+      "  <EmptyHeader>",
+      "    <EmptyMedia variant=\"icon\">",
+      "      <Icon />",
+      "    </EmptyMedia>",
+      "    <EmptyTitle>No data</EmptyTitle>",
+      "    <EmptyDescription>No data found</EmptyDescription>",
+      "  </EmptyHeader>",
+      "  <EmptyContent>",
+      "    <Button>Add data</Button>",
+      "  </EmptyContent>",
+      "</Empty>"
+    ],
+    "description": "https://ui.shadcn.com/docs/components/empty"
+  },
+  "Field": {
+    "prefix": ["cnx-field", "shadcn-x-field"],
+    "body": [
+      "<Field>",
+      "  <FieldLabel htmlFor=\"input-id\">Label</FieldLabel>",
+      "  {/* Input, Select, Switch, etc. */}",
+      "  <FieldDescription>Optional helper text.</FieldDescription>",
+      "  <FieldError>Validation message.</FieldError>",
+      "</Field>"
+    ],
+    "description": "https://ui.shadcn.com/docs/components/field"
+  },
+  "FieldSet": {
+    "prefix": ["cnx-field-set", "shadcn-x-field-set"],
+    "body": [
+      "<FieldSet>",
+      "  <FieldLegend>Profile</FieldLegend>",
+      "  <FieldDescription>This appears on invoices and emails.</FieldDescription>",
+      "  <FieldGroup>",
+      "    <Field>",
+      "      <FieldLabel htmlFor=\"name\">Full name</FieldLabel>",
+      "      <Input id=\"name\" autoComplete=\"off\" placeholder=\"Evil Rabbit\" />",
+      "      <FieldDescription>This appears on invoices and emails.</FieldDescription>",
+      "    </Field>",
+      "    <Field>",
+      "      <FieldLabel htmlFor=\"username\">Username</FieldLabel>",
+      "      <Input id=\"username\" autoComplete=\"off\" aria-invalid />",
+      "      <FieldError>Choose another username.</FieldError>",
+      "    </Field>",
+      "    <Field orientation=\"horizontal\">",
+      "      <Switch id=\"newsletter\" />",
+      "      <FieldLabel htmlFor=\"newsletter\">Subscribe to the newsletter</FieldLabel>",
+      "    </Field>",
+      "  </FieldGroup>",
+      "</FieldSet>"
+    ],
+    "description": "https://ui.shadcn.com/docs/components/field"
+  },
   "Form Formfield": {
     "prefix": ["cnx-form-formfield", "shadcn-x-form-formfield"],
     "body": [
@@ -752,6 +818,21 @@
       "</HoverCard>"
     ],
     "description": "https://ui.shadcn.com/docs/components/hover-card"
+  },
+  "Input Group": {
+    "prefix": ["cnx-input-group", "shadcn-x-input-group"],
+    "body": [
+      "<InputGroup>",
+      "  <InputGroupInput placeholder=\"Search...\" />",
+      "  <InputGroupAddon>",
+      "    <SearchIcon />",
+      "  </InputGroupAddon>",
+      "  <InputGroupAddon align=\"inline-end\">",
+      "    <InputGroupButton>Search</InputGroupButton>",
+      "  </InputGroupAddon>",
+      "</InputGroup>"
+    ],
+    "description": "https://ui.shadcn.com/docs/components/input-group"
   },
   "Input Disabled": {
     "prefix": ["cnx-input-disabled", "shadcn-x-input-disabled"],
@@ -834,6 +915,27 @@
     "body": ["<Input />"],
     "description": "https://ui.shadcn.com/docs/components/input"
   },
+  "Item": {
+    "prefix": ["cnx-item", "shadcn-x-item"],
+    "body": [
+      "<Item>",
+      "  <ItemHeader>Item Header</ItemHeader>",
+      "  <ItemMedia />",
+      "  <ItemContent>",
+      "    <ItemTitle>Item</ItemTitle>",
+      "    <ItemDescription>Item</ItemDescription>",
+      "  </ItemContent>",
+      "  <ItemActions />",
+      "  <ItemFooter>Item Footer</ItemFooter>",
+      "</Item>"
+    ],
+    "description": "https://ui.shadcn.com/docs/components/item"
+  },
+  "Kbd": {
+    "prefix": ["cnx-kbd", "shadcn-x-kbd"],
+    "body": ["<Kbd>Ctrl</Kbd>"],
+    "description": "https://ui.shadcn.com/docs/components/kbd"
+  },
   "Label": {
     "prefix": ["cnx-label", "shadcn-x-label"],
     "body": ["<Label htmlFor=\"email\">Your email address</Label>"],
@@ -859,6 +961,22 @@
       "</Menubar>"
     ],
     "description": "https://ui.shadcn.com/docs/components/menubar"
+  },
+  "Native Select": {
+    "prefix": ["cnx-native-select", "shadcn-x-native-select"],
+    "body": [
+      "<NativeSelect>",
+      "  <NativeSelectOption value=\"\">Select a fruit</NativeSelectOption>",
+      "  <NativeSelectOption value=\"apple\">Apple</NativeSelectOption>",
+      "  <NativeSelectOption value=\"banana\">Banana</NativeSelectOption>",
+      "  <NativeSelectOption value=\"blueberry\">Blueberry</NativeSelectOption>",
+      "  <NativeSelectOption value=\"grapes\" disabled>",
+      "    Grapes",
+      "  </NativeSelectOption>",
+      "  <NativeSelectOption value=\"pineapple\">Pineapple</NativeSelectOption>",
+      "</NativeSelect>"
+    ],
+    "description": "https://ui.shadcn.com/docs/components/native-select"
   },
   "Navigation Menu": {
     "prefix": ["cnx-navigation-menu", "shadcn-x-navigation-menu"],
@@ -1047,6 +1165,11 @@
     "body": ["<Toaster />"],
     "description": "https://ui.shadcn.com/docs/components/sonner-toaster"
   },
+  "Spinner": {
+    "prefix": ["cnx-spinner", "shadcn-x-spinner"],
+    "body": ["<Spinner />"],
+    "description": "https://ui.shadcn.com/docs/components/spinner"
+  },
   "Switch": {
     "prefix": ["cnx-switch", "shadcn-x-switch"],
     "body": ["<Switch />"],
@@ -1178,6 +1301,32 @@
       "</TooltipProvider>"
     ],
     "description": "https://ui.shadcn.com/docs/components/tooltip"
+  },
+  "Controller": {
+    "prefix": ["cnx-controller", "shadcn-x-controller"],
+    "body": [
+      "<Controller",
+      "  name=\"title\"",
+      "  control={form.control}",
+      "  render={({ field, fieldState }) => (",
+      "    <Field data-invalid={fieldState.invalid}>",
+      "      <FieldLabel htmlFor={field.name}>Bug Title</FieldLabel>",
+      "      <Input",
+      "        {...field}",
+      "        id={field.name}",
+      "        aria-invalid={fieldState.invalid}",
+      "        placeholder=\"Login button not working on mobile\"",
+      "        autoComplete=\"off\"",
+      "      />",
+      "      <FieldDescription>",
+      "        Provide a concise title for your bug report.",
+      "      </FieldDescription>",
+      "      {fieldState.invalid && <FieldError errors={[fieldState.error]} />}",
+      "    </Field>",
+      "  )}",
+      "/>"
+    ],
+    "description": "https://ui.shadcn.com/docs/forms/react-hook-forms"
   }
 }
 

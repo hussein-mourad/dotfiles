@@ -71,6 +71,16 @@
     ],
     "description": "https://ui.shadcn.com/docs/components/breadcrumb"
   },
+  "Button Group": {
+    "prefix": ["cni-button-group", "shadcn-i-button-group"],
+    "body": [
+      "import {",
+      "  ButtonGroup,",
+      "  ButtonGroupSeparator,",
+      "  ButtonGroupText,",
+      "} from \"@/components/ui/button-group\""
+    ]
+  },
   "Button": {
     "prefix": ["cni-button", "shadcn-i-button"],
     "body": ["import { Button } from \"@/components/ui/button\""],
@@ -232,6 +242,38 @@
     ],
     "description": "https://ui.shadcn.com/docs/components/dropdown-menu"
   },
+  "Empty": {
+    "prefix": ["cni-empty", "shadcn-i-empty"],
+    "body": [
+      "import {",
+      "  Empty,",
+      "  EmptyContent,",
+      "  EmptyDescription,",
+      "  EmptyHeader,",
+      "  EmptyMedia,",
+      "  EmptyTitle,",
+      "} from \"@/components/ui/empty\""
+    ],
+    "description": "https://ui.shadcn.com/docs/components/empty"
+  },
+  "Field": {
+    "prefix": ["cni-field", "shadcn-i-field"],
+    "body": [
+      "import {",
+      "  Field,",
+      "  FieldContent,",
+      "  FieldDescription,",
+      "  FieldError,",
+      "  FieldGroup,",
+      "  FieldLabel,",
+      "  FieldLegend,",
+      "  FieldSeparator,",
+      "  FieldSet,",
+      "  FieldTitle,",
+      "} from \"@/components/ui/field\""
+    ],
+    "description": "https://ui.shadcn.com/docs/components/field"
+  },
   "Form": {
     "prefix": ["cni-form", "shadcn-i-form"],
     "body": [
@@ -258,6 +300,20 @@
     ],
     "description": "https://ui.shadcn.com/docs/components/hover-card"
   },
+  "Input Group": {
+    "prefix": ["cni-input-group", "shadcn-i-input-group"],
+    "body": [
+      "import {",
+      "  InputGroup,",
+      "  InputGroupAddon,",
+      "  InputGroupButton,",
+      "  InputGroupInput,",
+      "  InputGroupText,",
+      "  InputGroupTextarea,",
+      "} from \"@/components/ui/input-group\""
+    ],
+    "description": "https://ui.shadcn.com/docs/components/input-group"
+  },
   "Input Otp": {
     "prefix": ["cni-input-otp", "shadcn-i-input-otp"],
     "body": [
@@ -274,6 +330,27 @@
     "prefix": ["cni-input", "shadcn-i-input"],
     "body": ["import { Input } from \"@/components/ui/input\""],
     "description": "https://ui.shadcn.com/docs/components/input"
+  },
+  "Item": {
+    "prefix": ["cni-item", "shadcn-i-item"],
+    "body": [
+      "import {",
+      "  Item,",
+      "  ItemActions,",
+      "  ItemContent,",
+      "  ItemDescription,",
+      "  ItemFooter,",
+      "  ItemHeader,",
+      "  ItemMedia,",
+      "  ItemTitle,",
+      "} from \"@/components/ui/item\""
+    ],
+    "description": "https://ui.shadcn.com/docs/components/item"
+  },
+  "Kbd": {
+    "prefix": ["cni-kbd", "shadcn-i-kbd"],
+    "body": ["import { Kbd } from \"@/components/ui/kbd\""],
+    "description": "https://ui.shadcn.com/docs/components/kbd"
   },
   "Label": {
     "prefix": ["cni-label", "shadcn-i-label"],
@@ -294,6 +371,17 @@
       "} from \"@/components/ui/menubar\""
     ],
     "description": "https://ui.shadcn.com/docs/components/menubar"
+  },
+  "Native Select": {
+    "prefix": ["cni-native-select", "shadcn-i-native-select"],
+    "body": [
+      "import {",
+      "  NativeSelect,",
+      "  NativeSelectOptGroup,",
+      "  NativeSelectOption,",
+      "} from \"@/components/ui/native-select\""
+    ],
+    "description": "https://ui.shadcn.com/docs/components/native-select"
   },
   "Navigation Menu": {
     "prefix": ["cni-navigation-menu", "shadcn-i-navigation-menu"],
@@ -417,6 +505,11 @@
     "body": ["import { Toaster } from \"@/components/ui/sonner\""],
     "description": "https://ui.shadcn.com/docs/components/sonner-toaster"
   },
+  "Spinner": {
+    "prefix": ["cni-spinner", "shadcn-i-spinner"],
+    "body": ["import { Spinner } from \"@/components/ui/spinner\""],
+    "description": "https://ui.shadcn.com/docs/components/spinner"
+  },
   "Switch": {
     "prefix": ["cni-switch", "shadcn-i-switch"],
     "body": ["import { Switch } from \"@/components/ui/switch\""],
@@ -479,4 +572,3 @@
     "description": "https://ui.shadcn.com/docs/components/tooltip"
   }
 }
-
