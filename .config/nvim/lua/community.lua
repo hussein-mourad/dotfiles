@@ -106,7 +106,7 @@ return {
   -- { import = "astrocommunity.completion.copilot-lua" },
   -- { import = "astrocommunity.completion.copilot-cmp" }, -- copilot
   -- { import = "astrocommunity.completion.copilot-lua-cmp" },
-  -- { import = "astrocommunity.completion.supermaven-nvim" },
+  { import = "astrocommunity.completion.supermaven-nvim" },
   -- { import = "astrocommunity.completion.avante-nvim" },
   -- { import = "astrocommunity.completion.fittencode-nvim" },
 
