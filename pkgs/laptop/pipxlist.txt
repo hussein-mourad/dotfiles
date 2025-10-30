@@ -1,2 +1,9 @@
-poetry 1.7.1
-pre-commit 3.7.0
+aws-shell 0.2.2
+harlequin 2.4.0
+organize-tool 3.3.0
+poetry 2.2.1
+posting 2.9.2
+pre-commit 4.3.0
+uv 0.9.6
+xxh-xxh 0.8.14
+you-get 0.4.1743
