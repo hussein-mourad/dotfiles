@@ -2,7 +2,8 @@
 -- Add shadcn components
 -- :ShadcnAdd
 return {
-  "BibekBhusal0/nvim-shadcn",
+  -- "BibekBhusal0/nvim-shadcn",
+  "hussein-mourad/nvim-shadcn",
   dependencies = {
     "nvim-telescope/telescope.nvim",
   },
