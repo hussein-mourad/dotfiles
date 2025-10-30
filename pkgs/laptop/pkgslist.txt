@@ -727,6 +727,7 @@ inetutils 2.6-1
 influx-cli 2.7.3-1
 iniparser 4.2.6-2
 inkscape 1.4.2-8
+insomnium-bin 0.2.3-1
 intel-compute-runtime 25.35.35096.9-1
 intel-gmmlib 22.8.1-1
 intel-graphics-compiler 1:2.18.5-1
