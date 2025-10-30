@@ -5,6 +5,7 @@ agate                         1.13.0
 agate-dbf                     0.2.3
 agate-excel                   0.4.1
 agate-sql                     0.7.2
+aioquic                       1.2.0
 alabaster                     1.0.0
 annotated-types               0.7.0
 anyio                         4.10.0
@@ -16,6 +17,7 @@ arandr                        0.1.11
 argcomplete                   3.6.2
 argon2-cffi                   25.1.0
 argon2-cffi-bindings          25.1.0
+asgiref                       3.9.1
 asttokens                     3.0.0
 async-lru                     2.0.5
 async-timeout                 5.0.1
@@ -27,6 +29,7 @@ Automat                       25.4.16
 babel                         2.17.0
 beautifulsoup4                4.13.5
 bleach                        6.2.0
+blinker                       1.9.0
 borgbackup                    1.4.1
 Brlapi                        0.8.6
 Brotli                        1.1.0
@@ -79,6 +82,7 @@ faust-cchardet                2.1.19
 feedparser                    6.0.12
 filelock                      3.19.1
 findpython                    0.7.0
+Flask                         3.1.2
 furo                          2025.7.19
 GeoIP                         1.3.2
 google-api-core               2.19.1
@@ -90,11 +94,13 @@ googleapis-common-protos      1.70.0
 greenlet                      3.2.4
 gufw                          26.4.0
 h11                           0.16.0
+h2                            4.2.0
 hatch-fancy-pypi-readme       25.1.0
 hatch-vcs                     0.5.0
 hatchling                     1.27.0
 hijridate                     2.5.0
 holidays                      0.70
+hpack                         4.1.0
 html2text                     2025.4.15
 html5-parser                  0.4.12
 html5lib                      1.1
@@ -103,6 +109,7 @@ httpie                        3.2.4
 httplib2                      0.31.0
 httpx                         0.28.1
 humanize                      4.13.0
+hyperframe                    6.1.0
 hyperlink                     21.0.0
 hypothesis                    6.138.16
 i3ipc                         2.2.1
@@ -120,6 +127,7 @@ ipykernel                     6.30.1
 ipython                       9.5.0
 ipython_pygments_lexers       1.1.1
 isodate                       0.7.2
+itsdangerous                  2.2.0
 jaconv                        0.4.0
 jalali_core                   1.0.0
 jaraco.classes                3.4.0
@@ -143,11 +151,13 @@ jupyter_server                2.17.0
 jupyterlab                    4.4.7
 jupyterlab_pygments           0.3.0
 jupyterlab_server             2.27.3
+kaitaistruct                  0.10
 keyring                       25.6.0
 khal                          0.13.0
 kitchen                       1.2.6
 korean_lunar_calendar         0.3.1
 lark                          1.2.2
+ldap3                         2.9
 leather                       0.4.0
 legacy-cgi                    2.6.3
 lensfun                       0.3.4
@@ -170,6 +180,9 @@ mdurl                         0.1.2
 mechanize                     0.4.10
 meson                         1.9.0
 mistune                       3.1.4
+mitmproxy                     12.1.1
+mitmproxy_linux               0.12.7
+mitmproxy_rs                  0.12.7
 mock                          5.2.0
 more-itertools                10.8.0
 mpv                           1.0.8
@@ -204,6 +217,7 @@ pacman_mirrors                5.1
 pandocfilters                 1.5.1
 parsedatetime                 2.6
 parso                         0.8.5
+passlib                       1.7.4
 pathspec                      0.12.1
 pbs-installer                 2025.9.2
 pdftotext                     2.2.2
@@ -224,6 +238,7 @@ prompt_toolkit                3.0.52
 protobuf                      6.32.0
 psutil                        7.0.0
 ptyprocess                    0.7.0
+publicsuffix2                 2.20191221
 pure_eval                     0.2.3
 pwquality                     1.4.5
 py7zr                         1.0.0
@@ -246,8 +261,10 @@ PyGObject                     3.52.3
 PyICU                         2.14
 pyinotify                     0.9.6
 pykakasi                      2.3.1.dev0
+pylsqpack                     0.3.18
 pyOpenSSL                     25.3.0
 pyparsing                     3.2.4
+pyperclip                     1.9.0
 pyppmd                        1.2.0
 pyproject_hooks               1.2.0
 PyQt5                         5.15.11
@@ -367,8 +384,10 @@ vobject                       0.9.9
 wcwidth                       0.2.13
 webencodings                  0.5.1
 websocket-client              1.8.0
+Werkzeug                      3.1.3
 wheel                         0.45.1
 wrapt                         1.17.3
+wsproto                       1.2.0
 wxPython                      4.2.3
 x_wr_timezone                 2.0.1
 xlrd                          2.0.2
