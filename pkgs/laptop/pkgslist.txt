@@ -185,6 +185,7 @@ default-cursors 3-1
 deluge 1:2.2.0-1
 deno 2.5.0-1
 desktop-file-utils 0.28-1
+devdocs-desktop 1.2.0-1
 device-mapper 2.03.35-1
 dfc 3.1.1-4
 dhclient 4.4.3.P1-4
