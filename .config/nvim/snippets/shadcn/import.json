@@ -97,6 +97,7 @@
     "body": [
       "import {",
       "  Card,",
+      "  CardAction,",
       "  CardContent,",
       "  CardDescription,",
       "  CardFooter,",
@@ -578,3 +579,4 @@
     "description": "https://ui.shadcn.com/docs/components/tooltip"
   }
 }
+
