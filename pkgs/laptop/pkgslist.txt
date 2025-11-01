@@ -39,7 +39,7 @@ apr-util 1.6.3-2
 arandr 0.1.11-4
 arch-wiki-docs 20250801-1
 archlinux-appstream-data 20250825-1
-archlinux-keyring 20250929-1
+archlinux-keyring 20251027-1
 argon2 20190702-6
 aribb24 1.0.3-4
 artwork-i3 20190912-2
@@ -127,7 +127,7 @@ cheat 4.4.2-3
 chmlib 0.40-9
 chntpw 140201-5
 chromaprint 1.6.0-1
-chromium 141.0.7390.76-1
+chromium 142.0.7444.59-1
 cifs-utils 7.4-1
 ckbcomp 1.227-2
 clang 20.1.8-1
@@ -195,7 +195,7 @@ diffutils 3.12-2
 digikam 8.7.0-3
 ding-libs 0.6.2-2
 direnv 2.37.1-1
-discord 1:0.0.112-1
+discord 1:0.0.113-1
 distro-info 1.11-1
 distro-info-data 0.63-1
 dive 0.13.1-1
@@ -279,7 +279,7 @@ fftw 3.3.10-7
 file 5.46-5
 filesystem 2025.05.03-1
 findutils 4.10.0-3
-firefox 144.0-1
+firefox 144.0.2-1
 firefoxpwa 2.16.0-1
 fish 4.0.8-1
 flac 1.5.0-1
@@ -324,6 +324,8 @@ gdk-pixbuf-xlib 2.40.2-3
 gdk-pixbuf2 2.42.12-2
 gdu 5.31.0-1
 geary 1:46.0-6
+gedit 48.2-1
+gedit-plugins 48.2-1
 gegl 0.4.62-2
 geocode-glib-2 3.26.4-4
 geocode-glib-common 3.26.4-4
@@ -1065,6 +1067,10 @@ libfreehand 0.1.2-5
 libfreexl 2.0.0-3
 libfyaml 0.9-1
 libgcrypt 1.11.2-1
+libgedit-amtk 5.9.1-1
+libgedit-gfls 1:0.3.0-1
+libgedit-gtksourceview 299.5.0-2
+libgedit-tepl 6.13.0-1
 libgee 0.20.8-1
 libgeotiff 1.7.4-1
 libgexiv2 0.14.6-1
@@ -2382,6 +2388,7 @@ stoken 0.92-5
 stow 2.4.1-1
 strace 6.16-1
 stress 1.0.7-3
+sublime-text-4 4.4200-1
 subversion 1.14.5-4
 sudo 1.9.17.p1-1
 suitesparse 7.11.0-1
@@ -2440,7 +2447,7 @@ thin-provisioning-tools 1.2.1-1
 threadweaver 6.18.0-1
 thunar 4.20.5-1
 thunar-volman 4.20.0-2
-thunderbird 143.0.1-1
+thunderbird 144.0-0.1
 tidy 5.8.0-3
 timew 1.9.1-1
 tinysparql 3.9.2-2
@@ -2548,6 +2555,7 @@ vulkan-icd-loader 1.4.321.0-1
 vulkan-intel 1:25.2.3-2
 vulkan-mesa-device-select 1:25.2.3-2
 vulkan-radeon 1:25.2.3-2
+vulkan-tools 1.4.321.0-1
 w3m 0.5.3.git20230713_1-1
 wallpapers-juhraya 1.1-3
 wavpack 5.8.1-1
@@ -2674,6 +2682,7 @@ zathura 0.5.12-1
 zathura-pdf-mupdf 0.4.4-23
 zbar 0.23.93-4
 zeal 0.7.2-1
+zed 0.204.3-1
 zen-browser-bin 1.16.1b-1
 zenity 4.1.99-2
 zensu 0.3-7

@@ -53,7 +53,7 @@ cantarell-fonts 1:0.303.1-2
 catdoc 0.95-6
 cheat 4.4.2-3
 chntpw 140201-5
-chromium 141.0.7390.76-1
+chromium 142.0.7444.59-1
 clipit 1:1.4.5+25+gf35db54-1
 clock-tui 0.5.0-2
 cmatrix 2.0-4
@@ -85,7 +85,7 @@ dhcpcd 10.2.4-1
 diffutils 3.12-2
 digikam 8.7.0-3
 direnv 2.37.1-1
-discord 1:0.0.112-1
+discord 1:0.0.113-1
 dive 0.13.1-1
 dmg2img 1.6.7-5
 dmidecode 3.6-1
@@ -125,7 +125,7 @@ feh 3.11.2-1
 ffmpeg 2:7.1.1-5
 ffmpegthumbnailer 2.2.3-3
 ffnvcodec-headers 13.0.19.0-1
-firefox 144.0-1
+firefox 144.0.2-1
 firefoxpwa 2.16.0-1
 fish 4.0.8-1
 flac 1.5.0-1
@@ -142,6 +142,8 @@ gcc 15.2.1+r22+gc4e96a094636-1
 gcolor3 2.4.0-9
 gdu 5.31.0-1
 geary 1:46.0-6
+gedit 48.2-1
+gedit-plugins 48.2-1
 gfeeds 2.2.0-5
 gimp 3.0.4-4
 git 2.51.0-1
@@ -469,6 +471,7 @@ sshpass 1.10-2
 sshs 4.7.2-1
 starship 1.23.0-1
 stow 2.4.1-1
+sublime-text-4 4.4200-1
 subversion 1.14.5-4
 sudo 1.9.17.p1-1
 swtpm 0.10.1-1
@@ -500,7 +503,7 @@ texlive-xetex 2025.2-2
 the_silver_searcher 2.2.0-3
 thunar 4.20.5-1
 thunar-volman 4.20.0-2
-thunderbird 143.0.1-1
+thunderbird 144.0-0.1
 tidy 5.8.0-3
 timew 1.9.1-1
 tiv 2015-4
@@ -616,6 +619,7 @@ zaread-git r120.c2d45e1-1
 zathura 0.5.12-1
 zathura-pdf-mupdf 0.4.4-23
 zeal 0.7.2-1
+zed 0.204.3-1
 zen-browser-bin 1.16.1b-1
 zensu 0.3-7
 zip 3.0-11
