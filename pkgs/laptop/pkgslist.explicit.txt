@@ -613,7 +613,6 @@ xterm 402-1
 yad 14.1-2
 yay 12.5.0-1
 yazi 25.5.31-2
-yt-dlp 2025.09.26-1
 ytfzf 2.6.2-2
 zaread-git r120.c2d45e1-1
 zathura 0.5.12-1

@@ -7,3 +7,4 @@ pre-commit 4.3.0
 uv 0.9.6
 xxh-xxh 0.8.14
 you-get 0.4.1743
+yt-dlp 2025.10.22
