@@ -9,6 +9,12 @@ startup_command = "nvim -c ':Telescope find_files hidden=true'"
 windows = ['lazygit']
 
 [[session]]
+name = "notes"
+path = "/mnt/d/data/documents/notes"
+startup_command = "nvim -c ':Telescope find_files hidden=true'"
+windows = ['lazygit']
+
+[[session]]
 name = "astrocommunity"
 path = "~/repos/astrocommunity/lua/astrocommunity"
 startup_command = "nvim -c ':Telescope find_files'"
