@@ -24,6 +24,7 @@ pipx list --short >"$PIPX_LIST"
 
 cd "$DOTFILES_PATH" || return
 
+git restore --staged .
 git add "$PKGS_LIST" "$PKGS_EXCIPLICIT" "$PIP_LIST" "$PIPX_LIST"
 git commit -m "backup: $DEVICE_NAME pkgs"
 git push
