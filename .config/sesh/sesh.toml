@@ -15,6 +15,11 @@ startup_command = "nvim -c ':Telescope find_files hidden=true'"
 windows = ['lazygit']
 
 [[session]]
+name = "youtube"
+path = "/mnt/d/data/media/videos/youtube"
+startup_command = "ranger"
+
+[[session]]
 name = "astrocommunity"
 path = "~/repos/astrocommunity/lua/astrocommunity"
 startup_command = "nvim -c ':Telescope find_files'"
