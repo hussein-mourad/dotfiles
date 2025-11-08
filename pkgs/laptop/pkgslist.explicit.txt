@@ -13,6 +13,8 @@ appimagelauncher 2.2.0-10
 arandr 0.1.11-4
 arch-wiki-docs 20250801-1
 artwork-i3 20190912-2
+asciinema 3.0.0-2
+asciiquarium 1.1-7
 asdf-vm 0.16.7-1
 atac 0.20.2-1
 atomicparsley 20240608.083822.1ed9031-1
@@ -53,7 +55,7 @@ cantarell-fonts 1:0.303.1-2
 catdoc 0.95-6
 cheat 4.4.2-3
 chntpw 140201-5
-chromium 142.0.7444.59-1
+chromium 142.0.7444.134-1
 clipit 1:1.4.5+25+gf35db54-1
 clock-tui 0.5.0-2
 cmatrix 2.0-4
@@ -66,6 +68,7 @@ coreutils 9.7-1
 cowsay 3.8.4-1
 cpanminus 1.7048-2
 cpupower 6.16-1
+crane 0.20.6-2
 criu 4.1.1-1
 cronie 1.7.2-1
 cryptsetup 2.8.1-1
@@ -168,6 +171,7 @@ gpick 0.3-2
 gping 1.20.1-1
 gputest 0.7.0-1
 grafana 12.1.1-1
+gron 0.7.1-2
 grub 2:2.12.r382.gee789e1a-2
 grub-customizer-git r795.2ecdc4c-1
 grub-theme-manjaro 20.2-16
