@@ -161,6 +161,7 @@ cpupower 6.16-1
 cracklib 2.10.3-1
 crane 0.20.6-2
 criu 4.1.1-1
+croc 1:10.2.4-1
 cronie 1.7.2-1
 crypto++ 8.9.0-2
 cryptsetup 2.8.1-1
@@ -263,7 +264,6 @@ exiv2 0.28.7-1
 exo 4.20.0-2
 expac 10-11
 expat 2.7.2-1
-expo-orbit-bin 2.0.2-1
 extra-cmake-modules 6.18.0-1
 eza 0.23.3-1
 f2fs-tools 1.16.0-3
@@ -1358,7 +1358,6 @@ licenses 20240728-1
 lightdm 1:1.32.0-6
 lightdm-settings 2.0.9-1
 lightdm-slick-greeter 2.2.2-1
-lightworks 2025.1.152194-1
 lilv 0.24.26-1
 linux-api-headers 6.16-2
 linux-firmware-amdgpu 20250917-1
@@ -1570,7 +1569,6 @@ ntopng 6.2-1
 ntp 4.2.8.p18-4
 numactl 2.0.19-1
 numlockx 1.2-6
-nvidia-cg-toolkit 3.1-8
 nvidia-driver-assistant 0.22.82.07-1
 nvidia-prime 1.0-5
 nvidia-settings 580.82.09-1
@@ -1815,6 +1813,7 @@ python-dunamai 1.25.0-1
 python-editables 0.5-5
 python-et-xmlfile 2.0.0-2
 python-executing 2.2.1-1
+python-faker 37.6.0-1
 python-fastjsonschema 2.21.2-1
 python-faust-cchardet 2.1.19-4
 python-feedparser 6.0.12-1

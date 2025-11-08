@@ -77,6 +77,7 @@ dunamai                       1.25.0
 editables                     0.5
 et_xmlfile                    2.0.0
 executing                     2.2.1
+Faker                         37.6.0
 fastjsonschema                2.21.2
 faust-cchardet                2.1.19
 feedparser                    6.0.12

@@ -70,6 +70,7 @@ cpanminus 1.7048-2
 cpupower 6.16-1
 crane 0.20.6-2
 criu 4.1.1-1
+croc 1:10.2.4-1
 cronie 1.7.2-1
 cryptsetup 2.8.1-1
 csvkit 2.1.0-1
@@ -119,7 +120,6 @@ ethtool 1:6.15-1
 evolution 3.56.2-2
 exfatprogs 1.2.9-1
 expac 10-11
-expo-orbit-bin 2.0.2-1
 eza 0.23.3-1
 f2fs-tools 1.16.0-3
 fd 10.3.0-1
@@ -259,7 +259,6 @@ libva-vdpau-driver 0.7.4-7
 libxnvctrl 580.82.09-1
 lightdm-settings 2.0.9-1
 lightdm-slick-greeter 2.2.2-1
-lightworks 2025.1.152194-1
 linux-headers-meta 6.16-1
 linux-lts-nvidia-meta 5.4-1
 linux-meta 6.16-1
@@ -409,6 +408,7 @@ pulseaudio-ctl 1.70-2
 pulseaudio-equalizer 17.0+r43+g3e2bb8a1e-1
 pyenv 1:2.6.7-1
 pyright 1.1.405-1
+python-faker 37.6.0-1
 python-httpie-jwt-auth 0.4.0-2
 python-hypothesis 6.138.16-1
 python-llfuse 1.5.1-1
