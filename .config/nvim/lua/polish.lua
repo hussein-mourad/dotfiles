@@ -18,6 +18,14 @@ vim.cmd [[
   augroup END
 ]]
 
+vim.api.nvim_create_autocmd("BufReadPost", {
+  pattern = { "*/routeTree.gen.ts", "*.lock" },
+  callback = function()
+    vim.bo.readonly = true
+    vim.bo.modifiable = false
+  end,
+})
+--
 -- vim.api.nvim_del_augroup_by_name "TermMappings"
 -- vim.keymap.set("t", "jk", [[<C-\><C-n>]], { desc = "Terminal normal mode" })
 vim.keymap.set("t", "<C-h>", [[<C-\><C-n><C-W>h]], { desc = "Terminal left window navigation" })
