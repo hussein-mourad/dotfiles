@@ -2545,7 +2545,7 @@ virt-install 5.1.0-1
 virt-manager 5.1.0-1
 virt-viewer 11.0-4
 virtiofsd 1.13.2-1
-visual-studio-code-bin 1.103.2-1
+visual-studio-code-bin 1.105.1-1
 vit 2.3.3-1
 vmaf 3.0.0-1
 vnstat 2.13-2
