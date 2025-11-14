@@ -115,6 +115,7 @@ efibootmgr 18-3
 electron32-bin 32.3.3-2
 endeavour 43.0-5
 entr 5.7-1
+eog 47.0-3
 eslint 9.31.0-1
 ethtool 1:6.15-1
 evolution 3.56.2-2
@@ -181,6 +182,7 @@ gst-plugins-base 1.26.6-1
 gst-plugins-good 1.26.6-1
 gst-plugins-ugly 1.26.6-1
 gstreamer 1.26.6-1
+gthumb 3.12.8-1
 gtkmm 1:2.24.5-5
 gtksourceview-pkgbuild 5-3
 gtop 1.1.5-2
