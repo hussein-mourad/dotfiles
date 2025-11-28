@@ -39,7 +39,7 @@ bmenu 0.26-1
 bottom 0.11.1-1
 brn-git r31.454e213-1
 broot 1.49.1-1
-bruno-bin 2.3.0-1
+bruno-bin 2.14.2-1
 btrfs-progs 6.16.1-1
 bzip2 1.0.8-6
 cantarell-fonts 1:0.303.1-2
