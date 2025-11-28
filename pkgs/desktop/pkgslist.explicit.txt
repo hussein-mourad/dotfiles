@@ -45,7 +45,7 @@ bzip2 1.0.8-6
 cantarell-fonts 1:0.303.1-2
 cdrtools 3.02a09-6
 cheat-bin 4.4.2-1
-chromium 142.0.7444.134-1
+chromium 142.0.7444.175-1
 clipit 1:1.4.5+25+gf35db54-1
 cloc 2.06-1
 clock-tui 0.6.0-1
@@ -65,7 +65,7 @@ dhcpcd 10.2.4-1
 diff-so-fancy 1.4.4-2
 diffutils 3.12-2
 direnv 2.37.1-1
-discord 1:0.0.113-1
+discord 1:0.0.116-1
 dmidecode 3.6-1
 dmraid 1.0.0.rc16.3-15
 dnsmasq 2.91-1
@@ -90,7 +90,7 @@ fd 10.3.0-1
 feh 3.11.2-1
 ffmpeg 2:7.1.1-5
 ffmpegthumbnailer 2.2.3-3
-firefox 144.0.2-1
+firefox 145.0-1
 firefox-developer-edition 144.0b3-1
 firefoxpwa 2.16.0-1
 flac 1.5.0-1
@@ -154,7 +154,7 @@ iftop 1.0pre4-6
 inetutils 2.6-1
 inkscape 1.4.2-8
 intel-ucode 20250812-1
-inxi 3.3.39.1-1
+inxi 3.3.40.1-1
 iperf 2.2.1-1
 iperf3 3.19.1-1
 ipp-usb 0.9.30-1
