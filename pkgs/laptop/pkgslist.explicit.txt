@@ -188,6 +188,8 @@ gtksourceview-pkgbuild 5-3
 gtop 1.1.5-2
 gufw 26.04-1
 gum 0.17.0-1
+gvfs 1.57.2-4
+gvfs-mtp 1.57.2-4
 gxkb 0.9.6-1
 handbrake 1.10.2-2
 handbrake-cli 1.10.2-2
@@ -539,6 +541,7 @@ ttf-roboto 3.011-1
 ttf-ubuntu-nerd 3.4.0-1
 tumbler 4.20.0-3
 typst 1:0.13.1-1
+udiskie 2.5.8-1
 unarchiver 1.10.8-5
 unrar 1:7.1.10-1
 unzip 6.0-23

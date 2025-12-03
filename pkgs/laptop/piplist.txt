@@ -154,6 +154,7 @@ jupyterlab_pygments           0.3.0
 jupyterlab_server             2.27.3
 kaitaistruct                  0.10
 keyring                       25.6.0
+keyutils                      0.6
 khal                          0.13.0
 kitchen                       1.2.6
 korean_lunar_calendar         0.3.1
@@ -370,6 +371,7 @@ typing-inspection             0.4.1
 tzdata                        2025.2
 tzlocal                       5.3.1
 uc-micro-py                   1.0.3
+udiskie                       2.5.8
 ueberzug                      18.3.1
 ufw                           0.36.2
 unrardll                      0.1.7

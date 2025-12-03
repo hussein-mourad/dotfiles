@@ -456,6 +456,8 @@ gumbo-parser 0.13.2-1
 gupnp 1:1.6.9-1
 gupnp-igd 1.6.0-2
 gutenprint 5.3.5-1
+gvfs 1.57.2-4
+gvfs-mtp 1.57.2-4
 gxkb 0.9.6-1
 gzip 1.14-2
 handbrake 1.10.2-2
@@ -1893,6 +1895,7 @@ python-jupyter-events 0.12.0-1
 python-jupyterlab-server 2.27.3-3
 python-kaitaistruct 0.10-7
 python-keyring 25.6.0-1
+python-keyutils 0.6-11
 python-kitchen 1.2.6-5
 python-korean_lunar_calendar 0.3.1-1
 python-lark-parser 1.2.2-3
@@ -2513,6 +2516,7 @@ typescript 5.9.2-1
 typst 1:0.13.1-1
 tzdata 2025b-1
 uchardet 0.0.8-3
+udiskie 2.5.8-1
 udisks2 2.10.2-1
 ueberzug 18.3.1-4
 ufw 0.36.2-5
