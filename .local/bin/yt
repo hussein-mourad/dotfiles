@@ -38,6 +38,34 @@ select_quality() {
 	done
 }
 
+select_subtitles() {
+	options=("en" "ar")
+
+	echo "Select subtitles:"
+	for i in "${!options[@]}"; do
+		printf "%2d) %s\n" $((i + 1)) "${options[$i]}"
+	done
+
+	read -rp "Select multiple (e.g. 1 2): " -a selected
+
+	for index in "${selected[@]}"; do
+		# ensure it's a number and within range
+		if [[ "$index" =~ ^[0-9]+$ ]] && ((index >= 1 && index <= ${#options[@]})); then
+			valid_items+=("${options[$((index - 1))]}")
+			# echo " - ${options[$((index - 1))]}"
+		else
+			echo "Skipping invalid selection: $index"
+			echo "Defaulting to English"
+			valid_items+=("en")
+			break
+		fi
+	done
+	SUB_LANG=$(
+		IFS=,
+		echo "${valid_items[*]}"
+	)
+}
+
 # Function to convert seconds to human-readable format
 function display_time {
 	local T=$1
@@ -85,6 +113,8 @@ mkdir -p "$YOUTUBE_DIR"
 touch "$LOG_FILE"
 
 select_quality
+echo ""
+select_subtitles
 
 if [[ $INPUT_URL =~ list= ]]; then
 	# Prefix playlist index with "-" separator, but only if it is available
@@ -127,7 +157,7 @@ yt-dlp \
 	--write-annotations \
 	--write-subs \
 	--write-auto-subs \
-	--sub-lang en,ar \
+	--sub-lang "$SUB_LANG" \
 	--convert-subs srt \
 	--convert-thumbnails png \
 	--concurrent-fragments 5 \
