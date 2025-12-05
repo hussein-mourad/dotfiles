@@ -154,7 +154,6 @@ yt-dlp \
 	--write-description \
 	--write-thumbnail \
 	--write-info-json \
-	--write-annotations \
 	--write-subs \
 	--write-auto-subs \
 	--sub-lang "$SUB_LANG" \
