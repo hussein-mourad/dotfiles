@@ -67,7 +67,7 @@ select_subtitles() {
 }
 
 # Function to convert seconds to human-readable format
-function display_time {
+display_time() {
 	local T=$1
 	local D=$((T / 60 / 60 / 24))
 	local H=$((T / 60 / 60 % 24))
@@ -174,4 +174,4 @@ echo "$INPUT_URL" >"$ACTUAL_DOWNLOAD_DIR/url.txt"
 echo "The video was downloaded to: $ACTUAL_DOWNLOAD_DIR"
 ELAPSED_TIME=$SECONDS
 echo "Elapsed time is: "
-display_time $ELAPSED_TIME
+display_time "$ELAPSED_TIME"
