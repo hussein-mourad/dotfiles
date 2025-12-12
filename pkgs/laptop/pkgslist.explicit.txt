@@ -4,6 +4,7 @@ acpi 1.8-2
 acpid 2.0.34-2
 act 0.2.81-1
 alacritty 0.15.1-1
+alarm-clock-applet 1:0.4.1-5
 alsa-firmware 1.2.4-4
 alsa-plugins 1:1.2.12-4
 alsa-utils 1.2.14-1
@@ -118,6 +119,7 @@ entr 5.7-1
 eog 47.0-3
 eslint 9.31.0-1
 ethtool 1:6.15-1
+evince 1:48.1-1
 evolution 3.56.2-2
 exfatprogs 1.2.9-1
 expac 10-11
@@ -383,6 +385,7 @@ patch 2.8-1
 patchutils 0.4.2-3
 pavucontrol 1:6.2-1
 pcmanfm 1.4.0-1
+pdfpc 4.7.0-2
 pdftk 3.3.3-4
 perl 5.42.0-1
 perl-anyevent-i3 0.19-2
