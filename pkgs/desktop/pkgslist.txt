@@ -321,6 +321,7 @@ gnome-clocks 49.0-1
 gnome-desktop-4 1:44.4-1
 gnome-desktop-common 1:44.4-1
 gnome-keyring 1:48.0-1
+gnome-terminal 3.58.0-1
 gnu-netcat 0.7.1-11
 gnulib-l10n 20241231-1
 gnupg 2.4.8-4
