@@ -239,6 +239,7 @@ ffmpegthumbnailer 2.3.0-1
 fftw 3.3.10-7
 file 5.46-5
 filesystem 2025.10.12-1
+filezilla 3.69.5-3
 findutils 4.10.0-3
 firefox 146.0.1-1
 firefox-developer-edition 147.0b5-1
@@ -1015,6 +1016,7 @@ libexttextcat 3.4.7-1
 libfabric 2.3.1-1
 libfdk-aac 2.0.3-1
 libffi 3.5.2-1
+libfilezilla 1:0.53.1-1
 libfm 1.4.1-1
 libfm-extra 1.4.1-1
 libfm-gtk3 1.4.1-1
