@@ -807,6 +807,7 @@ lazydocker-bin 0.24.1-1
 lazygit 0.57.0-1
 lazynpm 0.1.4-1
 lazysql 0.3.4-1
+lazyssh-bin 0.3.0-1
 lcms2 2.17-1
 ldb 2:4.23.3-2
 ldns 1.9.0-1
