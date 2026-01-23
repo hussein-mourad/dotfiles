@@ -297,6 +297,7 @@ perl 5.42.0-1
 perl-file-mimeinfo 0.35-4
 pgcli 4.3.0-1
 pgmodeler 3:1.2.0-1
+pipes-rs-bin 1.6.4-2
 pipewire 1:1.4.9-2
 pipewire-alsa 1:1.4.9-2
 pipewire-jack 1:1.4.9-2
