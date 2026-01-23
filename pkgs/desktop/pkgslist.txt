@@ -642,6 +642,7 @@ haskell-yaml 0.11.11.2-198
 haskell-zip-archive 0.4.3.2-105
 haskell-zlib 0.7.0.0-67
 haveged 1.9.19-1
+help2man 1.49.3-2
 hexchat 2.16.2-5
 hicolor-icon-theme 0.18-1
 hidapi 0.15.0-1
