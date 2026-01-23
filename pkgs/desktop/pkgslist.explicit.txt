@@ -43,6 +43,7 @@ bruno-bin 2.14.2-1
 btrfs-progs 6.17.1-1
 bzip2 1.0.8-6
 cantarell-fonts 1:0.303.1-2
+cbonsai 1.4.2-1
 cdrtools 3.02a09-6
 cheat-bin 4.4.2-1
 chromium 143.0.7499.169-1

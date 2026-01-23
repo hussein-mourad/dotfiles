@@ -111,6 +111,7 @@ cairomm-1.16 1.18.0-2
 cantarell-fonts 1:0.303.1-2
 capstone 5.0.6-1
 cblas 3.12.1-2
+cbonsai 1.4.2-1
 ccache 4.12.2-1
 cdparanoia 10.2-9
 cdrtools 3.02a09-6
