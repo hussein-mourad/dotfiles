@@ -2080,6 +2080,7 @@ sqlitebrowser 3.13.1-2
 squashfs-tools 4.7.4-1
 sratom 0.6.20-1
 srt 1.5.4-1
+sshs 4.7.2-1
 starship 1.24.1-1
 startup-notification 0.12-9
 stfl 0.24-6
