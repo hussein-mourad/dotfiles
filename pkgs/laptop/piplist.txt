@@ -296,7 +296,6 @@ PyYAML                        6.0.2
 pyzmq                         27.1.0
 pyzstd                        0.17.0
 qutebrowser                   3.5.1
-ranger-fm                     1.9.4
 RapidFuzz                     3.14.1
 readability-lxml              0.8.4.1
 recurring-ical-events         3.8.0
@@ -372,7 +371,6 @@ tzdata                        2025.2
 tzlocal                       5.3.1
 uc-micro-py                   1.0.3
 udiskie                       2.5.8
-ueberzug                      18.3.1
 ufw                           0.36.2
 unrardll                      0.1.7
 uritemplate                   4.2.0
