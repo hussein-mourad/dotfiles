@@ -151,6 +151,7 @@ cowsay 3.8.4-1
 cpio 2.15-3
 cppdap 1.58.0-2
 cpupower 6.18-1
+cracklib 2.10.3-1
 cronie 1.7.2-2
 crypto++ 8.9.0-2
 cryptsetup 2.8.1-1
@@ -321,6 +322,7 @@ gnome-autoar 0.4.5-1
 gnome-clocks 49.0-1
 gnome-desktop-4 1:44.4-1
 gnome-desktop-common 1:44.4-1
+gnome-disk-utility 46.1-2
 gnome-keyring 1:48.0-1
 gnome-terminal 3.58.0-1
 gnu-netcat 0.7.1-11
@@ -1168,6 +1170,7 @@ libproxy 0.5.12-1
 libpsl 0.21.5-2
 libptytty 2.0-5
 libpulse 17.0+r93+gbe2efb69b-1
+libpwquality 1.4.5-7
 libqaccessibilityclient-qt6 0.6.0-1
 libqalculate 5.8.2-1
 libqmi 1.36.0-1
