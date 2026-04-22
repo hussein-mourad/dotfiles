@@ -904,7 +904,7 @@ kyotocabinet 1.2.80-1
 l-smash 2.14.5-4
 lame 3.101.r6531-1
 lapack 3.12.1-2
-lazydocker-bin 0.24.1-1
+lazydocker-bin 0.25.2-1
 lazygit 0.60.0-1
 lazynpm 0.1.4-1
 lazysql 0.3.4-1
@@ -2557,6 +2557,7 @@ tzdata 2026a-1
 uchardet 0.0.8-3
 udiskie 2.6.1-1
 udisks2 2.11.1-2
+ueberzug 18.3.1-5
 ufw 0.36.2-7
 unarchiver 1.10.8-6
 unibilium 2.1.2-1

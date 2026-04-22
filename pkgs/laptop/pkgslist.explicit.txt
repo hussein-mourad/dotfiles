@@ -243,7 +243,7 @@ kompose 1.38.0-1
 konsole 25.12.3-1
 kubectl 1.35.2-1
 kvantum-manjaro 0.13.5+5+g0179d45-4
-lazydocker-bin 0.24.1-1
+lazydocker-bin 0.25.2-1
 lazygit 0.60.0-1
 lazynpm 0.1.4-1
 lazysql 0.3.4-1
@@ -545,6 +545,7 @@ ttf-ubuntu-nerd 3.4.0-2
 tumbler 4.20.1-1
 typst 1:0.14.2-2
 udiskie 2.6.1-1
+ueberzug 18.3.1-5
 unarchiver 1.10.8-6
 unrar 1:7.2.4-1
 unzip 6.0-23
