@@ -300,7 +300,6 @@ manjaro-hello 0.8.1-4
 manjaro-hotfixes 2024.1-2
 manjaro-i3-settings 1:20260221-1
 manjaro-printer 20240827-1
-manjaro-ranger-settings 20240626-1
 manjaro-release 26.0.4-1
 manjaro-settings-manager-notifier 0.5.8-8
 manjaro-system 20250814-1
@@ -545,7 +544,7 @@ ttf-ubuntu-nerd 3.4.0-2
 tumbler 4.20.1-1
 typst 1:0.14.2-2
 udiskie 2.6.1-1
-ueberzug 18.3.1-5
+ueberzugpp 2.9.8-3
 unarchiver 1.10.8-6
 unrar 1:7.2.4-1
 unzip 6.0-23
