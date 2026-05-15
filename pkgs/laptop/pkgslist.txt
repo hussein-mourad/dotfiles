@@ -125,6 +125,7 @@ catdoc 0.95-6
 cblas 3.12.1-2
 ccache 4.12.3-2
 cdparanoia 10.2-9
+cef 147.0.10-1
 cfitsio 1:4.6.3-1
 chafa 1.18.1-1
 cheat 4.4.2-3
@@ -780,11 +781,14 @@ jbig2dec 0.20-1
 jbigkit 2.1-8
 jdk-openjdk 25.0.2.u10-1
 jdk17-openjdk 17.0.18.u8-1
+jellyfin-desktop-git 1:0.r617.43b8fe4-1
+jellyfin-desktop-libmpv-git 1:0.r55016.6242788-3
 jellyfin-mpv-shim 2.9.0-2
 jellyfin-tui 1.4.2-1
 jemalloc 1:5.3.0-7
+jfsh 0.1.16-1
 jfsutils 1.1.15-9
-jftui 0.7.2-1
+jftui 0.7.5-3
 jose 14-1
 jpegoptim 1.5.6-1
 jq 1.8.1-1
