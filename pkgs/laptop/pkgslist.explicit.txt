@@ -65,6 +65,7 @@ colorpicker 1.0.f5d441a-2
 composer 2.9.5-1
 conky 1.22.2-1
 conky-i3 20210907-1
+coppelia-bin 0.0.11.alpha-2
 coreutils 9.10-1
 cowsay 3.8.4-1
 cpanminus 1.7048-3
