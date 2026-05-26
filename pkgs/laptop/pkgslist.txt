@@ -285,6 +285,7 @@ f2fs-tools 1.16.0-3
 faac 1.31.1-1
 faad2 2.11.2-1
 fakeroot 1.37.2-1
+fatsort 1.7.679-1
 fd 10.4.2-1
 fdupes 1:2.4.0-2
 feh 3.11.3-1
@@ -746,6 +747,8 @@ iana-etc 20260306-1
 icon-naming-utils 0.8.90-6
 icu 78.2-2
 icu75 75.1-9
+id3lib 3.8.3-19
+id3v2 0.1.12-7
 iftop 1.0pre4-6
 ijs 0.35-6
 imagemagick 7.1.2.17-1
