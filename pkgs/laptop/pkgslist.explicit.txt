@@ -116,6 +116,7 @@ ecryptfs-utils 111-9
 efibootmgr 18-3
 electron32-bin 32.3.3-2
 endeavour 43.0-5
+ente-auth-bin 4.4.22-1
 entr 5.8-1
 eog 49.2-1
 eslint 9.34.0-1
@@ -568,6 +569,7 @@ virt-manager 5.1.0-3
 virt-viewer 11.0-4
 visual-studio-code-bin 1.105.1-1
 vit 2.3.3-2
+vlc 3.0.22-4
 vnstat 2.13-2
 volumeicon 0.5.1-8
 vulkan-intel 1:26.0.2-1
