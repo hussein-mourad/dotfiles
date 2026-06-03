@@ -246,6 +246,7 @@ keepassxc 2.7.12-2
 khal 0.13.0-3
 kitty 0.46.1-1
 ko 0.18.1-2
+kodi 21.3-5
 kompose 1.38.0-1
 konsole 25.12.3-1
 kubectl 1.35.2-1
