@@ -2609,7 +2609,7 @@ virt-install 5.1.0-3
 virt-manager 5.1.0-3
 virt-viewer 11.0-4
 virtiofsd 1.13.3-1
-visual-studio-code-bin 1.105.1-1
+visual-studio-code-bin 1.123.0-5
 vit 2.3.3-2
 vlc 3.0.22-4
 vlc-cli 3.0.22-4
