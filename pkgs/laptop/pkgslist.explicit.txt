@@ -267,7 +267,7 @@ libdiscid 0.6.5-2
 libdvdcss 1.5.0-1
 libgpod 0.8.3-20
 libguestfs 1.56.2-4
-libinput-gestures 2.80-1
+libinput-gestures 2.81-1
 libreoffice-still 25.8.5-3
 libtool 2.6.0-4
 libva-intel-driver 2.4.1-6

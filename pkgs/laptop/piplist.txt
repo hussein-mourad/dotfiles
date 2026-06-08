@@ -156,6 +156,7 @@ leather                       0.4.1
 legacy-cgi                    2.6.4
 lensfun                       0.3.4
 LibAppArmor                   4.1.7
+libevdev                      0.13.1
 libfdt                        1.7.2
 libtorrent                    2.0.11
 libvirt-python                12.1.0
@@ -280,6 +281,7 @@ python-slugify                8.0.4
 python-xlib                   0.33
 pytimeparse                   1.1.8
 pytz                          2025.2
+pyudev                        0.24.4
 pyxdg                         0.28
 PyYAML                        6.0.3
 pyzmq                         27.1.0
