@@ -26,7 +26,8 @@ return {
 
   -- web dev
   { import = "astrocommunity.pack.html-css" },
-  { import = "astrocommunity.pack.typescript-all-in-one" },
+  -- { import = "astrocommunity.pack.typescript-all-in-one" },
+  { import = "astrocommunity.pack.typescript" },
   { import = "astrocommunity.pack.tailwindcss" },
   { import = "astrocommunity.pack.prettier" },
   -- { import = "astrocommunity.pack.biome" },
