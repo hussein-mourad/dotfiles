@@ -6,6 +6,22 @@
   "contributes": {
     "snippets": [
       {
+        "language": "javascriptreact",
+        "path": "./shadcn/help.json"
+      },
+      {
+        "language": "javascriptreact",
+        "path": "./shadcn/import.json"
+      },
+      {
+        "language": "javascriptreact",
+        "path": "./shadcn/pages.json"
+      },
+      {
+        "language": "javascriptreact",
+        "path": "./shadcn/usage.json"
+      },
+      {
         "language": "typescriptreact",
         "path": "./shadcn/help.json"
       },

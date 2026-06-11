@@ -1,5 +1,5 @@
 -- Add html tailwind emmet to blade file
--- if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
+if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
 
 return {
   {
@@ -36,7 +36,7 @@ return {
       -- Merge the original config with your custom config for Emmet
       opts.config.emmet_ls = vim.tbl_deep_extend("force", opts.config.emmet_ls or {}, {
         cmd = { "emmet-ls", "--stdio" },
-        filetypes = { "html", "css", "blade" },
+        filetypes = { "html", "css", "blade", "javascriptreact", "typescriptreact" },
         root_dir = function(fname) return require("lspconfig").util.find_git_ancestor(fname) end,
       })
 

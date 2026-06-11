@@ -1,4 +1,4 @@
 return {
   "supermaven-nvim",
-  enabled = false,
+  enabled = true,
 }
