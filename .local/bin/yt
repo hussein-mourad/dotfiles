@@ -134,19 +134,22 @@ else
 	FILENAME="%(title)s.%(ext)s"
 fi
 
-OUTPUT_FILENAME="$OUTPUT_DIR/$FILENAME"
+OUTPUT_PATH="$OUTPUT_DIR/$FILENAME"
 THUMBNAIL_PATH="thumbnail:$OUTPUT_DIR/thumbnails/$FILENAME"
 SUBTITLE_PATH="subtitle:$OUTPUT_DIR/subtitles/$FILENAME"
-DESCRIPTION="description:$OUTPUT_DIR/descriptions/$FILENAME"
+DESCRIPTIONS_PATH="description:$OUTPUT_DIR/descriptions/$FILENAME"
+INFOJSON_PATH="infojson:$OUTPUT_DIR/info/$FILENAME"
 
 SECONDS=0
 
 yt-dlp \
-	-f "$FORMAT" \
-	-o "$OUTPUT_FILENAME" \
-	-o "$THUMBNAIL_PATH" \
-	-o "$SUBTITLE_PATH" \
-	-o "$DESCRIPTION" \
+	--format "$FORMAT" \
+	--output "$OUTPUT_PATH" \
+	--output "$THUMBNAIL_PATH" \
+	--output "$SUBTITLE_PATH" \
+	--output "$DESCRIPTIONS_PATH" \
+	--output "$INFOJSON_PATH" \
+	--no-abort-on-error \
 	--embed-metadata \
 	--embed-chapters \
 	--embed-subs \
