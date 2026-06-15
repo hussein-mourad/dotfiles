@@ -508,6 +508,7 @@ taskwarrior-tui 0.26.5-1
 tcpdump 4.99.6-1
 tea 0.12.0-1
 telegram-desktop 6.6.3-1
+television 0.15.7-1
 termdown 1.18.0-7
 terminus-font 4.49.1-8
 tesseract-data-eng 2:4.1.0-4
