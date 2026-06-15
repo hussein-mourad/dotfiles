@@ -288,7 +288,7 @@ lolcat 100.0.1-5
 lsd 1.2.0-2
 lshw B.02.20-3
 lua51 5.1.5-13
-luarocks 3.13.0-1
+luarocks 3.13.0-5
 lvm2 2.03.38-1
 lxappearance 0.6.4-3
 lxinput 0.3.6-3
@@ -339,7 +339,7 @@ ncdu 2.9.2-1
 ndpi 4.12-2
 neofetch 7.1.0-2
 neomutt 1:20260105-1
-neovim 0.11.7-1
+neovim 0.12.2-1
 net-tools 2.10-3
 netctl 1.29-2
 nethogs 0.8.8-2
@@ -535,6 +535,7 @@ translate-shell 0.9.7.1-2
 transmission-cli 4.1.1-1
 trashy 2.0.0-1
 tree 2.3.1-1
+tree-sitter-cli 0.26.9-1
 ts-node 10.9.2-1
 ttf-dejavu 2.37+18+g9b5d1b2f-7
 ttf-droid 20121017-11

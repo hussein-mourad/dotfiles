@@ -1468,12 +1468,13 @@ lsof 4.99.6-1
 lsscsi 0.32-2
 lua 5.4.8-2
 lua-lpeg 1.1.0-4
+lua-luarocks 3.13.0-5
 lua51 5.1.5-13
 lua51-lpeg 1.1.0-4
 lua52 5.2.4-8
 lua53 5.3.6-4
 luajit 2.1.1772619647+659a616-1
-luarocks 3.13.0-1
+luarocks 3.13.0-5
 luit 20250912-1
 lv2 1.18.10-2
 lvm2 2.03.38-1
@@ -1574,7 +1575,7 @@ ndpi 4.12-2
 neofetch 7.1.0-2
 neomutt 1:20260105-1
 neon 0.36.0-1
-neovim 0.11.7-1
+neovim 0.12.2-1
 net-snmp 5.9.5.2-1
 net-tools 2.10-3
 netctl 1.29-2
@@ -2536,9 +2537,10 @@ translate-shell 0.9.7.1-2
 transmission-cli 4.1.1-1
 trashy 2.0.0-1
 tree 2.3.1-1
-tree-sitter 0.25.10-1
+tree-sitter 0.26.9-1
 tree-sitter-bash 0.25.1-1
 tree-sitter-c 0.24.1-1
+tree-sitter-cli 0.26.9-1
 tree-sitter-lua 0.5.0-1
 tree-sitter-markdown 0.5.1-1
 tree-sitter-python 0.25.0-1
