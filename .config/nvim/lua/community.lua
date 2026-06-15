@@ -119,6 +119,7 @@ return {
 
   -- utility
   { import = "astrocommunity.utility.nvim-toggler" },
+  { import = "astrocommunity.utility.noice-nvim" },
 
   -- terminal-integration
   { import = "astrocommunity.terminal-integration.vim-tmux-yank" },
