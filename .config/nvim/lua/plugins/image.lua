@@ -1,26 +1,39 @@
 -- if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
+
 return {
   "3rd/image.nvim",
   event = "VeryLazy",
   dependencies = {
-    {
-      "nvim-treesitter/nvim-treesitter",
-      build = ":TSUpdate",
-      config = function()
-        require("nvim-treesitter.configs").setup {
-          auto_install = true,
-          ensure_installed = { "markdown" },
-          highlight = { enable = true },
-        }
-      end,
-    },
-    {
-      "vhyrro/luarocks.nvim",
-      priority = 1000, -- this plugin needs to run before anything else
-      opts = {
-        rocks = { "magick", hererocks = true },
+    "https://github.com/leafo/magick",
+    -- {
+    --   "nvim-treesitter/nvim-treesitter",
+    --   build = ":TSUpdate",
+    --   config = function()
+    --     require("nvim-treesitter.configs").setup {
+    --       auto_install = true,
+    --       ensure_installed = { "markdown" },
+    --       highlight = { enable = true },
+    --     }
+    --   end,
+    -- },
+
+    specs = {
+      {
+        "AstroNvim/astrocore",
+        optional = true,
+        ---@type AstroCoreOpts
+        opts = {
+          treesitter = { ensure_installed = { "markdown", "markdown_inline" } },
+        },
       },
     },
+    -- {
+    --   "vhyrro/luarocks.nvim",
+    --   priority = 1000, -- this plugin needs to run before anything else
+    --   opts = {
+    --     rocks = { "magick", hererocks = true },
+    --   },
+    -- },
   },
   opts = {
     backend = "ueberzug",
@@ -30,7 +43,7 @@ return {
     integrations = {
       markdown = {
         enabled = true,
-        clear_in_insert_mode = true,
+        clear_in_insert_mode = false,
         download_remote_images = true,
         only_render_image_at_cursor = true,
         filetypes = { "markdown", "vimwiki" }, -- markdown extensions (ie. quarto) can go here

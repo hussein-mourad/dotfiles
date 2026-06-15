@@ -1,4 +1,6 @@
+-- if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
+
 return {
-  "supermaven-nvim",
-  enabled = true,
+  "supermaven-inc/supermaven-nvim",
+  enabled = false,
 }
