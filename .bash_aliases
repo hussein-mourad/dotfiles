@@ -22,6 +22,8 @@ alias c='clear'
 
 # vim
 alias v="nvim"
+alias v4="NVIM_APPNAME=nvim-astro-v4 command nvim"
+alias v6="NVIM_APPNAME=nvim-astro-v6 command nvim"
 alias vi="nvim"
 alias nvd="NVIM_APPNAME=nvim-default command nvim"
 alias nvim-kickstart="NVIM_APPNAME=nvim-kickstart command nvim"
