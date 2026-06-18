@@ -178,7 +178,7 @@ keepassxc 2.7.12-3
 kitty 0.46.2-1
 konsole 26.04.1-1
 kvantum-manjaro 0.13.5+5+g0179d45-4
-lazydocker-bin 0.24.1-1
+lazydocker-bin 0.25.2-1
 lazygit 0.61.1-1
 lazynpm 0.1.4-1
 lazysql 0.3.4-1

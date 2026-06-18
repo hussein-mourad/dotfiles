@@ -817,7 +817,7 @@ l-smash 2.14.5-4
 lame 3.101.r6531-1
 lapack 3.12.1-2
 layer-shell-qt 6.6.5-2
-lazydocker-bin 0.24.1-1
+lazydocker-bin 0.25.2-1
 lazygit 0.61.1-1
 lazynpm 0.1.4-1
 lazysql 0.3.4-1
