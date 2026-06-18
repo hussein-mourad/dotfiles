@@ -357,7 +357,6 @@ grafana 13.0.1-2
 graphene 1.10.8-2
 graphicsmagick 1.3.47-1
 graphite 1:1.3.14-6
-graphviz 14.1.5-1
 grep 3.12-2
 grim 1.5.0-2
 groff 1.24.1-1
@@ -397,7 +396,6 @@ gtksourceview-pkgbuild 5-3
 gtksourceview3 1:3.24.11+r30+gd880929f-1
 gtksourceview4 4.8.4-2
 gtksourceview5 5.20.0-1
-gts 0.7.6.121130-5
 gucharmap 17.0.2-1
 gufw 26.04-2
 guile 3.0.11-1
@@ -659,7 +657,6 @@ haveged 1.9.22-1
 hexchat 2.16.2-5
 hicolor-icon-theme 0.18-1
 hidapi 0.15.0-1
-highlight 4.20-1
 highway 1.4.0-1
 hiredis 1.3.0-1
 hplip 1:3.26.4-1
@@ -1118,11 +1115,9 @@ libmatroska 1.7.1-2
 libmaxminddb 1.13.3-1
 libmbim 1.34.0-1
 libmd 1.2.0-1
-libmediainfo 26.05-1
 libmfx 23.2.2-6
 libmicrodns 0.2.0-2
 libmm-glib 1.24.2-1
-libmms 0.6.4-6
 libmng 2.0.3-4
 libmnl 1.0.5-2
 libmodplug 0.8.9.0-7
@@ -1339,7 +1334,6 @@ libxvmc 1.0.15-1
 libxxf86vm 1.1.7-1
 libyaml 0.2.5-3
 libyuv r2426+464c51a03-1
-libzen 0.4.41-3
 libzip 1.11.4-1
 libzmf 0.0.2-20
 licenses 20240728-1
@@ -1425,7 +1419,6 @@ manjaro-i3-settings 1:20260610-1
 manjaro-icons 20240502-1
 manjaro-keyring 20251003-1
 manjaro-printer 20240827-1
-manjaro-ranger-settings 20240626-1
 manjaro-release 26.1.0pre-1
 manjaro-settings-manager 0.5.8-8
 manjaro-settings-manager-notifier 0.5.8-8
@@ -1438,7 +1431,6 @@ mbedtls 3.6.5-1
 md4c 0.5.3-1
 mdadm 4.6-2
 media-player-info 26-1
-mediainfo 26.05-1
 meld 3.22.3-2
 memtest86+ 7.20-2
 memtest86+-efi 7.20-2
@@ -1508,7 +1500,6 @@ neovim 0.12.2-1
 net-snmp 5.9.5.2-1
 netctl 1.29-2
 netdata 2.10.3-1
-netpbm 10.86.49-3
 netperf 2.7.0-8
 netstandard-targeting-pack 1:2.1.0-2
 netstat-nat 1.4.10-5
@@ -1562,6 +1553,7 @@ openal 1.25.2-1
 opencl-headers 2:2025.07.22-1
 openconnect 1:9.12-5
 opencore-amr 0.1.6-2
+opencv 4.13.0-6
 openexr 3.4.12-1
 openh264 2.6.0-2
 openjpeg2 2.5.4-1
@@ -1660,7 +1652,6 @@ perl-http-daemon 6.17-1
 perl-http-date 6.06-5
 perl-http-message 7.01-2
 perl-http-negotiate 6.01-16
-perl-image-exiftool 13.55-1
 perl-image-sane 5-8
 perl-import-into 1.002005-14
 perl-io-html 1.004-8
@@ -1788,7 +1779,6 @@ python-dbus 1.4.0-2
 python-defusedxml 0.7.1-8
 python-distro 1.9.0-4
 python-distutils-extra 2.39-15
-python-docopt 0.6.2-15
 python-editables 0.6-1
 python-fastjsonschema 2.21.2-2
 python-filelock 3.29.0-1
@@ -2174,7 +2164,6 @@ thunderbird 151.0-1
 tidy 5.8.0-3
 tig 2.6.0-1
 tinysparql 3.11.1-1
-tinyxml2 11.0.0-2
 tk 8.6.16-1
 tlrc-bin 1.12.0-1
 tmux 3.6_b-2
@@ -2215,7 +2204,7 @@ typst 1:0.14.2-2
 tzdata 2026b-1
 uchardet 0.0.8-4
 udisks2 2.11.1-2
-ueberzug 18.3.1-5
+ueberzugpp 2.9.8-3
 ufw 0.36.2-7
 unibilium 2.1.2-1
 unixodbc 2.3.14-1
@@ -2239,6 +2228,7 @@ vamp-plugin-sdk 1:2.10-1
 vapoursynth 75-3
 vde2 2.3.3-8
 vdhcoapp-bin 2.0.20-2
+verdict 1.4.5-2
 vibrancy-icons-teal 2.7-2
 vid.stab 1.1.1-2
 viewnior 1.8-7

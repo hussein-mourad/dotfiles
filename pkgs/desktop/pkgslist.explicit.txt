@@ -222,7 +222,6 @@ manjaro-hello 0.8.1-5
 manjaro-hotfixes 2018.08-6
 manjaro-i3-settings 1:20260610-1
 manjaro-printer 20240827-1
-manjaro-ranger-settings 20240626-1
 manjaro-release 26.1.0pre-1
 manjaro-settings-manager-notifier 0.5.8-8
 manjaro-system 20250814-1
@@ -403,6 +402,7 @@ ttf-liberation 2.1.5-2
 ttf-nerd-fonts-symbols 3.4.0-1
 ttf-nerd-fonts-symbols-mono 3.4.0-1
 typst 1:0.14.2-2
+ueberzugpp 2.9.8-3
 update-grub 2:2.14-1
 upower 1.91.2-1
 urlview 1.d-1

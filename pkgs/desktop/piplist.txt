@@ -30,7 +30,6 @@ dbus-python            1.4.0
 defusedxml             0.7.1
 deluge                 2.2.0
 distro                 1.9.0
-docopt                 0.6.2
 editables              0.6
 fastjsonschema         2.21.2
 filelock               3.29.0
@@ -165,7 +164,6 @@ typing-inspection      0.4.2
 tzdata                 2026.2
 tzlocal                5.3.1
 uc-micro-py            2.0.0
-ueberzug               18.3.1
 ufw                    0.36.2
 urllib3                2.7.0
 userpath               1.9.2
