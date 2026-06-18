@@ -28,8 +28,8 @@ fpath=(
 
 # Download Zinit, if it's not there yet
 if [ ! -d "$ZINIT_HOME" ]; then
-   mkdir -p "$(dirname $ZINIT_HOME)"
-   git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
+  mkdir -p "$(dirname "$ZINIT_HOME")"
+  git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
 fi
 
 # Load zinit
@@ -40,7 +40,8 @@ source "${ZINIT_HOME}/zinit.zsh"
 zinit light zsh-users/zsh-syntax-highlighting
 zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-autosuggestions
-zinit ice depth=1;zinit light jeffreytse/zsh-vi-mode
+zinit ice depth=1
+zinit light jeffreytse/zsh-vi-mode
 zinit light Aloxaf/fzf-tab
 
 # Atuin install
@@ -100,16 +101,16 @@ bindkey -M vicmd '^p' history-search-backward
 bindkey -M vicmd '^n' history-search-forward
 bindkey -M vicmd '^[w' kill-region
 bindkey -M vicmd "^X^E" edit-command-line
-zle     -N             sesh-sessions
+zle -N sesh-sessions
 bindkey -M emacs '\es' sesh-sessions
 bindkey -M vicmd '\es' sesh-sessions
 bindkey -M viins '\es' sesh-sessions
 
 # ---------- COLOR SETTINGS ----------
 # Remove Background colors
-eval "$(dircolors -p | \
-    sed 's/ 4[0-9];/ 01;/; s/;4[0-9];/;01;/g; s/;4[0-9] /;01 /' | \
-    dircolors /dev/stdin)"
+eval "$(dircolors -p |
+  sed 's/ 4[0-9];/ 01;/; s/;4[0-9];/;01;/g; s/;4[0-9] /;01 /' |
+  dircolors /dev/stdin)"
 
 # ---------- FZF CONFIGURATION ----------
 # Custom Catppuccin Dark theme
@@ -119,10 +120,12 @@ export FZF_DEFAULT_OPTS=" \
 --color=marker:#f5e0dc,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8"
 
 # ---------- SHELL INTEGRATIONS ----------
+# Nvm
 # source /usr/share/nvm/init-nvm.sh
 
+# Pyenv
 # if commond -v pyenv 1>/dev/null 2>&1; then
-  # eval "$(pyenv init -)"
+# eval "$(pyenv init -)"
 # fi
 
 # setopt noglob
@@ -158,13 +161,12 @@ eval "$(uv generate-shell-completion zsh)"
 
 # ---------- PATH & PROGRAM SETTINGS ----------
 # pnpm
-export PNPM_HOME="$HOME/.local/share/pnpm"
+export PNPM_HOME="/home/hussein/.local/share/pnpm"
 case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
+*":$PNPM_HOME/bin:"*) ;;
+*) export PATH="$PNPM_HOME/bin:$PATH" ;;
 esac
 # pnpm end
-
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 # [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -194,10 +196,10 @@ unset __conda_setup
 
 # Hook into directory change events
 if [[ -n "$ZSH_VERSION" ]]; then
-    autoload -Uz add-zsh-hook
-    add-zsh-hook chpwd venv_auto_activate
+  autoload -Uz add-zsh-hook
+  add-zsh-hook chpwd venv_auto_activate
 elif [[ -n "$BASH_VERSION" ]]; then
-    export PROMPT_COMMAND="venv_auto_activate; $PROMPT_COMMAND"
+  export PROMPT_COMMAND="venv_auto_activate; $PROMPT_COMMAND"
 fi
 
 eval "$(starship init zsh)"
