@@ -185,5 +185,19 @@ elif [[ -n "$BASH_VERSION" ]]; then
 fi
 
 eval "$(starship init zsh)"
+
 # Android SDK
 export ANDROID_HOME=$HOME/Android/Sdk
+export NDK_HOME=$HOME/Android/Sdk/ndk/27.1.12297006
+export PATH=$PATH:$ANDROID_HOME/emulator
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+# Cache sesh list output
+# sesh list & disown >/dev/null
+
+# Added by Antigravity CLI installer
+export PATH="/home/hussein/.local/bin:$PATH"

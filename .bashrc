@@ -190,3 +190,6 @@ export EDITOR='nvim'
 set -o vi
 
 #complete -C /usr/bin/terraform terraform
+
+# Added by Antigravity CLI installer
+export PATH="/home/hussein/.local/bin:$PATH"

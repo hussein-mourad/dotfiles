@@ -46,6 +46,7 @@ PATH="$PATH:$HOME/.screenlayout"
 PATH="$PATH:/usr/lib/gcc/avr/13.2.0"
 PATH="$PATH:$HOME/.config/composer/vendor/bin"
 PATH="$PATH:/mnt/d/data/apps"
+PATH="$PATH:~/.local/share/WebStorm-252.25557.126/bin"
 # PATH="$PATH:$HOME/.local/share/gem/ruby/3.0.0/bin"
 
 export BROWSER=/usr/bin/firefox
@@ -59,3 +60,6 @@ export MANPAGER='nvim +Man!'
 # eval $(ssh-agent)
 #
 export PATH
+
+# Added by Antigravity CLI installer
+export PATH="/home/hussein/.local/bin:$PATH"
