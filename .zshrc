@@ -2,7 +2,6 @@
 # Requirements: git, wget, curl, fzf, zoxide, neovim
 # Based on: https://github.com/dreamsofautonomy/zensh
 
-
 # ---------- POWERLEVEL10K INSTANT PROMPT ----------
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
@@ -23,6 +22,7 @@ fpath=(
   /usr/share/zsh/site-functions
   /usr/share/zsh/functions/Completion
   /usr/share/zsh/functions/Completion/Linux
+  $HOME/.zsh/completions
   $fpath
 )
 
@@ -62,7 +62,10 @@ zinit snippet OMZP::command-not-found
 
 # ---------- COMPLETION SETTINGS ----------
 # Load completions
+autoload bashcompinit && bashcompinit
 autoload -Uz compinit && compinit
+complete -C '/usr/local/bin/aws_completer' aws
+#
 # Completion styling
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
@@ -85,7 +88,6 @@ setopt hist_ignore_all_dups
 setopt hist_save_no_dups
 setopt hist_ignore_dups
 setopt hist_find_no_dups
-
 
 source ~/.bash_aliases
 source ~/.bash_functions
