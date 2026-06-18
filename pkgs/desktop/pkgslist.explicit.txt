@@ -207,6 +207,7 @@ lxappearance 0.6.4-3
 lxc 1:7.0.0-1
 lxd 6.8-2
 lxinput 0.3.6-3
+lxtask 0.1.12-2
 m4 1.4.21-2
 maia-console 1.2-7
 make 4.4.1-3
