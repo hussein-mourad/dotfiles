@@ -6,7 +6,7 @@ bindsym $mod+Ctrl+c exec --no-startup-id "gtk-launch chatgpt";
 bindsym $mod+p exec --no-startup-id bitwarden-desktop
 bindsym $mod+F5 exec i3-sensible-terminal -e 'mocp'
 # bindsym $mod+t exec --no-startup-id pkill picom
-bindsym $mod+Ctrl+t exec --no-startup-id picom -b
+bindsym $mod+Ctrl+t exec --no-startup-id picom --daemon
 bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart dunst'"
 bindsym Print exec --no-startup-id flameshot full
 bindsym Ctrl+Print exec --no-startup-id flameshot full --clipboard
