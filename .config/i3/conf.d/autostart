@@ -9,11 +9,12 @@ exec --no-startup-id prayer-times
 
 # exec --no-startup-id firefox 
 
-# exec --no-startup-id tmux start-server
+exec --no-startup-id tmux start-server && sleep 1
 # exec --no-startup-id $HOME/.tmux/plugins/tmux-resurrect/scripts/restore.sh
-# exec --no-startup-id konsole -p tabtitle=mtmux -e tmux attach
+exec --no-startup-id konsole -p tabtitle=mtmux -e tmux
 
 # exec --no-startup-id telegram-desktop
+# exec --no-startup-id simplescreenrecorder
 
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
