@@ -147,15 +147,15 @@ eval "$(zoxide init zsh)"
 
 # eval "$(_PIPENV_COMPLETE=zsh_source pipenv)"
 
-venv_auto_activate
-
-# eval "$(uv generate-shell-completion zsh)"
 eval "$(direnv hook zsh)"
 
 # eval "$(atuin init zsh --disable-up-arrow)"
 eval "$(atuin init zsh)"
 
-eval "$(uv generate-shell-completion zsh)"
+# eval "$(uv generate-shell-completion zsh)"
+
+# To add completions
+# uv generate-shell-completion zsh > ~/.zsh/completions/_uv
 
 # . /opt/asdf-vm/asdf.sh
 
@@ -171,7 +171,6 @@ esac
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 # [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 # typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
-
 
 # autoload -U +X bashcompinit && bashcompinit
 # complete -o nospace -C /usr/bin/terraform terraform
