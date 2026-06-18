@@ -128,22 +128,6 @@ export FZF_DEFAULT_OPTS=" \
 # bun completions
 # [ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
 
-# Define a function to activate venv if present
-venv_auto_activate() {
-  local venv_dirs=("venv" ".venv" "env" ".env")  # Add more names if needed
-
-  # Deactivate the current virtual environment if active
-  command -v deactivate &>/dev/null && deactivate
-
-  for dir in "${venv_dirs[@]}"; do
-    # Check if already activated to avoid redundant activation
-    if [[ -d "$dir" && -z "${VIRTUAL_ENV}" ]]; then
-      source "$dir/bin/activate"
-      break  # Exit loop after activating the first found environment
-    fi
-  done
-}
-
 # Hook function to activate venv_auto_activate when changing directories
 # chpwd_functions+=venv_auto_activate
 

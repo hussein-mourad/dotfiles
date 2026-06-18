@@ -120,6 +120,22 @@ function docker-homelab() {
   docker context use "$oldctx" >/dev/null
 }
 
+# Define a function to activate venv if present
+function venv_auto_activate() {
+  local venv_dirs=("venv" ".venv" "env" ".env") # Add more names if needed
+
+  # Deactivate the current virtual environment if active
+  command -v deactivate &>/dev/null && deactivate
+
+  for dir in "${venv_dirs[@]}"; do
+    # Check if already activated to avoid redundant activation
+    if [[ -d "$dir" && -z "${VIRTUAL_ENV}" ]]; then
+      source "$dir/bin/activate"
+      break # Exit loop after activating the first found environment
+    fi
+  done
+}
+
 function show-colors() {
   local fgc bgc vals seq0
 
