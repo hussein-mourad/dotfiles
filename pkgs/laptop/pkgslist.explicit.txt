@@ -21,7 +21,7 @@ atac 0.23.0-2
 atomicparsley 20240608.083822.1ed9031-1
 atool 0.39.0-10
 atuin 18.16.1-1
-auto-cpufreq 2.5.0-1
+auto-cpufreq 3.0.0-3
 autoconf 2.73-1
 autofs 5.1.9-5
 automake 1.18.1-1
@@ -239,7 +239,7 @@ jupyter-notebook 7.5.6-1
 jwt-cli 6.2.0-1
 k9s 0.50.18-2
 kakoune 2026.04.12-1
-kanata 1.7.0-1
+kanata 1.11.0-1
 kcolorchooser 26.04.1-1
 kdenlive 26.04.1-1
 keepassxc 2.7.12-3
@@ -570,7 +570,7 @@ viewnior 1.8-7
 vim 9.2.0511-1
 virt-manager 5.1.0-3
 virt-viewer 11.0-4
-visual-studio-code-bin 1.123.0-5
+visual-studio-code-bin 1.125.0-1
 vit 2.3.4-1
 vlc 3.0.22-4
 vnstat 2.13-2
