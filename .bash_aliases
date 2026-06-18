@@ -202,6 +202,7 @@ alias virsh="sudo virsh"
 alias pn="pnpm"
 alias clip="xclip -sel clip"
 alias ldo='lazydocker'
+alias lsh='lazyssh'
 alias open='xdg-open'
 alias code='code --password-store="gnome-libsecret"'
 # alias npx="npm_execpath=$(which pnpm) npx"
