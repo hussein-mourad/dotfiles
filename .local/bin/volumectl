@@ -1,0 +1,63 @@
+#!/usr/bin/env bash
+# Volume control script using native notify-send progress bar
+# Usage: volumectl up|down|toggle
+
+SINK="@DEFAULT_SINK@"
+NOTIFY_ID=9999 # Replaces old notifications
+NOTIFY_TIMEOUT=1000
+
+# --- helpers ---
+get_volume() {
+  pactl get-sink-volume "$SINK" | awk 'NR==1{print $5}' | tr -d '%'
+}
+
+is_muted() {
+  pactl get-sink-mute "$SINK" | grep -q "yes"
+}
+
+notify() {
+  local title="$1"
+  local value="$2" # 0–100, or -1 for mute
+  if command -v dunstify >/dev/null 2>&1; then
+    if ((value >= 0)); then
+      dunstify -r $NOTIFY_ID -t $NOTIFY_TIMEOUT -h int:value:"$value" "$title"
+    else
+      dunstify -r $NOTIFY_ID -t $NOTIFY_TIMEOUT "$title"
+    fi
+  else
+    if ((value >= 0)); then
+      notify-send -r $NOTIFY_ID -t $NOTIFY_TIMEOUT -h int:value:"$value" "$title"
+    else
+      notify-send -r $NOTIFY_ID -t $NOTIFY_TIMEOUT "$title"
+    fi
+  fi
+}
+
+# --- main ---
+case "$1" in
+up)
+  pactl set-sink-volume "$SINK" +5%
+  pactl set-sink-mute "$SINK" 0
+  vol=$(get_volume)
+  notify "🔊 Volume" "$vol"
+  ;;
+down)
+  pactl set-sink-volume "$SINK" -5%
+  pactl set-sink-mute "$SINK" 0
+  vol=$(get_volume)
+  notify "🔉 Volume" "$vol"
+  ;;
+toggle)
+  pactl set-sink-mute "$SINK" toggle
+  if is_muted; then
+    notify "🔇 Muted" -1
+  else
+    vol=$(get_volume)
+    notify "🔊 Volume" "$vol"
+  fi
+  ;;
+*)
+  echo "Usage: $0 {up|down|toggle}" >&2
+  exit 1
+  ;;
+esac

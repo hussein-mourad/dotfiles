@@ -6,9 +6,9 @@
 # assign [class="Skype"] $ws5
 
 # Zen browser
-assign [class="zen-alpha"] $ws1
+# assign [class="zen-alpha"] $ws1
 for_window [title="mtmux"] move to workspace $ws2
-for_window [class="Virt-viewer"] move to workspace $ws6
+#for_window [class="Virt-viewer"] move to workspace $ws6
 for_window [class="TelegramDesktop"] move to workspace $ws7
 # assign [class="TelegramDesktop"] $ws7
 
@@ -50,7 +50,7 @@ for_window [class="Xfburn"] floating enable
 # for_window [title="PyQt5"] floating enable border normal
 # for_window [title="PyQt5 Dev"] floating enable border normal
 for_window [title="i3 float"] floating enable border normal
-for_window [title="float"] floating enable border normal
+# for_window [title="float-pyqt5-dev"] floating enable border normal
 for_window [title="konsole"] border pixel $border_size
 
 # switch to workspace with urgent window automatically

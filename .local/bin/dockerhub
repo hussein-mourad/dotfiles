@@ -1,0 +1,127 @@
+#!/bin/bash
+
+# Docker Hub Base URL
+BASE_URL="https://hub.docker.com/v2"
+
+DEFAULT_NAMESPACE="library"
+
+# Parse a repository name into a namespace and repo name.
+parse_repo() {
+  local input="$1"
+  if [[ "$input" == *"/"* ]]; then
+    echo "$input"
+  else
+    echo "$DEFAULT_NAMESPACE/$input"
+  fi
+}
+
+search_repo() {
+  local repo_name="$1"
+  local output
+  output=$(curl -s "${BASE_URL}/search/repositories/?query=${repo_name}&page_size=25")
+  count=$(echo "$output" | jq '.count')
+  if [[ $count -eq 0 ]]; then
+    echo "Not found."
+    return
+  fi
+  {
+    echo -e "Name\tPull Count\tOfficial"
+    echo "$output" | jq -r ".results[] | [.repo_name,.pull_count,.is_official] | @tsv"
+  } | column -t -s $'\t'
+}
+
+get_readme() {
+  local repo_path
+  repo_path=$(parse_repo "$1")
+  local output
+  output=$(curl -s "${BASE_URL}/repositories/${repo_path}")
+  echo "$output" | jq -r '.full_description'
+}
+
+list_tags() {
+  local repo_path
+  repo_path=$(parse_repo "$1")
+  local output
+  output=$(curl -s "${BASE_URL}/repositories/${repo_path}/tags/?page_size=25")
+  {
+    echo -e "Tag\tSize\tLast Updated"
+    echo "$output" | jq -r '.results[] | [.name,.full_size,.last_updated] | @tsv' | while IFS=$'\t' read -r tag size last_updated; do
+      formatted_size=$(echo "$size" | numfmt --to=si --suffix=B)
+      formatted_date=$(date -d "$last_updated" +%Y-%m-%d)
+      echo -e "$tag\t$formatted_size\t$formatted_date"
+    done
+  } | column -t -s $'\t'
+}
+
+get_tag() {
+  local repo_path
+  repo_path=$(parse_repo "$1")
+  local tag="$2"
+  local output
+  output=$(curl -s "${BASE_URL}/repositories/${repo_path}/tags/${tag}")
+  {
+    echo -e "Tag\tSize"
+    echo "$output" | jq -r '. | [.name,.full_size] | @tsv' | while IFS=$'\t' read -r tag size; do
+      formatted_size=$(echo "$size" | numfmt --to=si --suffix=B)
+      echo -e "$tag\t$formatted_size"
+    done
+  } | column -t -s $'\t'
+}
+
+show_help() {
+  echo "Usage: $(basename "$0") <subcommand> [arguments]"
+  echo ""
+  echo "Subcommands:"
+  echo "  search <repo_name>                    Search for repositories by name."
+  echo "  readme <namespace/repo | repo>       Fetch the README for a repository."
+  echo "  tags <namespace/repo | repo>         List available tags and sizes for a repository."
+  echo "  tag <namespace/repo | repo> <tag>    Get tag info for a repository."
+  echo ""
+  exit 1
+}
+
+main() {
+  if [[ $# -lt 1 ]]; then
+    show_help
+  fi
+
+  local subcommand="$1"
+  shift
+
+  case "$subcommand" in
+  search)
+    if [[ $# -ne 1 ]]; then
+      echo "Error: 'search' requires a <repo_name> argument."
+      show_help
+    fi
+    search_repo "$1"
+    ;;
+  readme)
+    if [[ $# -ne 1 ]]; then
+      echo "Error: 'readme' requires <namespace/repo | repo> argument."
+      show_help
+    fi
+    get_readme "$1"
+    ;;
+  tags)
+    if [[ $# -ne 1 ]]; then
+      echo "Error: 'tags' requires <namespace/repo | repo> argument."
+      show_help
+    fi
+    list_tags "$1"
+    ;;
+  tag)
+    if [[ $# -ne 2 ]]; then
+      echo "Error: 'tag' requires <namespace/repo | repo> <tag> arguments."
+      show_help
+    fi
+    get_tag "$1" "$2"
+    ;;
+  *)
+    echo "Error: Unknown subcommand '$subcommand'."
+    show_help
+    ;;
+  esac
+}
+
+main "$@"

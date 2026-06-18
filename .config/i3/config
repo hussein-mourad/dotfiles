@@ -20,7 +20,6 @@ include ~/.config/i3/conf.d/appearance
 include ~/.config/i3/conf.d/bar
 include ~/.config/i3/conf.d/rules
 include ~/.config/i3/conf.d/exit-mode
-include ~/.config/i3/conf.d/gaps
 include ~/.config/i3/conf.d/keybindings
 include ~/.config/i3/conf.d/options
 include ~/.config/i3/conf.d/resize-mode
@@ -28,3 +27,5 @@ include ~/.config/i3/conf.d/volume
 include ~/.config/i3/conf.d/autostart
 include ~/.config/i3/conf.d/startapps
 include ~/.config/i3/conf.d/scratchpad
+include ~/.config/i3/conf.d/gaps
+

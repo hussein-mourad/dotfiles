@@ -2,17 +2,20 @@
 
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id xfce4-power-manager
+exec --no-startup-id dunst
 exec --no-startup-id xautolock -time 10 -locker $HOME/.local/bin/lockscreen
 exec --no-startup-id syncthing --no-browser
 exec --no-startup-id prayer-times
+exec --no-startup-id localsend --hidden
 
-# exec --no-startup-id zen-browser
+# exec --no-startup-id firefox 
 
-# exec --no-startup-id tmux start-server
+exec --no-startup-id tmux start-server && sleep 1
 # exec --no-startup-id $HOME/.tmux/plugins/tmux-resurrect/scripts/restore.sh
-# exec --no-startup-id konsole -p tabtitle=mtmux -e tmux attach
+exec --no-startup-id konsole -p tabtitle=mtmux -e tmux
 
 # exec --no-startup-id telegram-desktop
+# exec --no-startup-id simplescreenrecorder
 
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
@@ -26,13 +29,12 @@ exec_always --no-startup-id $HOME/.local/bin/keyboard
 # exec --no-startup-id gxkb
 exec_always --no-startup-id $HOME/.local/bin/applets
 exec --no-startup-id flameshot
-exec --no-startup-id megasync
+# exec --no-startup-id megasync
 exec --no-startup-id libinput-gestures-setup start
 # exec --no-startup-id clipit
 
 # exec --no-startup-id pulseaudio
 # exec --no-startup-id nitrogen --restore; sleep 1; picom -b
-exec --no-startup-id picom -b -o 0;
 # exec --no-startup-id manjaro-hello
 # exec --no-startup-id pamac-tray
 # exec --no-startup-id start_conky_maia
@@ -45,5 +47,6 @@ exec --no-startup-id picom -b -o 0;
 # exec_always --no-startup-id xrandr --output eDP-1 --left-of HDMI-1-1
 
 # exec --no-startup-id nitrogen --restore; sleep 1; 
-exec --no-startup-id $HOME/.screenlayout/primary; sleep 1;
-exec_always --no-startup-id sleep 1; feh --bg-fill "$HOME/.local/share/wallpaper.jpg" 
+exec --no-startup-id $HOME/.screenlayout/primary;
+exec_always --no-startup-id sleep 2; feh --bg-fill "$HOME/.local/share/wallpaper.jpg"
+exec --no-startup-id sleep 2; picom --daemon --shadow-opacity 0;

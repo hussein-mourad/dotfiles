@@ -1,0 +1,102 @@
+#!/usr/bin/env bash
+
+# start-vm.sh — start and connect to a VM using virsh and virt-viewer.
+#
+# Usage:
+#   start-vm.sh <vm-name>
+#
+# Description:
+#   This script connects to the QEMU system instance, checks whether the specified
+#   virtual machine exists, starts it if it's not already running, and then opens
+#   it in virt-viewer in fullscreen mode.
+#
+# Example:
+#   ./start-vm.sh win11
+#
+# Requirements:
+#   - virsh (libvirt)
+#   - virt-viewer
+#
+# Exit codes:
+#   0  Success
+#   1  Invalid usage or argument missing
+#   2  Required command not found
+#   3  VM not found
+#   4  Failed to start VM
+#
+
+set -euo pipefail
+
+# --- Constants ---
+CMD_NAME="$(basename "$0")"
+VIRSH_CONN="qemu:///system"
+
+# --- Functions ---
+usage() {
+  echo "Usage: $CMD_NAME <vm-name>"
+  echo
+  echo "Start and connect to a VM using virt-viewer."
+  echo
+  echo "Options:"
+  echo "  -h, --help    Show this help message and exit."
+  exit 1
+}
+
+error() {
+  echo "❌ Error: $*" >&2
+  exit 1
+}
+
+# --- Argument parsing ---
+if [[ $# -eq 0 ]]; then
+  usage
+fi
+
+case "$1" in
+-h | --help)
+  usage
+  ;;
+esac
+
+VM_NAME="$1"
+
+# --- Check dependencies ---
+for cmd in virsh virt-viewer; do
+  if ! command -v "$cmd" >/dev/null 2>&1; then
+    error "Required command '$cmd' not found. Please install it."
+  fi
+done
+
+# --- Check if VM exists ---
+if ! virsh --connect "$VIRSH_CONN" dominfo "$VM_NAME" >/dev/null 2>&1; then
+  echo "Available VMs:"
+  virsh --connect "$VIRSH_CONN" list --name --all | sed 's/^/  - /'
+  error "VM '$VM_NAME' not found."
+fi
+
+# --- Check if VM is already running ---
+VM_STATE="$(virsh --connect "$VIRSH_CONN" domstate "$VM_NAME" 2>/dev/null || echo "unknown")"
+
+if [[ "$VM_STATE" == "running" ]]; then
+  echo "✅ VM '$VM_NAME' is already running."
+else
+  echo "▶️  Starting VM '$VM_NAME'..."
+  if ! virsh --connect "$VIRSH_CONN" start "$VM_NAME" >/dev/null 2>&1; then
+    error "Failed to start VM '$VM_NAME'."
+  fi
+  echo "✅ VM started successfully."
+fi
+
+# --- Connect using virt-viewer ---
+echo "🖥️  Opening virt-viewer (Ctrl+Alt to release mouse)..."
+virt-viewer --connect "$VIRSH_CONN" "$VM_NAME" --full-screen --hotkeys=release-cursor=ctrl+alt
+
+exit 0
+
+# virt-manager doesn't support full screen from cmdline.
+# virt-manager --connect qemu:///system --show-domain-console $vm_name
+
+# To stop vm from cli:
+# sudo virsh shutdown <vm-name>
+# or
+# virsh -c qemu:///system shutdown <vm-name>

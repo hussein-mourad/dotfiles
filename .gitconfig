@@ -1,6 +1,8 @@
 [user]
 	email = 38833034+Hussein-Mourad@users.noreply.github.com
-	name = hussein-mourad
+	; name = hussein-mourad
+	name = Hussein Mourad
+	signingkey = ~/.ssh/id_ed25519_git_signkey.pub
 
 [credential "https://github.com"]
 	helper = 
@@ -38,9 +40,17 @@
 
 [alias]
 	pushall = !git remote | xargs -L1 git push --all
+	ignore = "!gi() { curl -sL https://www.toptal.com/developers/gitignore/api/$@ ;}; gi"
 
 [filter "lfs"]
 	process = git-lfs filter-process
 	required = true
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
+
+[gpg]
+	format = ssh
+[commit]
+	gpgSign = true
+[tag]
+	gpgSign = true

@@ -1,43 +1,47 @@
-# Make sure to have the following packages installed:
-# git wget curl fzf zxoide neovim
-# This config is based on: https://github.com/dreamsofautonomy/zensh
+## Zsh Configuration File
+# Requirements: git, wget, curl, fzf, zoxide, neovim
+# Based on: https://github.com/dreamsofautonomy/zensh
+
+# ---------- POWERLEVEL10K INSTANT PROMPT ----------
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
+# if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+#   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+# fi
 
+# ---------- ENVIRONMENT VARIABLES ----------
 source ~/.profile
 
-# Set the directory we want to store zinit and plugins
+# Directory for Zinit and plugins
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 
+# Paths for Zsh completions
 fpath=(
   /usr/local/share/zsh/site-functions
   /usr/share/zsh/site-functions
   /usr/share/zsh/functions/Completion
   /usr/share/zsh/functions/Completion/Linux
+  $HOME/.zsh/completions
   $fpath
 )
 
 # Download Zinit, if it's not there yet
 if [ ! -d "$ZINIT_HOME" ]; then
-   mkdir -p "$(dirname $ZINIT_HOME)"
-   git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
+  mkdir -p "$(dirname "$ZINIT_HOME")"
+  git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
 fi
 
-# Source/Load zinit
+# Load zinit
 source "${ZINIT_HOME}/zinit.zsh"
 
-# Add in Powerlevel10k
-zinit ice depth=1; zinit light romkatv/powerlevel10k
-
-# Add in zsh plugins
+# ---------- ZINIT PLUGINS ----------
+# zinit ice depth=1; zinit light romkatv/powerlevel10k
 zinit light zsh-users/zsh-syntax-highlighting
 zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-autosuggestions
-zinit ice depth=1;zinit light jeffreytse/zsh-vi-mode
+zinit ice depth=1
+zinit light jeffreytse/zsh-vi-mode
 zinit light Aloxaf/fzf-tab
 
 # Atuin install
@@ -49,7 +53,7 @@ zinit light Aloxaf/fzf-tab
 #     atpull"%atclone" src"init.zsh"
 # zinit light atuinsh/atuin
 
-# Add in snippets
+# ---------- ZINIT SNIPPETS ----------
 zinit snippet OMZP::git
 zinit snippet OMZP::sudo
 zinit snippet OMZP::archlinux
@@ -57,15 +61,22 @@ zinit snippet OMZP::archlinux
 zinit snippet OMZP::docker-compose
 zinit snippet OMZP::command-not-found
 
+# ---------- COMPLETION SETTINGS ----------
 # Load completions
+autoload bashcompinit && bashcompinit
 autoload -Uz compinit && compinit
+complete -C '/usr/local/bin/aws_completer' aws
+#
+# Completion styling
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
+zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
+zstyle ':completion:*' menu no
+zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
+zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 
 # zinit cdreplay -q
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-# History
+# ---------- HISTORY CONFIGURATION ----------
 HISTSIZE=1000000
 SAVEHIST=$HISTSIZE
 HISTORY_IGNORE="ls:cd:cd -:cd ..:cd ~:pwd:exit:clear"
@@ -79,71 +90,48 @@ setopt hist_save_no_dups
 setopt hist_ignore_dups
 setopt hist_find_no_dups
 
-# Completion styling
-zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
-zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
-zstyle ':completion:*' menu no
-zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
-zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
-
 source ~/.bash_aliases
 source ~/.bash_functions
 # source ~/bin/nvim-switcher
 
-# Keybindings
+# ---------- KEYBINDINGS ----------
 # bindkey -e # emacs mode
-bindkey -v # vim mode
+bindkey -v # Enable vim mode
 bindkey -M vicmd '^p' history-search-backward
 bindkey -M vicmd '^n' history-search-forward
 bindkey -M vicmd '^[w' kill-region
 bindkey -M vicmd "^X^E" edit-command-line
+zle -N sesh-sessions
+bindkey -M emacs '\es' sesh-sessions
+bindkey -M vicmd '\es' sesh-sessions
+bindkey -M viins '\es' sesh-sessions
 
+# ---------- COLOR SETTINGS ----------
 # Remove Background colors
-eval "$(dircolors -p | \
-    sed 's/ 4[0-9];/ 01;/; s/;4[0-9];/;01;/g; s/;4[0-9] /;01 /' | \
-    dircolors /dev/stdin)"
+eval "$(dircolors -p |
+  sed 's/ 4[0-9];/ 01;/; s/;4[0-9];/;01;/g; s/;4[0-9] /;01 /' |
+  dircolors /dev/stdin)"
 
-# Catppuccin Mocha
-# https://github.com/catppuccin/fzf
-export FZF_DEFAULT_OPTS=" \
---color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8 \
---color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
---color=marker:#f5e0dc,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8"
-
+# ---------- FZF CONFIGURATION ----------
+# Custom Catppuccin Dark theme
 export FZF_DEFAULT_OPTS=" \
 --color=bg+:#313244,bg:#222222,spinner:#f5e0dc,hl:#f38ba8 \
 --color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
 --color=marker:#f5e0dc,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8"
 
+# ---------- SHELL INTEGRATIONS ----------
+# Nvm
 # source /usr/share/nvm/init-nvm.sh
 
+# Pyenv
 # if commond -v pyenv 1>/dev/null 2>&1; then
-  # eval "$(pyenv init -)"
+# eval "$(pyenv init -)"
 # fi
 
-# eval "$(starship init zsh)"
 # setopt noglob
 
 # bun completions
 # [ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
-
-# pnpm
-export PNPM_HOME="$HOME/.local/share/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
-esac
-# pnpm end
-
-# Define a function to activate venv if present
-# venv_auto_activate() {
-#     if [[ -d "venv" ]]; then
-#         # Check if already activated to avoid redundant activation
-#         if [[ -z "${VIRTUAL_ENV}" ]]; then
-#             source venv/bin/activate
-#         fi
-#     fi
-# }
 
 # Hook function to activate venv_auto_activate when changing directories
 # chpwd_functions+=venv_auto_activate
@@ -157,10 +145,59 @@ eval "$(fzf --zsh)"
 # eval "$(zoxide init --cmd cd zsh)"
 eval "$(zoxide init zsh)"
 
-eval "$(_PIPENV_COMPLETE=zsh_source pipenv)"
+# eval "$(_PIPENV_COMPLETE=zsh_source pipenv)"
 
-# venv_auto_activate
+eval "$(direnv hook zsh)"
 
-eval "$(uv generate-shell-completion zsh)"
+# eval "$(atuin init zsh --disable-up-arrow)"
+eval "$(atuin init zsh)"
 
-. /opt/asdf-vm/asdf.sh
+# eval "$(uv generate-shell-completion zsh)"
+
+# To add completions
+# uv generate-shell-completion zsh > ~/.zsh/completions/_uv
+
+# . /opt/asdf-vm/asdf.sh
+
+# ---------- PATH & PROGRAM SETTINGS ----------
+# pnpm
+export PNPM_HOME="/home/hussein/.local/share/pnpm"
+case ":$PATH:" in
+*":$PNPM_HOME/bin:"*) ;;
+*) export PATH="$PNPM_HOME/bin:$PATH" ;;
+esac
+# pnpm end
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+# [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+# typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
+
+# autoload -U +X bashcompinit && bashcompinit
+# complete -o nospace -C /usr/bin/terraform terraform
+#
+
+# Hook into directory change events
+if [[ -n "$ZSH_VERSION" ]]; then
+  autoload -Uz add-zsh-hook
+  add-zsh-hook chpwd venv_auto_activate
+elif [[ -n "$BASH_VERSION" ]]; then
+  export PROMPT_COMMAND="venv_auto_activate; $PROMPT_COMMAND"
+fi
+
+eval "$(starship init zsh)"
+
+# Android SDK
+export ANDROID_HOME=$HOME/Android/Sdk
+export NDK_HOME=$HOME/Android/Sdk/ndk/27.1.12297006
+export PATH=$PATH:$ANDROID_HOME/emulator
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+# Cache sesh list output
+# sesh list & disown >/dev/null
+
+# Added by Antigravity CLI installer
+export PATH="/home/hussein/.local/bin:$PATH"

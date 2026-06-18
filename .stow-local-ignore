@@ -23,6 +23,7 @@ _darcs
 ^/COPYING
 
 etc
+pkgs
 install.sh
 .pkgslist.txt
 .pkgslist-explicit.txt
@@ -30,4 +31,5 @@ install.sh
 .pipxlist.txt
 python-packages.txt
 .stowrc
+.firefox-userChrome.css
 Makefile

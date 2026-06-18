@@ -22,8 +22,12 @@ alias c='clear'
 
 # vim
 alias v="nvim"
+alias v4="NVIM_APPNAME=nvim-astro-v4 command nvim"
+alias v6="NVIM_APPNAME=nvim-astro-v6 command nvim"
 alias vi="nvim"
 alias nvd="NVIM_APPNAME=nvim-default command nvim"
+alias nvim-kickstart="NVIM_APPNAME=nvim-kickstart command nvim"
+alias nvimv5="NVIM_APPNAME=nvim-astro-v5 command nvim"
 # alias nvim="NVIM_APPNAME=nvim-astro command nvim"
 # alias nvimv4="NVIM_APPNAME=astronvim-v4 command nvim"
 
@@ -41,9 +45,9 @@ alias lsl='ls -ahl | less'
 # cd
 alias cd..='cd ..' # Get rid of command not found
 alias ..='cd ..'
-alias ...='cd ../../../'
-alias ....='cd ../../../../'
-alias .....='cd ../../../../../'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias .....='cd ../../../..'
 alias .4='cd ../../../../'
 alias .5='cd ../../../../../'
 
@@ -181,13 +185,41 @@ alias gopher="browser ~/Pictures/gopher-dance.gif"
 # functions
 alias homelab-battery="ssh homelab upower -i /org/freedesktop/UPower/devices/battery_BAT1"
 
+# Systemctl shortcuts
+alias sc='sudo systemctl'
+alias scstart='sudo systemctl start'
+alias scstop='sudo systemctl stop'
+alias screstart='sudo systemctl restart'
+alias scstatus='sudo systemctl status'
+alias scenable='sudo systemctl enable'
+alias scdisable='sudo systemctl disable'
+alias sclog='sudo journalctl -u'
+
 alias curl="noglob curl"
 alias yt="noglob yt"
 alias sl="sl -e" # enable escaping by ctrl+c
 alias ra="ranger"
+alias rr="ranger"
 alias virsh="sudo virsh"
 alias pn="pnpm"
 alias clip="xclip -sel clip"
 alias ldo='lazydocker'
+alias lsh='lazyssh'
 alias open='xdg-open'
 alias code='code --password-store="gnome-libsecret"'
+# alias npx="npm_execpath=$(which pnpm) npx"
+alias serve="python3 -m http.server"
+alias gowebly="go run github.com/gowebly/gowebly/v2@latest"
+alias handbrakegui="ghb"
+alias handbrakecli="HandBrakeCLI"
+alias out="bat -p -l bash"
+alias k="kubectl"
+alias dcls="docker compose ls"
+alias dcstats="docker compose stats"
+alias dcdnv="docker compose down --volumes"
+alias zen="zen-browser"
+alias zed="zeditor"
+alias bw_unlock='export BW_SESSION=$(bw unlock --raw "$(gpg -d ~/.pass.gpg 2&>/dev/null)")'
+alias t="go-task"
+alias sshc="vi ~/.ssh/config"
+alias mpv="mpv --save-watch-history"
