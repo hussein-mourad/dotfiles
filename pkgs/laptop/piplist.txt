@@ -22,6 +22,7 @@ asttokens                     3.0.1
 async-lru                     2.3.0
 atomicwrites                  1.4.1
 attrs                         26.1.0
+audioop-lts                   0.2.2
 auto-cpufreq                  1
 autocommand                   2.2.2
 Automat                       25.4.16
@@ -80,9 +81,11 @@ faust-cchardet                2.1.19
 feedparser                    6.0.12
 filelock                      3.29.0
 findpython                    0.8.0
+fissix                        24.4.24
 Flask                         3.1.3
 furo                          2025.12.19
 GeoIP                         1.3.2
+gi-docgen                     2026.1
 google-api-core               2.19.2
 google-api-python-client      2.142.0
 google-auth                   2.52.0
@@ -96,6 +99,7 @@ h2                            4.3.0
 hatch-fancy-pypi-readme       25.1.0
 hatch-vcs                     0.5.0
 hatchling                     1.29.0
+holidays                      0.92
 hpack                         4.1.0
 html2text                     2025.4.15
 html5-parser                  0.4.12
@@ -150,6 +154,7 @@ kaitaistruct                  0.11
 keyring                       25.7.0
 keyutils                      0.6
 khal                          0.14.0
+korean_lunar_calendar         0.3.1
 lark                          1.3.1
 ldap3                         2.9
 leather                       0.4.1
@@ -250,6 +255,7 @@ pycryptodomex                 3.23.0
 pydantic                      2.13.4
 pydantic_core                 2.46.4
 pyfiglet                      1.0.4
+pygal                         3.1.0
 Pygments                      2.20.0
 PyGObject                     3.56.3
 pyicu                         2.16.2
@@ -280,6 +286,7 @@ python-json-logger            4.1.0
 python-magic                  0.4.27
 python-mpv-jsonipc            1.2.2
 python-slugify                8.0.4
+python-utils                  3.9.1
 python-xlib                   0.33
 pytimeparse                   1.1.8
 pytz                          2026.1
@@ -308,6 +315,7 @@ ruamel.yaml                   0.19.1
 ruamel.yaml.clib              0.2.15
 s-tui                         1.4.0
 scikit_build_core             0.12.2
+SCons                         4.10.1
 scour                         0.38.2
 screenkey                     1.5
 SecretStorage                 3.5.0
@@ -322,6 +330,7 @@ shiboken6                     6.11.1
 shiboken6-generator           6.11.1
 simplejson                    4.0.1
 six                           1.17.0
+smartypants                   2.0.2
 sniffio                       1.3.1
 snowballstemmer               3.1.0
 sortedcontainers              2.4.0
@@ -329,6 +338,7 @@ soupsieve                     2.8.4
 speedtest-cli                 2.1.3
 Sphinx                        9.1.0
 sphinx_basic_ng               1.0.0b2
+sphinx-bootstrap-theme        0.8.1
 sphinx_rtd_theme              3.0.0
 sphinxcontrib-applehelp       2.0.0
 sphinxcontrib-devhelp         2.0.0
@@ -340,7 +350,11 @@ sphinxcontrib-serializinghtml 2.0.0
 SQLAlchemy                    2.0.50
 SSSDConfig                    2.13.0
 stack_data                    0.6.4.dev0+g53501eb8b.d20251216
+standard-aifc                 3.13.0
 standard-cgi                  3.13.0
+standard-chunk                3.13.0
+standard-sndhdr               3.13.0
+standard-uu                   3.13.0
 systemd-python                235
 tasklib                       2.5.1
 TBB                           2023.0.0
@@ -360,6 +374,7 @@ Twisted                       26.4.0
 typeguard                     4.5.2
 typing_extensions             4.15.0
 typing-inspection             0.4.2
+typogrify                     2.1.0
 tzdata                        2026.2
 tzlocal                       5.3.1
 uc-micro-py                   2.0.0
@@ -386,6 +401,7 @@ wrapt                         2.1.2
 wsproto                       1.3.2
 wxPython                      4.2.5
 x_wr_timezone                 2.0.1
+xattr                         1.3.0
 xlrd                          2.0.2
 xmltodict                     1.0.4
 xxhash                        3.7.0
