@@ -30,7 +30,7 @@ b43-fwcutter 019-6
 base 3-3
 base-devel 1-3
 bat 0.26.1-2
-beekeeper-studio-bin 5.1.5-1
+beekeeper-studio-bin 5.8.1-1
 bind 9.20.23-1
 bison 3.8.2-8
 bitwarden 2026.2.1-1
@@ -43,7 +43,7 @@ borg 1.4.4-1
 bottom 0.12.3-2
 bridge-utils 1.7.1-2
 brn-git r31.454e213-1
-bruno-bin 2.13.1-1
+bruno-bin 3.4.2-1
 btop 1.4.7-1
 btrfs-progs 7.0-1
 bzip2 1.0.8-6
@@ -234,7 +234,7 @@ jfsh 0.1.16-1
 jfsutils 1.1.15-9
 jftui 0.7.5-3
 jpegoptim 1.5.6-1
-jqp 0.7.0-1
+jqp 0.8.0-1
 jupyter-notebook 7.5.6-1
 jwt-cli 6.2.0-1
 k9s 0.50.18-2
@@ -327,6 +327,7 @@ mobile-broadband-provider-info 20251101-1
 modemmanager 1.24.2-1
 mongodb-compass 1.45.4-1
 mongosh-bin 2.4.2-1
+moor 2.13.2-1
 morc_menu 1.0+5+g91598f8-1
 most 5.2.0-3
 mousepad 0.7.0-1
@@ -470,7 +471,7 @@ screenfetch 3.9.9-1
 screenkey 1.5-7
 sd 1.1.0-1
 sddm 0.21.0-7
-sesh-bin 2.18.2-1
+sesh-bin 2.26.2-1
 simple-scan 50.0-1
 simplescreenrecorder 0.4.4-3
 sl 5.05-5
