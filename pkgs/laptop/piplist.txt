@@ -39,6 +39,7 @@ build                         1.4.3
 CacheControl                  0.14.4
 cachetools                    7.1.4
 cachy                         0.3.0
+calcure                       3.2.1
 caldav                        3.2.0
 certifi                       2026.5.20
 cffi                          2.0.0
