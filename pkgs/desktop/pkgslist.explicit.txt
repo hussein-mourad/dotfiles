@@ -282,6 +282,7 @@ nvm 0.40.4-1
 nvme-cli 2.16-2
 obs-studio 32.1.2-3
 obsidian 1.12.7-2
+opencode 1.17.7-1
 openresolv 3.17.4-1
 openssh 10.3p1-1
 os-prober 1.84-1
