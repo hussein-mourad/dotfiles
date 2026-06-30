@@ -467,6 +467,7 @@ xorg-xhost 1.0.10-1
 xorg-xinit 1.4.4-1
 xorg-xkill 1.0.7-1
 xorg-xprop 1.2.8-1
+xscreensaver 6.15-1
 xterm 410-1
 yarn 1.22.22-2
 yay 12.5.7-1
