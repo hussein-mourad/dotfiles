@@ -1,4 +1,5 @@
 if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
+
 return {
   "yetone/avante.nvim",
   opts = {
@@ -7,7 +8,7 @@ return {
     providers = {
       ollama = {
         endpoint = "http://localhost:11434",
-        model = "qwen2.5-coder:1.5b",
+        model = "qwen2.5-coder:3b",
       },
     },
   },

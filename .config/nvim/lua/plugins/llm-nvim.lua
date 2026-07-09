@@ -7,9 +7,17 @@ return {
     config = function()
       require("llm").setup {
         -- [[ Openrouter ]]
-        url = "https://openrouter.ai/api/v1/chat/completions",
-        model = "google/gemini-2.0-flash-exp:free",
-        max_tokens = 4096,
+        -- url = "https://openrouter.ai/api/v1/chat/completions",
+        -- model = "google/gemini-2.0-flash-exp:free",
+        -- max_tokens = 4096,
+        -- temperature = 0.3,
+        -- top_p = 0.7,
+
+        -- [[ local llm ]]
+        url = "http://localhost:11434/api/chat",
+        model = "qwen2.5-coder:3b",
+        api_type = "ollama",
+        fetch_key = "None",
         temperature = 0.3,
         top_p = 0.7,
 
@@ -20,7 +28,7 @@ return {
           assistant = { text = "  ", hl = "Added" },
         },
 
-        -- history_path = "/tmp/llm-history",
+        history_path = "~/.llm-history",
         save_session = true,
         max_history = 15,
         max_history_name_length = 20,
