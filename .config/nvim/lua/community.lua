@@ -134,6 +134,7 @@ return {
   -- { import = "astrocommunity.file-explorer.oil-nvim" },
 
   { import = "astrocommunity.git.diffview-nvim" },
+  { import = "astrocommunity.git.codediff-nvim" },
 
   -- { import = "astrocommunity.keybinding.nvcheatsheet-nvim" },
 
