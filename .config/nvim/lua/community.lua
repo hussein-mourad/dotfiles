@@ -113,7 +113,8 @@ return {
   -- { import = "astrocommunity.completion.copilot-cmp" }, -- copilot
   -- { import = "astrocommunity.completion.copilot-lua-cmp" },
   -- { import = "astrocommunity.completion.supermaven-nvim" },
-  -- { import = "astrocommunity.completion.avante-nvim" },
+  -- { import = "astrocommunity.ai.avante-nvim" },
+  -- { import = "astrocommunity.ai.kurama622-llm-nvim"},
   -- { import = "astrocommunity.completion.fittencode-nvim" },
 
   -- quickfix menu
@@ -121,7 +122,7 @@ return {
 
   -- utility
   { import = "astrocommunity.utility.nvim-toggler" },
-  -- { import = "astrocommunity.utility.noice-nvim" },
+  { import = "astrocommunity.utility.noice-nvim" },
 
   -- terminal-integration
   { import = "astrocommunity.terminal-integration.vim-tmux-yank" },
@@ -139,7 +140,7 @@ return {
   { import = "astrocommunity.search.nvim-spectre" },
 
   -- { import = "astrocommunity.lsp.ts-error-translator-nvim" },
-  -- { import = "astrocommunity.lsp.inc-rename-nvim" },
+  { import = "astrocommunity.lsp.inc-rename-nvim" },
 
   { import = "astrocommunity.docker.lazydocker" },
 
