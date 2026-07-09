@@ -376,6 +376,7 @@ nvtop 3.3.2-1
 obs-studio 32.1.2-3
 obsidian 1.12.7-2
 openbsd-netcat 1.238_1-1
+opencode 1.17.7-1
 openresolv 3.17.4-1
 openssh 10.3p1-1
 os-prober 1.84-1

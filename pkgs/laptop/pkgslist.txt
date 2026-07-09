@@ -1665,6 +1665,7 @@ onetbb 2023.0.0-1
 oniguruma 6.9.10-1
 openal 1.25.2-1
 openbsd-netcat 1.238_1-1
+opencode 1.17.7-1
 openconnect 1:9.12-5
 opencore-amr 0.1.6-2
 opencv 4.13.0-6
