@@ -472,7 +472,7 @@ screenfetch 3.9.9-1
 screenkey 1.5-7
 sd 1.1.0-1
 sddm 0.21.0-7
-sesh-bin 2.26.2-1
+sesh-bin 2.27.0-1
 simple-scan 50.0-1
 simplescreenrecorder 0.4.4-3
 sl 5.05-5
