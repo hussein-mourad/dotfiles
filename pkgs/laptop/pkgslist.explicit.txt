@@ -56,7 +56,7 @@ cantarell-fonts 1:0.311-1
 catdoc 0.95-6
 cheat 4.4.2-3
 chntpw 140201-5
-chromium 150.0.7871.114-1
+chromium 150.0.7871.124-1
 clipit 1:1.4.5+25+gf35db54-1
 clock-tui 0.6.1-1
 cmatrix 2.0-4
@@ -644,7 +644,7 @@ zathura 2026.07.02-1
 zathura-pdf-mupdf 2026.05.10-4
 zeal 0.8.1-1
 zed 1.10.0-1
-zen-browser-bin 1.21.3b-1
+zen-browser-bin 1.21.6b-1
 zensu 0.3-7
 zip 3.0-13
 zk 0.15.5-1
