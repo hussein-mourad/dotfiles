@@ -100,6 +100,7 @@ google-auth                   2.55.2
 google-auth-httplib2          0.4.0
 google-auth-oauthlib          1.4.0
 googleapis-common-protos      1.75.0
+gps                           3.27.5
 greenlet                      3.5.1
 gufw                          26.4.0
 h11                           0.16.0
