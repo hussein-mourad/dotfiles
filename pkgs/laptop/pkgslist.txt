@@ -87,6 +87,8 @@ aws-sdk-cpp-s3 1.11.792-1
 ayatana-ido 0.10.4-1
 b43-fwcutter 019-6
 babl 0.1.126-1
+baloo 6.27.0-1
+baloo-widgets 26.04.3-1
 base 3-5
 base-devel 1-3
 bash 5.3.15-1
@@ -119,6 +121,7 @@ box2d 3.1.1-2
 breeze-cursors5 5.27.12-3
 breeze-icons 6.27.0-1
 bridge-utils 1.7.1-2
+brightnessctl 0.5.1-3
 brltty 6.9.1-3
 brn-git r31.454e213-1
 brotli 1.2.0-1
@@ -247,6 +250,7 @@ docker-buildx 0.35.0-1
 docker-compose 5.3.1-1
 docker-scan 0.26.0-2
 dog 0.1.0-8
+dolphin 26.04.3-1
 doppler-cli-bin 3.75.1-1
 dos2unix 7.5.6-1
 dosfstools 4.2-5
@@ -382,6 +386,7 @@ geoip 1.6.12-3
 geoip-database 20260204-1
 geos 3.14.1-2
 gettext 1.0-2
+gexiv2 0.16.1-1
 gfeeds 2.2.0-6
 gflags 2.2.2-6
 gfxstream 0.1.2-2
@@ -412,10 +417,12 @@ glslang 1:1.4.350.1-1
 glu 9.0.3-3
 glusterfs 1:11.2-2
 glycin 2.1.5-1
+glycin-gtk4 2.1.5-1
 gmime3 3.2.15-2
 gmp 6.3.0-3
 gnome-autoar 0.4.5-1
 gnome-desktop 1:44.5-1
+gnome-desktop-4 1:44.5-1
 gnome-desktop-common 1:44.5-1
 gnome-disk-utility 46.1-2
 gnome-keyring 1:50.0-1
@@ -502,6 +509,7 @@ guile 3.0.11-1
 gum 0.17.0-1
 gumbo-parser 0.13.2-1
 gupnp 1:1.6.10-1
+gupnp-dlna 0.12.0-5
 gupnp-igd 1.6.0-2
 gutenprint 5.3.5-1
 gvfs 1.60.1-1
@@ -777,7 +785,10 @@ hyprcursor 0.1.13-6
 hyprgraphics 0.5.1-2
 hyprland 0.55.4-1
 hyprland-guiutils 0.2.1-6
+hyprland-qt-support 0.1.0-12
 hyprlang 0.6.8-4
+hyprlauncher 0.1.6-5
+hyprpolkitagent 0.1.3-7
 hyprtoolkit 0.5.4-2
 hyprutils 0.13.1-1
 hyprwayland-scanner 0.4.6-1
@@ -895,7 +906,10 @@ kddockwidgets 2.4.0-3
 kdeclarative5 5.116.0-2
 kded5 5.116.0-2
 kdenlive 26.04.3-1
+kdnssd 6.27.0-1
 kdsingleapplication 1.2.1-1
+kdsoap 2.3.0-1
+kdsoap-ws-discovery-client 0.4.0-3
 keepassxc 2.7.12-3
 keyutils 1.6.3-4
 kfilemetadata 6.27.0-1
@@ -908,7 +922,9 @@ ki18n 6.27.0-1
 ki18n5 5.116.0-2
 kiconthemes 6.27.0-1
 kiconthemes5 5.116.0-2
+kidletime 6.27.0-1
 kio 6.27.0-1
+kio-extras 26.04.3-1
 kio5 5.116.0-6
 kirigami 6.27.0-1
 kirigami2 5.116.0-2
@@ -948,6 +964,7 @@ ktexttemplate 6.27.0-1
 ktextwidgets 6.27.0-1
 ktextwidgets5 5.116.0-2
 kubectl 1.36.2-1
+kuserfeedback 6.27.0-1
 kvantum 1.1.8-1
 kvantum-manjaro 0.13.5+5+g0179d45-4
 kvantum-qt5 1.1.8-1
@@ -1111,6 +1128,7 @@ libcloudproviders 0.4.0-1
 libcmis 0.6.3-1
 libcolord 1.4.8-1
 libconfig 1.8.2-2
+libcue 2.3.0-2
 libcups 2:2.4.19-1
 libcupsfilters 2.1.1-4
 libdaemon 0.14-6
@@ -1149,6 +1167,7 @@ libevdev 1.13.6-1
 libevent 2.1.13-1
 libewf 20140816-1
 libexif 0.6.26-1
+libexsid 2.1-1
 libexttextcat 3.4.8-1
 libfabric 2.6.0-1
 libfdk-aac 2.0.3-2
@@ -1200,6 +1219,7 @@ libhwasan 16.1.1+r346+g4e03491b401d-1
 libical 4.0.3-3
 libice 1.1.2-1
 libiconv 1.19-1
+libid3tag 0.16.4-1
 libidn 1.44-1
 libidn2 2.3.8-1
 libiec61883 1.2.0-9
@@ -1212,6 +1232,7 @@ libinput 1.31.3-1
 libinput-gestures 2.81-1
 libinput-tools 1.31.3-1
 libinstpatch 1.1.7-2
+libiptcdata 1.0.5-5
 libiscsi 1.20.3-1
 libisl 0.27-1
 libisoburn 1.5.8.2-1
@@ -1221,6 +1242,7 @@ libjpeg-turbo 3.2.0-2
 libjuice 1.7.2-1
 libjxl 0.11.2-2
 libkate 0.4.3-4
+libkexiv2 26.04.3-1
 libksane 26.04.3-1
 libksba 1.8.0-1
 liblangtag 0.6.8-1
@@ -1245,7 +1267,9 @@ libmd 1.2.0-1
 libmfx 23.2.2-6
 libmicrodns 0.2.0-2
 libmicrohttpd 1.0.5-1
+libmikmod 3.3.13-1
 libmm-glib 1.24.2-1
+libmms 0.6.4-6
 libmng 2.0.3-4
 libmnl 1.0.5-2
 libmodplug 0.8.9.0-7
@@ -1261,6 +1285,7 @@ libmupdf 1.27.2-2
 libmwaw 0.3.22-4
 libmypaint 1.6.1-2
 libnatpmp 20230423-3
+libnautilus-extension 50.2.2-1
 libnbd 1.24.2-3
 libndp 1.9-1
 libnet 2:1.3-2
@@ -1311,6 +1336,7 @@ libpng 1.6.58-2
 libpng12 1.2.59-2
 libportal 0.10.0-1
 libportal-gtk3 0.10.0-1
+libportal-gtk4 0.10.0-1
 libppd 2.1.1-2
 libproxy 0.5.12-1
 libpsl 0.21.5-2
@@ -1318,6 +1344,7 @@ libpst 0.6.76-10
 libptytty 2.0-6
 libpulse 17.0+r98+gb096704c0-1
 libpwquality 1.4.5-7
+libqalculate 5.11.0-1
 libqmi 1.38.0-1
 libqrtr-glib 1.4.0-1
 libquadmath 16.1.1+r346+g4e03491b401d-1
@@ -1327,6 +1354,7 @@ libraw 0.22.1-1
 libraw1394 2.1.2-4
 libre-graph-api 1.0.4-4
 libreoffice-still 25.8.7-4
+libresidfp 1.1.1-1
 librest 0.10.2-1
 librevenge 0.0.6-1
 librsvg 2:2.62.3-1
@@ -1337,6 +1365,7 @@ libsasl 2.1.28-5
 libseccomp 2.6.0-1
 libsecret 0.21.7-1
 libshout 1:2.4.6-5
+libsidplayfp 3.0.2-1
 libsigc++ 2.12.2-1
 libsigc++-3.0 3.8.1-1
 libsigsegv 2.15-1
@@ -1515,6 +1544,7 @@ llvm 22.1.6-1
 llvm-libs 22.1.6-1
 lm_sensors 1:3.6.2-1
 lmdb 0.9.35-1
+localsearch 3.11.1-1
 localsend-bin 1.17.0-1
 logrotate 3.22.0-1
 lolcat 100.0.1-5
@@ -1614,6 +1644,8 @@ moor 2.15.1-1
 morc_menu 1.0+5+g91598f8-1
 most 5.2.0-3
 mousepad 0.7.0-1
+mpc 0.35-2
+mpd 0.24.12-2
 mpdecimal 4.0.1-3
 mpfr 4.2.2-1
 mpg123 1.33.5-1
@@ -1631,6 +1663,7 @@ mypaint-brushes1 1.3.1-2
 mysql-workbench 8.0.47-3
 nano 9.1-1
 nano-syntax-highlighting 2025.07.01.r0.g256995b-2
+nautilus 50.2.2-1
 ncdu 2.9.2-1
 ncurses 6.6-2
 ndctl 85-1
@@ -1727,6 +1760,7 @@ opus 1.6.1-1
 orc 0.4.42-1
 os-prober 1.84-1
 osinfo-db 20251212-1
+otf-font-awesome 7.3.0-1
 otree 0.6.5-1
 owncloud-client 7.1.0.19041-1
 p11-kit 0.26.2-1
@@ -1832,6 +1866,7 @@ pixman 0.46.4-1
 pkcs11-helper 1.31.0-1
 pkgconf 2.5.1-1
 pkgfile 25-2
+plasma-activities 6.6.6-1
 playerctl 2.4.1-5
 plocate 1.1.24-1
 podofo 0.10.6-1
@@ -2420,6 +2455,7 @@ restic 0.19.1-1
 resvg 0.47.0-4
 rhash 1.4.6-1
 ripgrep 15.1.0-4
+ripgrep-all 0.10.10-1
 rmlint 2.10.2-2
 rnnoise 1:0.2-1
 rofi 2.0.0-1
@@ -2649,6 +2685,7 @@ tlrc-bin 1.13.1-1
 tmux 3.7_b-1
 todoman 4.7.0-1
 tomlplusplus 3.4.0-2
+totem-pl-parser 3.26.7-1
 tpm2-tss 4.1.3-1
 traceroute 2.1.6-1
 translate-shell 0.9.7.1-2
@@ -2809,9 +2846,11 @@ wireless-regdb 2026.05.30-1
 wireless_tools 30.pre9-5
 wireshark-cli 4.7.1-1
 wireshark-qt 4.7.1-1
+wl-clipboard 1:2.3.0-1
 wmutils 1:1.7-1
 woff2 1.0.2-6
 woff2-font-awesome 7.3.0-1
+wofi 1.5.3-1
 wolfssl 5.9.2-1
 wpa_supplicant 2:2.11-5
 wpebackend-fdo 1.16.1-1
@@ -2843,6 +2882,7 @@ xdg-desktop-portal 1.22.1-2
 xdg-desktop-portal-gtk 1.15.3-1
 xdg-desktop-portal-hyprland 1.3.12-2
 xdg-user-dirs 0.20-1
+xdg-user-dirs-gtk 0.16-1
 xdg-utils 1.2.1-2
 xdotool 4.20260303.1-1
 xerces-c 3.3.0-4
