@@ -221,10 +221,10 @@ hl.config({
 
 hl.config({
 	input = {
-		kb_layout = "us",
-		kb_variant = "",
-		kb_model = "",
-		kb_options = "",
+		kb_layout = "us,ara",
+		kb_variant = ",digits",
+		kb_model = "pc105",
+		kb_options = "shift:both_capslock_cancel,grp:alt_space_toggle,alt_shift_toggle",
 		kb_rules = "",
 
 		follow_mouse = 1,
