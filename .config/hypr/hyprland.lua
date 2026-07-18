@@ -33,9 +33,9 @@ hl.monitor({
 ---------------------
 
 -- Set programs that you use
-local terminal = "kitty"
-local fileManager = "dolphin"
-local menu = "hyprlauncher"
+local terminal = "konsole"
+local fileManager = "nautilus"
+local menu = "rofi -show combi"
 
 -------------------
 ---- AUTOSTART ----
