@@ -57,6 +57,7 @@ hl.on("hyprland.start", function()
 -- end)
 	hl.exec_cmd("hypridle")
 	hl.exec_cmd("hyprpaper")
+	hl.exec_cmd("hyprsunset")
 end)
 
 -------------------------------
