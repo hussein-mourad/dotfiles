@@ -102,11 +102,11 @@ RandomSaturationRange=100
 
 [General]
 Anchor=0.5,0.5
-Blur=false
+Blur=true
 ColorRandomization=false
 Description=Catppuccin Dark
 FillStyle=Tile
-Opacity=1
+Opacity=0.95
 Wallpaper=
 WallpaperFlipType=NoFlip
 WallpaperOpacity=1
