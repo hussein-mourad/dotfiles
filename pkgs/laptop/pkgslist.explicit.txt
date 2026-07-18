@@ -347,6 +347,7 @@ mousepad 0.7.0-1
 mpc 0.35-2
 mpd 0.24.12-2
 mpv 1:0.41.0-3
+mpv-mpris 1.2-1
 mupdf 1.27.2-2
 mysql-workbench 8.0.47-3
 nano 9.1-1
@@ -664,6 +665,7 @@ xterm 410-1
 yad 15.0-1
 yay 13.0.1-1
 yazi 26.5.6-4
+yt-dlp 2026.07.04-1
 ytfzf 2.6.2-2
 zaread-git r120.c2d45e1-1
 zathura 2026.07.02-1
