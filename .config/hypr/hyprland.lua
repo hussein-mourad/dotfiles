@@ -37,6 +37,7 @@ local terminal = "konsole"
 local fileManager = "nautilus"
 local menu = "rofi -show combi"
 local browser = "firefox"
+local lock = "hyprlock"
 
 -------------------
 ---- AUTOSTART ----
@@ -330,6 +331,10 @@ hl.bind("XF86AudioNext", hl.dsp.exec_cmd("playerctl next"), { locked = true })
 hl.bind("XF86AudioPause", hl.dsp.exec_cmd("playerctl play-pause"), { locked = true })
 hl.bind("XF86AudioPlay", hl.dsp.exec_cmd("playerctl play-pause"), { locked = true })
 hl.bind("XF86AudioPrev", hl.dsp.exec_cmd("playerctl previous"), { locked = true })
+
+-- Lock Screen
+hl.bind(mainMod .. " + SHIFT + L", hl.dsp.exec_cmd(lock))
+hl.bind(mainMod .. " + N", hl.dsp.exec_cmd("swaync-client --toggle-panel --skip-wait"), { release = true })
 
 --------------------------------
 ---- WINDOWS AND WORKSPACES ----
