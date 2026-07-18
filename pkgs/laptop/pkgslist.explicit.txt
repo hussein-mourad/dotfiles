@@ -210,6 +210,7 @@ httpie 3.2.4-2
 httpie-desktop-bin 2025.2.0-1
 hub 2.14.2-4
 hugo 0.163.3-1
+hypridle 0.1.7-9
 hyprland 0.55.4-1
 hyprlauncher 0.1.6-5
 hyprlock 0.9.5-4
@@ -512,6 +513,7 @@ stow 2.4.1-1
 sublime-text-4 4.4200-1
 subversion 1.14.5-5
 sudo 1.9.17.p2-6
+swaync 0.12.6-1
 swtpm 0.10.1-2
 sxiv 26-2
 syncthing 2.1.2-1

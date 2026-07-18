@@ -455,6 +455,7 @@ gpsd 3.27.5-1
 gptfdisk 1.0.10-2
 gputest 0.7.0-1
 grafana 13.1.0-1
+granite7 7.8.1-1
 grantleetheme 26.04.3-1
 graphene 1.10.8-2
 graphicsmagick 1.3.47-1
@@ -495,6 +496,7 @@ gtk-vnc 1.5.0-1
 gtk2 2.24.33-5
 gtk3 1:3.24.52-1
 gtk4 1:4.22.4-1
+gtk4-layer-shell 1.3.0-1
 gtkmm 1:2.24.5-5
 gtkmm-4.0 4.22.0-2
 gtkmm3 3.24.11-1
@@ -783,6 +785,7 @@ hwloc 2.14.0-1
 hyphen 2.8.9-1
 hyprcursor 0.1.13-6
 hyprgraphics 0.5.1-2
+hypridle 0.1.7-9
 hyprland 0.55.4-1
 hyprland-guiutils 0.2.1-6
 hyprland-qt-support 0.1.0-12
@@ -2626,6 +2629,7 @@ suitesparse 7.12.2-2
 supermin 5.3.5-2
 svt-av1 4.1.0-1
 svt-hevc 1.5.1-4
+swaync 0.12.6-1
 swtpm 0.10.1-2
 sxiv 26-2
 syncthing 2.1.2-1
