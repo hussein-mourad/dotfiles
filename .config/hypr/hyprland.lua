@@ -36,6 +36,7 @@ hl.monitor({
 local terminal = "konsole"
 local fileManager = "nautilus"
 local menu = "rofi -show combi"
+local browser = "firefox"
 
 -------------------
 ---- AUTOSTART ----
@@ -257,18 +258,30 @@ hl.device({
 local mainMod = "SUPER" -- Sets "Windows" key as main modifier
 
 -- Example binds, see https://wiki.hypr.land/Configuring/Basics/Binds/ for more
-hl.bind(mainMod .. " + Q", hl.dsp.exec_cmd(terminal))
-local closeWindowBind = hl.bind(mainMod .. " + C", hl.dsp.window.close())
+hl.bind(mainMod .. " + Return", hl.dsp.exec_cmd(terminal))
+hl.bind(mainMod .. " + B", hl.dsp.exec_cmd(browser))
+local closeWindowBind = hl.bind(mainMod .. " + Backspace", hl.dsp.window.close())
+-- hl.bind(mainMod .. "+ C", hl.dsp.window.close())
+hl.bind(mainMod .. "+ SHIFT + Q", hl.dsp.window.close())
 -- closeWindowBind:set_enabled(false)
 hl.bind(
-	mainMod .. " + M",
+	mainMod .. "+ SHIFT + E",
 	hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'")
 )
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
 hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
+hl.bind(mainMod .. " + SHIFT + O", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(menu))
+hl.bind(mainMod .. " + O", hl.dsp.exec_cmd(menu))
+hl.bind(mainMod .. " + Space", hl.dsp.exec_cmd(menu))
 hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
-hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit")) -- dwindle only
+-- hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit")) -- dwindle only
+
+-- Move focus with mainMod + vim keys
+hl.bind(mainMod .. " + H", hl.dsp.focus({ direction = "left" }))
+hl.bind(mainMod .. " + L", hl.dsp.focus({ direction = "right" }))
+hl.bind(mainMod .. " + K", hl.dsp.focus({ direction = "up" }))
+hl.bind(mainMod .. " + J", hl.dsp.focus({ direction = "down" }))
 
 -- Move focus with mainMod + arrow keys
 hl.bind(mainMod .. " + left", hl.dsp.focus({ direction = "left" }))
@@ -296,25 +309,17 @@ hl.bind(mainMod .. " + mouse_up", hl.dsp.focus({ workspace = "e-1" }))
 hl.bind(mainMod .. " + mouse:272", hl.dsp.window.drag(), { mouse = true })
 hl.bind(mainMod .. " + mouse:273", hl.dsp.window.resize(), { mouse = true })
 
+hl.bind(mainMod .. "+ EQUAL", hl.dsp.exec_cmd("volumectl up"), { locked = true, repeating = true })
+hl.bind(mainMod .. "+ MINUS", hl.dsp.exec_cmd("volumectl down"), { locked = true, repeating = true })
+hl.bind(mainMod .. "+ 0", hl.dsp.exec_cmd("volumectl toggle"), { locked = true, repeating = true })
+
 -- Laptop multimedia keys for volume and LCD brightness
-hl.bind(
-	"XF86AudioRaiseVolume",
-	hl.dsp.exec_cmd("wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+"),
-	{ locked = true, repeating = true }
-)
-hl.bind(
-	"XF86AudioLowerVolume",
-	hl.dsp.exec_cmd("wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"),
-	{ locked = true, repeating = true }
-)
-hl.bind(
-	"XF86AudioMute",
-	hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"),
-	{ locked = true, repeating = true }
-)
+hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd("volumectl up"), { locked = true, repeating = true })
+hl.bind("XF86AudioLowerVolume", hl.dsp.exec_cmd("volumectl down"), { locked = true, repeating = true })
+hl.bind("XF86AudioMute", hl.dsp.exec_cmd("volumectl toggle"), { locked = true, repeating = true })
 hl.bind(
 	"XF86AudioMicMute",
-	hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"),
+	hl.dsp.exec_cmd("pactl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"),
 	{ locked = true, repeating = true }
 )
 hl.bind("XF86MonBrightnessUp", hl.dsp.exec_cmd("brightnessctl -e4 -n2 set 5%+"), { locked = true, repeating = true })
