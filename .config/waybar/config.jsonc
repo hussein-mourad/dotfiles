@@ -1,4 +1,5 @@
 // -*- mode: jsonc -*-
+// INFO: man 5 waybar
 {
     // To Reload config:
     // killall -SIGUSR2 waybar
@@ -9,15 +10,16 @@
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
     "modules-left": [
+        // "hyprland/scratchpad",
         "hyprland/workspaces",
         "hyprland/submap",
-        "hyprland/scratchpad",
-        "custom/media",
+        "hyprland/window",
     ],
     "modules-center": [
-        "hyprland/window"
+        "custom/media"
     ],
     "modules-right": [
+        // "mpris",
         "mpd",
         "idle_inhibitor",
         "pulseaudio",
@@ -27,7 +29,7 @@
         "memory",
         "temperature",
         "backlight",
-        "keyboard-state",
+        // "keyboard-state",
         "hyprland/language",
         "battery",
         "battery#bat2",
@@ -38,9 +40,9 @@
     // Modules configuration
     "hyprland/workspaces": {
         "format": "{name}",
-        "on-click-window": "{address}",
         "on-scroll-up": "hyprctl dispatch 'hl.dsp.focus({workspace=\"e+1\"})' ",
         "on-scroll-down": "hyprctl dispatch 'hl.dsp.focus({workspace=\"e-1\"})' ",
+        "tooltip": false,
     },
     // "hyprland/workspaces": {
     //     "disable-scroll": true,
@@ -70,23 +72,33 @@
     "hyprland/submap": {
         "format": "<span style=\"italic\">{}</span>",
     },
-    "hyprland/scratchpad": {
-        "format": "{icon} {count}",
-        "show-empty": false,
-        "format-icons": [
-            "",
-            ""
-        ],
-        "tooltip": true,
-        "tooltip-format": "{app}: {title}",
-    },
+    // "hyprland/scratchpad": {
+    //     "format": "{icon} {count}",
+    //     "show-empty": false,
+    //     "format-icons": [
+    //         "",
+    //         ""
+    //     ],
+    //     "tooltip": true,
+    //     "tooltip-format": "{app}: {title}",
+    // },
     "hyprland/window": {
         "separate-outputs": true,
     },
+    "hyprland/language": {
+        "format": "{}",
+        "format-en": "EN",
+        "format-ar": "AR",
+        "tooltip": true,
+        "tooltip-format": "{long}",
+    },
     "mpd": {
-        "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ",
-        "format-disconnected": "Disconnected ",
-        "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ",
+        // "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ",
+        // "format-disconnected": "Disconnected ",
+        // "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ",
+        "format": "{stateIcon} {artist} - {title}",
+        "format-disconnected": "",
+        "format-stopped": "",
         "unknown-tag": "N/A",
         "interval": 5,
         "consume-icons": {
@@ -240,6 +252,7 @@
             "spotify": "",
             "default": "🎜",
         },
+        // Make sure script is executable: chmod +x mediaplayer.py
         "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null", // Script in resources folder
         // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
     },

@@ -1,5 +1,3 @@
-@import "catppuccin-mocha.css";
-
 * {
   /* `otf-font-awesome` is required to be installed for icons */
   font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;
@@ -279,7 +277,7 @@ label:focus {
 
 #language {
   background: #00b093;
-  color: #740864;
+  color: #ffffff;
   padding: 0 5px;
   margin: 0 5px;
   min-width: 16px;
