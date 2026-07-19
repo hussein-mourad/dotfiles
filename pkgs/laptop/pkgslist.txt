@@ -1906,6 +1906,7 @@ postgresql 18.4-1
 postgresql-libs 18.4-1
 postman-bin 11.37.1-1
 potrace 1.16-5
+power-profiles-daemon 0.30-1
 powertop 2.15-2
 ppp 2.5.2-1
 pps-tools 1.0.3-2

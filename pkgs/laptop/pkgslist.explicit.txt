@@ -441,6 +441,7 @@ polybar 3.7.2-2
 poppler-data 0.4.12-2
 postgresql 18.4-1
 postman-bin 11.37.1-1
+power-profiles-daemon 0.30-1
 powertop 2.15-2
 procs 0.14.12-1
 prometheus 3.12.0-1
