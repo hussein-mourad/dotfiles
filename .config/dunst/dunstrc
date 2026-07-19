@@ -1,5 +1,5 @@
 [global]
-    frame_width = 1
+    frame_width = 2 
 
     frame_color = "#89b4fa"
     separator_color= frame
@@ -143,13 +143,13 @@
     # Print a notification on startup.
     # This is mainly for error detection, since dbus (re-)starts dunst
     # automatically after a crash.
-    startup_notification = false
+    startup_notification = true
     
     # dmenu path.
     dmenu = /usr/bin/dmenu -p dunst:
     
     # Browser for opening urls in context menu.
-    browser = palemoon
+    browser = firefox
 
     # Align icons left/right/off
     icon_position = left
