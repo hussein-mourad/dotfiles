@@ -55,10 +55,11 @@
   "widgets": [
     "inhibitors",
     "title",
-    "buttons-grid",
+    // "buttons-grid",
     "dnd",
     "mpris",
     "notifications"
+    // "volume"
   ],
   "widget-config": {
     "notifications": {
@@ -86,6 +87,14 @@
       "autohide": true,
       "show-album-art": "always",
       "loop-carousel": false
+    },
+    "volume": {
+      "label": " 󰕾 ",
+      "expand-button-label": " ",
+      "collapse-button-label": " ",
+      "show-per-app": true,
+      "show-per-app-icon": true,
+      "show-per-app-label": false
     },
     "buttons-grid": {
       "buttons-per-row": 7,
