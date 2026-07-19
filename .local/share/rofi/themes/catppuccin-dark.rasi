@@ -1,15 +1,15 @@
 * {
-    bg-col:  #444444;
-    bg-col-light: #444444;
-    border-col: #444444;
-    selected-col: #444444;
+    bg-col:  #222222;
+    bg-col-light: #222222;
+    border-col: #89b4fa;
+    selected-col: #333333;
     blue: #89b4fa;
     fg-col: #cdd6f4;
     fg-col2: #f38ba8;
     grey: #6c7086;
 
     width: 600;
-    font: "JetBrainsMono Nerd Font 14";
+    font: "FiraCode Nerd Font 14";
 }
 
 element-text, element-icon , mode-switcher {
@@ -22,6 +22,7 @@ window {
     border: 3px;
     border-color: @border-col;
     background-color: @bg-col;
+    border-radius: 14px;
 }
 
 mainbox {
