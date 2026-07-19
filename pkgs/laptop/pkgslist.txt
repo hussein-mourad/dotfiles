@@ -164,6 +164,7 @@ ckbcomp 1.245-1
 clang 22.1.6-1
 clazy 1.17.1-1
 cli11 2.6.2-1
+cliphist 1:0.7.0-2
 clipit 1:1.4.5+25+gf35db54-1
 clock-tui 0.6.1-1
 clucene 2.3.3.4-17
@@ -321,7 +322,6 @@ faac 1.50-1
 faad2 2.11.2-1
 fakeroot 1:1.37.2-2
 fatsort 2:1.7.1.683-1
-fcft 3.3.3-1
 fd 10.4.2-2
 fdupes 1:2.4.0-2
 feh 3.12.2-1
@@ -360,7 +360,6 @@ fritzing 1.0.4-2
 fuse-common 3.18.2-1
 fuse2 2.9.9-5
 fuse3 3.18.2-1
-fuzzel 1.14.1-1
 fx 39.2.0-1
 fzf 0.74.0-1
 galculator 2.1.4-10
@@ -426,6 +425,7 @@ glycin-gtk4 2.1.5-1
 gmime3 3.2.15-2
 gmp 6.3.0-3
 gnome-autoar 0.4.5-1
+gnome-calculator 50.0-1
 gnome-desktop 1:44.5-1
 gnome-desktop-4 1:44.5-1
 gnome-desktop-common 1:44.5-1
@@ -795,7 +795,6 @@ hyprland 0.55.4-1
 hyprland-guiutils 0.2.1-6
 hyprland-qt-support 0.1.0-12
 hyprlang 0.6.8-4
-hyprlauncher 0.1.6-5
 hyprlock 0.9.5-4
 hyprpaper 0.8.4-3
 hyprpicker 0.4.7-1
@@ -2881,7 +2880,6 @@ wl-clipboard 1:2.3.0-1
 wmutils 1:1.7-1
 woff2 1.0.2-6
 woff2-font-awesome 7.3.0-1
-wofi 1.5.3-1
 wolfssl 5.9.2-1
 wpa_supplicant 2:2.11-5
 wpebackend-fdo 1.16.1-1

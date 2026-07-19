@@ -61,6 +61,7 @@ cava 0.10.7-1
 cheat 4.4.2-3
 chntpw 140201-5
 chromium 150.0.7871.128-1
+cliphist 1:0.7.0-2
 clipit 1:1.4.5+25+gf35db54-1
 clock-tui 0.6.1-1
 cmatrix 2.0-4
@@ -149,7 +150,6 @@ flex 2.6.4-6
 fpp 0.9.5-1
 freeze-bin 0.2.0-1
 fritzing 1.0.4-2
-fuzzel 1.14.1-1
 fx 39.2.0-1
 galculator 2.1.4-10
 garcon 4.20.0-2
@@ -170,6 +170,7 @@ github-cli 2.96.0-1
 gitleaks 8.30.1-1
 glmark2 2023.01-2
 glow 2.1.2-1
+gnome-calculator 50.0-1
 gnome-disk-utility 46.1-2
 gnome-keyring 1:50.0-1
 gnome-pomodoro-git r1304.1e48d37-1
@@ -216,7 +217,6 @@ hub 2.14.2-4
 hugo 0.163.3-1
 hypridle 0.1.7-9
 hyprland 0.55.4-1
-hyprlauncher 0.1.6-5
 hyprlock 0.9.5-4
 hyprpaper 0.8.4-3
 hyprpicker 0.4.7-1
@@ -632,7 +632,6 @@ wl-clip-persist 0.5.0-2
 wl-clipboard 1:2.3.0-1
 wmutils 1:1.7-1
 woff2-font-awesome 7.3.0-1
-wofi 1.5.3-1
 wpa_supplicant 2:2.11-5
 xarchiver 0.5.4.27-1
 xautolock 2.2-7
