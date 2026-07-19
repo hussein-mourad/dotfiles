@@ -17,7 +17,7 @@ windows = ['lazygit']
 [[session]]
 name = "youtube"
 path = "/mnt/d/data/media/videos/youtube"
-startup_command = "ranger"
+startup_command = "yy"
 
 [[session]]
 name = "astrocommunity"
