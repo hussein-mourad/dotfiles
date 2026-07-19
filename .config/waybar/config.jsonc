@@ -3,8 +3,8 @@
 {
     // To Reload config:
     // killall -SIGUSR2 waybar
-    // "layer": "top", // Waybar at top layer
-    // "position": "bottom", // Waybar position (top|bottom|left|right)
+    "layer": "top", // Waybar at top layer
+    "position": "top", // Waybar position (top|bottom|left|right)
     "height": 10, // Waybar height (to be removed for auto height)
     // "width": 1280, // Waybar width
     "spacing": 4, // Gaps between modules (4px)
@@ -16,10 +16,11 @@
         "hyprland/window",
     ],
     "modules-center": [
-        "custom/media"
+        "clock"
     ],
     "modules-right": [
         // "mpris",
+        // "custom/media",
         "mpd",
         "idle_inhibitor",
         "pulseaudio",
@@ -33,7 +34,6 @@
         "hyprland/language",
         "battery",
         "battery#bat2",
-        "clock",
         "tray",
         "custom/power",
     ],
@@ -97,7 +97,7 @@
         // "format-disconnected": "Disconnected ",
         // "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ",
         "format": "{stateIcon} {artist} - {title}",
-        "format-disconnected": "",
+        "format-disconnected": "Disconnected ",
         "format-stopped": "",
         "unknown-tag": "N/A",
         "interval": 5,
@@ -139,9 +139,12 @@
     "clock": {
         // "timezone": "America/New_York",
         // "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        // "format": "{:%H:%M:%s}",
         "tooltip-format": "<big>{:%Y %B %d}</big>\n<tt><small>{calendar}</small></tt>",
         // "format-alt": "{:%Y-%m-%d}",
-        "format-alt": "{:%Y-%m-%d %H:%M}",
+        // "format-alt": "{:%Y-%m-%d %H:%M}",
+        "format": "{:%H:%M}",
+        "format-alt": "{:%A, %B %d, %Y (%R)}",
     },
     "cpu": {
         "format": "{usage}% ",
