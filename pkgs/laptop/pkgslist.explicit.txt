@@ -18,6 +18,7 @@ artwork-i3 20190912-2
 asciinema 3.2.1-1
 asciiquarium 1.1-7
 asdf-vm 0.19.0-1
+ashell-bin 0.9.0-1
 atac 0.23.0-2
 atomicparsley 20240608.083822.1ed9031-1
 atool 0.39.0-10
@@ -58,7 +59,7 @@ cantarell-fonts 1:0.311-1
 catdoc 0.95-6
 cheat 4.4.2-3
 chntpw 140201-5
-chromium 150.0.7871.124-1
+chromium 150.0.7871.128-1
 clipit 1:1.4.5+25+gf35db54-1
 clock-tui 0.6.1-1
 cmatrix 2.0-4
@@ -393,6 +394,7 @@ nvidia-utils 610.43.03-1
 nvm 0.40.5-1
 nvme-cli 2.16-2
 nvtop 3.3.2-1
+nwg-displays 0.4.3-1
 nwg-look 1.1.1-3
 obs-studio 32.1.2-7
 obsidian 1.12.7-3
@@ -476,6 +478,9 @@ resvg 0.47.0-4
 ripgrep 15.1.0-4
 rmlint 2.10.2-2
 rofi 2.0.0-1
+rofi-calc 2.5.1-1
+rofi-emoji 4.1.0-3
+rofimoji 6.7.0-2
 rsync 3.4.4-1
 ruby-build 20260520-1
 rust-kanban 0.10.5-1
