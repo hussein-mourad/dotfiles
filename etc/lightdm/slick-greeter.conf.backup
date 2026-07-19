@@ -1,0 +1,15 @@
+[Greeter]
+background=/usr/share/hypr/wall0.png
+background-color=#222222
+draw-grid=false
+# theme-name=Catppuccin-Dark-Standard-Blue-Dark
+theme-name=Adwaita-dark
+icon-theme-name=Papirus-Dark
+font-name='Noto Sans 11'
+xft-antialias=true
+xft-hintstyle=hintfull
+enable-hidpi=auto
+activate-numlock=true
+# cursor-theme-name=Catppuccin-Mocha-Blue-Cursors
+cursor-theme-name=Adwaita
+other-monitors-logo=/usr/share/hypr/wall0.png
