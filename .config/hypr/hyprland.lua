@@ -352,9 +352,9 @@ hl.bind("XF86AudioPlay", hl.dsp.exec_cmd("playerctl play-pause"), { locked = tru
 hl.bind("XF86AudioPrev", hl.dsp.exec_cmd("playerctl previous"), { locked = true })
 
 -- Screenshot
-hl.bind("PRINT", hl.dsp.exec_cmd("flameshot full")) -- fullscreen
+hl.bind("PRINT", hl.dsp.exec_cmd("flameshot full"))                    -- fullscreen
 hl.bind("CTRL + PRINT", hl.dsp.exec_cmd("flameshot full --clipboard")) -- copy to clipboard only
-hl.bind("SHIFT + PRINT", hl.dsp.exec_cmd("flameshot gui")) -- picker
+hl.bind("SHIFT + PRINT", hl.dsp.exec_cmd("flameshot gui"))             -- picker
 
 -- Lock Screen
 hl.bind(mainMod .. " + SHIFT + L", hl.dsp.exec_cmd(lock))
