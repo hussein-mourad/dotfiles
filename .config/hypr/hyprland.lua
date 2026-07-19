@@ -276,6 +276,7 @@ local mainMod = "SUPER" -- Sets "Windows" key as main modifier
 -- Example binds, see https://wiki.hypr.land/Configuring/Basics/Binds/ for more
 hl.bind(mainMod .. " + Return", hl.dsp.exec_cmd(terminal))
 hl.bind(mainMod .. " + B", hl.dsp.exec_cmd(browser))
+-- hl.bind(mainMod .. " + P", hl.dsp.exec_cmd("bitwarden-desktop"))
 local closeWindowBind = hl.bind(mainMod .. " + Backspace", hl.dsp.window.close())
 -- hl.bind(mainMod .. "+ C", hl.dsp.window.close())
 hl.bind(mainMod .. "+ SHIFT + Q", hl.dsp.window.close())
@@ -285,12 +286,13 @@ hl.bind(
 	hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'")
 )
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
-hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
+-- hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
+local clipboardHistory = "cliphist list | rofi -dmenu -display-columns 2 | cliphist decode | wl-copy"
+hl.bind(mainMod .. " + V", hl.dsp.exec_cmd(clipboardHistory))
 hl.bind(mainMod .. " + SHIFT + O", hl.dsp.window.float({ action = "toggle" }))
-hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(menu))
 hl.bind(mainMod .. " + O", hl.dsp.exec_cmd(menu))
 hl.bind(mainMod .. " + Space", hl.dsp.exec_cmd(menu))
-hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
+hl.bind(mainMod .. " + SHIFT + P", hl.dsp.window.pseudo())
 -- hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit")) -- dwindle only
 
 -- Move focus with mainMod + vim keys
@@ -347,9 +349,119 @@ hl.bind("XF86AudioPause", hl.dsp.exec_cmd("playerctl play-pause"), { locked = tr
 hl.bind("XF86AudioPlay", hl.dsp.exec_cmd("playerctl play-pause"), { locked = true })
 hl.bind("XF86AudioPrev", hl.dsp.exec_cmd("playerctl previous"), { locked = true })
 
+-- Screenshot
+hl.bind("PRINT", hl.dsp.exec_cmd("flameshot full")) -- fullscreen
+hl.bind("CTRL + PRINT", hl.dsp.exec_cmd("flameshot full --clipboard")) -- copy to clipboard only
+hl.bind("SHIFT + PRINT", hl.dsp.exec_cmd("flameshot gui")) -- picker
+
 -- Lock Screen
 hl.bind(mainMod .. " + SHIFT + L", hl.dsp.exec_cmd(lock))
 hl.bind(mainMod .. " + N", hl.dsp.exec_cmd("swaync-client --toggle-panel --skip-wait"), { release = true })
+hl.bind(mainMod .. " + SHIFT + R", hl.dsp.exec_cmd("killall -SIGUSR2 waybar")) -- reload config
+-- Fullscreen
+hl.bind(mainMod .. " + F11", hl.dsp.window.fullscreen({ mode = 0 }))
+--
+-- Switch to a submap called `resize`.
+hl.bind(mainMod .. "+ R", hl.dsp.submap("resize"))
+
+-- Start a submap called "resize".
+hl.define_submap("resize", function()
+	-- Set repeating binds for resizing the active window.
+	-- (LDUR == HJKL) directions
+	hl.bind("left", hl.dsp.window.resize({ x = -10, y = 0, relative = true }), { repeating = true })
+	hl.bind("down", hl.dsp.window.resize({ x = 0, y = 10, relative = true }), { repeating = true })
+	hl.bind("up", hl.dsp.window.resize({ x = 0, y = -10, relative = true }), { repeating = true })
+	hl.bind("right", hl.dsp.window.resize({ x = 10, y = 0, relative = true }), { repeating = true })
+
+	hl.bind("h", hl.dsp.window.resize({ x = -10, y = 0, relative = true }), { repeating = true })
+	hl.bind("j", hl.dsp.window.resize({ x = 0, y = 10, relative = true }), { repeating = true })
+	hl.bind("k", hl.dsp.window.resize({ x = 0, y = -10, relative = true }), { repeating = true })
+	hl.bind("l", hl.dsp.window.resize({ x = 10, y = 0, relative = true }), { repeating = true })
+
+	-- Use `reset` to go back to the global submap
+	hl.bind("escape", hl.dsp.submap("reset"))
+end)
+
+hl.bind(mainMod .. "+ Escape", hl.dsp.submap("power menu"))
+
+-- Start a submap called "power menu".
+hl.define_submap("power menu", function()
+	hl.bind("l", hl.dsp.exec_cmd(lock), { description = "Lock screen" })
+	hl.bind("e", hl.dsp.exit(), { description = "Lock screen" })
+	hl.bind("s", hl.dsp.exec_cmd("systemctl suspend"))
+	hl.bind("h", hl.dsp.exec_cmd("systemctl hibernate"))
+	hl.bind("r", hl.dsp.exec_cmd("systemctl reboot"))
+	hl.bind("SHIFT + S", hl.dsp.exec_cmd("systemctl poweroff"))
+
+	-- bind = , L, exec, swaylock -f -c 222222, submap, reset
+	-- bind = , E, exec, hyprctl dispatch exit, submap, reset
+	-- bind = , S, exec, systemctl suspend, submap, reset
+	-- bind = , H, exec, systemctl hibernate, submap, reset
+	-- bind = , R, exec, systemctl reboot, submap, reset
+	-- bind = SHIFT, S, exec, systemctl poweroff, submap, reset
+
+	-- Use `reset` to go back to the global submap
+	hl.bind("escape", hl.dsp.submap("reset"))
+	hl.bind("return", hl.dsp.submap("reset"))
+end)
+
+hl.bind("SUPER + F1", function()
+	local game_mode = (hl.get_config("animations.enabled") == false)
+
+	if game_mode then
+		hl.exec_cmd("hyprctl reload")
+		return
+	end
+
+	hl.config({
+		general = {
+			gaps_in = 0,
+			gaps_out = 0, -- Disable gaps
+			border_size = 0,
+		},
+
+		animations = {
+			enabled = false, -- Disable animations
+		},
+
+		-- Disable blur, shadow and window rounding
+		decoration = {
+			shadow = { enabled = false },
+			blur = { enabled = false },
+			rounding = 0,
+		},
+	})
+end)
+
+hl.bind("SUPER + tab", function()
+	local layouts = { "scrolling", "dwindle", "master", "monocle" }
+	local workspace = hl.get_active_workspace()
+	if hl.get_active_special_workspace() then
+		workspace = hl.get_active_special_workspace()
+	end
+
+	local next_layout = "dwindle"
+
+	if not workspace then
+		return
+	end
+
+	for i = 1, #layouts do
+		if layouts[i] == workspace.tiled_layout then
+			local next_layout_idx = (i % #layouts) + 1
+			next_layout = layouts[next_layout_idx]
+			break
+		end
+	end
+
+	if workspace.special then
+		hl.workspace_rule({ workspace = tostring(workspace.name), layout = next_layout })
+	else
+		hl.workspace_rule({ workspace = tostring(workspace.id), layout = next_layout })
+	end
+end)
+
+-- Keybinds further down will be global again...
 
 --------------------------------
 ---- WINDOWS AND WORKSPACES ----
