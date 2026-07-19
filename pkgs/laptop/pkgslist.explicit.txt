@@ -458,6 +458,7 @@ python-pydantic 2.13.4-1
 python-pyqt5 5.15.11-7
 python-pystray 0.19.5-7
 python-pytest-asyncio 1.4.0-1
+python-pywal 3.3.0-11
 python-setuptools-scm 10.2.0-1
 python-truststore 0.10.4-3
 qdirstat-bin 1.9-1
@@ -624,6 +625,7 @@ wireplumber 0.5.15-1
 wireshark-qt 4.7.1-1
 wl-clip-persist 0.5.0-2
 wl-clipboard 1:2.3.0-1
+wlogout 1.2.2-0
 wmutils 1:1.7-1
 woff2-font-awesome 7.3.0-1
 wpa_supplicant 2:2.11-5
