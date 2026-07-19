@@ -8,7 +8,7 @@ usage() {
   cat <<EOF
 Usage: $0 <path-to-file-or-directory>
 
-Backup files/directories to dotfiles directory
+Copy a file/directory to the corresponding path inside ~/dotfiles and run 'make' to link it.
 
 Examples:
   $0 ~/.config/nvim        -> $DOTFILES_DIR/.config/nvim
@@ -26,7 +26,8 @@ if [ -z "$INPUT_PATH" ]; then
   usage
 fi
 
-# Resolve the full path and remove trailing slashes
+# Expand ~ to home directory and resolve the path
+INPUT_PATH="${INPUT_PATH/#\~/$HOME}"
 INPUT_PATH=$(realpath "$INPUT_PATH" 2>/dev/null || echo "$INPUT_PATH")
 INPUT_PATH="${INPUT_PATH%/}"
 
@@ -42,14 +43,17 @@ if [ ! -d "$DOTFILES_DIR" ]; then
   exit 1
 fi
 
-# Get the absolute path without the leading slash for the destination
-# Remove leading slash to avoid double slashes in destination
-RELATIVE_PATH="${INPUT_PATH#/}"
-DEST_PATH="$DOTFILES_DIR/$RELATIVE_PATH"
+# Get the relative path from home directory
+# If the path starts with /home/username/, remove it
+if [[ "$INPUT_PATH" == "$HOME"* ]]; then
+  # Remove the home directory prefix and the leading slash
+  RELATIVE_PATH="${INPUT_PATH#$HOME/}"
+else
+  # For system paths like /etc, remove the leading slash
+  RELATIVE_PATH="${INPUT_PATH#/}"
+fi
 
-# Alternative: If you want to preserve the exact path structure including root
-# For example: /etc/hosts -> ~/dotfiles/etc/hosts
-# The above already does this because we remove the leading slash
+DEST_PATH="$DOTFILES_DIR/$RELATIVE_PATH"
 
 echo "Input path: $INPUT_PATH"
 echo "Destination: $DEST_PATH"
