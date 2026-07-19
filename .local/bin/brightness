@@ -1,0 +1,59 @@
+#!/bin/bash
+
+# Requirements: brightnessctl
+# Configuration
+STEP=5
+OPTIONS="--exponent=4 --min-value=2"
+
+# Get current brightness values
+get_brightness() {
+  brightnessctl get
+}
+
+get_max() {
+  brightnessctl max
+}
+
+get_percent() {
+  local current=$(get_brightness)
+  local max=$(get_max)
+  echo $((current * 100 / max))
+}
+
+# Send notification
+notify() {
+  local direction=$1
+  local percent=$(get_percent)
+  local icon=""
+
+  case $direction in
+  up) icon="🔆" ;;
+  down) icon="🔅" ;;
+  esac
+
+  notify-send \
+    -h string:x-canonical-private-synchronous:brightness \
+    -h int:value:"$percent" \
+    -u low \
+    "Brightness" \
+    "${icon} ${percent}%"
+}
+
+# Main
+case $1 in
+up)
+  brightnessctl $OPTIONS set ${STEP}%+
+  notify up
+  ;;
+down)
+  brightnessctl $OPTIONS set ${STEP}%-
+  notify down
+  ;;
+get)
+  echo "$(get_percent)%"
+  ;;
+*)
+  echo "Usage: $0 {up|down|get}"
+  exit 1
+  ;;
+esac
