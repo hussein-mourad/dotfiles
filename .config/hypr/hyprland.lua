@@ -325,8 +325,9 @@ hl.bind(mainMod .. " + mouse_down", hl.dsp.focus({ workspace = "e+1" }))
 hl.bind(mainMod .. " + mouse_up", hl.dsp.focus({ workspace = "e-1" }))
 
 -- Move/resize windows with mainMod + LMB/RMB and dragging
-hl.bind(mainMod .. " + mouse:272", hl.dsp.window.drag(), { mouse = true })
-hl.bind(mainMod .. " + mouse:273", hl.dsp.window.resize(), { mouse = true })
+hl.bind(mainMod .. " + mouse:272", hl.dsp.window.drag(), { mouse = true })   -- left click
+hl.bind(mainMod .. " + mouse:273", hl.dsp.window.resize(), { mouse = true }) -- right click
+hl.bind(mainMod .. " + mouse:274", hl.dsp.window.close(), { mouse = true })  -- middle click
 
 hl.bind(mainMod .. "+ EQUAL", hl.dsp.exec_cmd("volumectl up"), { locked = true, repeating = true })
 hl.bind(mainMod .. "+ MINUS", hl.dsp.exec_cmd("volumectl down"), { locked = true, repeating = true })
