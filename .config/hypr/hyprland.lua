@@ -50,9 +50,10 @@ local lock = "hyprlock --quiet"
 --
 hl.on("hyprland.start", function()
 	-- hl.exec_cmd("waybar & hyprpaper & firefox")
+	-- hl.exec_cmd("waybar")
+	hl.exec_cmd("ashell")
 	hl.exec_cmd("nm-applet")
 	hl.exec_cmd("blueman-applet")
-	hl.exec_cmd("waybar")
 	hl.exec_cmd("systemctl --user start hyprpolkitagent") -- authentication
 	hl.exec_cmd("systemctl --user start kanata")
 	hl.exec_cmd("systemctl --user start mpd")
