@@ -223,3 +223,4 @@ alias bw_unlock='export BW_SESSION=$(bw unlock --raw "$(gpg -d ~/.pass.gpg 2&>/d
 alias t="go-task"
 alias sshc="vi ~/.ssh/config"
 alias mpv="mpv --save-watch-history"
+alias fzf-printenv="printenv | fzf"
