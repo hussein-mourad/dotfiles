@@ -34,10 +34,10 @@ hl.monitor({
 
 -- Set programs that you use
 local terminal = "konsole"
-local fileManager = "nautilus"
+local fileManager = "pcmanfm"
 local menu = "rofi -show combi"
 local browser = "firefox"
-local lock = "hyprlock"
+local lock = "hyprlock --quiet"
 
 -------------------
 ---- AUTOSTART ----
@@ -55,7 +55,7 @@ hl.on("hyprland.start", function()
 	hl.exec_cmd("waybar")
 	hl.exec_cmd("systemctl --user start hyprpolkitagent") -- authentication
 	hl.exec_cmd("systemctl --user start kanata")
-	hl.exec_cmd("mpd")
+	hl.exec_cmd("systemctl --user start mpd")
 	hl.exec_cmd("mpd-mpris")
 	hl.exec_cmd("swaync") -- notifications
 	hl.exec_cmd("hypridle")
@@ -309,7 +309,7 @@ hl.bind(mainMod .. " + down", hl.dsp.focus({ direction = "down" }))
 
 -- Switch workspaces with mainMod + [0-9]
 -- Move active window to a workspace with mainMod + SHIFT + [0-9]
-for i = 1, 10 do
+for i = 1, 9 do
 	local key = i % 10 -- 10 maps to key 0
 	hl.bind(mainMod .. " + " .. key, hl.dsp.focus({ workspace = i }))
 	hl.bind(mainMod .. " + SHIFT + " .. key, hl.dsp.window.move({ workspace = i }))
