@@ -1,5 +1,5 @@
 log_level = "warn"
-language = "en-GB" # UI language; defaults to $LC_MESSAGES / $LANG
+language = "en-US" # UI language; defaults to $LC_MESSAGES / $LANG
 region = "en-GB"   # date format + unit system; defaults to $LC_TIME / $LANG
 # outputs = "All"            # "All" (default), "Active", or { Targets = ["eDP-1"] }
 position = "Top" # "Top" (default) or "Bottom"
@@ -7,7 +7,7 @@ position = "Top" # "Top" (default) or "Bottom"
 enable_esc_key = true # Pressing Escape closes open menus
 
 [modules]
-left = [["appLauncher", "Workspaces"]]
+left = [["appLauncher", "Workspaces"], "WindowTitle"]
 # left = ["Workspaces"]
 right = [
   "KeyboardLayout",
@@ -15,14 +15,14 @@ right = [
   "MediaPlayer",
   [
     "Tray",
-    "Tempo",
     "Privacy",
     "Settings",
     # "Notifications",
   ],
 ]
 
-center = ["WindowTitle"]
+center = ["Tempo"]
+# center = ["WindowTitle"]
 # Default module layout:
 # left = [ "Workspaces" ]
 # center = [ "WindowTitle" ]
@@ -54,8 +54,8 @@ command = "rofi -show combi"
 # type = "Button"              # (default) "Button" or "Text"
 
 [window_title]
-mode = "Title"                    # "Title" (default), "Class", "InitialTitle", "InitialClass"
-truncate_title_after_length = 150 # (default) 0 means no truncation; capped at 2048
+mode = "Title"                   # "Title" (default), "Class", "InitialTitle", "InitialClass"
+truncate_title_after_length = 50 # (default) 0 means no truncation; capped at 2048
 
 [keyboard_layout]
 labels = { "English (US)" = "EN", "Arabic (Eastern Arabic numerals)" = "AR" } # (default: {}) map layout names to short labels
