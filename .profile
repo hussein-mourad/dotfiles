@@ -55,6 +55,8 @@ export BROWSER=/usr/bin/firefox
 #export TERM=xfce4-terminal
 export TERMINAL=/usr/bin/konsole
 export EDITOR=nvim
+# export PAGER=less
+# Set man page viewer
 export MANPAGER='nvim +Man!'
 
 # eval $(ssh-agent)
