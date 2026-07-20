@@ -21,6 +21,8 @@
 ------------------
 
 -- See https://wiki.hypr.land/Configuring/Basics/Monitors/
+require("monitors")
+
 hl.monitor({
 	output = "",
 	mode = "preferred",
