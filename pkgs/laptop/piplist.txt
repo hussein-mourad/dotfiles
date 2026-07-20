@@ -130,6 +130,8 @@ icalendar                     7.2.0
 icalendar-searcher            1.0.6
 idna                          3.18
 ifaddr                        0.2.0
+ImageIO                       2.37.3
+imageio-ffmpeg                0.6.0
 imagesize                     2.0.0
 importlib_metadata            9.0.0
 Incremental                   24.11.0
@@ -342,6 +344,7 @@ s-tui                         1.4.0
 scikit_build_core             0.12.2
 SCons                         4.10.1
 scour                         0.38.2
+screeninfo                    0.8.1
 screenkey                     1.5
 SecretStorage                 3.5.0
 Send2Trash                    1.8.3
@@ -417,6 +420,7 @@ vcs-versioning                2.2.2
 virtualenv                    21.6.0
 vit                           2.3.4
 vobject                       0.9.9
+waypaper                      2.8
 wcwidth                       0.8.2
 webencodings                  0.5.1
 websocket-client              1.9.0
