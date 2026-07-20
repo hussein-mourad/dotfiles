@@ -201,3 +201,6 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 # Added by Antigravity CLI installer
 export PATH="/home/hussein/.local/bin:$PATH"
+export OPENSPEC_TELEMETRY=0
+
+source "$HOME/.claude-code.env"

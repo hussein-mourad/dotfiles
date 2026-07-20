@@ -1,0 +1,85 @@
+#!/usr/bin/env bash
+# Exit on error (-e), unset vars (-u), or failed pipeline (-o pipefail)
+set -euo pipefail
+
+# --- Dependency checks ---
+for cmd in bw jq fzf gpg; do
+  if ! command -v "$cmd" &>/dev/null; then
+    echo "❌ Required tool '$cmd' is not installed. Please install it and try again."
+    exit 1
+  fi
+done
+
+# Clipboard utils optional
+if ! command -v wl-copy &>/dev/null && ! command -v xclip &>/dev/null && ! command -v pbcopy &>/dev/null; then
+  echo "⚠️  No clipboard tool found (wl-copy / xclip / pbcopy). Output will be printed instead."
+fi
+
+# --- Session handling ---
+if [ -z "${BW_SESSION:-}" ]; then
+  # Decrypt master password from ~/.pass.gpg into BW_PASSWORD
+  BW_PASSWORD=$(gpg -d "$HOME"/.pass.gpg 2>/dev/null)
+  export BW_PASSWORD
+
+  # Unlock vault using password from env variable
+  BW_SESSION="$(bw unlock --raw --passwordenv BW_PASSWORD)"
+
+  # Cleanup: remove BW_PASSWORD from environment
+  unset BW_PASSWORD
+  export BW_SESSION
+fi
+
+# --- Item selection with fzf ---
+# CHOICE=$(bw list items --session "$BW_SESSION" |
+#   jq -r '.[] | "\(.id)\t\(.name)"' |
+#   fzf --prompt="🔑 Search your vault: " --height=40%)
+#
+# List all items, fuzzy search with gum
+CHOICE=$(bw list items --session "$BW_SESSION" \  |
+  jq -r '.[] | "\(.id)\t\(.name)"' |
+  gum filter --placeholder "🔑 Search your vault...")
+ITEM_ID=$(awk '{print $1}' <<<"$CHOICE")
+
+# Exit if nothing chosen
+if [ -z "$ITEM_ID" ]; then
+  echo "❌ No item selected."
+  exit 1
+fi
+
+# --- Field selection with fzf ---
+FIELD=$(printf "username\npassword\nfull-item" |
+  fzf --prompt="📋 Choose field: " --height=20%)
+
+if [ -z "$FIELD" ]; then
+  echo "❌ No field selected."
+  exit 1
+fi
+
+# --- Fetch value ---
+case "$FIELD" in
+username)
+  VALUE=$(bw get item "$ITEM_ID" --session "$BW_SESSION" | jq -r '.login.username')
+  ;;
+password)
+  VALUE=$(bw get password "$ITEM_ID" --session "$BW_SESSION")
+  ;;
+full-item)
+  VALUE=$(bw get item "$ITEM_ID" --session "$BW_SESSION" | jq)
+  ;;
+esac
+
+# --- Copy or print ---
+ITEM_NAME="$(bw get item "$ITEM_ID" | jq -r '.name')"
+if command -v wl-copy &>/dev/null; then
+  printf "%s" "$VALUE" | wl-copy
+  echo "✅ $FIELD for [$ITEM_NAME] copied to clipboard."
+elif command -v xclip &>/dev/null; then
+  printf "%s" "$VALUE" | xclip -sel clip
+  echo "✅ $FIELD for [$ITEM_NAME] copied to clipboard."
+elif command -v pbcopy &>/dev/null; then
+  printf "%s" "$VALUE" | pbcopy
+  echo "✅ $FIELD for [$ITEM_NAME] copied to clipboard."
+else
+  echo "🔓 $FIELD for [$ITEM_NAME]:"
+  echo "$VALUE"
+fi

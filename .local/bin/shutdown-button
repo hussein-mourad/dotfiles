@@ -1,0 +1,10 @@
+
+#!/bin/bash
+
+# If called with click, perform action
+if [ "$BLOCK_BUTTON" = 1 ]; then
+    systemctl poweroff
+fi
+
+# Display a simple icon or text on the bar
+echo "⏻"  # Power symbol
