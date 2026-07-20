@@ -7,33 +7,12 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from
 {
-  "project_panel": {
-    "dock": "left"
-  },
-  "outline_panel": {
-    "dock": "left"
-  },
-  "collaboration_panel": {
-    "dock": "left"
-  },
-  "git_panel": {
-    "dock": "left"
-  },
-  "disable_ai": true,
-  "minimap": {
-    "show": "always"
-  },
-  "icon_theme": {
-    "mode": "system",
-    "light": "Zed (Default)",
-    "dark": "Zed (Default)"
-  },
-  "agent": {
-    "dock": "right",
+  "assistant": {
     "default_model": {
       "provider": "zed.dev",
       "model": "claude-3-5-sonnet-latest"
-    }
+    },
+    "version": "2"
   },
   "telemetry": {
     "metrics": false
@@ -48,14 +27,14 @@
   "features": {
     "edit_prediction_provider": "zed"
   },
-  "vim_mode": true,
-  "ui_font_size": 18.0,
-  "buffer_font_size": 16.0,
+  "vim_mode": false,
+  "ui_font_size": 15,
+  "buffer_font_size": 12,
   "buffer_font_family": "FiraCode Nerd Font Mono",
   "theme": {
     "mode": "system",
-    "light": "One Light",
-    "dark": "One Dark"
+    "light": "Ayu Light",
+    "dark": "Ayu Dark"
   },
   "autosave": { "after_delay": { "milliseconds": 1500 } }
 }
