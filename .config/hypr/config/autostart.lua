@@ -7,7 +7,7 @@
 -- Autostart necessary processes (like notifications daemons, status bars, etc.)
 -- Or execute your favorite apps at launch like this:
 --
-local browser = "firefox"
+local config = require("config.global")
 
 hl.on("hyprland.start", function()
 	-- hl.exec_cmd("waybar & hyprpaper & firefox")
@@ -32,5 +32,5 @@ hl.on("hyprland.start", function()
 	hl.exec_cmd("tmux start-server & konsole -p tabtitle=mtmux -e tmux")
 	hl.exec_cmd("wl-paste --type text --watch cliphist store -max-items 20")
 	hl.exec_cmd("wl-paste --type image --watch cliphist store -max-items 20")
-	hl.exec_cmd(browser)
+	hl.exec_cmd(config.browser)
 end)

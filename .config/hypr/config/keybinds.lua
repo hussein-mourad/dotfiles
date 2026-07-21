@@ -1,47 +1,41 @@
 ---------------------
 ---- KEYBINDINGS ----
 ---------------------
-local terminal = "konsole"
-local fileManager = "pcmanfm"
-local menu = "rofi -show combi"
-local browser = "firefox"
-local lock = "hyprlock --quiet"
-
-local mainMod = "SUPER" -- Sets "Windows" key as main modifier
 
 -- Example binds, see https://wiki.hypr.land/Configuring/Basics/Binds/ for more
-hl.bind(mainMod .. " + Return", hl.dsp.exec_cmd(terminal))
-hl.bind(mainMod .. " + B", hl.dsp.exec_cmd(browser))
--- hl.bind(mainMod .. " + P", hl.dsp.exec_cmd("bitwarden-desktop"))
+
+local config = require("config.global")
+local mainMod = config.mod
+
+-- Launch Apps
+hl.bind(mainMod .. " + Return", hl.dsp.exec_cmd(config.terminal))
+hl.bind(mainMod .. " + B", hl.dsp.exec_cmd(config.browser))
+hl.bind(mainMod .. " + P", hl.dsp.exec_cmd(config.passwordManager))
+hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(config.fileManager))
+hl.bind(mainMod .. " + V", hl.dsp.exec_cmd(config.clipboardHistory))
+hl.bind(mainMod .. " + O", hl.dsp.exec_cmd(config.menu))
+hl.bind(mainMod .. " + Space", hl.dsp.exec_cmd(config.menu))
+
 local closeWindowBind = hl.bind(mainMod .. " + Backspace", hl.dsp.window.close())
+-- closeWindowBind:set_enabled(false)
+
 -- hl.bind(mainMod .. "+ C", hl.dsp.window.close())
 hl.bind(mainMod .. "+ SHIFT + Q", hl.dsp.window.close())
--- closeWindowBind:set_enabled(false)
 hl.bind(
 	mainMod .. "+ SHIFT + E",
 	hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'")
-)
-hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
--- hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
-local clipboardHistory = "cliphist list | rofi -dmenu -display-columns 2 | cliphist decode | wl-copy"
-hl.bind(mainMod .. " + V", hl.dsp.exec_cmd(clipboardHistory))
+) -- exit hyprland
+
 hl.bind(mainMod .. " + SHIFT + O", hl.dsp.window.float({ action = "toggle" }))
-hl.bind(mainMod .. " + O", hl.dsp.exec_cmd(menu))
-hl.bind(mainMod .. " + Space", hl.dsp.exec_cmd(menu))
 hl.bind(mainMod .. " + SHIFT + P", hl.dsp.window.pseudo())
 -- hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit")) -- dwindle only
 
+-- Change Focused window
 -- Move focus with mainMod + vim keys
 hl.bind(mainMod .. " + H", hl.dsp.focus({ direction = "left" }))
 hl.bind(mainMod .. " + J", hl.dsp.focus({ direction = "down" }))
 hl.bind(mainMod .. " + K", hl.dsp.focus({ direction = "up" }))
 hl.bind(mainMod .. " + L", hl.dsp.focus({ direction = "right" }))
-
--- Move Windows
-hl.bind(mainMod .. " + SHIFT + H", hl.dsp.window.move({ direction = "left" }))
-hl.bind(mainMod .. " + SHIFT + J", hl.dsp.window.move({ direction = "down" }))
-hl.bind(mainMod .. " + SHIFT + K", hl.dsp.window.move({ direction = "up" }))
-hl.bind(mainMod .. " + SHIFT + L", hl.dsp.window.move({ direction = "right" }))
 
 -- Move focus with mainMod + arrow keys
 hl.bind(mainMod .. " + left", hl.dsp.focus({ direction = "left" }))
@@ -49,7 +43,13 @@ hl.bind(mainMod .. " + down", hl.dsp.focus({ direction = "down" }))
 hl.bind(mainMod .. " + up", hl.dsp.focus({ direction = "up" }))
 hl.bind(mainMod .. " + right", hl.dsp.focus({ direction = "right" }))
 
--- Move Windows
+-- Move Windows (vim keys)
+hl.bind(mainMod .. " + SHIFT + H", hl.dsp.window.move({ direction = "left" }))
+hl.bind(mainMod .. " + SHIFT + J", hl.dsp.window.move({ direction = "down" }))
+hl.bind(mainMod .. " + SHIFT + K", hl.dsp.window.move({ direction = "up" }))
+hl.bind(mainMod .. " + SHIFT + L", hl.dsp.window.move({ direction = "right" }))
+
+-- Move Windows (arrow keys)
 hl.bind(mainMod .. " + SHIFT + left", hl.dsp.window.move({ direction = "left" }))
 hl.bind(mainMod .. " + SHIFT + down", hl.dsp.window.move({ direction = "down" }))
 hl.bind(mainMod .. " + SHIFT + up", hl.dsp.window.move({ direction = "up" }))
@@ -67,8 +67,12 @@ for i = 1, 9 do
 	hl.bind(mainMod .. " + SHIFT + " .. key, hl.dsp.window.move({ workspace = i }))
 end
 
+-- Fullscreen
+hl.bind(mainMod .. " + F11", hl.dsp.window.fullscreen({ mode = 0 }))
+
 -- Example special workspace (scratchpad)
 hl.bind(mainMod .. " + S", hl.dsp.workspace.toggle_special("magic"))
+hl.bind(mainMod .. " + comma", hl.dsp.workspace.toggle_special("magic"))
 hl.bind(mainMod .. " + SHIFT + S", hl.dsp.window.move({ workspace = "special:magic" }))
 
 -- Scroll through existing workspaces with mainMod + scroll
@@ -80,6 +84,7 @@ hl.bind(mainMod .. " + mouse:272", hl.dsp.window.drag(), { mouse = true }) -- le
 hl.bind(mainMod .. " + mouse:273", hl.dsp.window.resize(), { mouse = true }) -- right click
 hl.bind(mainMod .. " + mouse:274", hl.dsp.window.close(), { mouse = true }) -- middle click
 
+-- Volume control (volumectl: ~/.local/bin)
 hl.bind(mainMod .. "+ EQUAL", hl.dsp.exec_cmd("volumectl up"), { locked = true, repeating = true })
 hl.bind(mainMod .. "+ MINUS", hl.dsp.exec_cmd("volumectl down"), { locked = true, repeating = true })
 hl.bind(mainMod .. "+ 0", hl.dsp.exec_cmd("volumectl toggle"), { locked = true, repeating = true })
@@ -111,8 +116,6 @@ hl.bind("SHIFT + PRINT", hl.dsp.exec_cmd("flameshot gui")) -- picker
 -- hl.bind(mainMod .. " + SHIFT + L", hl.dsp.exec_cmd(lock))
 hl.bind(mainMod .. " + N", hl.dsp.exec_cmd("swaync-client --toggle-panel --skip-wait"), { release = true })
 -- hl.bind(mainMod .. " + SHIFT + R", hl.dsp.exec_cmd("killall -SIGUSR2 waybar")) -- reload config
--- Fullscreen
-hl.bind(mainMod .. " + F11", hl.dsp.window.fullscreen({ mode = 0 }))
 --
 -- Switch to a submap called `resize`.
 hl.bind(mainMod .. "+ R", hl.dsp.submap("resize"))
@@ -139,7 +142,7 @@ hl.bind(mainMod .. "+ Escape", hl.dsp.submap("power menu"))
 
 -- Start a submap called "power menu".
 hl.define_submap("power menu", function()
-	hl.bind("l", hl.dsp.exec_cmd(lock), { description = "Lock screen" })
+	hl.bind("l", hl.dsp.exec_cmd(config.lock), { description = "Lock screen" })
 	hl.bind("e", hl.dsp.exit(), { description = "Lock screen" })
 	hl.bind("s", hl.dsp.exec_cmd("systemctl suspend"))
 	hl.bind("h", hl.dsp.exec_cmd("systemctl hibernate"))
