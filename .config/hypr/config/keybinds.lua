@@ -139,6 +139,7 @@ hl.define_submap("resize", function()
 end)
 
 hl.bind(mod .. "+ Escape", hl.dsp.submap("power menu"))
+-- hl.bind(mod .. "+ Escape", hl.dsp.exec_cmd("wlogout"))
 
 -- Start a submap called "power menu".
 hl.define_submap("power menu", function()
@@ -161,7 +162,19 @@ hl.define_submap("power menu", function()
 	hl.bind("return", hl.dsp.submap("reset"))
 end)
 
-hl.bind("SUPER + F1", function()
+-- Source: https://wiki.hypr.land/Configuring/Advanced-and-Cool/Uncommon-tips-and-tricks/
+
+-- hl.bind(mod .. " + X", function()
+-- 	if hl.get_workspace("special:minimized") then
+-- 		hl.dispatch(hl.dsp.window.move({ workspace = hl.get_active_workspace(), window = "tag:minimized" }))
+-- 		hl.dispatch(hl.dsp.window.clear_tags({ window = "tag:minimized" }))
+-- 	else
+-- 		hl.dispatch(hl.dsp.window.tag({ tag = "minimized", window = hl.get_active_window() }))
+-- 		hl.dispatch(hl.dsp.window.move({ workspace = "special:minimized", follow = false }))
+-- 	end
+-- end)
+
+hl.bind(mod .. " + F1", function()
 	local game_mode = (hl.get_config("animations.enabled") == false)
 
 	if game_mode then
@@ -189,7 +202,7 @@ hl.bind("SUPER + F1", function()
 	})
 end)
 
-hl.bind("SUPER + tab", function()
+hl.bind(mod .. " + tab", function()
 	local layouts = { "scrolling", "dwindle", "master", "monocle" }
 	local workspace = hl.get_active_workspace()
 	if hl.get_active_special_workspace() then

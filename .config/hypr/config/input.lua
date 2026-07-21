@@ -2,6 +2,9 @@
 ---- INPUT ----
 ---------------
 
+-- Remapping caps lock
+-- cat /usr/share/X11/xkb/rules/base.lst | grep 'caps'
+
 hl.config({
 	input = {
 		kb_layout = "us,ara",
