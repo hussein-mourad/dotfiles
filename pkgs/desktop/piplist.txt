@@ -44,6 +44,7 @@ hatchling              1.30.1
 httpie                 3.2.4
 httplib2               0.32.0
 hyperlink              21.0.0
+i3ipc                  2.2.1
 idna                   3.18
 ifaddr                 0.2.0
 Incremental            24.11.0
@@ -80,6 +81,7 @@ netsnmp-python         1.0a1
 nftables               0.1
 npyscreen              5.0.4
 numpy                  2.5.1
+nwg-displays           0.4.3
 ordered-set            4.1.0
 orjson                 3.11.9
 packaging              26.2
@@ -121,6 +123,7 @@ PySide6                6.11.1
 PySocks                1.7.1
 python-dateutil        2.9.0
 python-distutils-extra 2.39
+python-xlib            0.33
 pytz                   2026.1
 pyxdg                  0.28
 PyYAML                 6.0.3
