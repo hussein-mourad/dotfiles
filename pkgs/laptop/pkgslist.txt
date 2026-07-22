@@ -458,7 +458,6 @@ gpm 1.20.7.r38.ge82d1a6-6
 gpsd 3.27.5-1
 gptfdisk 1.0.10-2
 gputest 0.7.0-1
-grafana 13.1.0-1
 granite7 7.8.1-1
 grantleetheme 26.04.3-1
 graphene 1.10.8-2
@@ -1917,7 +1916,6 @@ prison 6.27.0-1
 procps-ng 4.0.6-3
 procs 0.14.12-1
 proj 9.8.1-1
-prometheus 3.12.0-1
 prometheus-node-exporter 1.11.1-1
 protobuf 35.1-1
 protobuf-c 1.5.2-12
