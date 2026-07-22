@@ -15,6 +15,7 @@ hl.bind(mod .. " + E", hl.dsp.exec_cmd(config.fileManager))
 hl.bind(mod .. " + V", hl.dsp.exec_cmd(config.clipboardHistory))
 hl.bind(mod .. " + O", hl.dsp.exec_cmd(config.menu))
 hl.bind(mod .. " + Space", hl.dsp.exec_cmd(config.menu))
+hl.bind(mod .. " + CTRL + M", hl.dsp.exec_cmd(config.audioGUI))
 
 local closeWindowBind = hl.bind(mod .. " + Backspace", hl.dsp.window.close())
 -- closeWindowBind:set_enabled(false)

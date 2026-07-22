@@ -7,4 +7,5 @@ return {
 	lock = "hyprlock --quiet",
 	passwordManager = "bitwarden-desktop",
 	clipboardHistory = "cliphist list | rofi -dmenu -display-columns 2 | cliphist decode | wl-copy",
+	audioGUI = "pavucontrol",
 }
