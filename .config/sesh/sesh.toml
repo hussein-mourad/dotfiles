@@ -10,13 +10,13 @@ windows = ['lazygit']
 
 [[session]]
 name = "notes"
-path = "/mnt/d/data/documents/notes"
+path = "~/Documents/notes"
 startup_command = "nvim -c ':Telescope find_files hidden=true'"
 windows = ['lazygit']
 
 [[session]]
 name = "youtube"
-path = "/mnt/d/data/media/videos/youtube"
+path = "~/Videos/youtube"
 startup_command = "yy"
 
 [[session]]
