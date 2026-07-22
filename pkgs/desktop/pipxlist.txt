@@ -1,0 +1,6 @@
+awscli-local 0.22.2
+csvkit 2.2.0
+organize-tool 3.3.0
+pipenv 2026.6.2
+rendercv 2.8
+tabview 1.4.4
