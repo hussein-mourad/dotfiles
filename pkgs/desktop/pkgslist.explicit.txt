@@ -442,6 +442,7 @@ wallpapers-juhraya 1.1-3
 waybar-git 0.15.0.r947.g30610d3-1
 web-ext 8.3.0-1
 websocat 1.14.1-1
+wev 1.1.0-1
 wezterm 20240203.110809.5046fc22-2
 wf-recorder 0.6.0-1
 wget 1.25.0-5
