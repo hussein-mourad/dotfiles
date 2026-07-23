@@ -38,6 +38,7 @@ blueman 2.4.6-2
 bluez-utils 5.86-6.1
 bmenu 0.26-1
 bottom 0.14.3-1
+brightnessctl 0.5.1-3
 brn-git r31.454e213-1
 broot 1.57.0-1
 bruno-bin 3.5.1-1
@@ -48,7 +49,7 @@ cantarell-fonts 1:0.311-1
 cbonsai 1.4.2-1
 cdrtools 3.02a09-6
 cheat-bin 4.4.2-1
-chromium 150.0.7871.128-1
+chromium 150.0.7871.181-1
 clipit 1:1.4.5+25+gf35db54-1
 cloc 2.08-1
 clock-tui-bin 0.12.1-1
@@ -342,6 +343,7 @@ rclone 1.74.4-1
 redshift-qt 0.6-2
 reiserfsprogs 3.6.27-5
 restic 0.19.1-1
+resvg 0.47.0-4
 ripgrep 15.1.0-4
 rofi 2.0.0-1
 rofi-emoji 4.1.0-3
@@ -489,6 +491,7 @@ yt-dlp 2026.07.04-1
 zathura 2026.07.02-1
 zathura-pdf-mupdf 2026.05.10-4
 zed 1.10.0-1
+zellij 0.44.3-1
 zen-browser-bin 1.21.8b-1
 zensu 0.3-7
 zoxide 0.10.0-1
