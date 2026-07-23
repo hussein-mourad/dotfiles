@@ -2236,7 +2236,6 @@ typst 1:0.15.0-1
 tzdata 2026b-1
 uchardet 0.0.8-4
 udisks2 2.11.1-2
-ueberzugpp 2.9.8-4
 ufw 0.36.2-7
 unibilium 2.1.2-1
 unixodbc 2.3.14-1
