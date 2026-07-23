@@ -416,6 +416,7 @@ ttf-nerd-fonts-symbols 3.4.0-1
 ttf-nerd-fonts-symbols-mono 3.4.0-1
 turbo 2.9.16-1
 typst 1:0.15.0-1
+ueberzugpp 2.9.8-4
 update-grub 2:2.14-1
 upower 1.91.3-1
 urlview 1.d-1
