@@ -20,6 +20,7 @@ chardet                6.0.0.post1
 charset-normalizer     3.4.7
 cli_helpers            2.15.0
 click                  8.3.3
+colorama               0.4.6
 configobj              5.0.9
 constantly             23.10.4
 coverage               7.13.5
@@ -63,6 +64,7 @@ legacy-cgi             2.6.4
 lensfun                0.3.4
 lexicon                3.0.0
 LibAppArmor            4.1.7
+libtmux                0.61.0
 libtorrent             2.0.13
 libvirt-python         12.5.0
 lit                    22.1.6.dev0
@@ -154,6 +156,7 @@ tabview                1.4.4
 TBB                    2023.0.0
 time-machine           3.2.0
 tinycss2               1.5.1
+tmuxp                  1.74.0
 tomli                  2.4.1
 tomlkit                0.15.0
 trove-classifiers      2026.6.1.19

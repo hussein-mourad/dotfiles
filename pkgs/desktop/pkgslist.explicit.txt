@@ -186,6 +186,7 @@ keepassxc 2.7.12-3
 kitty 0.47.4-1
 konsole 26.04.3-1
 kvantum-manjaro 0.13.5+5+g0179d45-4
+lazy-tmux 0.2.0-1
 lazydocker-bin 0.25.2-1
 lazygit 0.63.0-1
 lazynpm 0.1.4-1
@@ -400,6 +401,7 @@ tk 8.6.16-1
 tlrc-bin 1.12.0-1
 tmux 3.7_b-1
 tmuxinator 3.4.1-1
+tmuxp 1.74.0-1
 traceroute 2.1.6-1
 translate-shell 0.9.7.1-2
 trashy 2.0.0-1
