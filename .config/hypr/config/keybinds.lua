@@ -114,7 +114,7 @@ hl.bind("CTRL + PRINT", hl.dsp.exec_cmd("flameshot full --clipboard")) -- copy t
 hl.bind("SHIFT + PRINT", hl.dsp.exec_cmd("flameshot gui")) -- picker
 
 -- Lock Screen
--- hl.bind(mainMod .. " + SHIFT + L", hl.dsp.exec_cmd(lock))
+hl.bind(mod .. " + CTRL + L", hl.dsp.exec_cmd(config.lock))
 hl.bind(mod .. " + N", hl.dsp.exec_cmd("swaync-client --toggle-panel --skip-wait"), { release = true })
 -- hl.bind(mainMod .. " + SHIFT + R", hl.dsp.exec_cmd("killall -SIGUSR2 waybar")) -- reload config
 --
