@@ -36,6 +36,14 @@
       {
         "language": "typescriptreact",
         "path": "./shadcn/usage.json"
+      },
+      {
+        "language": "javascript",
+        "path": "./javascript.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./typescript.json"
       }
     ]
   }

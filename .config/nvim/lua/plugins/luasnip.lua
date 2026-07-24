@@ -7,6 +7,7 @@ return {
     -- :help luasnip.txt
     local ls = require "luasnip"
     ls.filetype_extend("javascript", { "javascriptreact" })
+    ls.filetype_extend("typescript", { "typescriptreact" })
     -- load snippets paths
     require("luasnip.loaders.from_vscode").lazy_load {
       paths = { vim.fn.stdpath "config" .. "/snippets" },
