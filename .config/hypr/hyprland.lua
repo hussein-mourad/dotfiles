@@ -1,8 +1,14 @@
 -- Refer to the wiki for more information.
 -- https://wiki.hypr.land/Configuring/Start/
 
-require("monitors")
-require("config.monitors")
+-- Load monitors, ignore if it fails
+-- monitors.lua is created using nwg-displays
+local success = pcall(require, "monitors")
+if not success then
+	-- Load default monitors config
+	require("config.monitors")
+end
+
 require("config.autostart")
 require("config.env")
 require("config.permissions")
