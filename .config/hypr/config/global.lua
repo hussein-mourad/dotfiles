@@ -1,7 +1,7 @@
 return {
 	mod = "SUPER", -- Sets "Windows" key as main modifier
 	terminal = "konsole",
-	fileManager = "pcmanfm",
+	fileManager = "GDK_BACKEND=x11 pcmanfm",
 	menu = "rofi -show combi",
 	browser = "firefox",
 	lock = "hyprlock --quiet",
