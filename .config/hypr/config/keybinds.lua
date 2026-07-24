@@ -139,11 +139,12 @@ hl.define_submap("resize", function()
 	hl.bind("escape", hl.dsp.submap("reset"))
 end)
 
-hl.bind(mod .. "+ Escape", hl.dsp.submap("power menu"))
+local powerMenu = "Power Menu: (l)ock, (e)xit, switch_(u)ser, (s)uspend, (h)ibernate, (r)eboot, (Shift+s)hutdown"
+hl.bind(mod .. "+ Escape", hl.dsp.submap(powerMenu))
 -- hl.bind(mod .. "+ Escape", hl.dsp.exec_cmd("wlogout"))
 
 -- Start a submap called "power menu".
-hl.define_submap("power menu", "reset", function()
+hl.define_submap(powerMenu, "reset", function()
 	hl.bind("l", hl.dsp.exec_cmd(config.lock), { description = "Lock screen" })
 	hl.bind("e", hl.dsp.exit(), { description = "Lock screen" })
 	hl.bind("s", hl.dsp.exec_cmd("systemctl suspend"))
