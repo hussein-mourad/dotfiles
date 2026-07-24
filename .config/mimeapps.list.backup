@@ -37,6 +37,7 @@ text/*=nvim.desktop
 x-scheme-handler/claude-cli=claude-code-url-handler.desktop
 x-scheme-handler/zoommtg=Zoom.desktop
 x-scheme-handler/zoommtg=ZoomLauncher.desktop
+text/plain=nvim.desktop
 
 [Added Associations]
 x-scheme-handler/http=firefox.desktop;zen.desktop;userapp-firefox.desktop;chromium.desktop;zen-browser.desktop;zen-alpha.desktop;zen-beta.desktop;
@@ -70,3 +71,4 @@ image/svg+xml=nsxiv.desktop;
 image/heif=nsxiv.desktop;
 image/webp=nsxiv.desktop;
 text/x-python=nvim.desktop;
+text/plain=nvim.desktop;
