@@ -7,7 +7,7 @@ position = "Top" # "Top" (default) or "Bottom"
 enable_esc_key = true # Pressing Escape closes open menus
 
 [modules]
-left = [["appLauncher", "Workspaces"], "WindowTitle"]
+left = [["appLauncher", "Workspaces"], "WindowTitle", "KeyboardSubmap"]
 # left = ["Workspaces"]
 right = [
   "KeyboardLayout",
