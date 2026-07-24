@@ -132,6 +132,7 @@ clang18 18.1.8-2
 clang19 19.1.7-1
 clang20 20.1.8-1
 clang21 21.1.8-1
+cliphist 1:0.7.0-2
 clipit 1:1.4.5+25+gf35db54-1
 cloc 2.08-1
 clock-tui-bin 0.12.1-1

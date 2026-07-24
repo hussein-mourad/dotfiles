@@ -50,6 +50,7 @@ cbonsai 1.4.2-1
 cdrtools 3.02a09-6
 cheat-bin 4.4.2-1
 chromium 150.0.7871.181-1
+cliphist 1:0.7.0-2
 clipit 1:1.4.5+25+gf35db54-1
 cloc 2.08-1
 clock-tui-bin 0.12.1-1
