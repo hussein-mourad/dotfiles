@@ -215,7 +215,6 @@ dash 0.5.13.4-1
 dav1d 1.5.3-1
 db 6.2.32-4
 db5.3 5.3.28-7
-dbeaver 26.1.0-1
 dbus 1.16.2-1
 dbus-broker 37-3
 dbus-broker-units 37-3
