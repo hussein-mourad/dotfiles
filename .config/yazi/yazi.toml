@@ -1,2 +1,11 @@
 # [mgr]
 # show_hidden = true
+
+## Disable image preview
+[plugin]
+prepend_previewers = [
+  { mime = "image/*", run = "none" },
+  { mime = "image/{avif,hei?,jxl}", run = "none" },
+  { mime = "video/*", run = "none" },
+  { mime = "pdf/*", run = "none" },
+]
