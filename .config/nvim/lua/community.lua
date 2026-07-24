@@ -32,7 +32,7 @@ return {
   { import = "astrocommunity.pack.typescript" },
   { import = "astrocommunity.pack.tailwindcss" },
   { import = "astrocommunity.pack.prettier" },
-  -- { import = "astrocommunity.pack.biome" },
+  { import = "astrocommunity.pack.biome" },
   -- { import = "astrocommunity.pack.php" },
   -- { import = "astrocommunity.pack.blade" },
   -- { import = "astrocommunity.pack.laravel" },
@@ -81,10 +81,10 @@ return {
   -- { import = "astrocommunity.editing-support.nvim-regexplainer" }, -- explain regex
   -- { import = "astrocommunity.editing-support.copilotchat-nvim" }, -- copilot chat
   -- { import = "astrocommunity.editing-support.nvim-devdocs" }, -- devdocs documentation
-  -- { import = "astrocommunity.editing-support.multiple-cursors-nvim" },
+  { import = "astrocommunity.editing-support.multiple-cursors-nvim" },
 
   -- motion
-  -- { import = "astrocommunity.motion.mini-surround" },
+  { import = "astrocommunity.motion.mini-surround" },
   -- { import = "astrocommunity.motion.marks-nvim" },
 
   -- scrolling --
