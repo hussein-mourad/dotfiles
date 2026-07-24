@@ -416,6 +416,7 @@ ttf-droid 20121017-11
 ttf-firacode-nerd 3.4.0-2
 ttf-inconsolata 1:3.000-5
 ttf-indic-otf 0.2-12
+ttf-lato 2.015-5
 ttf-liberation 2.1.5-2
 ttf-linux-libertine 5.3.0-10
 ttf-nerd-fonts-symbols 3.4.0-1
