@@ -240,6 +240,7 @@ f2fs-tools 1.16.0-3
 faac 1.50-1
 faad2 2.11.2-1
 fakeroot 1:1.37.2-2
+fastfetch 2.66.0-1
 fcft 3.3.3-1
 fd 10.4.2-2
 feh 3.12.2-1
@@ -2438,6 +2439,7 @@ yazi 26.5.6-4
 yq 4.1.1-1
 yt-dlp 2026.07.04-1
 yt-dlp-ejs 0.8.0-1
+yyjson 0.12.0-1
 zathura 2026.07.02-1
 zathura-pdf-mupdf 2026.05.10-4
 zbar 0.23.93-6
