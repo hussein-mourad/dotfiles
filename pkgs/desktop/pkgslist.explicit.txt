@@ -396,6 +396,7 @@ telegram-desktop 6.9.3-7
 terminus-font 4.49.1-8
 terraform 1.15.7-1
 texinfo 7.3-1
+texlive-bin 2026.0-2
 the_silver_searcher 2.2.0-4
 thunderbird 152.0-1
 tidy 5.8.0-3
