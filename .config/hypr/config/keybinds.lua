@@ -121,6 +121,14 @@ hl.bind(mod .. " + N", hl.dsp.exec_cmd("swaync-client --toggle-panel --skip-wait
 -- Switch to a submap called `resize`.
 hl.bind(mod .. "+ R", hl.dsp.submap("resize"))
 
+-- Scrolling Layout
+hl.bind(mod .. "+ SHIFT + period", hl.dsp.layout("move +col"))
+hl.bind(mod .. "+ SHIFT + comma", hl.dsp.layout("swapcol l"))
+
+-- Monocle Layout
+hl.bind(mod .. "+ A", hl.dsp.layout("cycleprev"))
+hl.bind(mod .. "+ D", hl.dsp.layout("cyclenext"))
+
 -- Start a submap called "resize".
 hl.define_submap("resize", function()
 	-- Set repeating binds for resizing the active window.
