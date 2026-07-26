@@ -337,6 +337,7 @@ mesa-utils 9.0.0-7
 mhwd 0.6.6-6
 mhwd-db 20260305-1
 minikube 1.38.1-2
+minio-client 2025.08.13-1
 mitmproxy 12.2.3-1
 mkinitcpio-openswap 0.1.1-1
 mobile-broadband-provider-info 20251101-1
