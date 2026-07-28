@@ -136,6 +136,7 @@ cliphist 1:0.7.0-2
 clipit 1:1.4.5+25+gf35db54-1
 cloc 2.08-1
 clock-tui-bin 0.12.1-1
+cloud-image-utils 0.33-3
 clucene 2.3.3.4-17
 clutter 1.26.4-3
 clutter-gtk 1.8.4-4
