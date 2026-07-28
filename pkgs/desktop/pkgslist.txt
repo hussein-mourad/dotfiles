@@ -2165,6 +2165,7 @@ subversion 1.14.5-5
 sudo 1.9.17.p2-6
 suil 0.10.26-1
 suitesparse 7.12.2-2
+superfile 1.6.0-1
 svt-av1 4.1.0-1
 svt-hevc 1.5.1-4
 swayidle 1.9.0-1
