@@ -121,13 +121,38 @@ hl.bind(mod .. " + N", hl.dsp.exec_cmd("swaync-client --toggle-panel --skip-wait
 -- Switch to a submap called `resize`.
 hl.bind(mod .. "+ R", hl.dsp.submap("resize"))
 
--- Scrolling Layout
-hl.bind(mod .. "+ SHIFT + period", hl.dsp.layout("move +col"))
-hl.bind(mod .. "+ SHIFT + comma", hl.dsp.layout("swapcol l"))
+-- -- Scrolling Layout
+-- hl.bind(mod .. "+ SHIFT + period", hl.dsp.layout("move +col"))
+-- hl.bind(mod .. "+ SHIFT + comma", hl.dsp.layout("swapcol l"))
+--
+-- -- Monocle Layout
+-- hl.bind(mod .. "+ A", hl.dsp.layout("cycleprev"))
+-- hl.bind(mod .. "+ D", hl.dsp.layout("cyclenext"))
 
--- Monocle Layout
-hl.bind(mod .. "+ A", hl.dsp.layout("cycleprev"))
-hl.bind(mod .. "+ D", hl.dsp.layout("cyclenext"))
+hl.bind(mod .. "+ A", function()
+	local workspace = hl.get_active_workspace()
+	if hl.get_active_special_workspace() then
+		workspace = hl.get_active_special_workspace()
+	end
+	local layout = workspace.tiled_layout
+	if layout == "scrolling" then
+		hl.dispatch(hl.dsp.layout("move +col"))
+	elseif layout == "monocle" then
+		hl.dispatch(hl.dsp.layout("cycleprev"))
+	end
+end)
+hl.bind(mod .. "+ D", function()
+	local workspace = hl.get_active_workspace()
+	if hl.get_active_special_workspace() then
+		workspace = hl.get_active_special_workspace()
+	end
+	local layout = workspace.tiled_layout
+	if layout == "scrolling" then
+		hl.dispatch(hl.dsp.layout("swapcol l"))
+	elseif layout == "monocle" then
+		hl.dispatch(hl.dsp.layout("cyclenext"))
+	end
+end)
 
 -- Start a submap called "resize".
 hl.define_submap("resize", function()
