@@ -590,7 +590,7 @@ ttf-roboto 3.015-1
 ttf-ubuntu-nerd 3.4.0-2
 typst 1:0.15.0-1
 udiskie 2.6.2-1
-ueberzugpp 2.9.8-4
+ueberzugpp 2.9.10-1
 unarchiver 1.10.8-6
 unrar 1:7.2.7-1
 unzip 6.0-23

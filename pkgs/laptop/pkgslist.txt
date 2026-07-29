@@ -155,7 +155,7 @@ ccache 4.13.6-1
 cdparanoia 10.2-9
 cef 150.0.9-1
 cfitsio 1:4.6.4-1
-chafa 1.18.2-1
+chafa 1.18.2-2
 cheat 4.4.2-3
 chmlib 0.40-10
 chntpw 140201-5
@@ -2768,7 +2768,7 @@ tzdata 2026b-1
 uchardet 0.0.8-4
 udiskie 2.6.2-1
 udisks2 2.11.1-2
-ueberzugpp 2.9.8-4
+ueberzugpp 2.9.10-1
 ufw 0.36.2-7
 unarchiver 1.10.8-6
 unibilium 2.1.2-1
