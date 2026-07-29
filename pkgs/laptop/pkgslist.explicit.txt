@@ -605,6 +605,7 @@ veracrypt 1.26.24-3
 vibrancy-icons-teal 2.7-2
 viewnior 1.8-7
 vim 9.2.0735-1
+vimiv 0.9.1-10
 virt-manager 5.1.0-3
 virt-viewer 11.0-4
 visual-studio-code-bin 1.129.1-1

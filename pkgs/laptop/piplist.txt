@@ -417,6 +417,7 @@ validate                      5.0.9
 validate-pyproject            0.25
 VapourSynth                   77
 vcs-versioning                2.2.2
+vimiv                         0.9.1
 virtualenv                    21.6.0
 vit                           2.3.4
 vobject                       0.9.9
