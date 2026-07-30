@@ -70,3 +70,24 @@ hl.window_rule({
 	match = { class = "tmuxkitty" },
 	workspace = "2",
 })
+
+local ueberzugpp_rule = hl.window_rule({
+	name = "ueberzug-overlay",
+	match = {
+		class = "^ueberzugpp_.*",
+	},
+	float = true,
+	no_anim = true,
+	fullscreen = false,
+	no_initial_focus = true,
+	no_focus = true,
+	opacity = 1.0, -- Full opacity
+	border_size = 0, -- Remove border for cleaner look
+	no_dim = true,
+	keep_aspect_ratio = true,
+	move = {
+		"(monitor_w - window_w - (monitor_w * 0.05))", -- 5% from right edge
+		"(monitor_h * 0.05)", -- 5% from top edge
+	},
+})
+ueberzugpp_rule:set_enabled(true)
