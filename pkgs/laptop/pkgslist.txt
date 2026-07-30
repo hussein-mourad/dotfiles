@@ -828,6 +828,7 @@ imagemagick 7.1.2.26-1
 imake 1.0.11-1
 imath 3.2.2-6
 imlib2 1.12.6-1
+imv 5.0.0-4
 inetutils 2.8-1
 influx-cli 2.7.3-1
 iniparser 4.2.6-2
@@ -1319,6 +1320,8 @@ libnma 1.10.6-3
 libnma-common 1.10.6-3
 libnma-gtk4 1.10.6-3
 libnotify 0.8.8-1
+libnsbmp 0.1.7-2
+libnsgif 1.0.0-2
 libnsl 2.0.1-2
 libnss_nis 3.4-1
 libntfs-3g 2026.2.25-1
@@ -2418,6 +2421,7 @@ qemu-vhost-user-gpu 11.0.2-2
 qemu-vmsr-helper 11.0.2-2
 qhexedit2 0.8.9-2
 qhull 2020.2-5
+qoi r350.4461cc3-1
 qpdf 12.3.2-2
 qqc2-desktop-style 6.27.0-1
 qrcodegencpp-cmake 1.8.0-4
@@ -2658,6 +2662,7 @@ suitesparse 7.12.2-2
 supermin 5.3.5-2
 svt-av1 4.1.0-1
 svt-hevc 1.5.1-4
+swayimg 5.3-1
 swaync 0.12.6-1
 swtpm 0.10.1-2
 sxiv 26-2
