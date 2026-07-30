@@ -148,6 +148,7 @@ fish 4.8.0-1
 flac 1.5.0-1
 flameshot 14.0.0-1
 flex 2.6.4-6
+foot 1.27.0-2
 fpp 0.9.5-1
 freeze-bin 0.2.0-1
 fritzing 1.0.4-2
@@ -564,7 +565,7 @@ timew 1.9.1-1
 tiv 2015-4
 tk 8.6.16-1
 tlrc-bin 1.13.1-1
-tmux 3.7_b-1
+tmux 3.6_b-2
 tmuxinator 3.4.1-1
 todoman 4.7.0-1
 traceroute 2.1.6-1
@@ -591,6 +592,7 @@ ttf-roboto 3.015-1
 ttf-ubuntu-nerd 3.4.0-2
 typst 1:0.15.0-1
 udiskie 2.6.2-1
+ueberzugpp 2.9.10-1
 unarchiver 1.10.8-6
 unrar 1:7.2.7-1
 unzip 6.0-23

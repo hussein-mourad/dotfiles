@@ -155,7 +155,7 @@ ccache 4.13.6-1
 cdparanoia 10.2-9
 cef 150.0.9-1
 cfitsio 1:4.6.4-1
-chafa 1.18.2-2
+chafa 1.18.2-1
 cheat 4.4.2-3
 chmlib 0.40-10
 chntpw 140201-5
@@ -322,6 +322,7 @@ faad2 2.11.2-1
 fakeroot 1:1.37.2-2
 fastfetch 2.65.2-1
 fatsort 2:1.7.1.683-1
+fcft 3.3.3-1
 fd 10.4.2-2
 fdupes 1:2.4.0-2
 feh 3.12.2-1
@@ -350,6 +351,7 @@ foomatic-db-gutenprint-ppds 5.3.5-1
 foomatic-db-nonfree 3:20260209-1
 foomatic-db-nonfree-ppds 3:20260209-1
 foomatic-db-ppds 3:20260209-1
+foot 1.27.0-2
 fpp 0.9.5-1
 freeglut 3.8.0-1
 freetype2 2.14.3-1
@@ -2717,7 +2719,7 @@ tinyxml2 11.0.0-2
 tiv 2015-4
 tk 8.6.16-1
 tlrc-bin 1.13.1-1
-tmux 3.7_b-1
+tmux 3.6_b-2
 tmuxinator 3.4.1-1
 todoman 4.7.0-1
 tomlplusplus 3.4.0-2
@@ -2769,6 +2771,7 @@ tzdata 2026b-1
 uchardet 0.0.8-4
 udiskie 2.6.2-1
 udisks2 2.11.1-2
+ueberzugpp 2.9.10-1
 ufw 0.36.2-7
 unarchiver 1.10.8-6
 unibilium 2.1.2-1
