@@ -65,3 +65,8 @@ hl.window_rule({
 	match = { title = ".*mtmux.*" },
 	workspace = "2",
 })
+
+hl.window_rule({
+	match = { class = "tmuxkitty" },
+	workspace = "2",
+})
