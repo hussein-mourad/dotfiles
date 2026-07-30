@@ -2,10 +2,16 @@
 # show_hidden = true
 
 ## Disable image preview
-[plugin]
-prepend_previewers = [
-  { mime = "image/*", run = "none" },
-  { mime = "image/{avif,hei?,jxl}", run = "none" },
-  { mime = "video/*", run = "none" },
-  { mime = "application/pdf", run = "none" },
-]
+# [plugin]
+# prepend_previewers = [
+#   { mime = "image/*", run = "none" },
+#   { mime = "image/{avif,hei?,jxl}", run = "none" },
+#   { mime = "video/*", run = "none" },
+#   { mime = "application/pdf", run = "none" },
+# ]
+# [preview]
+# image_driver = "ueberzug"
+#
+# [preview.ueberzug]
+# # Override the default command to use sixel instead of wayland
+# command = "ueberzugpp layer -so sixel"
