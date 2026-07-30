@@ -4,8 +4,18 @@
 
 # Hide graphical session information
 unset WAYLAND_DISPLAY
-# unset DISPLAY
-export XDG_SESSION_TYPE=dumb
+unset DISPLAY
+unset XDG_SESSION_TYPE
+unset XDG_SESSION_DESKTOP
+unset XDG_CURRENT_DESKTOP
+unset HYPRLAND_INSTANCE_SIGNATURE
+unset TERM
+unset TERM_PROGRAM
+unset TERM_PROGRAM_VERSION
+
+# export TERM=foot
+# export TERM_PROGRAM=foot
+# export XDG_SESSION_TYPE=dumb
 
 yy() {
   local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
@@ -15,5 +25,4 @@ yy() {
   fi
   rm -vi --preserve-root -f -- "$tmp"
 }
-
 yy "$@"
