@@ -302,6 +302,7 @@ logrotate 3.22.0-1
 lolcat 100.0.1-5
 lsd 1.2.0-2
 lshw B.02.20-3
+lsix 1.9.1-1
 lua51 5.1.5-13
 luarocks 3.13.0-5
 lvm2 2.03.41-1
@@ -590,7 +591,6 @@ ttf-roboto 3.015-1
 ttf-ubuntu-nerd 3.4.0-2
 typst 1:0.15.0-1
 udiskie 2.6.2-1
-ueberzugpp 2.9.10-1
 unarchiver 1.10.8-6
 unrar 1:7.2.7-1
 unzip 6.0-23
@@ -679,6 +679,7 @@ zathura 2026.07.02-1
 zathura-pdf-mupdf 2026.05.10-4
 zeal 0.8.1-1
 zed 1.10.0-1
+zellij 0.44.3-1
 zen-browser-bin 1.21.8b-1
 zensu 0.3-7
 zip 3.0-13

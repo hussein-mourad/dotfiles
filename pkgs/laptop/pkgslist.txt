@@ -1563,6 +1563,7 @@ lrzip 0.660-1
 lsb-release 2.0.r55.a25a4fc-1
 lsd 1.2.0-2
 lshw B.02.20-3
+lsix 1.9.1-1
 lsof 4.99.7-1
 lsscsi 0.32-2
 lua 5.5.0-2
@@ -2768,7 +2769,6 @@ tzdata 2026b-1
 uchardet 0.0.8-4
 udiskie 2.6.2-1
 udisks2 2.11.1-2
-ueberzugpp 2.9.10-1
 ufw 0.36.2-7
 unarchiver 1.10.8-6
 unibilium 2.1.2-1
@@ -2989,6 +2989,7 @@ zathura-pdf-mupdf 2026.05.10-4
 zbar 0.23.93-6
 zeal 0.8.1-1
 zed 1.10.0-1
+zellij 0.44.3-1
 zen-browser-bin 1.21.8b-1
 zenity 4.2.2-1
 zensu 0.3-7
