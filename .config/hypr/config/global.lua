@@ -4,7 +4,7 @@ return {
 	fileManager = "GDK_BACKEND=x11 pcmanfm",
 	menu = "rofi -show combi",
 	browser = "firefox",
-	lock = "hyprlock --quiet",
+	lock = "hyprlock --quiet --immediate-render",
 	passwordManager = "bitwarden-desktop",
 	clipboardHistory = "cliphist list | rofi -dmenu -display-columns 2 | cliphist decode | wl-copy",
 	audioGUI = "pavucontrol",
