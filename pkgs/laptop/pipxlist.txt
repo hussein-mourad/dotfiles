@@ -1,5 +1,6 @@
 aws-shell 0.2.2
 harlequin 2.5.2
+litellm 1.94.1
 mutagen 1.48.1
 organize-tool 3.3.0
 poetry 2.3.4
