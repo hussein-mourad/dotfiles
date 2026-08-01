@@ -121,6 +121,7 @@ earlyoom 1.9.0-1
 ecryptfs-utils 111-9
 efibootmgr 18-4
 electron32-bin 32.3.3-2
+emacs 30.2-3
 endeavour 43.0-8
 ente-auth-bin 4.4.22-1
 entr 5.8-1
@@ -155,7 +156,7 @@ fritzing 1.0.4-2
 fx 39.2.0-1
 galculator 2.1.4-10
 gcalcli 4.5.1-1
-gcc 16.1.1+r346+g4e03491b401d-1
+gcc 16.1.1+r346+g4e03491b401d-4
 gcolor3 2.4.0-9
 gdu 5.36.1-1
 geary 1:46.0-8
