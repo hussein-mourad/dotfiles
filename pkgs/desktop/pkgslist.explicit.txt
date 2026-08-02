@@ -47,6 +47,7 @@ bzip2 1.0.8-6
 calc 2.17.0.0-1
 cantarell-fonts 1:0.311-1
 cbonsai 1.4.2-1
+ccmux-bin 1.2.2-1
 cdrtools 3.02a09-6
 cheat-bin 4.4.2-1
 chromium 150.0.7871.181-1

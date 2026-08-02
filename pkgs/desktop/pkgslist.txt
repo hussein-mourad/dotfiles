@@ -118,6 +118,7 @@ capstone 5.0.9-1
 cblas 3.12.1-2
 cbonsai 1.4.2-1
 ccache 4.13.6-1
+ccmux-bin 1.2.2-1
 cdparanoia 10.2-9
 cdrtools 3.02a09-6
 cfitsio 1:4.6.4-1
