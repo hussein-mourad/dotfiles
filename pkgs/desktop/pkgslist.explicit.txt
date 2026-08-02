@@ -372,6 +372,7 @@ sddm-breath-theme 24.0.0-6
 sesh-bin 2.27.0-1
 simple-scan 50.0-1
 simplescreenrecorder 0.4.4-3
+sl 5.05-5
 slurp 1.5.0-2
 smartmontools 7.5-1
 snapd 2.76-1
