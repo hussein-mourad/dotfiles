@@ -288,6 +288,7 @@ pyicu                         2.16.2
 pyinotify                     0.9.6
 pykakasi                      2.3.1.dev0
 pylsqpack                     0.3.18
+pynput                        1.8.2
 pyOpenSSL                     26.3.0
 pyparsing                     3.3.2
 pyperclip                     1.11.0

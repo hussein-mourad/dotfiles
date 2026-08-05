@@ -2210,6 +2210,7 @@ python-pyicu 2.16.2-1
 python-pyinotify 0.9.6-16
 python-pykakasi 2.3.0-3
 python-pylsqpack 0.3.18-4
+python-pynput 1.8.2-1
 python-pyopenssl 26.3.0-1
 python-pyparsing 3.3.2-1
 python-pyperclip 1.11.0-2
