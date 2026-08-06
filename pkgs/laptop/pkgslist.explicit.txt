@@ -680,6 +680,7 @@ xterm 410-1
 yad 15.0-1
 yay 13.0.1-1
 yazi 26.5.6-4
+ydotool 1.0.4-2
 yt-dlp 2026.07.04-1
 ytfzf 2.6.2-2
 zaread-git r120.c2d45e1-1
