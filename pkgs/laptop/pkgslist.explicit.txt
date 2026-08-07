@@ -387,6 +387,7 @@ nfs-utils 2.9.1-1
 ngrep 1.49.0-1
 ngrok 3.22.0-1
 nitrogen 1.6.1-6
+nix 2.35.1-3
 nmap 7.99-2
 nnn 5.2-1
 noto-fonts-emoji 1:2.051-1
