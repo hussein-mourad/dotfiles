@@ -651,6 +651,7 @@ xclip 0.13-6
 xcursor-maia 20160417-3
 xdg-desktop-portal-gtk 1.15.3-1
 xdg-desktop-portal-hyprland 1.3.12-2
+xdg-desktop-portal-wlr 0.8.2-1
 xdg-user-dirs 0.20-1
 xdg-utils 1.2.1-2
 xdotool 4.20260303.1-1
