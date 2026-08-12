@@ -863,7 +863,6 @@ java-runtime-common 3-6
 jbig2dec 0.20-2
 jbigkit 2.1-8
 jdk-openjdk 26.0.1.u8-1
-jdk17-openjdk 17.0.19.u10-1
 jellyfin-desktop-git 1:0.r617.43b8fe4-1
 jellyfin-desktop-libmpv-git 1:0.r55016.6242788-3
 jellyfin-mpv-shim 2.10.0-2
