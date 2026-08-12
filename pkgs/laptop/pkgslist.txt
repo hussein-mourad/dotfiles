@@ -771,6 +771,7 @@ haskell-zip-archive 0.4.3.2-149
 haskell-zlib 0.7.1.0-22
 haveged 1.9.26-1
 hdf5 2.1.1-1
+hdparm 9.65-3
 hicolor-icon-theme 0.18-1
 hidapi 0.15.0-1
 highway 1.4.0-1
@@ -997,6 +998,7 @@ kyotocabinet 1.2.80-2
 l-smash 2.14.5-4
 lame 3.101.r6531-2
 lapack 3.12.1-2
+laptop-mode-tools 1.74-1
 layer-shell-qt 6.7.3-1
 lazydocker-bin 0.25.2-1
 lazygit 0.64.0-1
@@ -2599,6 +2601,7 @@ sddm 0.21.0-7
 sdl2-compat 2.32.70-1
 sdl2_image 2.8.12-1
 sdl3 3.4.12-1
+sdparm 1.12-1
 seabios 1.17.0-2
 seatd 0.9.3-1
 sed 4.10-1
