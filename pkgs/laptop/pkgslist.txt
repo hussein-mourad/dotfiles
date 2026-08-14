@@ -772,6 +772,7 @@ haskell-zlib 0.7.1.0-22
 haveged 1.9.26-1
 hdf5 2.1.1-1
 hdparm 9.65-3
+helm 4.2.2-1
 hicolor-icon-theme 0.18-1
 hidapi 0.15.0-1
 highway 1.4.0-1
@@ -864,8 +865,6 @@ java-runtime-common 3-6
 jbig2dec 0.20-2
 jbigkit 2.1-8
 jdk-openjdk 26.0.1.u8-1
-jellyfin-desktop-git 1:0.r617.43b8fe4-1
-jellyfin-desktop-libmpv-git 1:0.r55016.6242788-3
 jellyfin-mpv-shim 2.10.0-2
 jellyfin-tui 1.4.2-1
 jemalloc 1:5.3.1-2
@@ -983,7 +982,9 @@ ktexttemplate 6.27.0-1
 ktextwidgets 6.27.0-1
 ktextwidgets5 5.116.0-2
 kubectl 1.36.2-1
+kubectx 0.11.0-1
 kuserfeedback 6.27.0-1
+kustomize 5.8.1-1
 kvantum 1.1.8-1
 kvantum-manjaro 0.13.5+5+g0179d45-4
 kvantum-qt5 1.1.8-1
