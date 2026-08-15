@@ -430,6 +430,7 @@ pcmanfm 1.4.0-2
 pcmanfm-qt 2.4.0-1
 pdfpc 4.7.0-2
 pdftk 3.3.3-4
+peek 1.5.1-4
 perl 5.42.2-1
 perl-anyevent-i3 0.19-3
 perl-file-mimeinfo 0.37-1
