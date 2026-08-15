@@ -2278,7 +2278,7 @@ virt-install 5.1.0-3
 virt-manager 5.1.0-3
 virt-viewer 11.0-4
 virtiofsd 1.14.0-1
-visual-studio-code-bin 1.129.1-1
+visual-studio-code-bin 1.133.0-1
 vlc 3.0.23_2-9
 vlc-cli 3.0.23_2-9
 vlc-gui-qt 3.0.23_2-9
@@ -2446,7 +2446,7 @@ zathura-pdf-mupdf 2026.05.10-4
 zbar 0.23.93-6
 zed 1.10.0-1
 zellij 0.44.3-1
-zen-browser-bin 1.21.8b-1
+zen-browser-bin 1.21.14b-1
 zenity 4.2.2-1
 zennotes-bin 2.20.2-1
 zensu 0.3-7

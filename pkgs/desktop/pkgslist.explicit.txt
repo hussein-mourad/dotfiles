@@ -441,7 +441,7 @@ viewnior 1.8-7
 vim 9.2.0735-1
 virt-manager 5.1.0-3
 virt-viewer 11.0-4
-visual-studio-code-bin 1.129.1-1
+visual-studio-code-bin 1.133.0-1
 vlc 3.0.23_2-9
 vnstat 2.13-2
 volumeicon 0.5.1-8
@@ -505,7 +505,7 @@ zathura 2026.07.02-1
 zathura-pdf-mupdf 2026.05.10-4
 zed 1.10.0-1
 zellij 0.44.3-1
-zen-browser-bin 1.21.8b-1
+zen-browser-bin 1.21.14b-1
 zennotes-bin 2.20.2-1
 zensu 0.3-7
 zoxide 0.10.0-1
