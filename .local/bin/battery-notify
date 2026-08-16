@@ -1,0 +1,220 @@
+#!/usr/bin/env bash
+
+# =============================================================================
+# Battery Monitor for Hyprland
+# =============================================================================
+# Description: Monitors battery level and provides notifications/sleep actions
+# Features:
+#   - Single notification at 20% (Low)
+#   - Single notification at 5% (Critical)
+#   - Auto-sleep at 2% (Emergency)
+#   - Automatic battery detection
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# CONFIGURATION
+# -----------------------------------------------------------------------------
+# Battery thresholds
+LOW_BAT=20     # First warning level
+CRITICAL_BAT=5 # Second warning level
+SLEEP_BAT=2    # Emergency sleep level
+
+# Check interval in seconds (lower = more responsive, higher = less CPU)
+CHECK_INTERVAL=10
+
+# Notification sounds (freedesktop theme .oga events, played via pw-play/paplay)
+SOUND_DIR="/usr/share/sounds/freedesktop/stereo"
+LOW_SOUND="message-new-instant" # alternatives: dialog-warning, power-unplug, complete
+CRITICAL_SOUND="dialog-error"   # alternatives: power-plug, suspend-error
+SLEEP_SOUND="suspend-error"     # alternatives: dialog-error
+
+# Note: canberra-gtk-play respects GNOME's event-sounds setting and returns
+# "Failed to play sound: Sound disabled" when it's off (common on Hyprland).
+# To enable it, run:  gsettings set org.gnome.desktop.sound event-sounds true
+# This script avoids the issue by playing .oga files directly via pw-play.
+
+# -----------------------------------------------------------------------------
+# BATTERY DETECTION
+# -----------------------------------------------------------------------------
+
+# Find the battery device automatically
+detect_battery() {
+  local battery_path=""
+
+  # Look for any BAT* or BATT* directories
+  for device in /sys/class/power_supply/BAT* /sys/class/power_supply/BATT*; do
+    if [ -d "$device" ] && [ -f "${device}/capacity" ] && [ -f "${device}/status" ]; then
+      battery_path="$device"
+      break
+    fi
+  done
+
+  echo "$battery_path"
+}
+
+# Get the battery path
+BATTERY_PATH=$(detect_battery)
+
+# Check if battery was found
+if [ -z "$BATTERY_PATH" ]; then
+  echo "ERROR: No battery found in /sys/class/power_supply/"
+  echo "Available devices:"
+  ls -la /sys/class/power_supply/
+  exit 1
+fi
+
+CAPACITY_FILE="${BATTERY_PATH}/capacity"
+STATUS_FILE="${BATTERY_PATH}/status"
+
+# -----------------------------------------------------------------------------
+# STATE TRACKING
+# -----------------------------------------------------------------------------
+# Flags to ensure each notification is sent only once per discharge cycle
+low_notified=0      # 0 = not yet notified, 1 = already notified
+critical_notified=0 # 0 = not yet notified, 1 = already notified
+
+# -----------------------------------------------------------------------------
+# HELPER FUNCTIONS
+# -----------------------------------------------------------------------------
+
+# Get current battery percentage
+get_battery_percentage() {
+  local capacity
+  capacity=$(cat "$CAPACITY_FILE" 2>/dev/null)
+
+  if [ -z "$capacity" ]; then
+    echo "ERROR"
+  else
+    echo "$capacity"
+  fi
+}
+
+# Get current battery status (Charging/Discharging/Full/Unknown)
+get_battery_status() {
+  local status
+  status=$(cat "$STATUS_FILE" 2>/dev/null)
+
+  if [ -z "$status" ]; then
+    echo "ERROR"
+  else
+    echo "$status"
+  fi
+}
+
+# Play a sound for the given notification urgency
+play_sound() {
+  local urgency="$1"
+  local event
+
+  case "$urgency" in
+  critical) event="$CRITICAL_SOUND" ;;
+  sleep) event="$SLEEP_SOUND" ;;
+  low | normal) event="$LOW_SOUND" ;;
+  *) event="$LOW_SOUND" ;;
+  esac
+
+  local file="${SOUND_DIR}/${event}.oga"
+  [ -f "$file" ] || return 1
+
+  # if command -v canberra-gtk-play >/dev/null 2>&1; then
+  #   canberra-gtk-play -i "$event" >/dev/null 2>&1
+  if command -v pw-play >/dev/null 2>&1; then
+    pw-play "$file" >/dev/null 2>&1
+  elif command -v paplay >/dev/null 2>&1; then
+    paplay "$file" >/dev/null 2>&1
+  fi
+}
+
+# Send a desktop notification
+send_notification() {
+  local urgency="$1" # low, normal, critical
+  local title="$2"
+  local message="$3"
+
+  notify-send -u "$urgency" "$title" "$message"
+  play_sound "$urgency"
+}
+
+# Sleep the system
+sleep_system() {
+  systemctl suspend
+}
+
+# Reset notification flags (called when charging is detected)
+reset_notification_flags() {
+  low_notified=0
+  critical_notified=0
+}
+
+# -----------------------------------------------------------------------------
+# STARTUP MESSAGE
+# -----------------------------------------------------------------------------
+
+echo "🔋 Battery Monitor Started"
+echo "   Battery detected: $BATTERY_PATH"
+echo "   Low threshold: ${LOW_BAT}%"
+echo "   Critical threshold: ${CRITICAL_BAT}%"
+echo "   Sleep threshold: ${SLEEP_BAT}%"
+echo "   Check interval: ${CHECK_INTERVAL}s"
+echo "─────────────────────────────────"
+
+# -----------------------------------------------------------------------------
+# MAIN MONITORING LOGIC
+# -----------------------------------------------------------------------------
+
+# Main loop - runs indefinitely
+while true; do
+  # Read current battery state
+  current_battery=$(get_battery_percentage)
+  current_status=$(get_battery_status)
+
+  # Skip iteration if battery info couldn't be read
+  if [ "$current_battery" = "ERROR" ] || [ "$current_status" = "ERROR" ]; then
+    sleep "$CHECK_INTERVAL"
+    continue
+  fi
+
+  # =========================================================================
+  # CASE 1: Battery is discharging
+  # =========================================================================
+  if [ "$current_status" = "Discharging" ]; then
+
+    # ----- Emergency: Sleep at very low battery -----
+    if [ "$current_battery" -le "$SLEEP_BAT" ]; then
+      send_notification "critical" \
+        "⚠️ Battery Critical" \
+        "Battery at ${current_battery}%. System will sleep NOW to prevent data loss!"
+
+      play_sound "sleep"
+
+      sleep_system
+      break # Exit script after sleeping
+
+    # ----- Critical notification at 5% (only once) -----
+    elif [ "$current_battery" -le "$CRITICAL_BAT" ] && [ "$critical_notified" -eq 0 ]; then
+      send_notification "critical" \
+        "🔴 Battery Very Low" \
+        "Battery is at ${current_battery}%. Please connect charger immediately!"
+
+      critical_notified=1
+
+    # ----- Low notification at 20% (only once) -----
+    elif [ "$current_battery" -le "$LOW_BAT" ] && [ "$low_notified" -eq 0 ]; then
+      send_notification "normal" \
+        "🟡 Battery Low" \
+        "Battery is at ${current_battery}%. Please connect a charger soon."
+
+      low_notified=1
+    fi
+
+  # =========================================================================
+  # CASE 2: Battery is charging (or full)
+  # =========================================================================
+  else
+    # Reset notification flags so they fire again on next discharge cycle
+    reset_notification_flags
+  fi
+
+  # Wait before checking again
+  sleep "$CHECK_INTERVAL"
+done
