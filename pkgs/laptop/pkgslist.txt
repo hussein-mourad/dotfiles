@@ -2814,6 +2814,7 @@ uwsm 0.26.6-1
 v2ray 5.49.0-1
 v2ray-domain-list-community 20260730073441-1
 v2ray-geoip 202607171233-1
+v2raya-bin 2.2.7.5-1
 v4l-utils 1.32.0-2
 v86d 0.1.10-13
 vagrant 2.4.9-1

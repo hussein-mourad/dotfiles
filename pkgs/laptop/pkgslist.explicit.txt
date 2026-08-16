@@ -608,6 +608,7 @@ urxvt-resize-font-git 27.b593580-1
 usbutils 019-1
 uwsm 0.26.6-1
 v2ray 5.49.0-1
+v2raya-bin 2.2.7.5-1
 vagrant 2.4.9-1
 vault 2.0.4-1
 veracrypt 1.26.24-3
