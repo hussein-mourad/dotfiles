@@ -395,6 +395,7 @@ ntfs-3g 2026.7.7-1
 ntopng 6.2-1
 ntp 4.2.8.p18-6
 numlockx 1.2-6
+nvidia-container-toolkit 1.19.1-1
 nvidia-prime 1.0-6
 nvidia-settings 610.57.04-1
 nvidia-utils 610.57.04-1
@@ -606,6 +607,7 @@ urlview 1.d-1
 urxvt-resize-font-git 27.b593580-1
 usbutils 019-1
 uwsm 0.26.6-1
+v2ray 5.49.0-1
 vagrant 2.4.9-1
 vault 2.0.4-1
 veracrypt 1.26.24-3

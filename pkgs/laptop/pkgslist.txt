@@ -1334,6 +1334,7 @@ libnsl 2.0.1-2
 libnss_nis 3.4-1
 libntfs-3g 2026.7.7-1
 libnumbertext 1.0.11-3
+libnvidia-container 1.19.1-1
 libnvme 1.16.2-2
 libobjc 16.1.1+r595+g171d15ac6959-1
 libodfgen 0.1.8-5
@@ -1750,6 +1751,7 @@ ntopng 6.2-1
 ntp 4.2.8.p18-6
 numactl 2.0.19-1
 numlockx 1.2-6
+nvidia-container-toolkit 1.19.1-1
 nvidia-driver-assistant 0.23.48.01-7
 nvidia-prime 1.0-6
 nvidia-settings 610.57.04-1
@@ -2809,6 +2811,9 @@ uthash 2.3.0-3
 util-linux 2.42.2-1
 util-linux-libs 2.42.2-1
 uwsm 0.26.6-1
+v2ray 5.49.0-1
+v2ray-domain-list-community 20260730073441-1
+v2ray-geoip 202607171233-1
 v4l-utils 1.32.0-2
 v86d 0.1.10-13
 vagrant 2.4.9-1
