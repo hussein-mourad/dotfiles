@@ -790,6 +790,7 @@ hwdata 0.410-1
 hwinfo 25.5-1
 hwloc 2.14.0-1
 hyphen 2.8.9-1
+hypnotix 5.6-2
 hyprcursor 0.1.13-7
 hyprgraphics 0.5.1-4
 hypridle 0.1.8-1
@@ -1733,6 +1734,7 @@ nlohmann-json 3.12.0-2
 nm-connection-editor 1.36.0-2
 nmap 7.99-3
 nnn 5.2-1
+noctalia-git 5.0.0.r5273.ged64dbc39-1
 node-gyp 13.0.1-1
 nodejs 26.7.0-1
 nodejs-nopt 10.0.1-1
@@ -2314,6 +2316,7 @@ python-typogrify 2.1.0-2
 python-tzdata 2026.3-1
 python-tzlocal 1:5.4.4-1
 python-uc-micro-py 2.0.0-1
+python-unidecode 1.4.0-3
 python-unrardll 0.1.7-5
 python-uritemplate 4.2.0-2
 python-urllib3 2.7.0-1
@@ -2578,6 +2581,7 @@ safeeyes 2.2.3-1
 samba 2:4.24.5-1
 sane 1.4.0-4
 sane-airscan 0.99.38-1
+satty 0.21.1-1
 sbc 2.2-1
 sbxkb 0.7.6-7
 scdoc 1.11.5-1
@@ -2663,6 +2667,7 @@ sshs 4.7.2-1
 sssd 2.13.1-1
 starship 1.26.0-1
 startup-notification 0.12-9
+stb 20260415.205329.g31c1ad374564-1
 stfl 0.24-6
 stoken 0.92-6
 stow 2.4.1-1
@@ -2676,6 +2681,7 @@ suitesparse 7.12.3-1
 supermin 5.3.5-2
 svt-av1 4.2.0-1
 svt-hevc 1.5.1-4
+swappy 1.8.0-1
 swayimg 5.5-1
 swaync 0.12.6-1
 swtpm 0.10.1-2

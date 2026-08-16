@@ -216,6 +216,7 @@ htop 3.5.2-1
 httpie 3.2.4-2
 hub 2.14.2-4
 hugo 0.164.0-1
+hypnotix 5.6-2
 hypridle 0.1.8-1
 hyprland 0.56.2-1
 hyprlock 0.9.6-2
@@ -388,6 +389,7 @@ nitrogen 1.6.1-6
 nix 2.35.1-3
 nmap 7.99-3
 nnn 5.2-1
+noctalia-git 5.0.0.r5273.ged64dbc39-1
 noto-fonts-emoji 1:2.051-1
 nss-mdns 0.15.1-2
 nsxiv 34-1
@@ -503,6 +505,7 @@ sad 0.4.32-3
 safeeyes 2.2.3-1
 samba 2:4.24.5-1
 sane-airscan 0.99.38-1
+satty 0.21.1-1
 sbxkb 0.7.6-7
 scrcpy 4.1-2
 screen 5.0.2-2
@@ -535,6 +538,7 @@ stow 2.4.1-1
 sublime-text-4 4.4200-1
 subversion 1.14.5-5
 sudo 1.9.17.p2-6
+swappy 1.8.0-1
 swayimg 5.5-1
 swaync 0.12.6-1
 swtpm 0.10.1-2
