@@ -1,5 +1,12 @@
 #!/bin/bash
 
+set -euo pipefail
+
+usage() {
+	echo "Usage: $(basename "$0") <video_url> [youtube_directory]"
+	exit 1
+}
+
 select_quality() {
 	# Menu for selecting video quality
 	echo "Select video quality:"
@@ -57,7 +64,7 @@ select_subtitles() {
 			echo "Skipping invalid selection: $index"
 			echo "Defaulting to English"
 			valid_items+=("en")
-			break
+			continue
 		fi
 	done
 	SUB_LANG=$(
@@ -79,27 +86,21 @@ display_time() {
 	((S >= 0)) && printf '%d seconds\n' $S
 }
 
-# Check if yt-dlp is installed
-if ! command -v yt-dlp &>/dev/null; then
-	echo "yt-dlp could not be found. Please install it first."
-	exit
-fi
+# Check if commannd is installed
+check_cmd() {
+	local cmd=$1
+	if ! command -v "$cmd" &>/dev/null; then
+		echo "$cmd could not be found. Please install it first."
+		exit 1
+	fi
+}
 
-# Check if jq is installed
-if ! command -v jq &>/dev/null; then
-	echo "jq could not be found. Please install it first."
-	exit 1
-fi
-
-# Check if xdg-user-dir is installed
-if ! command -v xdg-user-dir &>/dev/null; then
-	echo "xdg-user-dir could not be found. Please install xdg-utils"
-	exit 1
-fi
+check_cmd "yt-dlp"
+check_cmd "jq"
+check_cmd "xdg-user-dir"
 
 if [ $# -lt 1 ]; then
-	echo "Usage: $(basename "$0") <video_url> [youtube_directory]"
-	exit 1
+	usage
 fi
 
 INPUT_URL="$1"
