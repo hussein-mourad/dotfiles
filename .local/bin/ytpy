@@ -1,0 +1,215 @@
+#!/usr/bin/env python3
+
+import json
+import os
+import re
+import shutil
+import subprocess
+import sys
+import tempfile
+import time
+
+
+def select_quality():
+    options = ["1080p", "720p", "480p", "360p", "240p", "144p", "Exit"]
+    while True:
+        print("Select video quality:")
+        for i, opt in enumerate(options, 1):
+            print(f"{i:2d}) {opt}")
+        try:
+            choice = int(input("Enter choice: "))
+            picked = options[choice - 1]
+        except (ValueError, IndexError):
+            print("invalid option")
+            continue
+        match picked:
+            case "1080p":
+                fmt = "bestvideo[height<=1080]+bestaudio/best"
+            case "720p":
+                fmt = "bestvideo[height<=720]+bestaudio/best"
+            case "480p":
+                fmt = "bestvideo[height<=480]+bestaudio/best"
+            case "360p":
+                fmt = "bestvideo[height<=360]+bestaudio/best"
+            case "240p":
+                fmt = "bestvideo[height<=240]+bestaudio/best"
+            case "144p":
+                fmt = "bestvideo[height<=144]+bestaudio/best"
+            case "Exit":
+                sys.exit(0)
+            case _:
+                print("invalid option")
+                continue
+        return fmt
+
+
+def select_subtitles():
+    options = ["en", "ar"]
+
+    print("Select subtitles:")
+    for i, opt in enumerate(options, 1):
+        print(f"{i:2d}) {opt}")
+
+    selected = input("Select multiple (e.g. 1 2): ").split()
+
+    valid_items = []
+    for idx in selected:
+        if idx.isdigit() and 1 <= int(idx) <= len(options):
+            valid_items.append(options[int(idx) - 1])
+        else:
+            print(f"Skipping invalid selection: {idx}")
+            print("Defaulting to English")
+            valid_items.append("en")
+            continue
+
+    return ",".join(valid_items)
+
+
+def display_time(seconds):
+    d = seconds // 86400
+    h = seconds // 3600 % 24
+    m = seconds // 60 % 60
+    s = seconds % 60
+
+    parts = []
+    if d > 0:
+        parts.append(f"{d} days")
+    if h > 0:
+        parts.append(f"{h} hours")
+    if m > 0:
+        parts.append(f"{m} minutes")
+    if s > 0:
+        parts.append(f"{s} seconds")
+    if not parts:
+        parts.append("0 seconds")
+    print(" ".join(parts))
+
+
+def check_dep(name, hint=None):
+    if shutil.which(name) is None:
+        msg = f"{name} could not be found. Please install it first."
+        if hint:
+            msg += f" ({hint})"
+        print(msg, file=sys.stderr)
+        sys.exit(1)
+
+
+def main():
+    check_dep("yt-dlp")
+
+    if len(sys.argv) < 2:
+        print(f"Usage: {os.path.basename(sys.argv[0])} <video_url> [youtube_directory]")
+        sys.exit(1)
+
+    input_url = sys.argv[1]
+
+    home_videos = os.path.expanduser("~/videos")
+    if os.path.isdir(home_videos):
+        default_youtube_dir = os.path.join(home_videos, "youtube")
+    else:
+        check_dep("xdg-user-dir", "xdg-utils")
+        default_youtube_dir = subprocess.check_output(
+            ["xdg-user-dir", "VIDEOS"], text=True
+        ).strip() + "/youtube"
+
+    youtube_dir = sys.argv[2] if len(sys.argv) > 2 else default_youtube_dir
+
+    log_dir = tempfile.mkdtemp()
+    log_file = os.path.join(log_dir, "output.log")
+
+    os.makedirs(youtube_dir, exist_ok=True)
+
+    fmt = select_quality()
+    print()
+    sub_lang = select_subtitles()
+
+    if "list=" in input_url:
+        channel_dir = f"{youtube_dir}/%(playlist_uploader)s"
+        output_dir = f"{channel_dir}/%(playlist_title)s"
+        filename = "%(playlist_index&{}-|)s%(title)s.%(ext)s"
+
+        metadata = subprocess.check_output(
+            ["yt-dlp", "--dump-json", "--flat-playlist", input_url], text=True
+        )
+        lines = metadata.strip().splitlines()
+        playlist_uploader = json.loads(lines[0]).get("playlist_uploader")
+        playlist_title = json.loads(lines[0]).get("playlist_title")
+        actual_output_dir = f"{youtube_dir}/{playlist_uploader}/{playlist_title}"
+
+        archive_file = os.path.join(actual_output_dir, "archive.log")
+    else:
+        channel_dir = f"{youtube_dir}/%(uploader)s"
+        output_dir = f"{channel_dir}/%(title)s"
+        filename = "%(title)s.%(ext)s"
+        archive_file = None
+
+    output_path = f"{output_dir}/{filename}"
+    thumbnail_path = f"thumbnail:{output_dir}/thumbnails/{filename}"
+    subtitle_path = f"subtitle:{output_dir}/subtitles/{filename}"
+    descriptions_path = f"description:{output_dir}/descriptions/{filename}"
+    infojson_path = f"infojson:{output_dir}/info/{filename}"
+
+    start = time.monotonic()
+
+    cmd = [
+        "yt-dlp",
+        "--format", fmt,
+        "--output", output_path,
+        "--output", thumbnail_path,
+        "--output", subtitle_path,
+        "--output", descriptions_path,
+        "--output", infojson_path,
+        "--no-abort-on-error",
+        "--embed-metadata",
+        "--embed-chapters",
+        "--embed-subs",
+        "--embed-thumbnail",
+        "--write-description",
+        "--write-thumbnail",
+        "--write-info-json",
+        "--write-subs",
+        "--write-auto-subs",
+        "--sub-lang", sub_lang,
+        "--convert-subs", "srt",
+        "--convert-thumbnails", "png",
+        "--concurrent-fragments", "5",
+        "--merge-output-format", "mp4",
+        "--sponsorblock-mark", "all",
+        input_url,
+    ]
+
+    if archive_file:
+        cmd.insert(-1, "--download-archive")
+        cmd.insert(-1, archive_file)
+
+    with open(log_file, "w") as lf:
+        proc = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True)
+        for line in proc.stdout:
+            print(line, end="")
+            lf.write(line)
+        proc.wait()
+
+    if proc.returncode != 0:
+        sys.exit(proc.returncode)
+
+    with open(log_file) as lf:
+        for line in lf:
+            m = re.match(r"Destination:\s+(.+)", line)
+            if m:
+                actual_download_dir = os.path.dirname(m.group(1))
+                break
+        else:
+            actual_download_dir = youtube_dir
+
+    os.makedirs(actual_download_dir, exist_ok=True)
+    with open(os.path.join(actual_download_dir, "url.txt"), "w") as f:
+        f.write(input_url + "\n")
+
+    print(f"The video was downloaded to: {actual_download_dir}")
+    elapsed = int(time.monotonic() - start)
+    print("Elapsed time is: ")
+    display_time(elapsed)
+
+
+if __name__ == "__main__":
+    main()
