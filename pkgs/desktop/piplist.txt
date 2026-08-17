@@ -32,6 +32,7 @@ defusedxml             0.7.1
 deluge                 2.2.0
 distro                 1.9.0
 editables              0.6
+evillimiter            1.5.0
 fastjsonschema         2.21.2
 filelock               3.29.3
 fluidity-sm            0.2.1
