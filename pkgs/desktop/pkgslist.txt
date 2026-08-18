@@ -1511,6 +1511,7 @@ naps2 8.2.0-1
 nautilus 50.2.2-1
 nb 7.14.0-1
 ncdu 2.9.2-1
+ncmpcpp 0.10.1-8
 ncurses 6.6-2
 ndctl 85-1
 ndpi 4.12-2

@@ -269,6 +269,7 @@ naps2 8.2.0-1
 nautilus 50.2.2-1
 nb 7.14.0-1
 ncdu 2.9.2-1
+ncmpcpp 0.10.1-8
 ndpi 4.12-2
 neomutt 1:20260616-1
 neovim 0.12.4-1
