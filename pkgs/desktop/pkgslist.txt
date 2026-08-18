@@ -1518,6 +1518,7 @@ neon 0.37.1-1
 neovim 0.12.4-1
 net-snmp 5.9.5.2-1
 netctl 1.29-2
+nethogs 0.8.8-2
 netperf 2.7.0-8
 netstandard-targeting-pack 1:2.1.0-2
 netstat-nat 1.4.10-5

@@ -272,6 +272,7 @@ ndpi 4.12-2
 neomutt 1:20260616-1
 neovim 0.12.4-1
 netctl 1.29-2
+nethogs 0.8.8-2
 netperf 2.7.0-8
 netstat-nat 1.4.10-5
 network-manager-applet 1.36.0-2
