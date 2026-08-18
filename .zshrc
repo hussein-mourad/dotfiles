@@ -23,6 +23,7 @@ fpath=(
   /usr/share/zsh/functions/Completion
   /usr/share/zsh/functions/Completion/Linux
   $HOME/.zsh/completions
+  ${ASDF_DATA_DIR:-$HOME/.asdf}/completions
   $fpath
 )
 
@@ -36,7 +37,8 @@ fi
 source "${ZINIT_HOME}/zinit.zsh"
 
 # ---------- ZINIT PLUGINS ----------
-# zinit ice depth=1; zinit light romkatv/powerlevel10k
+zinit ice depth=1
+# zinit light romkatv/powerlevel10k
 zinit light zsh-users/zsh-syntax-highlighting
 zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-autosuggestions
@@ -60,6 +62,8 @@ zinit snippet OMZP::archlinux
 # zinit snippet OMZP::docker
 zinit snippet OMZP::docker-compose
 zinit snippet OMZP::command-not-found
+# zinit ice wait"0"
+# zinit snippet OMZP::git-commit
 
 # ---------- COMPLETION SETTINGS ----------
 # Load completions
@@ -92,7 +96,6 @@ setopt hist_find_no_dups
 
 source ~/.bash_aliases
 source ~/.bash_functions
-# source ~/bin/nvim-switcher
 
 # ---------- KEYBINDINGS ----------
 # bindkey -e # emacs mode
@@ -168,6 +171,9 @@ case ":$PATH:" in
 esac
 # pnpm end
 
+# asdf plugin
+export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 # [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 # typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
@@ -186,6 +192,9 @@ fi
 
 eval "$(starship init zsh)"
 
+autoload -U +X bashcompinit && bashcompinit
+complete -C $(which aws_completer) aws
+
 # Android SDK
 export ANDROID_HOME=$HOME/Android/Sdk
 export NDK_HOME=$HOME/Android/Sdk/ndk/27.1.12297006
@@ -195,12 +204,20 @@ export PATH=$PATH:$ANDROID_HOME/emulator
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+# eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 # Cache sesh list output
 # sesh list & disown >/dev/null
 
 # Added by Antigravity CLI installer
 export PATH="/home/hussein/.local/bin:$PATH"
+
 export OPENSPEC_TELEMETRY=0
 
 source "$HOME/.claude-code.env"
+
+export ANDROID_SDK_ROOT=/opt/android-sdk
+export ANDROID_AVD_HOME=/opt/android-sdk/tools
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/tools/bin
+export PATH=$PATH:$ANDROID_HOME/platform-tools
