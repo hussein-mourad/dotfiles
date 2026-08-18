@@ -1,215 +1,286 @@
 #!/usr/bin/env python3
+"""Download YouTube videos with configurable quality and subtitles.
 
-import json
-import os
-import re
-import shutil
+Uses the yt-dlp Python library directly (no subprocess for yt-dlp).
+"""
+
+from __future__ import annotations
+
+import argparse
 import subprocess
 import sys
 import tempfile
 import time
+from dataclasses import dataclass
+from pathlib import Path
+from typing import TextIO
+
+try:
+    import yt_dlp
+except ImportError:
+    print("yt-dlp could not be found. Please install it first.", file=sys.stderr)
+    sys.exit(1)
+
+QUALITY_FORMATS: dict[str, str] = {
+    "1080p": "bestvideo[height<=1080]+bestaudio/best",
+    "720p": "bestvideo[height<=720]+bestaudio/best",
+    "480p": "bestvideo[height<=480]+bestaudio/best",
+    "360p": "bestvideo[height<=360]+bestaudio/best",
+    "240p": "bestvideo[height<=240]+bestaudio/best",
+    "144p": "bestvideo[height<=144]+bestaudio/best",
+}
+
+SUBTITLE_LANGS: list[str] = ["en", "ar"]
 
 
-def select_quality():
-    options = ["1080p", "720p", "480p", "360p", "240p", "144p", "Exit"]
+@dataclass(frozen=True)
+class DownloadConfig:
+    url: str
+    quality: str
+    sub_lang: str
+    youtube_dir: Path
+
+
+def prompt_choice(
+    title: str, options: list[str], prompt: str = "Enter choice: "
+) -> str:
+    """Show a numbered single-select menu; return the picked option."""
     while True:
-        print("Select video quality:")
+        print(title)
         for i, opt in enumerate(options, 1):
             print(f"{i:2d}) {opt}")
         try:
-            choice = int(input("Enter choice: "))
-            picked = options[choice - 1]
+            choice = int(input(prompt))
+            return options[choice - 1]
         except (ValueError, IndexError):
             print("invalid option")
-            continue
-        match picked:
-            case "1080p":
-                fmt = "bestvideo[height<=1080]+bestaudio/best"
-            case "720p":
-                fmt = "bestvideo[height<=720]+bestaudio/best"
-            case "480p":
-                fmt = "bestvideo[height<=480]+bestaudio/best"
-            case "360p":
-                fmt = "bestvideo[height<=360]+bestaudio/best"
-            case "240p":
-                fmt = "bestvideo[height<=240]+bestaudio/best"
-            case "144p":
-                fmt = "bestvideo[height<=144]+bestaudio/best"
-            case "Exit":
-                sys.exit(0)
-            case _:
-                print("invalid option")
-                continue
-        return fmt
 
 
-def select_subtitles():
-    options = ["en", "ar"]
-
-    print("Select subtitles:")
+def prompt_multi_choice(title: str, options: list[str], prompt: str) -> str:
+    """Show a numbered multi-select menu; return comma-joined picks."""
+    print(title)
     for i, opt in enumerate(options, 1):
         print(f"{i:2d}) {opt}")
 
-    selected = input("Select multiple (e.g. 1 2): ").split()
+    selected = input(prompt).split()
 
-    valid_items = []
-    for idx in selected:
-        if idx.isdigit() and 1 <= int(idx) <= len(options):
-            valid_items.append(options[int(idx) - 1])
+    valid_items: list[str] = []
+    for token in selected:
+        if token.isdigit() and 1 <= int(token) <= len(options):
+            valid_items.append(options[int(token) - 1])
         else:
-            print(f"Skipping invalid selection: {idx}")
+            print(f"Skipping invalid selection: {token}")
             print("Defaulting to English")
             valid_items.append("en")
-            continue
 
     return ",".join(valid_items)
 
 
-def display_time(seconds):
-    d = seconds // 86400
-    h = seconds // 3600 % 24
-    m = seconds // 60 % 60
-    s = seconds % 60
-
-    parts = []
-    if d > 0:
-        parts.append(f"{d} days")
-    if h > 0:
-        parts.append(f"{h} hours")
-    if m > 0:
-        parts.append(f"{m} minutes")
-    if s > 0:
-        parts.append(f"{s} seconds")
-    if not parts:
-        parts.append("0 seconds")
-    print(" ".join(parts))
+def select_quality() -> str:
+    picked = prompt_choice("Select video quality:", list(QUALITY_FORMATS) + ["Exit"])
+    if picked == "Exit":
+        sys.exit(0)
+    return picked
 
 
-def check_dep(name, hint=None):
-    if shutil.which(name) is None:
-        msg = f"{name} could not be found. Please install it first."
-        if hint:
-            msg += f" ({hint})"
-        print(msg, file=sys.stderr)
-        sys.exit(1)
+def select_subtitles() -> str:
+    return prompt_multi_choice(
+        "Select subtitles:",
+        SUBTITLE_LANGS,
+        "Select multiple (e.g. 1 2): ",
+    )
 
 
-def main():
-    check_dep("yt-dlp")
+def display_time(seconds: int) -> str:
+    """Convert a duration in seconds to a human-readable string."""
+    days, rem = divmod(seconds, 86400)
+    hours, rem = divmod(rem, 3600)
+    minutes, secs = divmod(rem, 60)
 
-    if len(sys.argv) < 2:
-        print(f"Usage: {os.path.basename(sys.argv[0])} <video_url> [youtube_directory]")
-        sys.exit(1)
+    parts: list[str] = []
+    if days > 0:
+        parts.append(f"{days} days")
+    if hours > 0:
+        parts.append(f"{hours} hours")
+    if minutes > 0:
+        parts.append(f"{minutes} minutes")
+    if secs > 0:
+        parts.append(f"{secs} seconds")
 
-    input_url = sys.argv[1]
+    return " ".join(parts) if parts else "0 seconds"
 
-    home_videos = os.path.expanduser("~/videos")
-    if os.path.isdir(home_videos):
-        default_youtube_dir = os.path.join(home_videos, "youtube")
-    else:
-        check_dep("xdg-user-dir", "xdg-utils")
-        default_youtube_dir = subprocess.check_output(
-            ["xdg-user-dir", "VIDEOS"], text=True
-        ).strip() + "/youtube"
 
-    youtube_dir = sys.argv[2] if len(sys.argv) > 2 else default_youtube_dir
+class TeeLogger:
+    """yt-dlp logger that mirrors every message to stdout and a log file."""
 
-    log_dir = tempfile.mkdtemp()
-    log_file = os.path.join(log_dir, "output.log")
+    def __init__(self, stream: TextIO) -> None:
+        self._stream = stream
 
-    os.makedirs(youtube_dir, exist_ok=True)
+    def _emit(self, msg: object) -> None:
+        print(msg)
+        print(msg, file=self._stream)
 
-    fmt = select_quality()
-    print()
-    sub_lang = select_subtitles()
+    def debug(self, msg: object, *args, **kwargs) -> None:
+        self._emit(msg)
 
-    if "list=" in input_url:
-        channel_dir = f"{youtube_dir}/%(playlist_uploader)s"
-        output_dir = f"{channel_dir}/%(playlist_title)s"
+    def info(self, msg: object, *args, **kwargs) -> None:
+        self._emit(msg)
+
+    def warning(self, msg: object, *args, **kwargs) -> None:
+        self._emit(msg)
+
+    def error(self, msg: object, *args, **kwargs) -> None:
+        self._emit(msg)
+
+
+def default_youtube_dir() -> Path:
+    """Use ~/videos/youtube if it exists, else xdg-user-dir VIDEOS/youtube."""
+    videos = Path.home() / "videos"
+    if videos.is_dir():
+        return videos / "youtube"
+    result = subprocess.run(
+        ["xdg-user-dir", "VIDEOS"], capture_output=True, text=True, check=True
+    )
+    return Path(result.stdout.strip()) / "youtube"
+
+
+def build_outtmpl(output_dir: str, filename: str) -> dict[str, str]:
+    """Per-type output templates so each artifact lands in its own folder."""
+    return {
+        "default": f"{output_dir}/{filename}",
+        "thumbnail": f"{output_dir}/thumbnails/{filename}",
+        "subtitle": f"{output_dir}/subtitles/{filename}",
+        "description": f"{output_dir}/descriptions/{filename}",
+        "infojson": f"{output_dir}/info/{filename}",
+    }
+
+
+def resolve_playlist_metadata(url: str) -> tuple[str, str] | None:
+    """Extract playlist uploader/title for archive path, or None for single videos."""
+    if "list=" not in url:
+        return None
+    ydl_opts = {
+        "skip_download": True,
+        "extract_flat": True,
+    }
+    with yt_dlp.YoutubeDL(ydl_opts) as ydl:
+        info = ydl.extract_info(url, download=False, process=False)
+    return info.get("playlist_uploader"), info.get("playlist_title")
+
+
+def download(config: DownloadConfig, log_file: Path) -> int:
+    """Run the download; returns 0 on success, non-zero on failure."""
+    playlist_meta = resolve_playlist_metadata(config.url)
+
+    if playlist_meta is not None:
+        uploader, playlist_title = playlist_meta
+        output_dir = f"{config.youtube_dir}/%(playlist_uploader)s/%(playlist_title)s"
         filename = "%(playlist_index&{}-|)s%(title)s.%(ext)s"
-
-        metadata = subprocess.check_output(
-            ["yt-dlp", "--dump-json", "--flat-playlist", input_url], text=True
-        )
-        lines = metadata.strip().splitlines()
-        playlist_uploader = json.loads(lines[0]).get("playlist_uploader")
-        playlist_title = json.loads(lines[0]).get("playlist_title")
-        actual_output_dir = f"{youtube_dir}/{playlist_uploader}/{playlist_title}"
-
-        archive_file = os.path.join(actual_output_dir, "archive.log")
+        actual_output_dir = config.youtube_dir / uploader / playlist_title
+        archive_file = actual_output_dir / "archive.log"
     else:
-        channel_dir = f"{youtube_dir}/%(uploader)s"
-        output_dir = f"{channel_dir}/%(title)s"
+        output_dir = f"{config.youtube_dir}/%(uploader)s/%(title)s"
         filename = "%(title)s.%(ext)s"
         archive_file = None
 
-    output_path = f"{output_dir}/{filename}"
-    thumbnail_path = f"thumbnail:{output_dir}/thumbnails/{filename}"
-    subtitle_path = f"subtitle:{output_dir}/subtitles/{filename}"
-    descriptions_path = f"description:{output_dir}/descriptions/{filename}"
-    infojson_path = f"infojson:{output_dir}/info/{filename}"
+    finished_files: list[str] = []
+
+    def hook(d: dict) -> None:
+        if d.get("status") == "finished":
+            finished_files.append(d["filepath"])
+
+    ydl_opts = {
+        "format": config.quality,
+        "outtmpl": build_outtmpl(output_dir, filename),
+        "ignoreerrors": True,
+        "embed_metadata": True,
+        "embed_chapters": True,
+        "embedsubs": True,
+        "embedthumbnail": True,
+        "writedescription": True,
+        "writethumbnail": True,
+        "writeinfojson": True,
+        "writesubtitles": True,
+        "writeautomaticsub": True,
+        "subtitleslangs": [lang for lang in config.sub_lang.split(",") if lang],
+        "convertsubtitles": "srt",
+        "convert_thumbnails": "png",
+        "concurrent_fragment_downloads": 5,
+        "merge_output_format": "mp4",
+        "sponsorblockmark": "all",
+        "postprocessor_hooks": [hook],
+        "logger": TeeLogger(log_file.open("w", encoding="utf-8")),
+    }
+
+    if archive_file is not None:
+        ydl_opts["download_archive"] = str(archive_file)
 
     start = time.monotonic()
 
-    cmd = [
-        "yt-dlp",
-        "--format", fmt,
-        "--output", output_path,
-        "--output", thumbnail_path,
-        "--output", subtitle_path,
-        "--output", descriptions_path,
-        "--output", infojson_path,
-        "--no-abort-on-error",
-        "--embed-metadata",
-        "--embed-chapters",
-        "--embed-subs",
-        "--embed-thumbnail",
-        "--write-description",
-        "--write-thumbnail",
-        "--write-info-json",
-        "--write-subs",
-        "--write-auto-subs",
-        "--sub-lang", sub_lang,
-        "--convert-subs", "srt",
-        "--convert-thumbnails", "png",
-        "--concurrent-fragments", "5",
-        "--merge-output-format", "mp4",
-        "--sponsorblock-mark", "all",
-        input_url,
-    ]
+    try:
+        with yt_dlp.YoutubeDL(ydl_opts) as ydl:
+            ydl.download([config.url])
+    except yt_dlp.utils.DownloadError as exc:
+        print(f"Download failed: {exc}", file=sys.stderr)
+        return 1
 
-    if archive_file:
-        cmd.insert(-1, "--download-archive")
-        cmd.insert(-1, archive_file)
+    if not finished_files:
+        print("No files were downloaded.", file=sys.stderr)
+        return 1
 
-    with open(log_file, "w") as lf:
-        proc = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True)
-        for line in proc.stdout:
-            print(line, end="")
-            lf.write(line)
-        proc.wait()
+    # Save the URL next to the downloaded video
+    download_dir = Path(finished_files[-1]).parent
+    (download_dir / "url.txt").write_text(f"{config.url}\n", encoding="utf-8")
 
-    if proc.returncode != 0:
-        sys.exit(proc.returncode)
-
-    with open(log_file) as lf:
-        for line in lf:
-            m = re.match(r"Destination:\s+(.+)", line)
-            if m:
-                actual_download_dir = os.path.dirname(m.group(1))
-                break
-        else:
-            actual_download_dir = youtube_dir
-
-    os.makedirs(actual_download_dir, exist_ok=True)
-    with open(os.path.join(actual_download_dir, "url.txt"), "w") as f:
-        f.write(input_url + "\n")
-
-    print(f"The video was downloaded to: {actual_download_dir}")
+    print(f"The video was downloaded to: {download_dir}")
     elapsed = int(time.monotonic() - start)
-    print("Elapsed time is: ")
-    display_time(elapsed)
+    print(f"Elapsed time is: {display_time(elapsed)}")
+
+    return 0
+
+
+def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
+    parser = argparse.ArgumentParser(
+        prog="ytpy",
+        description="Download YouTube videos with configurable quality and subtitles.",
+    )
+    parser.add_argument("url", help="video or playlist URL")
+    parser.add_argument(
+        "--dir",
+        help="output directory (default: ~/videos/youtube or xdg-user-dir VIDEOS/youtube)",
+    )
+    quality = list(QUALITY_FORMATS)
+    parser.add_argument(
+        "--quality",
+        choices=quality,
+        help="video quality (prompts interactively if omitted)",
+    )
+    parser.add_argument(
+        "--subs",
+        nargs="+",
+        choices=SUBTITLE_LANGS,
+        help="subtitle languages (prompts interactively if omitted)",
+    )
+    return parser.parse_args(argv)
+
+
+def main(argv: list[str] | None = None) -> int:
+    args = parse_args(argv)
+
+    youtube_dir = Path(args.dir) if args.dir else default_youtube_dir()
+    youtube_dir.mkdir(parents=True, exist_ok=True)
+
+    quality = args.quality if args.quality else QUALITY_FORMATS[select_quality()]
+    sub_lang = ",".join(args.subs) if args.subs else select_subtitles()
+
+    config = DownloadConfig(
+        url=args.url,
+        quality=quality,
+        sub_lang=sub_lang,
+        youtube_dir=youtube_dir,
+    )
+    return download(config, Path(tempfile.mkdtemp()) / "output.log")
 
 
 if __name__ == "__main__":
-    main()
+    raise SystemExit(main())
