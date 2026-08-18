@@ -206,6 +206,7 @@ alias clip="xclip -sel clip"
 alias ldo='lazydocker'
 alias lsh='lazyssh'
 alias open='xdg-open'
+alias o='xdg-open'
 alias code='code --password-store="gnome-libsecret"'
 # alias npx="npm_execpath=$(which pnpm) npx"
 alias serve="python3 -m http.server"
@@ -221,6 +222,8 @@ alias zen="zen-browser"
 alias zed="zeditor"
 alias bw_unlock='export BW_SESSION=$(bw unlock --raw "$(gpg -d ~/.pass.gpg 2&>/dev/null)")'
 alias t="go-task"
+alias tl="go-task --list"
 alias sshc="vi ~/.ssh/config"
 alias mpv="mpv --save-watch-history"
 alias fzf-printenv="printenv | fzf"
+alias wm="workmux"
