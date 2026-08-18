@@ -21,8 +21,8 @@ return {
   { import = "astrocommunity.pack.python.basedpyright" },
   { import = "astrocommunity.pack.python.black" },
   { import = "astrocommunity.pack.python.isort" },
-  -- { import = "astrocommunity.pack.python-ruff" },
-  -- { import = "astrocommunity.pack.go" },
+  { import = "astrocommunity.pack.python.ruff" },
+  { import = "astrocommunity.pack.go" },
   { import = "astrocommunity.pack.lua" },
   -- { import = "astrocommunity.pack.rust" },
 
