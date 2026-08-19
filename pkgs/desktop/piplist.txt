@@ -137,6 +137,7 @@ requests               2.34.2
 requests-toolbelt      1.0.0
 rich                   15.0.0
 rrdtool                0.1.10
+s-tui                  1.4.0
 scikit_build_core      0.12.2
 scour                  0.38.2
 screenkey              1.5
@@ -170,6 +171,7 @@ tzlocal                5.4.4
 uc-micro-py            2.0.0
 ufw                    0.36.2
 urllib3                2.7.0
+urwid                  4.0.8
 userpath               1.9.2
 validate               5.0.9
 validate-pyproject     0.25

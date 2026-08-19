@@ -1920,6 +1920,7 @@ python-tzdata 2026.3-1
 python-tzlocal 1:5.4.4-1
 python-uc-micro-py 2.0.0-1
 python-urllib3 2.7.0-1
+python-urwid 4.0.8-2
 python-userpath 1.9.2-4
 python-validate-pyproject 0.25-1
 python-vcs-versioning 2.2.4-1
@@ -2095,6 +2096,7 @@ rust-bindgen 0.72.1-3
 rutabaga-ffi 0.1.85-1
 rxvt-unicode-terminfo 9.31-9
 s-nail 14.9.25-1
+s-tui 1.4.0-1
 samba 2:4.24.5-1
 sane 1.4.0-4
 sane-airscan 0.99.38-1

@@ -359,6 +359,7 @@ rofi 2.0.0-1
 rofi-emoji 4.1.0-3
 rsync 3.4.4-1
 s-nail 14.9.25-1
+s-tui 1.4.0-1
 samba 2:4.24.5-1
 sane-airscan 0.99.38-1
 sbxkb 0.7.6-7
