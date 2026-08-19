@@ -154,6 +154,7 @@ eval "$(direnv hook zsh)"
 
 # eval "$(atuin init zsh --disable-up-arrow)"
 eval "$(atuin init zsh)"
+eval "$(atuin ai init zsh)"
 
 # eval "$(uv generate-shell-completion zsh)"
 
@@ -221,3 +222,8 @@ export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
+
+# export http_proxy="http://127.0.0.1:3128"
+# export https_proxy="http://127.0.0.1:3128"
+# export ftp_proxy="http://127.0.0.1:3128"
+# export no_proxy="localhost,127.0.0.1,*.local"
