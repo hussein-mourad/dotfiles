@@ -143,6 +143,7 @@ feh 3.12.2-1
 ffmpeg 2:9.0-5
 ffmpegthumbnailer 2.3.0-2
 ffnvcodec-headers 13.1.15.0-1
+filezilla 3.70.6-1
 firefox 153.0.3-2
 firefoxpwa 2.18.4-1
 fish 4.8.1-1
