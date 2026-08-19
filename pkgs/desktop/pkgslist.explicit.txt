@@ -389,6 +389,7 @@ starship 1.26.0-1
 stow 2.4.1-1
 strace 7.0-1
 stress 1.0.7-3
+stress-ng 0.21.04-2
 subversion 1.14.5-5
 sudo 1.9.17.p2-6
 superfile 1.6.0-1
