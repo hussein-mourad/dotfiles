@@ -86,6 +86,7 @@ ctop 0.7.7-3
 curlie 1.8.2-1
 cutecom 0.51.0-5
 debugedit 5.3-1
+dell-bios-fan-control-git r5.2700610-5
 deluge 1:2.2.0-5
 deno 2.9.5-1
 devdocs-desktop 1.2.0-1
@@ -237,6 +238,7 @@ i3blocks 1.5-4
 i3exit 20201126-2
 i3lock-color 2.13.c.5-3
 i3status 2.15-1
+i8kutils 1.60-1
 id3v2 0.1.12-7
 iftop 1.0pre4-6
 imv 5.0.1-2
