@@ -704,5 +704,6 @@ zen-browser-bin 1.21.14b-1
 zensu 0.3-7
 zip 3.0-13
 zk 0.15.6-1
+zoom 7.1.5-1
 zoxide 0.10.0-1
 zram-generator 1.2.1-1
