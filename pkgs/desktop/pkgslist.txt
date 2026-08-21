@@ -1761,6 +1761,7 @@ poppler-data 0.4.12-2
 poppler-glib 26.07.0-1
 popt 1.19-2
 portaudio 1:19.7.0-4
+portmaster 2.0.0-2
 portmidi 1:2.0.8-1
 portsmf 234-3
 postgresql-libs 18.4-3
