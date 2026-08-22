@@ -175,7 +175,7 @@ show_brightness_percentage = true # (default) show numeric brightness value in t
 enabled = false # (default)
 
 [appearance]
-style = "Islands" # (default), "Islands", "Solid", or "Gradient"
+style = "Solid" # (default), "Islands", "Solid", or "Gradient"
 # font_name = "Sans"           # (default: None) custom font family
 # scale_factor = 1.0           # (default) range: 0.0 < x <= 2.0
 # opacity = 1.0                # (default) range: 0.0 to 1.0
@@ -193,6 +193,7 @@ workspace_colors = ["#7aa2f7", "#9ece6a"]
 
 [appearance.background_color]
 base = "#1a1b26"
+# base = "#212121"
 weak = "#24273a"
 strong = "#414868"
 # weakest = "#000000"    # (default: None)
