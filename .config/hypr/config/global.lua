@@ -9,8 +9,8 @@ return {
 	clipboardHistory = "cliphist list | rofi -dmenu -display-columns 2 | cliphist decode | wl-copy",
 	audioGUI = "pavucontrol",
 	screenshot = {
-		full = "flameshot full",
-		clipboard = "flameshot full --clipboard",
-		region = "flameshot gui",
+		full = "hyprshot -m active -m output -z -f screenshot-$(date -u '+%Y%m%dT%H%M%S').png -o ~/Pictures/screenshots",
+		window = "hyprshot -m window -z -f screenshot-$(date -u '+%Y%m%dT%H%M%S').png -o ~/Pictures/screenshots",
+		region = "hyprshot -m region -z -f screenshot-$(date -u '+%Y%m%dT%H%M%S').png -o ~/Pictures/screenshots",
 	},
 }
