@@ -110,7 +110,7 @@ hl.bind("XF86AudioPrev", hl.dsp.exec_cmd("playerctl previous"), { locked = true 
 
 -- Screenshot
 hl.bind("PRINT", hl.dsp.exec_cmd(config.screenshot.full)) -- fullscreen
-hl.bind("CTRL + PRINT", hl.dsp.exec_cmd(config.screenshot.clipboard)) -- copy to clipboard only
+hl.bind("CTRL + PRINT", hl.dsp.exec_cmd(config.screenshot.window)) -- copy to clipboard only
 hl.bind("SHIFT + PRINT", hl.dsp.exec_cmd(config.screenshot.region)) -- region
 
 -- Lock Screen
