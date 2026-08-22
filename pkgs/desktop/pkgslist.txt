@@ -1516,6 +1516,11 @@ nano 9.1-1
 nano-syntax-highlighting 2025.07.01.r0.g256995b-2
 naps2 8.2.0-1
 nautilus 50.2.2-1
+nautilus-admin 1:1.2.0-3
+nautilus-empty-file 1.2-2
+nautilus-image-converter 0.4.0-2
+nautilus-open-any-terminal 0.8.2-1
+nautilus-python 4.1.0-3
 nb 7.14.0-1
 ncdu 2.9.2-1
 ncmpcpp 0.10.1-8
@@ -2103,6 +2108,7 @@ samba 2:4.24.5-1
 sane 1.4.0-4
 sane-airscan 0.99.38-1
 sassc 3.6.2-5
+satty 0.21.1-1
 sbc 2.2-1
 sbxkb 0.7.6-7
 sc 7.16-8
@@ -2184,6 +2190,7 @@ suitesparse 7.12.3-1
 superfile 1.6.0-1
 svt-av1 4.2.0-1
 svt-hevc 1.5.1-4
+swappy 1.8.0-1
 swayidle 1.9.0-1
 swayimg 5.5-1
 swaylock 1.8.6-1
