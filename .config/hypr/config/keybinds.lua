@@ -109,9 +109,9 @@ hl.bind("XF86AudioPlay", hl.dsp.exec_cmd("playerctl play-pause"), { locked = tru
 hl.bind("XF86AudioPrev", hl.dsp.exec_cmd("playerctl previous"), { locked = true })
 
 -- Screenshot
-hl.bind("PRINT", hl.dsp.exec_cmd("flameshot full")) -- fullscreen
-hl.bind("CTRL + PRINT", hl.dsp.exec_cmd("flameshot full --clipboard")) -- copy to clipboard only
-hl.bind("SHIFT + PRINT", hl.dsp.exec_cmd("flameshot gui")) -- picker
+hl.bind("PRINT", hl.dsp.exec_cmd(config.screenshot.full)) -- fullscreen
+hl.bind("CTRL + PRINT", hl.dsp.exec_cmd(config.screenshot.clipboard)) -- copy to clipboard only
+hl.bind("SHIFT + PRINT", hl.dsp.exec_cmd(config.screenshot.region)) -- region
 
 -- Lock Screen
 hl.bind(mod .. " + CTRL + L", hl.dsp.exec_cmd(config.lock))
@@ -209,7 +209,7 @@ end)
 -- 	end
 -- end)
 
-hl.bind(mod .. " + F1", function()
+hl.bind(mod .. " + F5", function()
 	local game_mode = (hl.get_config("animations.enabled") == false)
 
 	if game_mode then

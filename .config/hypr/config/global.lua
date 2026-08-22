@@ -8,4 +8,9 @@ return {
 	passwordManager = "bitwarden-desktop",
 	clipboardHistory = "cliphist list | rofi -dmenu -display-columns 2 | cliphist decode | wl-copy",
 	audioGUI = "pavucontrol",
+	screenshot = {
+		full = "flameshot full",
+		clipboard = "flameshot full --clipboard",
+		region = "flameshot gui",
+	},
 }
