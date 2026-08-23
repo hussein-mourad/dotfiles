@@ -387,6 +387,7 @@ smartmontools 7.5-1
 snapd 2.76-1
 sniffnet 1.5.1-1
 sof-firmware 2025.12.2-1
+solanum 6.0.0-2
 sox 14.8.0.1-1
 spectre-meltdown-checker 0.46+20+g9b7b09a-1
 speedtest-cli 2.1.3-10
