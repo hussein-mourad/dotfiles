@@ -1761,6 +1761,7 @@ polkit 127-3
 polkit-gnome 0.105-12
 polkit-qt5 0.201.1-1
 polkit-qt6 0.201.1-1
+pomo 0.9.1-1
 poppler 26.07.0-1
 poppler-data 0.4.12-2
 poppler-glib 26.07.0-1
