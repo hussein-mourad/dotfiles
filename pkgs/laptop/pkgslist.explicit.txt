@@ -145,8 +145,8 @@ ffmpeg 2:9.0-5
 ffmpegthumbnailer 2.3.0-2
 ffnvcodec-headers 13.1.15.0-1
 filezilla 3.70.6-1
-firefox 153.0.3-2
-firefoxpwa 2.18.4-1
+firefox 154.0-1
+firefoxpwa 2.19.0-1
 fish 4.8.1-1
 flac 1.5.0-1
 flameshot 14.0.0-1
@@ -455,6 +455,7 @@ pkgfile 26-1
 plocate 1.1.24-1
 polkit-gnome 0.105-12
 polybar 3.7.2-2
+pomo 0.9.1-1
 poppler-data 0.4.12-2
 postgresql 18.4-3
 postman-bin 11.37.1-1
@@ -692,6 +693,7 @@ yad 15.0-2
 yay 13.0.1-1
 yazi 26.5.6-4
 ydotool 1.0.4-2
+yq 4.1.2-1
 yt-dlp 2026.07.04-1
 ytfzf 2.6.2-2
 zaread-git r120.c2d45e1-1
