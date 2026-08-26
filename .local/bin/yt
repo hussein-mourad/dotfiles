@@ -14,27 +14,27 @@ select_quality() {
 	select opt in "${options[@]}"; do
 		case $opt in
 		"1080p")
-			FORMAT="bestvideo[height<=1080]+bestaudio/best"
+			FORMAT="bestvideo[height<=1080]+bestaudio[abr<=192]/best"
 			break
 			;;
 		"720p")
-			FORMAT="bestvideo[height<=720]+bestaudio/best"
+			FORMAT="bestvideo[height<=720]+bestaudio[abr<=128]/best"
 			break
 			;;
 		"480p")
-			FORMAT="bestvideo[height<=480]+bestaudio/best"
+			FORMAT="bestvideo[height<=480]+bestaudio[abr<=96]/best"
 			break
 			;;
 		"360p")
-			FORMAT="bestvideo[height<=360]+bestaudio/best"
+			FORMAT="bestvideo[height<=360]+bestaudio[abr<=64]/best"
 			break
 			;;
 		"240p")
-			FORMAT="bestvideo[height<=240]+bestaudio/best"
+			FORMAT="bestvideo[height<=240]+bestaudio[abr<=64]/best"
 			break
 			;;
 		"144p")
-			FORMAT="bestvideo[height<=144]+bestaudio/best"
+			FORMAT="bestvideo[height<=144]+bestaudio[abr<=64]/best"
 			break
 			;;
 		"Exit")
