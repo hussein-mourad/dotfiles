@@ -174,8 +174,10 @@ yt-dlp \
 
 ACTUAL_DOWNLOAD_DIR=$(grep "Destination: " "$LOG_FILE" | head -1 | awk -F'Destination: ' '{print $2}' | xargs -I {} dirname "{}")
 
-# Save the URL to the file
-echo "$INPUT_URL" >"$ACTUAL_DOWNLOAD_DIR/url.txt"
+if [ -w "$ACTUAL_DOWNLOAD_DIR" ]; then
+	# Save the URL to the file
+	echo "$INPUT_URL" >"$ACTUAL_DOWNLOAD_DIR/url.txt"
+fi
 
 echo "The video was downloaded to: $ACTUAL_DOWNLOAD_DIR"
 ELAPSED_TIME=$SECONDS
