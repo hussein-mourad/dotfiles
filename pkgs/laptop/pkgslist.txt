@@ -1777,7 +1777,7 @@ onetbb 2023.1.0-1
 oniguruma 6.9.10-1
 openal 1.25.2-2
 openbsd-netcat 1.238_1-1
-opencode 1.18.15-1
+opencode 1.18.18-1
 opencode-desktop-bin 1.18.9-1
 openconnect 1:9.21-1
 opencore-amr 0.1.6-2
