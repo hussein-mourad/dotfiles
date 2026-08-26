@@ -71,7 +71,7 @@ hl.window_rule({
 	workspace = "2",
 })
 
-local ueberzugpp_rule = hl.window_rule({
+hl.window_rule({
 	name = "ueberzug-overlay",
 	match = {
 		class = "^ueberzugpp_.*",
@@ -89,5 +89,20 @@ local ueberzugpp_rule = hl.window_rule({
 		"(monitor_w - window_w - (monitor_w * 0.05))", -- 5% from right edge
 		"(monitor_h * 0.05)", -- 5% from top edge
 	},
+	enabled = true,
 })
-ueberzugpp_rule:set_enabled(true)
+
+hl.window_rule({
+	name = "picture_in_picture",
+	match = {
+		title = "Picture-in-Picture",
+	},
+	float = true,
+	enabled = true,
+})
+
+hl.window_rule({
+	match = { class = "omacalc" },
+	size = { 400, 500 }, -- Sets a comfortable size
+	float = true,
+})
