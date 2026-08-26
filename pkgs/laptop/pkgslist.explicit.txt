@@ -65,6 +65,7 @@ chromium 151.0.7922.137-1
 cliphist 1:0.7.0-2
 clipit 1:1.4.5+25+gf35db54-1
 clock-tui 0.6.1-1
+cloud-image-utils 0.33-3
 cmatrix 2.0-4
 cmus 2.12.0-6
 colorpicker 1.0.f5d441a-2
@@ -108,7 +109,6 @@ docker-buildx 0.36.0-1
 docker-compose 5.4.0-1
 docker-scan 0.26.0-2
 dog 0.1.0-8
-dolphin 26.04.3-1
 doppler-cli-bin 3.75.1-1
 dosfstools 4.2-5
 dotnet-sdk-10.0 10.0.10.sdk110-1
@@ -595,6 +595,7 @@ ttf-dejavu 2.37+18+g9b5d1b2f-8
 ttf-droid 20121017-11
 ttf-firacode-nerd 3.5.0-1
 ttf-font-icons 1.1-3
+ttf-hack 3.003-7
 ttf-hack-nerd 3.5.0-1
 ttf-inconsolata 1:3.000-5
 ttf-indic-otf 0.2-12

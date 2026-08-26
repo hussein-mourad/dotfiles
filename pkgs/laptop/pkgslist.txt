@@ -91,8 +91,6 @@ aws-sdk-cpp-s3 1.11.792-1
 ayatana-ido 0.10.4-1
 b43-fwcutter 020-1
 babl 0.1.128-1
-baloo 6.28.0-1
-baloo-widgets 26.04.3-1
 base 3-5
 base-devel 1-3
 bash 5.3.15-1
@@ -153,6 +151,7 @@ cava 0.10.7-1
 cblas 3.12.1-2
 ccache 4.13.6-1
 cdparanoia 10.2-10
+cdrtools 3.02a09-6
 cef 151.3.16-1
 cfitsio 1:4.6.4-1
 chafa 1.18.2-2
@@ -169,6 +168,7 @@ cli11 2.7.2-1
 cliphist 1:0.7.0-2
 clipit 1:1.4.5+25+gf35db54-1
 clock-tui 0.6.1-1
+cloud-image-utils 0.33-3
 clucene 2.3.3.4-17
 clutter 1.26.4-4
 clutter-gtk 1.8.4-4
@@ -257,7 +257,6 @@ docker-buildx 0.36.0-1
 docker-compose 5.4.0-1
 docker-scan 0.26.0-2
 dog 0.1.0-8
-dolphin 26.04.3-1
 doppler-cli-bin 3.75.1-1
 dos2unix 7.5.6-1
 dosfstools 4.2-5
@@ -898,7 +897,6 @@ kakoune 2026.05.21-2
 kanata 1.11.0-1
 karchive 6.28.0-1
 karchive5 5.116.0-3
-kauth 6.28.0-1
 kauth5 5.116.0-2
 kbd 2.10.0-1
 kbookmarks 6.28.0-1
@@ -928,10 +926,7 @@ kdeclarative5 5.116.0-2
 kdeconnect 26.04.3-1
 kded5 5.116.0-2
 kdenlive 26.04.3-2
-kdnssd 6.28.0-1
 kdsingleapplication 1.2.1-1
-kdsoap 2.3.0-1
-kdsoap-ws-discovery-client 0.4.0-3
 keepassxc 2.7.12-3
 keyutils 1.6.3-4
 kfilemetadata 6.28.0-2
@@ -944,10 +939,8 @@ ki18n 6.28.0-1
 ki18n5 5.116.0-2
 kiconthemes 6.28.0-1
 kiconthemes5 5.116.0-2
-kidletime 6.28.0-1
 kind 0.32.0-2
 kio 6.28.0-1
-kio-extras 26.04.3-1
 kio5 5.116.0-6
 kirigami 6.28.0-1
 kirigami-addons 1.13.1-1
@@ -992,7 +985,6 @@ ktextwidgets 6.28.0-1
 ktextwidgets5 5.116.0-2
 kubectl 1.36.3-1
 kubectx 0.11.0-1
-kuserfeedback 6.28.0-1
 kustomize 5.8.1-1
 kvantum 1.1.8-1
 kvantum-manjaro 0.13.5+5+g0179d45-4
@@ -1278,7 +1270,6 @@ libjpeg-turbo 3.2.0-2
 libjuice 1.7.3-1
 libjxl 0.12.0-1
 libkate 0.4.3-4
-libkexiv2 26.04.3-1
 libkeybinder3 0.3.2-5
 libksane 26.04.3-1
 libksba 1.8.0-1
@@ -1922,7 +1913,6 @@ pixman 0.46.4-1
 pkcs11-helper 1.31.0-1
 pkgconf 3.0.5-1
 pkgfile 26-1
-plasma-activities 6.7.4-1
 playerctl 2.4.1-5
 plocate 1.1.24-1
 podofo 0.10.6-1
@@ -2522,7 +2512,6 @@ restic 0.19.1-1
 resvg 0.48.1-1
 rhash 1.4.6-1
 ripgrep 15.2.0-1
-ripgrep-all 0.10.10-2
 rmlint 2.10.2-2
 rmpc 0.11.0-2
 rnnoise 1:0.2-1
@@ -2792,6 +2781,7 @@ ttf-dejavu 2.37+18+g9b5d1b2f-8
 ttf-droid 20121017-11
 ttf-firacode-nerd 3.5.0-1
 ttf-font-icons 1.1-3
+ttf-hack 3.003-7
 ttf-hack-nerd 3.5.0-1
 ttf-inconsolata 1:3.000-5
 ttf-indic-otf 0.2-12
