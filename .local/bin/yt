@@ -166,6 +166,9 @@ yt-dlp \
 	--concurrent-fragments 5 \
 	--merge-output-format mp4 \
 	--sponsorblock-mark all \
+	--cookies-from-browser firefox \
+	--no-check-certificates \
+	--remote-components ejs:github \
 	${ARCHIVE_FILE:+--download-archive "$ARCHIVE_FILE"} \
 	"$INPUT_URL" | tee "$LOG_FILE"
 
