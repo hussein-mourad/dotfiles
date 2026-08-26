@@ -126,7 +126,7 @@ alias wget='wget -c' # continue by default
 #default ff
 # alias ff=ff13
 #my default browser
-alias browser=zen-browser
+alias browser="firefox"
 
 # git
 alias gaf='git add -f'
@@ -143,9 +143,18 @@ alias fastping='ping -c 100 -s .2'
 #alias u="sudo apt update && sudo apt upgrade -y && sudo snap refresh"
 #alias r='sudo apt remove'
 alias q='yay -Ss'
-alias i='yay -S --noredownload --answerdiff None'
-alias u="yay -Syu --noredownload --answerdiff None"
-alias r='yay -Rsc'
+alias i='yay -S --noredownload --norebuild --noremovemake --answerdiff None --answerclean All --needed'
+alias u="yay -Syu --noredownload --answerdiff None --answerclean All --noremovemake --combinedupgrade --batchinstall"
+alias ireview="yay -S --noredownload --noremovemake"
+alias ureview="yay -Syu --noredownload --noremovemake"
+alias r='yay -Rns'
+alias U="sudo pacman -Syu"
+# Clean up orphaned dependencies
+alias orphan='yay -Rns $(yay -Qtdq)'
+# Search and install in one go
+alias si='yay -S --noredownload --needed $(yay -Ssq)'
+# Show AUR package info
+alias info='yay -Qi'
 
 # commands enhancement (modern unix tools)
 if [ -x "$(command -v lsd)" ]; then
@@ -159,7 +168,7 @@ if [ -x "$(command -v duf)" ]; then
 	alias df="duf"
 fi
 if [ -x "$(command -v bat)" ]; then
-	alias cat="bat"
+	alias cat="bat --style=plain"
 fi
 
 alias za="zathura"
