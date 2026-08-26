@@ -192,8 +192,8 @@ workspace_colors = ["#7aa2f7", "#9ece6a"]
 # backdrop = 0.0   # (default) backdrop blur amount
 
 [appearance.background_color]
-base = "#1a1b26"
-# base = "#212121"
+# base = "#1a1b26"
+base = "#212121"
 weak = "#24273a"
 strong = "#414868"
 # weakest = "#000000"    # (default: None)
