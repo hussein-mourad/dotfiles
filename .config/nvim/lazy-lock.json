@@ -68,7 +68,7 @@
   "obsidian.nvim": { "branch": "main", "commit": "07f94ef04a417555ee56a5895ddeb740f2de0033" },
   "overseer.nvim": { "branch": "master", "commit": "a93d9f6d6defdac4bcd6d2c8ba988650e42e0a0e" },
   "package-info.nvim": { "branch": "master", "commit": "47b093600d311105c03bc3e530327d7f794bc4dc" },
-  "peek.nvim": { "branch": "master", "commit": "5820d937d5414baea5f586dc2a3d912a74636e5b" },
+  "peek.nvim": { "branch": "master", "commit": "703b06bef147f657e986a19413655137c0f90724" },
   "plenary.nvim": { "branch": "master", "commit": "74b06c6c75e4eeb3108ec01852001636d85a932b" },
   "render-markdown.nvim": { "branch": "main", "commit": "4663eb3ecd538bd5062628fb6d95bbe6bdca78f6" },
   "resession.nvim": { "branch": "master", "commit": "cc819b0489938d03e4f3532a583354f0287c015b" },

@@ -56,7 +56,7 @@ return {
   { import = "astrocommunity.pack.markdown" },
 
   { import = "astrocommunity.markdown-and-latex.markdown-preview-nvim" },
-  { import = "astrocommunity.markdown-and-latex.peek-nvim" },
+  -- { import = "astrocommunity.markdown-and-latex.peek-nvim" },
   { import = "astrocommunity.markdown-and-latex.glow-nvim" },
   { import = "astrocommunity.markdown-and-latex.vimtex" },
   { import = "astrocommunity.markdown-and-latex.render-markdown-nvim" },
