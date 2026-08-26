@@ -15,4 +15,5 @@ return {
 		window = "hyprshot -m window -z -f screenshot-$(date -u '+%Y%m%dT%H%M%S').png -o ~/Pictures/screenshots",
 		region = "hyprshot -m region -z -f screenshot-$(date -u '+%Y%m%dT%H%M%S').png -o ~/Pictures/screenshots",
 	},
+	calculator = "omacalc",
 }
