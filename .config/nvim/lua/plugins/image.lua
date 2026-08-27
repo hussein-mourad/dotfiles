@@ -2,6 +2,7 @@
 
 return {
   "3rd/image.nvim",
+  enabled = true,
   event = "VeryLazy",
   dependencies = {
     "https://github.com/leafo/magick",

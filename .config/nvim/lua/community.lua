@@ -11,6 +11,7 @@ return {
   -- import/override with your plugins folder
 
   -- colorscheme
+  -- { import = "astrocommunity.colorscheme.vscode-nvim" },
   { import = "astrocommunity.colorscheme.catppuccin" },
 
   -- langs
@@ -24,6 +25,7 @@ return {
   { import = "astrocommunity.pack.python.ruff" },
   { import = "astrocommunity.pack.go" },
   { import = "astrocommunity.pack.lua" },
+  -- { import = "astrocommunity.pack.cs" },
   -- { import = "astrocommunity.pack.rust" },
 
   -- web dev
