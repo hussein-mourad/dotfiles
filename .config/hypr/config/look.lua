@@ -109,7 +109,9 @@ hl.config({
 -- See https://wiki.hypr.land/Configuring/Layouts/Master-Layout/ for more
 hl.config({
 	master = {
-		new_status = "master",
+		new_status = "slave", -- slave, master
+		new_on_top = true,
+		mfact = 0.60, -- default 0.55
 	},
 })
 
