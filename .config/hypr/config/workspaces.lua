@@ -106,3 +106,11 @@ hl.window_rule({
 	size = { 400, 500 }, -- Sets a comfortable size
 	float = true,
 })
+
+hl.window_rule({
+	match = { class = "xdg-desktop-portal-*" },
+	size = { 800, 600 }, -- Sets a comfortable size
+	center = true,
+	float = true,
+	enabled = true,
+})
