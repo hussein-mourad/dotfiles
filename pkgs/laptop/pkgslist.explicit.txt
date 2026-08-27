@@ -178,6 +178,7 @@ gnome-calculator 50.0-1
 gnome-disk-utility 46.1-3
 gnome-keyring 1:50.0-1
 gnome-pomodoro-git r1304.1e48d37-1
+gnome-themes-extra 1:3.28-1
 gnuplot 6.0.5-1
 go 2:1.26.5-1
 go-task 3.52.0-1
