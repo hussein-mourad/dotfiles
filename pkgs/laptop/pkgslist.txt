@@ -10,8 +10,8 @@ acpi 1.8-2
 acpid 2.0.34-2
 act 0.2.89-1
 ada 3.4.4-1
-adapta-maia-theme 3.94.0.149-4
 adobe-source-code-pro-fonts 2.042u+1.062i+1.026vf-2
+adw-gtk-theme 6.5-1
 adwaita-cursors 50.0-1
 adwaita-fonts 50.0-1
 adwaita-icon-theme 50.0-1
@@ -1617,7 +1617,6 @@ manjaro-base-skel 20171029-4
 manjaro-browser-settings 20231111-2
 manjaro-hello 0.8.1-7
 manjaro-hotfixes 2024.1-2
-manjaro-i3-settings 1:20260704-1
 manjaro-icons 20240502-1
 manjaro-keyring 20251003-1
 manjaro-printer 20240827-1
@@ -1824,7 +1823,6 @@ pangomm 2.46.5-1
 pangomm-2.48 2.56.2-1
 papers 50.2-1
 papirus-icon-theme 20260801-1
-papirus-maia-icon-theme 20201007-1
 parallel 20260722-1
 parted 3.7-1
 pass 1.7.4-7

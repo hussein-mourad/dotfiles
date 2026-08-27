@@ -3,6 +3,7 @@ accountsservice 26.27.3-1
 acpi 1.8-2
 acpid 2.0.34-2
 act 0.2.89-1
+adw-gtk-theme 6.5-1
 alacritty 0.17.0-1
 alarm-clock-applet 1:0.4.1-5
 alsa-firmware 1.2.4-4
@@ -331,7 +332,6 @@ manjaro-base-skel 20171029-4
 manjaro-browser-settings 20231111-2
 manjaro-hello 0.8.1-7
 manjaro-hotfixes 2024.1-2
-manjaro-i3-settings 1:20260704-1
 manjaro-printer 20240827-1
 manjaro-release 26.1.0-1
 manjaro-settings-manager-notifier 0.5.8-9
@@ -429,7 +429,6 @@ pacui 1:r1365.9204e8b-1
 pamac-gtk 11.7.5-2
 pandoc-cli 3.6.1-20
 papers 50.2-1
-papirus-maia-icon-theme 20201007-1
 pass 1.7.4-7
 pass-import 3.5-2
 patch 2.8-1
