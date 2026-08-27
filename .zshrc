@@ -214,7 +214,7 @@ export PATH="/home/hussein/.local/bin:$PATH"
 
 export OPENSPEC_TELEMETRY=0
 
-source "$HOME/.claude-code.env"
+# source "$HOME/.claude-code.env"
 
 export ANDROID_SDK_ROOT=/opt/android-sdk
 export ANDROID_AVD_HOME=/opt/android-sdk/tools
@@ -227,3 +227,12 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 # export https_proxy="http://127.0.0.1:3128"
 # export ftp_proxy="http://127.0.0.1:3128"
 # export no_proxy="localhost,127.0.0.1,*.local"
+
+export PATH="$HOME/.config/emacs/bin:$PATH"
+export PATH="$HOME/.local/share/gem/ruby/3.4.0/bin:$PATH"
+
+# kimi-code
+export PATH="/home/hussein/.kimi-code/bin:$PATH"
+
+# opencode2
+export PATH=/home/hussein/.opencode/bin:$PATH

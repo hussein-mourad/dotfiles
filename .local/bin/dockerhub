@@ -1,13 +1,71 @@
 #!/bin/bash
+set -euo pipefail
 
 # Docker Hub Base URL
 BASE_URL="https://hub.docker.com/v2"
 
 DEFAULT_NAMESPACE="library"
+JSON_MODE=false
+
+# Check that required tools are available.
+check_deps() {
+  for cmd in jq numfmt curl column; do
+    if ! command -v "$cmd" &>/dev/null; then
+      echo "Error: required dependency '$cmd' not found." >&2
+      exit 1
+    fi
+  done
+}
+
+# Unified API caller with error handling.
+# Usage: api_call <url> [jq_filter]
+# If jq_filter is provided, applies it; otherwise prints raw response.
+# On HTTP error or curl failure, prints a message to stderr and returns non-zero.
+api_call() {
+  local url="$1"
+  local filter="${2:-}"
+  local http_code
+  local tmp_out
+  tmp_out=$(mktemp)
+  local tmp_headers
+  tmp_headers=$(mktemp)
+  local curl_exit=0
+
+  http_code=$(curl -s -o "$tmp_out" -w "%{http_code}" -D "$tmp_headers" "$url") || curl_exit=$?
+
+  if [[ $curl_exit -ne 0 ]]; then
+    echo "Error: curl failed (exit $curl_exit) for $url" >&2
+    rm -f "$tmp_out" "$tmp_headers"
+    return 1
+  fi
+
+  if [[ "$http_code" -ge 400 ]]; then
+    local err_msg
+    err_msg=$(jq -r '.message // "HTTP '"$http_code"'"' "$tmp_out" 2>/dev/null || echo "HTTP $http_code")
+    echo "Error: $err_msg" >&2
+    rm -f "$tmp_out" "$tmp_headers"
+    return 1
+  fi
+
+  if [[ -n "$filter" ]]; then
+    if ! jq -e "$filter" "$tmp_out" &>/dev/null; then
+      # jq failed or produced no output — this includes empty/null results
+      :
+    fi
+    jq -r "$filter" "$tmp_out" 2>/dev/null || :
+  else
+    cat "$tmp_out"
+  fi
+  rm -f "$tmp_out" "$tmp_headers"
+}
 
 # Parse a repository name into a namespace and repo name.
 parse_repo() {
   local input="$1"
+  if [[ -z "$input" ]]; then
+    echo "Error: repository name cannot be empty." >&2
+    return 1
+  fi
   if [[ "$input" == *"/"* ]]; then
     echo "$input"
   else
@@ -18,36 +76,77 @@ parse_repo() {
 search_repo() {
   local repo_name="$1"
   local output
-  output=$(curl -s "${BASE_URL}/search/repositories/?query=${repo_name}&page_size=25")
-  count=$(echo "$output" | jq '.count')
-  if [[ $count -eq 0 ]]; then
+  output=$(api_call "${BASE_URL}/search/repositories/?query=${repo_name}&page_size=25" ".") || return 1
+  local count
+  count=$(echo "$output" | jq -r '.count // 0')
+  if [[ "$count" -eq 0 ]]; then
     echo "Not found."
+    return
+  fi
+  if $JSON_MODE; then
+    echo "$output" | jq -c '{count, results: [.results[] | {name: .repo_name, pulls: .pull_count, official: .is_official}]}'
     return
   fi
   {
     echo -e "Name\tPull Count\tOfficial"
-    echo "$output" | jq -r ".results[] | [.repo_name,.pull_count,.is_official] | @tsv"
+    echo "$output" | jq -r '.results[] | [.repo_name, .pull_count, (if .is_official then "Yes" else "No" end)] | @tsv'
+  } | column -t -s $'\t'
+}
+
+get_info() {
+  local repo_path
+  repo_path=$(parse_repo "$1") || return 1
+  local output
+  output=$(api_call "${BASE_URL}/repositories/${repo_path}" ".") || return 1
+  if $JSON_MODE; then
+    echo "$output" | jq -c '{name, namespace, pull_count, star_count, description, is_official, is_automated, last_updated}'
+    return
+  fi
+  {
+    echo -e "Field\tValue"
+    echo -e "Name\t$(echo "$output" | jq -r '.name // "?"')"
+    echo -e "Namespace\t$(echo "$output" | jq -r '.namespace // "?"')"
+    echo -e "Description\t$(echo "$output" | jq -r '.description // "?"')"
+    echo -e "Pull Count\t$(echo "$output" | jq -r '.pull_count // 0')"
+    echo -e "Star Count\t$(echo "$output" | jq -r '.star_count // 0')"
+    echo -e "Official\t$(echo "$output" | jq -r 'if .is_official == true then "Yes" else "N/A" end')"
+    echo -e "Automated\t$(echo "$output" | jq -r 'if .is_automated then "Yes" else "No" end')"
+    echo -e "Last Updated\t$(echo "$output" | jq -r '.last_updated // "?"' | head -c 10)"
   } | column -t -s $'\t'
 }
 
 get_readme() {
   local repo_path
-  repo_path=$(parse_repo "$1")
+  repo_path=$(parse_repo "$1") || return 1
   local output
-  output=$(curl -s "${BASE_URL}/repositories/${repo_path}")
-  echo "$output" | jq -r '.full_description'
+  output=$(api_call "${BASE_URL}/repositories/${repo_path}" ".") || return 1
+  local full_description
+  full_description=$(echo "$output" | jq -r '.full_description // ""')
+  if [[ -z "$full_description" ]]; then
+    echo "No README available for this repository."
+    return
+  fi
+  if $JSON_MODE; then
+    jq -c '{full_description}' <<<"$output"
+    return
+  fi
+  echo "$full_description"
 }
 
 list_tags() {
   local repo_path
-  repo_path=$(parse_repo "$1")
+  repo_path=$(parse_repo "$1") || return 1
   local output
-  output=$(curl -s "${BASE_URL}/repositories/${repo_path}/tags/?page_size=25")
+  output=$(api_call "${BASE_URL}/repositories/${repo_path}/tags/?page_size=25" ".") || return 1
+  if $JSON_MODE; then
+    echo "$output" | jq -c '{count, results: [.results[] | {tag: .name, size: .full_size, last_updated}]}'
+    return
+  fi
   {
     echo -e "Tag\tSize\tLast Updated"
-    echo "$output" | jq -r '.results[] | [.name,.full_size,.last_updated] | @tsv' | while IFS=$'\t' read -r tag size last_updated; do
-      formatted_size=$(echo "$size" | numfmt --to=si --suffix=B)
-      formatted_date=$(date -d "$last_updated" +%Y-%m-%d)
+    echo "$output" | jq -r '.results[] | [.name, .full_size, .last_updated] | @tsv' | while IFS=$'\t' read -r tag size last_updated; do
+      formatted_size=$(echo "$size" | numfmt --to=si --suffix=B 2>/dev/null || echo "${size}B")
+      formatted_date=$(date -d "$last_updated" +%Y-%m-%d 2>/dev/null || echo "${last_updated:0:10}")
       echo -e "$tag\t$formatted_size\t$formatted_date"
     done
   } | column -t -s $'\t'
@@ -55,34 +154,66 @@ list_tags() {
 
 get_tag() {
   local repo_path
-  repo_path=$(parse_repo "$1")
+  repo_path=$(parse_repo "$1") || return 1
   local tag="$2"
+  if [[ -z "$tag" ]]; then
+    echo "Error: tag name cannot be empty." >&2
+    return 1
+  fi
   local output
-  output=$(curl -s "${BASE_URL}/repositories/${repo_path}/tags/${tag}")
+  output=$(api_call "${BASE_URL}/repositories/${repo_path}/tags/${tag}" ".") || return 1
+  if $JSON_MODE; then
+    echo "$output" | jq -c '{tag: .name, size: .full_size, last_updated}'
+    return
+  fi
   {
     echo -e "Tag\tSize"
-    echo "$output" | jq -r '. | [.name,.full_size] | @tsv' | while IFS=$'\t' read -r tag size; do
-      formatted_size=$(echo "$size" | numfmt --to=si --suffix=B)
-      echo -e "$tag\t$formatted_size"
+    echo "$output" | jq -r '[.name, .full_size] | @tsv' | while IFS=$'\t' read -r tagname size; do
+      formatted_size=$(echo "$size" | numfmt --to=si --suffix=B 2>/dev/null || echo "${size}B")
+      echo -e "$tagname\t$formatted_size"
     done
   } | column -t -s $'\t'
 }
 
 show_help() {
-  echo "Usage: $(basename "$0") <subcommand> [arguments]"
-  echo ""
-  echo "Subcommands:"
-  echo "  search <repo_name>                    Search for repositories by name."
-  echo "  readme <namespace/repo | repo>       Fetch the README for a repository."
-  echo "  tags <namespace/repo | repo>         List available tags and sizes for a repository."
-  echo "  tag <namespace/repo | repo> <tag>    Get tag info for a repository."
-  echo ""
-  exit 1
+  local exit_code="${1:-0}"
+  cat >&2 <<EOF
+Usage: $(basename "$0") [--json] <subcommand> [arguments]
+
+Subcommands:
+  search <repo_name>                 Search for repositories by name.
+  info <namespace/repo | repo>       Show detailed info about a repository.
+  readme <namespace/repo | repo>     Fetch the README for a repository.
+  tags <namespace/repo | repo>       List available tags and sizes for a repository.
+  tag <namespace/repo | repo> <tag>  Get tag info for a repository.
+
+Options:
+  --json       Output in JSON format (machine-readable)
+
+EOF
+  exit "$exit_code"
 }
 
 main() {
   if [[ $# -lt 1 ]]; then
-    show_help
+    show_help 1
+  fi
+
+  check_deps
+
+  # Extract global --json flag before the subcommand
+  local args=()
+  for arg in "$@"; do
+    case "$arg" in
+    --json) JSON_MODE=true ;;
+    --help | -h) show_help 0 ;;
+    *) args+=("$arg") ;;
+    esac
+  done
+  set -- "${args[@]}"
+
+  if [[ $# -lt 1 ]]; then
+    show_help 0
   fi
 
   local subcommand="$1"
@@ -91,35 +222,45 @@ main() {
   case "$subcommand" in
   search)
     if [[ $# -ne 1 ]]; then
-      echo "Error: 'search' requires a <repo_name> argument."
-      show_help
+      echo "Error: 'search' requires a <repo_name> argument." >&2
+      show_help 1
     fi
     search_repo "$1"
     ;;
+  info)
+    if [[ $# -ne 1 ]]; then
+      echo "Error: 'info' requires <namespace/repo | repo> argument." >&2
+      show_help 1
+    fi
+    get_info "$1"
+    ;;
   readme)
     if [[ $# -ne 1 ]]; then
-      echo "Error: 'readme' requires <namespace/repo | repo> argument."
-      show_help
+      echo "Error: 'readme' requires <namespace/repo | repo> argument." >&2
+      show_help 1
     fi
     get_readme "$1"
     ;;
   tags)
     if [[ $# -ne 1 ]]; then
-      echo "Error: 'tags' requires <namespace/repo | repo> argument."
-      show_help
+      echo "Error: 'tags' requires <namespace/repo | repo> argument." >&2
+      show_help 1
     fi
     list_tags "$1"
     ;;
   tag)
     if [[ $# -ne 2 ]]; then
-      echo "Error: 'tag' requires <namespace/repo | repo> <tag> arguments."
-      show_help
+      echo "Error: 'tag' requires <namespace/repo | repo> <tag> arguments." >&2
+      show_help 1
     fi
     get_tag "$1" "$2"
     ;;
+  help | --help | -h)
+    show_help 0
+    ;;
   *)
-    echo "Error: Unknown subcommand '$subcommand'."
-    show_help
+    echo "Error: Unknown subcommand '$subcommand'." >&2
+    show_help 1
     ;;
   esac
 }
