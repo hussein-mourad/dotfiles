@@ -104,7 +104,9 @@ invert = false
 #   "^innocuous-cmd .*--secret=.+",
 # ]
 
-history_filter = ["^cd", "^ls$", "^ll$", "^la$", "^ls -al", "^rm"]
+history_filter = ["^cd", "^ls$", "^ll$", "^la$", "^ls -al", "^rm", "^c$", "^yy$", "^clear$", "^lg$", "^exit .*$", "^exit$", 
+  # "^pn.*$"
+]
 
 
 ## prevent commands run with cwd matching any of these regexes from being written
