@@ -10,6 +10,7 @@ alsa-firmware 1.2.4-4
 alsa-plugins 1:1.2.12-6
 alsa-utils 1.2.16-1
 android-studio 2025.1.2.11-1
+apache-tools 2.4.68-1
 apparmor 4.1.7-1
 appimagelauncher 3.0.0_beta_3-1
 arandr 0.1.11-6
