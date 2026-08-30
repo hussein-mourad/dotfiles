@@ -100,6 +100,7 @@ diffutils 3.12-2
 digikam 9.1.0-7
 direnv 2.37.1-1
 discord 1:1.0.152-1
+distrobox 1.8.2.5-1
 dive 0.13.1-1
 dmg2img 1.6.7-5
 dmidecode 3.7-1
