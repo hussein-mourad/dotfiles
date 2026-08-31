@@ -1,6 +1,7 @@
 7zip 26.02-1
 a52dec 0.8.0-3
 aalib 1.4rc5-19
+aardvark-dns 2.1.0-3
 abseil-cpp 20260526.0-2
 accounts-qml-module 0.7-6
 accountsservice 26.27.3-1
@@ -189,6 +190,7 @@ confuse 3.3-5
 conky 1.22.3-3
 conky-i3 20210907-1
 containerd 2.3.3-1
+containers-common 1:0.69.1-1
 convertlit 1.8-13
 coppelia-bin 0.0.11.alpha-2
 coreutils 9.11-2
@@ -1709,6 +1711,7 @@ neon 0.37.1-1
 neovim 0.12.4-1
 net-snmp 5.9.5.2-1
 net-tools 2.10-3
+netavark 2.1.0-3
 netctl 1.29-2
 nethogs 0.8.8-2
 netpbm 10.86.50-2
@@ -2629,6 +2632,7 @@ simde 0.8.2-1
 simdjson 1:4.6.6-1
 simple-scan 50.0-1
 simplescreenrecorder 0.4.4-3
+skopeo 1.24.0-1
 sl 5.05-5
 slang 2.3.3-4
 sleuthkit 4.15.0-1
@@ -2855,6 +2859,7 @@ virt-viewer 11.0-4
 virtiofsd 1.14.0-1
 visual-studio-code-bin 1.133.0-1
 vit 2.3.4-1
+vivaldi 8.1.4087.75-1
 vivid 0.11.1-1
 vlc 3.0.23_2-10
 vlc-cli 3.0.23_2-10
