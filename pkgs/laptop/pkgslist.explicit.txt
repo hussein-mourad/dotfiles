@@ -46,6 +46,7 @@ bmenu 0.26-1
 bmon 4.0-5
 borg 1.4.5-1
 bottom 0.14.7-1
+bpftrace 0.26.1-1
 bridge-utils 1.7.1-2
 brightnessctl 0.5.1-3
 brn-git r31.454e213-1
