@@ -93,7 +93,6 @@ debugedit 5.3-1
 dell-bios-fan-control-git r5.2700610-5
 deluge 1:2.2.0-5
 deno 2.9.5-1
-devdocs-desktop 1.2.0-1
 device-mapper 2.03.42-1
 dfc 3.1.1-4
 dhclient 4.4.3.P1-4
