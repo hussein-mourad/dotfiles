@@ -63,6 +63,7 @@ cryptography                  49.0.0
 css-parser                    1.1.1
 cssselect                     1.5.0
 csvkit                        2.2.0
+cupshelpers                   1.0
 datasets                      5.0.1
 dbfread                       2.0.7
 dbus-python                   1.4.0
@@ -278,6 +279,7 @@ pycparser                     3.0
 pycriu                        4.2.1
 pycryptodome                  3.23.0
 pycryptodomex                 3.23.0
+pycups                        2.0.4
 pydantic                      2.13.4
 pydantic_core                 2.46.4
 pydub                         0.25.1
