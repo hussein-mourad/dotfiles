@@ -304,6 +304,7 @@ libinput-gestures 2.81-1
 libreoffice-still 26.2.6-1
 libtool 2.6.2-5
 libva-intel-driver 2.4.5-1
+libwebp-utils 1.6.0-2
 libxnvctrl 610.57.04-1
 linux-headers-meta 7.1-1
 linux-lts-nvidia-meta 6.1-2

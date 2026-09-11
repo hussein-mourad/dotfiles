@@ -1485,6 +1485,7 @@ libvterm 0.3.3-2
 libwacom 2.19.1-1
 libwbclient 2:4.24.6-1
 libwebp 1.6.0-2
+libwebp-utils 1.6.0-2
 libwireplumber 0.5.17-1
 libwmf 0.2.16-1
 libwnck3 43.3-1
