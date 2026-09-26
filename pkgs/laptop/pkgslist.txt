@@ -1558,12 +1558,10 @@ linux-firmware-whence 20260810-2
 linux-headers-meta 7.1-1
 linux-lts-meta 6.1-1
 linux-lts-nvidia-meta 6.1-2
-linux-lts-virtualbox-host-modules-meta 6.1-2
 linux-meta 7.1-1
 linux-nvidia-meta 7.1-1
 linux61 6.1.187-2
 linux61-nvidia 610.57.04-10
-linux61-virtualbox-host-modules 7.2.16-7
 linux71 7.1.13-2
 linux71-headers 7.1.13-2
 linux71-nvidia 610.57.04-12
