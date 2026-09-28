@@ -89,6 +89,7 @@ csvkit 2.2.0-2
 ctop 0.7.7-3
 curlie 1.8.2-1
 cutecom 0.60.0_RC1-2
+darkstat 3.0.722-1
 debugedit 5.3-2
 dell-bios-fan-control-git r5.2700610-5
 deluge 1:2.2.0-7
@@ -533,6 +534,7 @@ slides 0.9.0-2
 slurp 1.5.0-2
 smartmontools 7.5-1
 snapd 2.76.2-2
+sniffnet 1.5.1-1
 sof-firmware 2025.12.2-1
 sops 3.13.3-1
 sox 14.8.0.1-1
@@ -664,6 +666,8 @@ wl-clipboard 1:2.3.0-1
 wlogout 1.2.2-0
 wmutils 1:1.7-2
 woff2-font-awesome 7.3.1-1
+wondershaper-git r48.98792b5-1
+wondershaper-gui 1.0.0-2
 wpa_supplicant 2:2.12-1
 xarchiver 0.5.4.27-1
 xautolock 2.2-8

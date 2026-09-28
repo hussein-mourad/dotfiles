@@ -218,6 +218,7 @@ curl 8.22.0-1
 curlie 1.8.2-1
 cutecom 0.60.0_RC1-2
 cyrus-sasl-gssapi 2.1.28-4
+darkstat 3.0.722-1
 dash 0.5.13.4-1
 dav1d 1.5.4-1
 db 6.2.32-4
@@ -2654,6 +2655,7 @@ smbclient 2:4.24.6-1
 snapd 2.76.2-2
 snappy 1.2.2-3
 sndio 1.10.0-1
+sniffnet 1.5.1-1
 sof-firmware 2025.12.2-1
 solid 6.29.0-1
 solid5 5.116.0-2
@@ -2954,6 +2956,8 @@ wmutils 1:1.7-2
 woff2 1.0.2-6
 woff2-font-awesome 7.3.1-1
 wolfssl 5.9.2-1
+wondershaper-git r48.98792b5-1
+wondershaper-gui 1.0.0-2
 wpa_supplicant 2:2.12-1
 wpebackend-fdo 1.16.1-1
 wtype 0.4-2
