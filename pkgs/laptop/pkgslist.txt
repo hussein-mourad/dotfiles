@@ -815,6 +815,7 @@ hyprland-guiutils 0.2.2-3
 hyprland-qt-support 0.1.0-14
 hyprlang 0.6.8-5
 hyprlock 0.9.6-3
+hyprmon-bin 0.0.17-1
 hyprpaper 0.8.4-8
 hyprpicker 0.4.7-4
 hyprpolkitagent 0.1.3-10
