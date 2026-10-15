@@ -64,7 +64,7 @@ catdoc 0.95-6
 cava 0.10.7-1
 cheat 5.1.0-1
 chntpw 140201-5
-chromium 153.0.8010.36-1
+chromium 154.0.8037.97-1
 cliphist 1:0.7.0-2
 clipit 1:1.4.5+25+gf35db54-1
 clock-tui 0.6.1-1
@@ -585,7 +585,7 @@ texlive-latexextra 2026.1-1
 texlive-latexrecommended 2026.1-1
 texlive-xetex 2026.1-1
 the_silver_searcher 2.2.0-4
-thunderbird 154.0-2
+thunderbird 158.0-1
 tidy 5.8.0-3
 timew 1.9.1-1
 tiv 2015-4
@@ -640,7 +640,7 @@ virt-manager 5.1.0-4
 virt-viewer 11.0-4
 visual-studio-code-bin 1.137.0-1
 vit 2.3.4-1
-vivaldi 8.2.4133.52-1
+vivaldi 8.2.4133.87-1
 vivid 0.11.1-1
 vlc 3.0.23_2-13
 vnstat 2.13-2

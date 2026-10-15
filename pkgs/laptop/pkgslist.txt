@@ -164,7 +164,7 @@ cheat 5.1.0-1
 chmlib 0.40-10
 chntpw 140201-5
 chromaprint 1.6.1-2
-chromium 153.0.8010.36-1
+chromium 154.0.8037.97-1
 cifs-utils 7.5-1
 ckbcomp 1.245-1
 clang 22.1.8-1
@@ -2765,7 +2765,7 @@ the_silver_searcher 2.2.0-4
 thin-provisioning-tools 1.3.3-1
 threadweaver 6.29.0-1
 thrift 0.22.0-6
-thunderbird 154.0-2
+thunderbird 158.0-1
 tidy 5.8.0-3
 timew 1.9.1-1
 tinysparql 3.11.1-1
@@ -2874,7 +2874,7 @@ virt-viewer 11.0-4
 virtiofsd 1.14.0-1
 visual-studio-code-bin 1.137.0-1
 vit 2.3.4-1
-vivaldi 8.2.4133.52-1
+vivaldi 8.2.4133.87-1
 vivid 0.11.1-1
 vlc 3.0.23_2-13
 vlc-cli 3.0.23_2-13
