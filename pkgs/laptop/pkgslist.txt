@@ -344,7 +344,7 @@ file 5.48-1
 filesystem 2025.10.12-1
 filezilla 3.71.1-1
 findutils 4.11.0-1
-firefox 157.0.1-1
+firefox 158.0-1
 firefoxpwa 2.19.0-1
 fish 4.9.1-1
 flac 1.5.0-1
@@ -2923,6 +2923,7 @@ vulkan-mesa-implicit-layers 1:26.2.2-1
 vulkan-radeon 1:26.2.2-1
 vulkan-tools 1.4.357.0-1
 w3m 0.5.6-1
+wakeonlan 0.50-1
 wallpapers-juhraya 1.1-3
 wavpack 5.9.0-1
 waybar-git 0.15.0.r1019.g3672eee-1
