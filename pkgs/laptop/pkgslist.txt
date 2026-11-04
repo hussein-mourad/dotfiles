@@ -3059,7 +3059,7 @@ zbar 0.23.93-7
 zeal 0.9.1-2
 zed 1.18.1-1
 zellij 0.45.1-1
-zen-browser-bin 1.22.1b-1
+zen-browser-bin 1.24b-1
 zenity 4.2.2-1
 zensu 0.3-7
 zeromq 4.3.5-3
