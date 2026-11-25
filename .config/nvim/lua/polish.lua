@@ -59,3 +59,12 @@ vim.keymap.set("t", "<C-h>", [[<C-\><C-n><C-W>h]], { desc = "Terminal left windo
 --     ["~/%.config/foo/.*"] = "fooscript",
 --   },
 -- }
+
+-- angularls also answers documentSymbol for .ts files but returns only the class, and aerial
+-- may pick it over vtsls (the outline then misses DTO fields). Let vtsls own symbols.
+vim.api.nvim_create_autocmd("LspAttach", {
+  callback = function(args)
+    local client = vim.lsp.get_client_by_id(args.data.client_id)
+    if client and client.name == "angularls" then client.server_capabilities.documentSymbolProvider = false end
+  end,
+})
